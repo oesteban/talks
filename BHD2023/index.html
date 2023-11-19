@@ -450,70 +450,36 @@ Center for Open Science (COS) - RRs' Details & Workflow</a>
 
 ---
 
-# WDL Example (Nextflow)
+# What are Registered Reports?
 
-.tiny[
-```WDL
-params.input_dir = 'data'
-params.output_dir = 'results'
-
-process fsl_preprocess {
-  input:
-  file input_image from "$input_dir/input.nii.gz"
-
-  output:
-  file "${params.output_dir}/preprocessed.nii.gz"
-
-  script:
-  """
-  bet $input_image ${params.output_dir}/brain.nii.gz
-  flirt -in $input_image -ref MNI152_T1_2mm_brain.nii.gz -omat ${params.output_dir}/transformation.mat
-  """
-
-}
-
-process fsl_stats {
-  input:
-  file input_image from fsl_preprocess.output
-
-  output:
-  file "${params.output_dir}/stats.nii.gz"
-
-  script:
-  """
-  fslstats $input_image -m > ${params.output_dir}/mean.txt
-  fslstats $input_image -p 50 > ${params.output_dir}/median.txt
-  """
-
-}
-
-workflow {
-  fsl_preprocess | fsl_stats
-}
-```
-]
+<br />
+<p align="center">
+<a href="https://www.cos.io/initiatives/registered-reports">
+<img src="images/cos-workflow.png" width="85%" /><br /><br />
+Center for Open Science (COS) - RRs' Details & Workflow</a>
+</p>
 
 ---
 
+# Examples
+
 .pull-left[
-<p align="center">
-<img src="../card-nipype.svg" width="100%" />
+<p align="right">
+<a href="https://rr.peercommunityin.org/articles/rec?id=346">
+<img src="images/rr-1-defacing.png" width="100%" />
+https://rr.peercommunityin.org/articles/rec?id=346
+</a>
 </p>
 <br />
 
-``` Python
-from nipype.interfaces.fsl import BET
-brain_extract = BET(
-  in_file="/data/coolproject/sub-01/ses-01/anat/sub-01_ses-01_T1w.nii",
-  out_file="/out/sub-01/ses-01/anat/sub-01_ses-01_desc-brain_T1w.nii"
-)
-brain_extract.run()
-```
 ]
 
 .pull-right[
-<p align="center">
-<img src="https://nipype.readthedocs.io/en/latest/_images/nipype_architecture_overview2.png" width="65%" />
+<p align="left">
+<a href="https://doi.org/10.6084/m9.figshare.19579873.v1">
+<img src="images/rr-2-hcph.png" width="90%" />
+10.6084/m9.figshare.19579873.v1
+</a>
 </p>
 ]
 
