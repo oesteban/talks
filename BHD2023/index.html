@@ -282,6 +282,18 @@
         -ms-transform: rotate(-90deg);
         transform: rotate(-90deg);
       }
+
+      .dim {
+        color: #ccc;
+      }
+
+      .nodim {
+        color: #000;
+      }
+
+      .bold {
+        font-weight: 600;
+      }
     </style>
   </head>
   <body>
@@ -485,7 +497,7 @@ Center for Open Science (COS) - RRs' Details & Workflow</a>
 
 ---
 
-# Examples
+# Learning by doing
 
 .pull-left[
 <p align="right">
@@ -498,6 +510,8 @@ https://rr.peercommunityin.org/articles/rec?id=346
 
 ]
 
+--
+
 .pull-right[
 <p align="left">
 <a href="https://doi.org/10.6084/m9.figshare.19579873.v1">
@@ -509,34 +523,365 @@ https://rr.peercommunityin.org/articles/rec?id=346
 
 ---
 
-# WDL Example - Translation into Nipype
+# Defacing RR &mdash; motivation
 
+.pull-left[
+<p align="right">
+<br />
+<img src="images/defacing-result.png" width="100%" />
+<br />
+<br />
+.tiny[Provins, C., … Esteban, O. (2022). 28<sup>th</sup> OHBM. Glasgow, Scotland, UK.]
+</p>
 
-```Python
-import nipype.interfaces.fsl as fsl
-import nipype.pipeline.engine as pe
+]
 
-input_image = 'input.nii.gz'
-output_dir = 'results'
+--
 
-preprocess = pe.Node(fsl.BET(), name='preprocess')
-preprocess.inputs.in_file = input_image
-preprocess.inputs.out_file = f'{output_dir}/brain.nii.gz'
+.pull-right[
+<p align="left">
+<img src="images/defacing-humans-ba.png" width="95%" />
+</p>
+]
 
-stats = pe.Node(fsl.ImageStats(), name='stats')
-stats.inputs.in_file = f'{output_dir}/brain.nii.gz'
-stats.inputs.op_string = '-m -p 50'
+<!--
 
-workflow = pe.Workflow(name='my_workflow')
-workflow.connect([(preprocess, stats, [('out_file', 'in_file')])])
-workflow.base_dir = 'working_dir'
-workflow.run()
-```
+- We had done a pilot study presented in OHBM 2022 suggesting machines and humans see quality in defaced T1w images differently as compared to the original image.
+- Why registration: because there was potential for the project to become a rabbit-hole:
+    - Difficult to interpret
+    - Or worse, a moving target
+    - High risk, low return project
 
+-->
 
 ---
 
-# Facets to standardize
+# Defacing RR &mdash; lessons learned
+
+<img align='top' src="images/mriqc-rating.png" width="30%" />
+--
+<img align='top' src="images/g-power.png" width="30%" />
+--
+<img align='top' src="images/qkay.png" width="30%" />
+
+<!--
+
+- Introduce the experiments
+- Pre-registration showed its benefits early on:
+    - Moved from categorical ratings to interval scale
+    - Realized that a nested design would not give us the statistical power
+    - need for q-kay
+-->
+
+---
+
+# Defacing RR &mdash; timeline
+
+<p align="center">
+<img src="images/defacing-RRs-timeline.png" width="90%" /><br /><br />
+</p>
+
+<!--
+
+- We worked on a pre-registration document for 6 months, and attempted a submission to NeuroImage.
+- Submission to PCI RR
+
+- Report timing of reviews
+- Recommender (editor) first requested us to improve several items:
+    - Most importantly, to remove speculative statements on our abstract and the removal of the discussion.
+- Review had really high quality:
+    - Showcase examples of useful changes.
+
+-->
+
+---
+
+# Defacing RR &mdash; the PCI RR
+
+
+<!--
+
+STAGE 1 - what does that mean
+- List collaborating journals recommended to us (automatic acceptance)
+- Mention friendly journals (acceptance not guaranteed)
+- Mention other journals (acceptance not guaranteed and withdrawal)
+
+-->
+
+---
+
+# Learning by doing
+
+.pull-left[
+<p align="right">
+<a href="https://rr.peercommunityin.org/articles/rec?id=346">
+<img src="images/rr-1-defacing.png" width="100%" />
+https://rr.peercommunityin.org/articles/rec?id=346
+</a>
+</p>
+<br />
+
+]
+
+--
+
+.pull-right[
+<p align="left">
+<a href="https://doi.org/10.6084/m9.figshare.19579873.v1">
+<img src="images/rr-2-hcph.png" width="90%" />
+10.6084/m9.figshare.19579873.v1
+</a>
+</p>
+]
+
+---
+
+# HCPh RR
+
+<!-- workflow? -->
+
+<!--
+
+- Explain how this is a different type of RR, for larger projects
+- Mention Programmatic RRs at PCI RR and defer discussion to later.
+
+-->
+
+---
+
+# Why RRs? (Ph.D. Students, postdocs)
+
+.boxed-content[
+.distribute.larger[
+.nodim[
+* .large.bold[Brings about the most onerous aspects of research]
+
+    * If there is no (clear) project, you better learn soon.
+    * Helps build a better understanding of the workflow.
+]
+.dim[
+* .large.bold[Secure publication]
+
+    * Helps detect major issues early on (e.g., data are not workable).
+    * Pushes the experience of peer-review early.
+]
+.dim[
+* .large.bold[Transparency is built-in]
+
+    * Better communication within stakeholders (mentors, collaborators)
+    * Better communication toward publication (editors, reviewers)
+]
+]]
+
+---
+
+# Why RRs? (Ph.D. Students, postdocs)
+
+.boxed-content[
+.distribute.larger[
+.dim[
+* .large.bold[Brings about the most onerous aspects of research]
+
+    * If there is no (clear) project, you better learn soon.
+    * Helps build a better understanding of the workflow.
+]
+.nodim[
+* .large.bold[Secure publication]
+
+    * Helps detect major issues early on (e.g., data are not workable).
+    * Pushes the experience of peer-review early.
+]
+.dim[
+* .large.bold[Transparency is built-in]
+
+    * Better communication within stakeholders (mentors, collaborators)
+    * Better communication toward publication (editors, reviewers)
+]
+]]
+
+---
+
+# Why RRs? (Ph.D. Students, postdocs)
+
+.boxed-content[
+.distribute.larger[
+.dim[
+* .large.bold[Brings about the most onerous aspects of research]
+
+    * If there is no (clear) project, you better learn soon.
+    * Helps build a better understanding of the workflow.
+]
+.dim[
+* .large.bold[Secure publication]
+
+    * Helps detect major issues early on (e.g., data are not workable).
+    * Pushes the experience of peer-review early.
+]
+.nodim[
+* .large.bold[Transparency is built-in]
+
+    * Better communication within stakeholders (mentors, collaborators)
+    * Better communication toward publication (editors, reviewers)
+]
+]]
+
+---
+
+# Why RRs? (ECRs, consolidated PIs)
+
+.boxed-content[
+.distribute.larger[
+.nodim[
+* .large.bold[Secures the realization of the project]
+
+    * Effectively avert procrastination
+    * Identify bottlenecks before project derails
+]
+.dim[
+* .large.bold[RRs are effective to track the project]
+
+    * RRs generate a roadmap as opposed to creating the path as you go
+    * Progress is easier to demonstrate to third parties
+]
+.dim[
+* .large.bold[Transparency is built-in]
+
+    * Openness has longstanding benefits (cf. preprints)
+]
+]]
+
+---
+
+# Why RRs? (ECRs, consolidated PIs)
+
+.boxed-content[
+.distribute.larger[
+.dim[
+* .large.bold[Secures the realization of the project]
+
+    * Effectively avert procrastination
+    * Identify bottlenecks before project derails
+]
+.nodim[
+* .large.bold[RRs are effective to track the project]
+
+    * RRs generate a roadmap as opposed to creating the path as you go
+    * Progress is easier to demonstrate to third parties
+]
+.dim[
+* .large.bold[Transparency is built-in]
+
+    * Openness has longstanding benefits (cf. preprints)
+]
+]]
+
+---
+
+# Why RRs? (ECRs, consolidated PIs)
+
+.boxed-content[
+.distribute.larger[
+.dim[
+* .large.bold[Secures the realization of the project]
+
+    * Effectively avert procrastination
+    * Identify bottlenecks before project derails
+]
+.dim[
+* .large.bold[RRs are effective to track the project]
+
+    * RRs generate a roadmap as opposed to creating the path as you go
+    * Progress is easier to demonstrate to third parties
+]
+.nodim[
+* .large.bold[Transparency is built-in]
+
+    * Openness has longstanding benefits (cf. preprints)
+]
+]]
+
+---
+
+# Unwarranted criticism
+
+.boxed-content[
+.distribute.larger[
+.nodim[
+* .large.bold[(Pre)registration only works with clear hypotheses]
+
+    * *if all research is pre-registered, we will not generate creative, new solutions*
+    * Not applicable to qualitative research and development of new methodologies
+]
+.dim[
+* .large.bold[Pre-registration increases the risk of being scooped]
+
+    * If you just pre-register, equivalent risk to pre-prints
+    * RR Stage 1 studies can be embargoed
+    * RR guarantees publication
+]
+.dim[
+* .large.bold[Data must not exist]
+
+    * It's a matter of controlling for biases
+]
+]]
+
+---
+
+# Unwarranted criticism
+
+.boxed-content[
+.distribute.larger[
+.dim[
+* .large.bold[(Pre)registration only works with clear hypotheses]
+
+    * *if all research is pre-registered, we will not generate creative, new solutions*
+    * Not applicable to qualitative research and development of new methodologies
+]
+.nodim[
+* .large.bold[Pre-registration increases the risk of being scooped]
+
+    * If you just pre-register, equivalent risk to pre-prints
+    * RR Stage 1 studies can be embargoed
+    * RR guarantees publication
+]
+.dim[
+* .large.bold[Data must not exist]
+
+    * It's a matter of controlling for biases
+]
+]]
+
+---
+
+# Unwarranted criticism
+
+.boxed-content[
+.distribute.larger[
+.dim[
+* .large.bold[(Pre)registration only works with clear hypotheses]
+
+    * *if all research is pre-registered, we will not generate creative, new solutions*
+    * Not applicable to qualitative research and development of new methodologies
+]
+.dim[
+* .large.bold[Pre-registration increases the risk of being scooped]
+
+    * If you just pre-register, equivalent risk to pre-prints
+    * RR Stage 1 studies can be embargoed
+    * RR guarantees publication
+]
+.nodim[
+* .large.bold[Data must not exist]
+
+    * It's a matter of controlling for biases
+]
+]]
+
+---
+
+
+# Limitations
 
 .boxed-content[
 .distribute.large[
