@@ -248,6 +248,14 @@
         font-size: 24pt;
       }
 
+      .huge {
+        font-size: 40pt;
+      }
+
+      .gigantic {
+        font-size: 60pt;
+      }
+
       .boxed-content {
         float: left;
         display: block;
@@ -514,6 +522,10 @@ https://rr.peercommunityin.org/articles/rec?id=346
 
 .pull-right[
 <p align="left">
+<br />
+<br />
+<br />
+<br />
 <a href="https://doi.org/10.6084/m9.figshare.19579873.v1">
 <img src="images/rr-2-hcph.png" width="90%" />
 10.6084/m9.figshare.19579873.v1
@@ -531,7 +543,7 @@ https://rr.peercommunityin.org/articles/rec?id=346
 <img src="images/defacing-result.png" width="100%" />
 <br />
 <br />
-.tiny[Provins, C., … Esteban, O. (2022). 28<sup>th</sup> OHBM. Glasgow, Scotland, UK.]
+.tiny[Provins, C., … Esteban, O. (2022). 28<sup>th</sup> OHBM. Glasgow, Scotland, UK. [10.31219/osf.io/t9ehk](https://doi.org/10.31219/osf.io/t9ehk)]
 </p>
 
 ]
@@ -578,7 +590,13 @@ https://rr.peercommunityin.org/articles/rec?id=346
 # Defacing RR &mdash; timeline
 
 <p align="center">
-<img src="images/defacing-RRs-timeline.png" width="90%" /><br /><br />
+<img src="images/defacing-RR-timeline.png" width="90%" />
+</p>
+--
+<p align="center">
+<img align='top' src="images/pci-recommended-journals.png" width="25%" />
+<span width="20%"> </span>
+<img align='top' src="images/pci-defacing-bias-level.png" width="35%" />
 </p>
 
 <!--
@@ -598,6 +616,16 @@ https://rr.peercommunityin.org/articles/rec?id=346
 
 # Defacing RR &mdash; the PCI RR
 
+<br />
+<br />
+<br />
+<br />
+<br />
+
+.gigantic.center[
+[rr.peercommunityin.org](https://rr.peercommunityin.org/)
+]
+
 
 <!--
 
@@ -612,21 +640,12 @@ STAGE 1 - what does that mean
 
 # Learning by doing
 
-.pull-left[
-<p align="right">
-<a href="https://rr.peercommunityin.org/articles/rec?id=346">
-<img src="images/rr-1-defacing.png" width="100%" />
-https://rr.peercommunityin.org/articles/rec?id=346
-</a>
-</p>
-<br />
-
-]
-
---
-
 .pull-right[
 <p align="left">
+<br />
+<br />
+<br />
+<br />
 <a href="https://doi.org/10.6084/m9.figshare.19579873.v1">
 <img src="images/rr-2-hcph.png" width="90%" />
 10.6084/m9.figshare.19579873.v1
@@ -634,9 +653,48 @@ https://rr.peercommunityin.org/articles/rec?id=346
 </p>
 ]
 
+--
+
+.pull-left[
+<br />
+<br />
+<br />
+<br />
+.huge[HCPh = Human Connectome PHantom]
+]
+
 ---
 
-# HCPh RR
+# HCPh &mdash; motivation
+
+<p align="center">
+<img src="images/nmeth-rr-figshare.png" width="80%" />
+</p>
+
+---
+
+# HCPh &mdash; motivation
+
+<p align="center">
+<img src="https://www.axonlab.org/hcph-sops/assets/images/cohort1.png" width="50%" />
+</p>
+
+---
+
+# HCPh &mdash; SOPs
+
+.center[
+.huge[[www.axonlab.org/hcph-sops](https://www.axonlab.org/hcph-sops/)]
+<iframe src="https://www.axonlab.org/hcph-sops/" width="90%" height="600px" />
+]
+
+---
+
+# HCPh &mdash; timeline
+
+<p align="center">
+<img src="images/HCPh-timeline.png" width="90%" />
+</p>
 
 <!-- workflow? -->
 
@@ -880,114 +938,206 @@ https://rr.peercommunityin.org/articles/rec?id=346
 
 ---
 
+# Limitations
+
+.boxed-content[
+.distribute.larger[
+.nodim[
+* .larger.bold[Timing]
+    * *Scheduled* RRs (PCI RR)
+]
+.dim[
+* .larger.bold[Unsuitable for longstanding projects]
+    * *Programmatic* RRs (PCI RR)
+]
+.dim[
+* .larger.bold[Ethical oversight and funding required]
+    * RRs will continue evolving over time
+]
+]
+.dim[
+* .larger.bold[Journals have low IF]
+
+    * With the exception of Nature titles
+]
+]
+]
+
+---
 
 # Limitations
 
 .boxed-content[
-.distribute.large[
-* **Outer interface** (inputs and outputs). Also, consider an internal data structure format for high throughput.
-* **Implementation** (WDL vs. programmed): code styling, best practices, BIDS-Apps.
-* **Modularize** (see *NiPreps* and *TemplateFlow*).
-* Use **containers** to ensure software delivery and reproducibility.
-* Implement testing and **continuous integration** to catch errors early and streamline development.
-* **Version** the workflow and its components to ensure compatibility and track changes, issue **LTS**.
-* Promote **community** and social standardization through collaboration, documentation, telemetry, and open-source practices.
-* **Visual reporting**
-]]
+.distribute.larger[
+.dim[
+* .larger.bold[Timing]
+    * *Scheduled* RRs (PCI RR)
+]
+.nodim[
+* .larger.bold[Unsuitable for longstanding projects]
+    * *Programmatic* RRs (PCI RR)
+]
+.dim[
+* .larger.bold[Ethical oversight and funding required]
+    * RRs will continue evolving over time
+]
+]
+.dim[
+* .larger.bold[Journals have low IF]
+
+    * With the exception of Nature titles
+]
+]
+]
 
 ---
 
-# BIDS-Apps: subject-wise parallelization
-
-<p align="center">
-<a href="https://doi.org/10.1371/journal.pcbi.1005209">
-<img src="../journal.pcbi.1005209.g002.png" width="90%" /><br /><br />
-(Gorgolewski et al., 2017)
-</a>
-</p>
-
----
-
-## The individual report
-<p align="center">
-<video controls="controls" width="70%"
-       name="Video Name" src="../fmriprep-report.mov"></video>
-</p>
-
----
-
-# Why standarizing?
+# Limitations
 
 .boxed-content[
-.distribute.large[
-* Pushing the *truck factor* above 1.0.
-* Engage users
-]]
+.distribute.larger[
+.dim[
+* .larger.bold[Timing]
+    * *Scheduled* RRs (PCI RR)
+]
+.dim[
+* .larger.bold[Unsuitable for longstanding projects]
+    * *Programmatic* RRs (PCI RR)
+]
+.nodim[
+* .larger.bold[Ethical oversight and funding required]
+    * RRs will continue evolving over time
+]
+]
+.dim[
+* .larger.bold[Journals have low IF]
+
+    * With the exception of Nature titles
+]
+]
+]
 
 ---
 
-# "Analysis-grade" data
+# Limitations
 
-.larger[
-The *NeuroImaging PREProcessing toolS* (*[NiPreps](https://nipreps.org).org*) augment scanners to produce *analysis-grade* data (= **directly consumable by analyses**)
+.boxed-content[
+.distribute.larger[
+.dim[
+* .larger.bold[Timing]
+    * *Scheduled* RRs (PCI RR)
 ]
+.dim[
+* .larger.bold[Unsuitable for longstanding projects]
+    * *Programmatic* RRs (PCI RR)
+]
+.dim[
+* .larger.bold[Ethical oversight and funding required]
+    * RRs will continue evolving over time
+]
+]
+.nodim[
+* .larger.bold[Journals have low IF]
+
+    * With the exception of Nature titles
+]
+]
+]
+
+---
+
+# Results
+
+<p align="center">
+<a href="https://doi.org/10.1038/s41562-021-01193-7">
+<img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-021-01193-7/MediaObjects/41562_2021_1193_Fig2_HTML.png?as=webp" width="65%" /><br /><br />
+Chambers, C.D., Tzavella, L. The past, present and future of Registered Reports. Nat Hum Behav 6, 29–42 (2022). doi:10.1038/s41562-021-01193-7</a>
+</p>
+
+---
+
+# Results
+
+.left-column-mid[
+<p align="right">
+<img src="images/soderberg-quality.png" width="90%" />
+</p>
+]
+
+.right-column-mid[
+.larger[Increasing quality:]
+
+353 researchers peer reviewed a pair of papers from 29 published RRs from psychology and neuroscience and 57 non-RR comparison papers.
+<br />
+Soderberg et al., Nat Hum Behav 2021 [10.1038/s41562-021-01142-4](https://doi.org/10.1038/s41562-021-01142-4)
+]
+
+---
+
+# Results
+
+.left-column-mid[
+<p align="right">
+<img src="images/soderberg-quality.png" width="90%" />
+</p>
+]
+
+.right-column-mid[
+.larger[Increasing quality:]
+
+353 researchers peer reviewed a pair of papers from 29 published RRs from psychology and neuroscience and 57 non-RR comparison papers.
+<br />
+Soderberg et al., Nat Hum Behav 2021 [10.1038/s41562-021-01142-4](https://doi.org/10.1038/s41562-021-01142-4)
 
 <br />
-.pull-left[
+<br />
+<br />
+<br />
+.larger[Also reducing publication bias:]
 
-***Analysis-grade* data** is an analogy to the concept of "*sushi-grade (or [sashimi-grade](https://en.wikipedia.org/wiki/Sashimi)) fish*" in that both are:
+  * Generally, open science (Allen et al. 2019 [10.1371/journal.pbio.3000246](https://doi.org/10.1371/journal.pbio.3000246))
 
-.large[**minimally preprocessed**,]
-
-and
-
-.large[**safe to consume** directly.]
+  * Specifically in psychology (Scheel et al. 2021 [10.1177/25152459211007467](https://doi.org/10.1177/25152459211007467))
 ]
-
-.pull-right[
-<img align="right" style='margin-right: 50px' src="https://1.bp.blogspot.com/-Osh4H4WXka0/WlMJmVgkZTI/AAAAAAAAEMY/GynUzSomJ-EBiyqv2m-maiOyKSM7SOmNACLcBGAs/s400/yellowfin%2Btuna%2Bsteaks%2Bnutrition.jpg" />
-]
-
----
-
-<p align="center">
-<img src="../nipreps-chart.png" width="63%" /><br />
-<em>NiPreps</em> (<a href="https://doi.org/10.31219/osf.io/ujxp6">Esteban et al., 2020</a>)
-</p>
-
----
-
-template: title
-layout: false
-.middle[
-<p align="center">
-<img src="https://github.com/oesteban/fmriprep/raw/f4c7a9804be26c912b24ef4dccba54bdd72fa1fd/docs/_static/fmriprep-21.0.0.svg" width="95%" />
-</p>
-]
-
----
-
-# *TemplateFlow*
-
-<p align="center">
-<img src="https://www.templateflow.org/assets/templateflow_fig-birdsview.png" width="60%" /><br />
-(<a href="https://doi.org/10.1038/s41592-022-01681-2">Ciric et al., 2022</a>)
-</p>
-
----
-
-# *TemplateFlow* | Client
-
-<div class="asciicast" id="501873"></div>
 
 ---
 
 # Conclusion
 
-<p align="center">
-<img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41596-020-0327-3/MediaObjects/41596_2020_327_Fig1_HTML.png?as=png" width="90%" /><br />
-(<a href="https://doi.org/10.1038/s41596-020-0327-3">Esteban et al., 2020</a>)
-</p>
+.large[
+&nbsp;&nbsp;&nbsp;✓ &nbsp;&nbsp; Results should not be relevant toward publication
+]
+
+--
+
+.large[
+&nbsp;&nbsp;&nbsp;✓ &nbsp;&nbsp; Redesigning the publication workflow
+]
+
+--
+
+.large[
+&nbsp;&nbsp;&nbsp;✓ &nbsp;&nbsp; Demonstrated that it is possible
+]
+
+--
+
+.large[
+&nbsp;&nbsp;&nbsp;✓ &nbsp;&nbsp; Justification at the individual level
+]
+
+--
+
+.large[
+&nbsp;&nbsp;&nbsp;✓ &nbsp;&nbsp; Justification at the global level
+]
+
+--
+
+.large[
+&nbsp;&nbsp;&nbsp;✓ &nbsp;&nbsp; Provided tools
+]
+
 
 ---
 
@@ -997,7 +1147,6 @@ layout: false
 
 ### Questions?
 
-#### NiPreps Hackathons 2023 - ISMRM and OHBM
 ]
 ]
 </textarea>
