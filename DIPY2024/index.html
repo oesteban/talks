@@ -7445,25 +7445,16 @@ Lausanne University Hospital and University of Lausanne</p>
 </div>
 </div>
 </div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=131f31ef">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=b36765b9">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/markdown" tabindex="0">
-<p>Hello world! I'm Oscar Esteban.</p>
-<iframe height="500" src="brain.html" style="border: 0;" width="700"></iframe>
-</div>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7977b897">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<table style="background-color: white">
+<tr style="background-color: white">
+<td style="width: 49%; text-align: left;">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">nibabel</span> <span class="k">as</span> <span class="nn">nb</span>
 
@@ -7472,9 +7463,17 @@ Lausanne University Hospital and University of Lausanne</p>
     <span class="s2">"sub-001_ses-001_acq-undistorted_T1w.nii.gz"</span>
 <span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span>
-    <span class="n">nb</span><span class="o">.</span><span class="n">as_closest_canonical</span><span class="p">(</span><span class="n">ni_img</span><span class="p">)</span><span class="o">.</span><span class="n">dataobj</span>
+    <span class="n">nb</span><span class="o">.</span><span class="n">as_closest_canonical</span><span class="p">(</span>
+        <span class="n">ni_img</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">dataobj</span>
 <span class="p">)</span>
 </pre></div>
+</td>
+<td style="width: 50%; text-align: left;">
+<iframe src="brain.html" style="height: 400px; width: 500px; border: 0"></iframe></td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
