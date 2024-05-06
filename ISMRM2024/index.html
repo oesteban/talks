@@ -180,7 +180,7 @@
         height: 85%;
         float: left;
       }
-        .left-column h2:last-of-type, .left-column h3:last-child {
+        .left-column2 h2:last-of-type, .left-column2 h3:last-child {
           color: #000;
         }
       .right-column2 {
@@ -190,15 +190,21 @@
       }
       /* Two-column layout (60% left) */
       .left-column3 {
-        width: 43%;
+        display: block;
+        width: auto;
         height: 85%;
-        float: left;
+        margin: 0 32% 0 5%;
       }
-        .left-column h2:last-of-type, .left-column h3:last-child {
+        .left-column3 h2:last-of-type, .left-column3 h3:last-child {
           color: #000;
         }
+
+      .left-column3 li {
+        margin-left: 25px;
+      }
+
       .right-column3 {
-        width: 35%;
+        width: 30%;
         float: right;
         padding-top: 1em;
       }
@@ -337,21 +343,34 @@ count: false
 
 
 .center[
-<a href="https://oesteban.github.io/talks/ISMRM2024/"><img src="images/qr-talk-url.svg" alt="workflow" style="width: 20%" /></a>
+<a href="https://oesteban.github.io/talks/ISMRM2024/">
+  <img src="images/qr-talk-url.svg" alt="workflow" style="width: 20%" />
+  <br />
+  https://oesteban.github.io/talks/ISMRM2024/
+</a>
+
+<br />
+<br />
 
 ## Harnessing QA/QC protocols for diffusion MRI neuroimaging workflows with MRIQC
 
-<br />
-<br />
-
 ### Oscar Esteban &lt; phd@oscaresteban.es >
 
-Authors do not have any conflict of interest to be declared
+.small[Authors do not have any conflict of interest to be declared]
 
 ]
 
 ???
 
+
+Welcome everyone, I'm Oscar Esteban and I'm about to describe a comprehensive approach
+to ensure the reliability of the diffusion MRI workflow by implementing robust QA/QC workflows.
+
+Before we get started, please note the QR code at the top.
+It leads to the link below and contains these slides.
+However, the online slides are interactive so I strongly recommend to follow my talk on your phone or your laptop if you have it handy.
+
+I'll first make a summary of the topics -- for those still opening the link the QR code and the text of the link will be visible at the right hand side of the slide.
 
 ---
 name: newsection
@@ -368,8 +387,19 @@ layout: true
 
 ## Outlook
 
-.boxed-content[
-.distribute.large[
+.right-column3.center[
+<a href="https://oesteban.github.io/talks/ISMRM2024/">
+  <img src="images/qr-talk-url.svg" alt="workflow" style="width: 100%" />
+  <br />
+  https://oesteban.github.io/talks/ISMRM2024/
+</a>
+]
+
+.left-column3[
+
+.large[
+
+<br />
 
 * Implementing QA/QC protocols
 
@@ -382,11 +412,21 @@ layout: true
 
 * Results
 
-]
-]
+]]
 
 ???
 
+Let me re-iterate that the QR code leads to a better experience, as the slides contain interactive plots and renders I could not show up here on stage given the constraints to specific formats.
+
+In this talk, we will first have a bird's eye view over the diffusion MRI pipeline.
+Next, I will propose the establishment of several QA/QC checkpoints along the pipeline to focus on one of the earliest layers: assessing the quality of the unprocessed data.
+
+We will then move into introducing MRIQC, a QA/QC tool for unprocessed data (meaning: reconstructed data out of the scanner that is yet to be processed).
+Although initially conceived for fMRI and anatomical T1w and T2w images, the latest release of MRIQC features a full extension to diffusion MRI.
+
+Then, I will introduce the data we employed to showcase MRIQC today, and shamelessly promote our local study, the Human Connectome PHantom, which we will make available soon.
+
+Finally, I'll show some of the results. I hope at this point those interested managed to pull up the slides.
 
 ---
 
@@ -411,6 +451,16 @@ layout: true
 
 ???
 
+Overall, this slide must be familiar to everyone.
+In this case, it represents the workflow for MRI connectivity analyses.
+
+Like most of the neuroimaging modalities, diffusion MRI start in the scanner, data are reconstructed into 4D images that humans can somehow understand, and in our case, convert them from DICOM into BIDS to maximize future reusability.
+
+We next run MRIQC, to obtain an early insight into the data quality.
+Images are then preprocessed (in our case, it'd be a conflict of interest not to do that with fMRIPrep or dMRIPrep), to remove sources of signal of no interest that may bias downstream modeling.
+
+Finally, we extract connectivity matrices and model them statistically.
+
 ---
 
 ## QA/QC of the neuroimaging worflow
@@ -429,6 +479,9 @@ layout: true
 ]
 
 ???
+
+Let's zoom out and insert quality checkpoints.
+The reason is that it has been shown that data quality can bias results, so we want to ensure no subpar image makes all the way into analysis.
 
 ---
 count:false
@@ -450,6 +503,8 @@ count:false
 
 ???
 
+A trivial, but critical first checkpoint is about the completeness and adequacy of metadata and data organization.
+
 ---
 count:false
 
@@ -469,6 +524,8 @@ count:false
 ]
 
 ???
+
+If something fails, for example, we identify that the events timing corresponding to an fMRI task is missing for some subjects, we need to look back and revise our conversion into BIDS.
 
 ---
 count:false
@@ -490,6 +547,8 @@ count:false
 
 ???
 
+Once that checkpoint is cleared, we execute MRIQC and screen the visual report corresponding to each T1-weighted image in the study. At this point, we must have clear exclusion criteria. Some images may need to be excluded at this point.
+
 ---
 count:false
 
@@ -510,6 +569,10 @@ count:false
 
 ???
 
+If the quality of the anatomical image is deemed sufficient for the study requirements, we move on to screening the individual visual reports generated with MRIQC for both diffusion and functional MRI.
+
+Again, some images may not surpass the quality requirements predefined before acquisition and specifically designed for the study at hand.
+
 ---
 count:false
 
@@ -529,6 +592,11 @@ count:false
 ]
 
 ???
+
+We will be carefull and not only run Quality Control (which essentially means trashing, unfortunately, data), but also run Quality Assesment and inform earlier stages of the workflow.
+
+For instance, if an artifact must be addressed during scanning, or the scanner requires a revision.
+It is critical that these feedback loops are triggered immediately so that artifacts do not replicate for the rest of the collection effort.
 
 
 ---
@@ -551,6 +619,8 @@ count:false
 
 ???
 
+The pattern repeats after preprocessing, and fMRIPrep, and dMRIPrep generate reports just for that.
+
 ---
 count:false
 
@@ -570,6 +640,9 @@ count:false
 ]
 
 ???
+
+Again, excluded images may require actions at earlier stages.
+
 
 ---
 count:false
@@ -591,6 +664,8 @@ count:false
 
 ???
 
+The pattern repeats at the connectivity extraction phase.
+
 ---
 count:false
 
@@ -611,6 +686,9 @@ count:false
 
 ???
 
+With a corresponding feedback loop.
+For instance, we may need to revise nuisance regression.
+
 ---
 
 ## QA/QC protocols: 'Swiss-cheese security model'
@@ -629,6 +707,12 @@ count:false
 ]
 
 ???
+
+For those with knowledge about security protocols, this approach will surely evoke the Swiss cheese model.
+
+The model assumes that all QC checkpoints will have holes through which data progresses toward analysis.
+
+By layering several QC checkpoints looking at the data in different ways, we make sure that images with potential to bias the results do not make all the way through the workflow.
 
 ---
 
@@ -649,6 +733,8 @@ count:false
 
 ???
 
+Today, we will be focusing in the first layer on unprocessed data, which we implement with MRIQC.
+
 ---
 count:false
 
@@ -668,6 +754,8 @@ count:false
 ]
 
 ???
+
+Hence, this section of the workflow.
 
 ---
 
@@ -690,6 +778,8 @@ count:false
 
 ???
 
+We created MRIQC at Stanford back in 2016, to assess anatomical and functional images shared through OpenNeuro.
+
 ---
 
 ## MRIQC: QA/QC of unprocessed data
@@ -699,6 +789,14 @@ count:false
 ]
 
 ???
+
+MRIQC provides support for visual and automated assessment.
+
+Visual assessment is supported with the individual reports, which I'll introduce later.
+
+Automated assessment can be built on a number of image quality metrics that we extract from every image.
+
+In this slide, you can see a "group" report generated by MRIQC, plotting several image quality metrics corresponding to the T1w images in a large dataset.
 
 ---
 count:false
@@ -711,6 +809,8 @@ count:false
 
 ???
 
+Let's focus on the two first, which are the coefficient of joint variation of gray and white matter, and the contrast-to-noise ratio.
+
 ---
 count:false
 
@@ -721,6 +821,9 @@ count:false
 ]
 
 ???
+
+If we zoom in, we can find some datapoints where these two particular metrics are outlying.
+We can click on the particular datapoint, and the individual report opens up in our screen.
 
 ---
 count:false
@@ -733,6 +836,8 @@ count:false
 
 ???
 
+In this case, we can see how this particular T1 weighted image has obvious head motion patterns that probably makes it unusable for almost any application.
+
 ---
 
 ## Presenting MRIQC for DWI
@@ -743,6 +848,10 @@ count:false
 
 ???
 
+Over the last year, we have improved MRIQC to generate quality metrics and visualizations.
+
+The one you can see on the screen shows the shell-wise joint distribution of SNR (with reference to the noise floor calculated by means of PCA) in the x axis and FA in the y axes.
+
 ---
 
 ## Data — The Human Connectome PHantom (HCPh)
@@ -752,6 +861,14 @@ count:false
 ]
 
 ???
+
+The development of MRIQC for diffusion has gone hand-in-hand with the collection of the first subset of our Human Connectome Phantom study.
+
+This is developed as a registered report and received Stage 1 at Nature Methods.
+
+We are currently working toward the Stage 2, and will openly release the data with it.
+
+The dataset consists of 72 sessions of diffusion and functional MRI for connectivity analyses.
 
 ---
 
@@ -925,9 +1042,6 @@ Analysis Methods Exhibition Hall (Hall 403)
 ???
 
 
-name: title
-layout: true
-class: center
 ---
 layout: false
 count: false
