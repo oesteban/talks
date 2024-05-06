@@ -370,7 +370,6 @@ Before we get started, please note the QR code at the top.
 It leads to the link below and contains these slides.
 However, the online slides are interactive so I strongly recommend to follow my talk on your phone or your laptop if you have it handy.
 
-I'll first make a summary of the topics -- for those still opening the link the QR code and the text of the link will be visible at the right hand side of the slide.
 
 ---
 name: newsection
@@ -416,7 +415,6 @@ layout: true
 
 ???
 
-Let me re-iterate that the QR code leads to a better experience, as the slides contain interactive plots and renders I could not show up here on stage given the constraints to specific formats.
 
 In this talk, we will first have a bird's eye view over the diffusion MRI pipeline.
 Next, I will propose the establishment of several QA/QC checkpoints along the pipeline to focus on one of the earliest layers: assessing the quality of the unprocessed data.
@@ -457,7 +455,9 @@ In this case, it represents the workflow for MRI connectivity analyses.
 Like most of the neuroimaging modalities, diffusion MRI start in the scanner, data are reconstructed into 4D images that humans can somehow understand, and in our case, convert them from DICOM into BIDS to maximize future reusability.
 
 We next run MRIQC, to obtain an early insight into the data quality.
-Images are then preprocessed (in our case, it'd be a conflict of interest not to do that with fMRIPrep or dMRIPrep), to remove sources of signal of no interest that may bias downstream modeling.
+Images are then preprocessed to remove sources of signal of no interest that may bias downstream modeling.
+
+We employ fMRIPrep and dMRIPrep for preprocessing.
 
 Finally, we extract connectivity matrices and model them statistically.
 
@@ -593,7 +593,9 @@ count:false
 
 ???
 
-We will be carefull and not only run Quality Control (which essentially means trashing, unfortunately, data), but also run Quality Assesment and inform earlier stages of the workflow.
+We will be carefull and not only run Quality Control, which essentially means trashing data.
+
+We also can run Quality Assesment and inform earlier stages of the workflow.
 
 For instance, if an artifact must be addressed during scanning, or the scanner requires a revision.
 It is critical that these feedback loops are triggered immediately so that artifacts do not replicate for the rest of the collection effort.
