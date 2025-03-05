@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="3840"
+   height="2160"
+   viewBox="0 0 1016 571.5"
+   version="1.1"
+   id="svg153259"
+   sodipodi:docname="venn-interests.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1139"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.11223479"
+     inkscape:cx="2027.0008"
+     inkscape:cy="26.72968"
+     inkscape:window-width="1920"
+     inkscape:window-height="1029"
+     inkscape:window-x="1080"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg153259" />
+  <defs
+     id="defs153256">
+    <rect
+       x="1162.2062"
+       y="501.9108"
+       width="486.69366"
+       height="194.74548"
+       id="rect155966" />
+    <rect
+       x="1162.2062"
+       y="501.9108"
+       width="486.69366"
+       height="194.74548"
+       id="rect155966-0" />
+    <rect
+       x="1162.2062"
+       y="501.9108"
+       width="1429.372"
+       height="552.63691"
+       id="rect155966-5" />
+  </defs>
+  <g
+     id="layer1">
+    <circle
+       style="opacity:0.304017;fill:#aeceac;stroke:none;stroke-width:4.99999;stroke-linejoin:round;stroke-dashoffset:8.31308;paint-order:fill markers stroke"
+       id="path153344"
+       cx="405.19971"
+       cy="181.09799"
+       r="150.08916" />
+    <circle
+       style="opacity:0.328262;fill:#ffceac;fill-opacity:1;stroke:none;stroke-width:4.99999;stroke-linejoin:round;stroke-dashoffset:8.31308;paint-order:fill markers stroke"
+       id="path153344-7"
+       cx="610.80029"
+       cy="181.09799"
+       r="150.08916" />
+    <circle
+       style="opacity:0.213009;fill:#aeceff;fill-opacity:1;stroke:none;stroke-width:4.99999;stroke-linejoin:round;stroke-dashoffset:8.31308;paint-order:fill markers stroke"
+       id="path153344-9"
+       cx="508"
+       cy="383.52274"
+       r="150.08916" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-7.9878942,7.2507274)"
+       id="text155964"
+       style="font-size:160px;line-height:1.25;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect155966)"><tspan
+         x="1162.207"
+         y="636.79016"
+         id="tspan2305">Neuro</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,308.58065,7.5682274)"
+       id="text155964-8"
+       style="font-size:160px;line-height:1.25;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect155966-0)"><tspan
+         x="1162.207"
+         y="636.79016"
+         id="tspan2307">ML/AI</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,11.363174,276.35246)"
+       id="text155964-1"
+       style="font-size:160px;line-height:1.25;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect155966-5)"
+       x="544.31921"
+       y="0"><tspan
+         x="1716.8126"
+         y="636.79016"
+         id="tspan2309">S&amp;S</tspan></text>
+  </g>
+</svg>
