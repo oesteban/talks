@@ -498,6 +498,13 @@ Oscar Esteban &lt;<code>phd@oscaresteban.es</code>>
 
 ???
 
+Hello again, everyone!
+
+My name is Oscar Esteban.
+
+Welcome to my second interview for the Research Scientist position at Idiap.
+
+I'm excited to be back to share more details about my work and how it aligns with Idiap and the position.
 
 ---
 
@@ -533,21 +540,15 @@ layout: true
 
 ???
 
-(1) The originality and significance of one of your scientific works
-(approximately 10 minutes).
+As requested, I’ll follow the structure provided for this second interview:
 
-(2) Two of your other major achievements (as defined by the SNSF),
-highlighting selected works from your career. These achievements can
-encompass contributions to knowledge generation, innovation, research
-advancement, and the development and support of peers and the broader
-research community. When describing these achievements, please consider
-your specific role, the work or findings and their impact on science or
-society, and your application of skills and new methods to foster
-innovation, new ideas, and projects (approximately 7 minutes).
+I’ll discuss one major scientific work—my Human Connectome Phantom or HCPh project—
 
-(3) Your research grant submission plan for the first two years,
-including potential collaborations with non-academic partners
-(approximately 3 minutes).
+then highlight two achievements,
+
+and finally share my grant submission plan.
+
+But first, I will allow myself to include a bit of context along the way to situate my research program and future goals.
 
 
 ---
@@ -573,6 +574,12 @@ count:false
 
 ???
 
+I work in neuroimaging, specifically on structural and functional connectivity, which involves mapping how different parts of the brain interconnect and communicate.
+
+In many ways, these analyses are reminiscent of graph-related machine learning problems—nodes, edges, and so forth—
+
+I’ll show you how that parallels machine learning workflows more generally.
+
 ---
 
 # The research workflow of connectivity analyses
@@ -588,6 +595,12 @@ count:false
 ]
 
 ???
+
+This is the MRI-based connectivity analysis pipeline, in broad strokes.
+
+Interestingly, it looks like any machine learning pipeline: we acquire data, perform quality control, preprocess it, define features, and then apply statistical modeling to extract insights.
+
+For a deeper dive into the details of the neuroimaging worflow, I've participated in several efforts such as the two references given below.
 
 ---
 count:false
@@ -619,6 +632,14 @@ count:false
 
 ???
 
+The pipeline starts with data acquisition, management and quality assurance and control (QA/QC).
+
+My early work on QA/QC applied machine learning to automatically assess MRI images of the brain, and raised awareness over issues like “site effects”—where data from different scanners or labs can systematically vary, much like “batch effects” in genomics.
+
+One key principle in AI is that models are only as good as their data and neuroimaging is no exception.
+
+This is why my group and I have been deeply involved in BIDS, produced version-controlled, machine-readable standard operating procedures, developed comprehensive QA/QC protocols and created ready-to-use applications to detect suboptimal data early.
+
 ---
 count:false
 
@@ -646,6 +667,16 @@ count:false
 ]
 
 ???
+
+Next in the pipeline is preprocessing, which transforms raw data into something models can reliably interpret.
+
+For example, it identifies signals of no interest for their cleaning or accounting within modeling.
+
+In neuroimaging, preprocessing also deals with accurately locating signals and objects in space and time, and often the definition of relevant brain regions that focus the analysis.
+
+A decade ago, we might have called it “feature engineering.”
+
+Regardless of the term, it’s crucial: “preprocessing” is now a keyword in job posts at major players like Anthropic, DeepMind, and OpenAI.
 
 ---
 count:false
@@ -682,6 +713,18 @@ count:false
 
 ???
 
+Once data are ready for analysis, we formalize connectivity as undirected acyclic graphs, represented with symmetric matrices.
+
+In the case of structural connectivity, we use diffusion MRI to track white-matter bundles pathways connecting brain regions.
+
+For functional connectivity we measure synchronized functional MRI signal fluctuations sensitive to the dynamic oxygen content in blood.
+
+I’ve been involved in several works applying structural and functional connectivity.
+
+For instance, in Rodrigue 2021, we explored ML approaches to identify clinical biomarkers.
+
+Unfortunately, we had to conclude that, despite promising data quality and reliability remain insufficient for robust biomarker discovery.
+
 ---
 
 # Despite active research, no real-world application
@@ -701,6 +744,24 @@ count:false
 * .large[<i class="fa-solid fa-handshake-simple"></i> Incipient **standardization**] .larger[[[Esteban, (2025)](https://doi.org/10.1007/978-1-0716-4260-3_8)]]
 ]
 ]
+
+???
+
+Therefore, although simple on the surface, the workflow is highly-complex and each step introduces potential variability.
+
+Complicating matters further, every lab around the world might use a slightly different pipeline.
+
+Different tools, different parameters—lead to inconsistent results.
+
+This fragmentation hinders progress and real-world applications of connectivity analyses are very scarce.
+
+Let's compare with genomics.
+
+Neuroimaging is today in an early stage of standardization akin to genomics at the conclusion of the Human Genome Project in 2003.
+
+One key aspect for the remarkable advance of genomics is precisely the comprehensive standardization process of the pipeline that culminated some 10 years ago.
+
+For that reason, I advocate for replicating this success experience in neuroscience.
 
 ---
 count: false
@@ -728,6 +789,10 @@ count: false
 
 ???
 
+On top of all that methodological variability, there’s also inherent unreliability in measuring connectivity from session to session.
+
+If you scan the same participant twice, back-to-back, you can still get different connectivity measurements, indicating limited test-retest reliability. So we have a twofold problem: inconsistent pipelines and fundamental physiological or measurement-induced fluctuations.
+
 ---
 count:false
 
@@ -751,6 +816,14 @@ count:false
 
 ???
 
+This is why, with the support of an Ambizione project, I launched the Human Connectome Phantom project.
+
+I wanted to generate an ultra-dense, calibration-grade dataset to address both pipeline and measurement unreliability.
+
+The idea is to have a single subject—myself—scanned intensively within a very short time window to minimize brain changes (and hence, serve as a "phantom" reference).
+
+The dataset needed to combine sophisticated functional and structural MR acquisitions, and a wealth of physiological tracking.
+
 ---
 
 ## HCPh: An ultra-dense, calibration dataset
@@ -774,12 +847,15 @@ Naturalistic movie (cognition state variability)
 
 Peer-reviewed pre-registration
 
-Personal involvement
 ]
 
 .left-column3[
 <img src="../assets/hcph-00.svg" width="90%" /><br />
 ]
+
+???
+
+As mentioned, I lent myself as the phantom given the hefty commitment the project involved and the total absence of antecedents of a human being scanned so frequently.
 
 
 ---
@@ -806,7 +882,6 @@ Naturalistic movie (cognition state variability)
 
 Peer-reviewed pre-registration
 
-Personal involvement
 ]
 
 .left-column3[
@@ -815,6 +890,10 @@ Personal involvement
 
 ???
 
+First, our study focused on a single scanner at CHUV.
+
+We collected a very comprehensive MRI protocol with technical sophistication to provide a solid foundation to secondary methodological developments.
+
 ---
 count:false
 
@@ -839,7 +918,6 @@ Naturalistic movie (cognition state variability)
 
 Peer-reviewed pre-registration
 
-Personal involvement
 ]
 
 .left-column3[
@@ -848,6 +926,8 @@ Personal involvement
 
 ???
 
+We collected eye-tracking to assess arousal and analyze correlation with other facets such as head motion.
+
 ---
 count:false
 
@@ -872,7 +952,6 @@ Naturalistic movie (cognition state variability)
 
 Peer-reviewed pre-registration
 
-Personal involvement
 ]
 
 .left-column3[
@@ -881,6 +960,8 @@ Personal involvement
 
 ???
 
+We also obtained a wealth of signals to investigate physiological variability, including expired oxygen and CO2.
+
 ---
 count:false
 
@@ -904,8 +985,6 @@ Emphasis on technical aspects:
 Naturalistic movie (cognition state variability)
 
 Peer-reviewed pre-registration
-
-Personal involvement
 ]
 
 .left-column3[
@@ -938,7 +1017,6 @@ Naturalistic movie (cognition state variability)
 
 Peer-reviewed pre-registration
 
-Personal involvement
 ]
 
 .left-column3[
@@ -971,7 +1049,6 @@ Naturalistic movie (cognition state variability)
 
 Peer-reviewed pre-registration
 
-Personal involvement
 ]
 
 .left-column3[
@@ -1004,7 +1081,6 @@ Naturalistic movie (cognition state variability)
 
 Peer-reviewed pre-registration
 
-Personal involvement
 ]
 
 .left-column3[
@@ -1037,7 +1113,6 @@ Naturalistic movie (cognition state variability)
 
 Peer-reviewed pre-registration
 
-Personal involvement
 ]
 
 .left-column3[
@@ -1070,7 +1145,6 @@ Naturalistic movie (cognition state variability)
 
 Peer-reviewed pre-registration
 
-Personal involvement
 ]
 
 .left-column3[
@@ -1103,7 +1177,6 @@ Naturalistic movie (cognition state variability)
 
 Peer-reviewed pre-registration
 
-Personal involvement
 ]
 
 .left-column3[
@@ -1136,7 +1209,6 @@ Naturalistic movie (cognition state variability)
 
 Peer-reviewed pre-registration
 
-Personal involvement
 ]
 
 .left-column3[
@@ -1164,6 +1236,12 @@ Provins et al., (2023)</a>
 <img src="../assets/hcph-full.svg" width="90%" /><br />
 ]
 
+???
+
+The study is accepted as a Stage 1 Registered Report at Nature Methods, accessible with the QR code.
+
+By pre-registering, we locked in our hypotheses and methods up front and addressed designed issues raised by three reviewers before data collection started.
+
 ---
 
 # Why the Registered Report Approach
@@ -1188,6 +1266,14 @@ Provins et al., (2023)</a>
 ]
 
 ???
+
+Registered Reports reduce biases and ensure transparency as it removes incentives to drive the results and interpretation because journals commit to publish the work regardless of the final outcomes.
+
+Given that the HCPh is intended as a communal reference dataset, it was crucial that the design itself was peer-reviewed.
+
+Registered reports are not free of caveats.
+
+With the communal improvement of scientific endeavors, we will be able to shorten the preparation time of pre-registered analysis and ensure that peer-review does not excessively delays the onset of data collection.
 
 ---
 
@@ -1217,10 +1303,15 @@ Provins et al., (2023)</a>
 
 ???
 
-Slide notes:
+We are currently concluding the final Stage 2 reporting the results, to be submitted to the journal within the next 3-4 months.
 
-- Emphasize how HCPh can serve as a “gold standard” for comparing different methods and scanners.
-- Highlight the open-access nature, which encourages broad adoption and secondary analyses.
+We have collected and preprocessed a unique dataset and publicly released its comprehensive standard operating procedures.
+
+Following our pre-registered commitments, we are currently executing our promised analysis involving principal components analyses of functional connectivity and bayesian modelling of structural connectivity.
+
+Finally, we will investigate how structural and functional connectivity measurements agree if obtained with different devices.
+
+This will yield a baseline measure of how stable connectivity metrics can be if the protocol is maximally controlled.
 
 ---
 
@@ -1254,6 +1345,14 @@ Slide notes:
 
 ???
 
+But the impact of HCPh goes far beyond the analyses committed within the Stage 1 report.
+
+We hope to see new “human phantom” datasets at multiple sites, enabling direct cross-site calibration.
+
+HCPh can also serve as ground truth data for AI-driven motion-correction algorithms, generative modeling, or even real-time scanning protocols.
+
+Essentially, we’re complementing standardization efforts (like NiPreps) with a calibration resource that addresses test-retest and multi-site reproducibility.
+
 ---
 count:false
 
@@ -1276,6 +1375,8 @@ count:false
 ]
 
 ???
+
+Let's move now into highlighting two of my achievements as per the SNSF definition.
 
 ---
 
@@ -1306,6 +1407,18 @@ www.nipreps.org</a>
 ]
 ]
 
+???
+
+In computational neuroscience I'm recognized by my standardization efforts.
+
+NiPreps is a framework for standardized preprocessing pipelines in neuroimaging.
+
+I often use the “sushi-grade” analogy
+
+just like sushi-grade fish is minimally processed but safe to consume,
+
+NiPreps yields “analysis-grade” data, with minimal processing interventions but ready for direct machine learning ingestion.
+
 ---
 
 <p align="center">
@@ -1313,6 +1426,11 @@ www.nipreps.org</a>
 <em>NiPreps</em> (<a href="https://doi.org/10.31219/osf.io/ujxp6">Esteban et al., 2020</a>)
 </p>
 
+???
+
+Here’s the basic architecture.
+
+It’s an ecosystem of modular tools at different levels of abstraction, offering space for AI/ML innovation all accross individual computer vision tasks.
 
 ---
 
@@ -1322,10 +1440,12 @@ www.nipreps.org</a>
 
 * .large[<i class="fa-solid fa-hands-clapping"></i> **Not just wide adoption**]
   .indent[
-  .gray-text[Relevant works: [Caucheteux, Gramfort & King, (2023)](https://doi.org/10.1038/s41562-022-01516-2), [Tozzi et al., (2024)](https://doi.org/10.1038/s41591-024-03057-9), [Hyon et al., (2020)](https://doi.org/10.1073/pnas.2013606117), [Yamashita et al., (2020)](https://doi.org/10.1371/journal.pbio.3000966).]
+  .gray-text[Used in large neuroscientific endeavors: ENIGMA]
 
   .gray-text[Industry: [Flywheel's gears for *MRIQC* and *fMRIPrep*](https://flywheel.io/insights/blog/comprehensive-support-bids#:~:text=The%20Flywheel%20Gear%20Exchange%20currently,to%20download%20your%20entire), [Amazon Web Services featured *fMRIPrep*](https://aws.amazon.com/blogs/opensource/fmri-data-preprocessing-aws-fmriprep/#:~:text=itself,efforts%20on%20preprocessing%20fMRI%20data), 
   [QMENTA's RS fMRI tool derived from *fMRIPrep*](https://catalog.qmenta.com/tool/resting-state-fmri#:~:text=Catalog%20catalog,Networks%3B%20%E2%80%A2%20Salience%20Network)]
+
+  .gray-text[Relevant works: [Caucheteux, Gramfort & King, (2023)](https://doi.org/10.1038/s41562-022-01516-2), [Tozzi et al., (2024)](https://doi.org/10.1038/s41591-024-03057-9), [Hyon et al., (2020)](https://doi.org/10.1073/pnas.2013606117), [Yamashita et al., (2020)](https://doi.org/10.1371/journal.pbio.3000966).]
   ]
 
 * .large[<i class="fa-solid fa-people-group"></i> **Built a Lasting Community**]
@@ -1342,11 +1462,18 @@ www.nipreps.org</a>
 
 ???
 
-- Focus on two distinguishing aspects of NiPreps:
-  1. The **community** that grew organically outside of a single lab, necessitating robust governance and licensing strategies.
-  2. The **standardization approach** to boost reliability, complementing the repetition-based approach of HCPh.
-- Emphasize the “reverse tech transfer” pattern: used industrial devops concepts to improve academic research pipelines.
+Beyond citations and the staggering usage figures I showed in my first presentation, NiPreps is a major achievement by DORA principles.
 
+NiPreps is used in large consortia like ENIGMA, given a foundation to pioneering clinical applications such as Tozzi 2024, and is offered by major industry players like Flywheel, QMENTA, and even AWS workflows.
+
+
+The NiPreps framework is driven by a community involving more than 100 scientist globally and their adoption continues growing.
+
+That’s the real impact: it’s changing how people conduct imaging studies and ensuring higher data quality across labs.
+
+One distinct reason for success is that we contributed to bridge the gap between research and real-world applicationi by reversing the typical knowledge transference flow:
+
+We integrate software engineering best practices from devops and industry for the standardization and solidification of the neuroimaging workflow.
 
 ---
 
@@ -1374,8 +1501,17 @@ www.nipreps.org</a>
 
 ???
 
-- These events are prime examples of how I share open-science skills in informal, practical settings.
-- Brainhacks and NiPraxis bring researchers together to learn, code, and improve workflows collectively.
+My second major achievement is my broader open science advocacy, training, and mentorship.
+
+On average, I lead or contribute to over 2,000 code commits a year on GitHub, spread across 80+ repositories.
+
+I run the “NiPraxis” course, an off-curriculum, hands-on training series teaching reproducible pipelines to new researchers.
+
+I also organize hackathons and BrainHacks to foster collaborative code sprints.
+
+The aim is to seed a culture of openness and reproducibility—making sure early-career scientists learn these best practices from day one.
+
+
 
 ---
 count:false
@@ -1399,40 +1535,92 @@ count:false
 ]
 
 ???
+
+Let's move into my future research plans.
+
 ---
 .boxed-content.centered[
 <img src="images/venn-interests.svg" width="99%" />
 ]
+
+???
+
+This diagram shows the intersection of my core areas: Neuro/Neuroscience for real-world applications, ML/AI and computer vision for powerful algorithmic approaches, and finally Software engineering & standardization (S&S).
+
+I have identified three main funding opportunities which can be loosely assigned to each of these areas.
 
 ---
 .boxed-content.centered[
 <img src="images/venn-grants-1.svg" width="99%" />
 ]
 
+???
+
+The first is an SNSF Division II grant targeting ML/AI techniques for QA/QC on raw MRI signals, known as the “k-space,” before standard image reconstruction.
+
+This project has strong industry connections with MR vendors such as Siemens and could dramatically reduce artifacts early on and save precious dollars sunk into unusable data as well as participants' time.
+
+I see it as an opportunity to partner with ML experts at Idiap who specialize in signal processing, plus non-academic collaborators in the medical imaging industry.
+
+This project obtained a very good scored by a US BRAIN Initiative panel after submission for R01.
+
+Currently, I'm collecting preliminary data in collaboration with Dr. Franceschiello (HES-SO and the sense) to secure a well-rounded submission by October 2025.
+
 ---
 .boxed-content.centered[
 <img src="images/venn-grants-2.svg" width="99%" />
 ]
+
+???
+
+The second is my ERC Consolidator proposal called NETwin (network digital twins for personalized epilepsy).
+
+The idea is to build individualized “digital twins” of a patient’s brain network using SC and FC data, then apply AI-based modeling to predict seizures and treatment outcomes.
+
+This is directly relevant to my background in connectivity, harnessing those improved pipelines from NiPreps and the reliability insights from HCPh.
+
+Again, this proposal will derive from previous funding efforts.
 
 ---
 .boxed-content.centered[
 <img src="images/venn-grants-3.svg" width="99%" />
 ]
 
----
-.boxed-content.centered[
-<img src="images/venn-grants.svg" width="99%" />
-]
+???
+
+The third grant is more speculative and involves industry collaboration through an Innosuisse Innovation project.
+
+To identify potential partners, we plan to hold a dedicated workshop implementing a "continuing education" program offered to Swiss companies.
+
+In addition to potential ex-Idiap figures, I plan to invite Chris Gorgolewski (Antrhopic, and collaborator in the early days of fMRIPrep) and Fabian Pedregosa (Google) as key speakers to ensure the attractiveness.
+
+The concept is to systematically benchmark and calibrate advanced imaging or possibly AI-driven scanning protocols.
+
+This ties nicely to the “human phantom” concept, potentially enabling multi-site calibration with industry-driven R&D to scale it up.
 
 ---
 .boxed-content.centered[
 <img src="images/grant-timeline-baseline.svg" width="99%" />
 ]
 
+???
+
+Here you can see the projected timeline for each grant.
+
+In the early phase, I’d focus on the SNSF grant—especially relevant to Idiap’s ML expertise—then progress to the ERC Consolidator, and finally move on to the industry project.
+
+Of course, this is flexible and will adapt to funding cycles and partnership opportunities.
+
 ---
 .boxed-content.centered[
 <img src="images/grant-timeline.svg" width="99%" />
 ]
+
+???
+
+I have several other ideas at various stages of development, which I’d be delighted to discuss if time permits.
+
+In any case, I hope this presentation shows how I plan to build upon my achievements—HCPh for calibration, NiPreps for pipeline standardization, and open science for broad community impact—to establish a robust research program here at Idiap.
 
 </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
