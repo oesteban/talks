@@ -498,6 +498,32 @@ Oscar Esteban &lt;<code>phd@oscaresteban.es</code>>
 
 ???
 
+---
+layout: false
+count: false
+
+
+.center[
+<a href="https://oesteban.github.io/talks/20250306/">
+  <img src="images/qr-talk-url.svg" alt="workflow" style="width: 20%" />
+  <br />
+  https://oesteban.github.io/talks/20250306/
+</a>
+
+<br />
+<br />
+
+## Harnessing the reliability of neuroimaging bottom-up
+
+Oscar Esteban &lt;<code>phd@oscaresteban.es</code>>
+
+<br />
+
+### Presentation at Idiap Research Institute — 06.03.2025
+]
+
+???
+
 Hello again, everyone!
 
 My name is Oscar Esteban.
@@ -596,7 +622,7 @@ I’ll show you how that parallels machine learning workflows more generally.
 
 ???
 
-This is the MRI-based connectivity analysis pipeline, in broad strokes.
+In broad strokes, this is the MRI-based connectivity analysis pipeline.
 
 Interestingly, it looks like any machine learning pipeline: we acquire data, perform quality control, preprocess it, define features, and then apply statistical modeling to extract insights.
 
@@ -679,7 +705,24 @@ A decade ago, we might have called it “feature engineering.”
 Regardless of the term, it’s crucial: “preprocessing” is now a keyword in job posts at major players like Anthropic, DeepMind, and OpenAI.
 
 ---
-count:false
+
+# fMRIPrep: despite minimal, a complex workflow
+
+.boxed-content.center[
+<br />
+<br />
+<img src="https://github.com/oesteban/fmriprep/raw/f4c7a9804be26c912b24ef4dccba54bdd72fa1fd/docs/_static/fmriprep-21.0.0.svg" width="100%" />
+]
+
+???
+
+Here I'm showing a very much simplified overview of fMRIPrep's design.
+
+Despite it being just "minimal" preprocessing and just one step of the pipeline, its complexity is evident.
+
+Rather than delving into each of these steps, I'll just say that there's a current need to update and improve computer vision algorithms and approaches (segmentation, image registration, dimensionality reduction, etc.) with AI/ML all across the dataflow.
+
+---
 
 # The research workflow of connectivity analyses
 
@@ -715,7 +758,7 @@ count:false
 
 Once data are ready for analysis, we formalize connectivity as undirected acyclic graphs, represented with symmetric matrices.
 
-In the case of structural connectivity, we use diffusion MRI to track white-matter bundles pathways connecting brain regions.
+In the case of structural connectivity, we use diffusion MRI to track pathways of white-matter bundles connecting brain regions.
 
 For functional connectivity we measure synchronized functional MRI signal fluctuations sensitive to the dynamic oxygen content in blood.
 
@@ -753,9 +796,11 @@ Complicating matters further, every lab around the world might use a slightly di
 
 Different tools, different parameters—lead to inconsistent results.
 
-This fragmentation hinders progress and real-world applications of connectivity analyses are very scarce.
+This fragmentation hinders progress and precludes between-study comparisons.
 
-Let's compare with genomics.
+The consequence is an acute scarcity of real-world applications of connectivity analyses.
+
+Let's compare to genomics.
 
 Neuroimaging is today in an early stage of standardization akin to genomics at the conclusion of the Human Genome Project in 2003.
 
@@ -791,7 +836,7 @@ count: false
 
 On top of all that methodological variability, there’s also inherent unreliability in measuring connectivity from session to session.
 
-If you scan the same participant twice, back-to-back, you can still get different connectivity measurements, indicating limited test-retest reliability. So we have a twofold problem: inconsistent pipelines and fundamental physiological or measurement-induced fluctuations.
+If you scan the same participant twice, back-to-back, you can still get different connectivity measurements, indicating limited test-retest reliability.
 
 Despite all these concerns, more than 20 thousand papers were published focusing on functional connectivity and 10 thousand on structural connectivity in 2024, as per Pubmed.
 
@@ -818,9 +863,11 @@ count:false
 
 ???
 
-This is why, with the support of an Ambizione project, I launched the Human Connectome Phantom project.
+Having deeply focused on the standardization to address analytical variability, in 2020 I started to work on the reliability problem of connectivity analysis.
 
-I wanted to generate an ultra-dense, calibration-grade dataset to address both pipeline and measurement unreliability.
+Tat that moment, I identified that the neuroimaging community was lacking an ultra-dense, calibration-grade dataset to address the problem.
+
+With the support of an Ambizione project, I launched the Human Connectome Phantom project.
 
 The idea is to have a single subject—myself—scanned intensively within a very short time window to minimize brain changes (and hence, serve as a "phantom" reference).
 
@@ -962,7 +1009,7 @@ Peer-reviewed pre-registration
 
 ???
 
-We also obtained a wealth of signals to investigate physiological variability, including expired oxygen and CO2.
+We also obtained a wealth of signals to investigate physiological variability, including expired oxygen and CO2 (which is far from standard practice but needed).
 
 ---
 count:false
@@ -994,6 +1041,8 @@ Peer-reviewed pre-registration
 ]
 
 ???
+
+This first wave of data was collected in about 3 weeks to ensure minimal changes on the human brain phantom.
 
 ---
 count:false
@@ -1027,6 +1076,8 @@ Peer-reviewed pre-registration
 
 ???
 
+Data were then standardized, properly stored under version control, and quality-controlled.
+
 ---
 count:false
 
@@ -1058,6 +1109,8 @@ Peer-reviewed pre-registration
 ]
 
 ???
+
+We preprocessed the data with NiPreps
 
 ---
 count:false
@@ -1091,6 +1144,8 @@ Peer-reviewed pre-registration
 
 ???
 
+Next comes connectivity extraction.
+
 ---
 count:false
 
@@ -1122,6 +1177,8 @@ Peer-reviewed pre-registration
 ]
 
 ???
+
+And this process yielded at least 36 pairs of structural and functional matrices.
 
 ---
 count:false
@@ -1155,6 +1212,12 @@ Peer-reviewed pre-registration
 
 ???
 
+But we also wanted to test agreement between scanners.
+
+To do so, we modified the protocol so that it would be suitable for the two clinical scanners with more limited performance.
+
+We collected 12 more sessions on the research scanner with the homogenized protocol.
+
 ---
 count:false
 
@@ -1186,6 +1249,8 @@ Peer-reviewed pre-registration
 ]
 
 ???
+
+And 12 more sessions per scanner on the two clinical scanners.
 
 ---
 count:false
@@ -1219,6 +1284,7 @@ Peer-reviewed pre-registration
 
 ???
 
+Finally, we committed to release all materials (data, code, operating procedures, etc.) open.
 
 ---
 
@@ -1271,9 +1337,11 @@ By pre-registering, we locked in our hypotheses and methods up front and address
 
 ???
 
-Registered Reports reduce biases and ensure transparency as it removes incentives to drive the results and interpretation because journals commit to publish the work regardless of the final outcomes.
+Registered Reports reduce biases and ensure transparency as it removes incentives to drive the results and interpretation.
 
-Given that the HCPh is intended as a communal reference dataset, it was crucial that the design itself was peer-reviewed.
+Why? Because with the acceptance of the Stage 1, journals commit to publish the final work (or Stage 2) regardless of the final outcomes.
+
+Given that the HCPh is intended as a foundational reference dataset, it was crucial that the design itself was peer-reviewed.
 
 Registered reports are not free of caveats.
 
@@ -1480,7 +1548,7 @@ We integrate software engineering best practices from devops and industry for th
 
 ---
 
-# Open Science advocacy, training, and mentorship
+# Open Science Advocacy, Training, & Mentorship
 
 .boxed-content.larger.no-bullet[
 * .large[<i class="fa-solid fa-code"></i> **Open Source** and **transparent research**]
@@ -1506,25 +1574,26 @@ We integrate software engineering best practices from devops and industry for th
 
 ???
 
-My second major achievement is my broader open science advocacy, training, and mentorship.
+My second major achievement revolves around open science advocacy, training, and mentorship.
 
-At this point, it should be clear the HOW is more important to me than the specific results themselves.
+In practice, this means:
 
-On average, I lead or contribute to over 2,000 code commits a year on GitHub, spread across 80+ repositories.
+Contributing to over 2,000 code commits per year across more than 80 open repositories.
 
-I'm convinced that registered reports will become a critical tool toward more rigorous and solid science.
+Embracing Registered Reports to ensure rigorous methodology and better research planification, as opposed to brute-force trial and error.
 
-It is particularly relevant to AI/ML approaches where we often favor brute-force instead of a more responsible forward-looking design of models and experiments.
+Indeed, registered reports will become central to prospectively implementing trustworthy and interpretable models, in contrast to retrospective assurance.
 
-Registered reports will become central to prospectively implementing trustworthy and interpretable models, in contrast to retrospective assurance.
+Organizing **hands-on training** like **NiPraxis** and the **CIBM/fMRIPrep Bootcamp** so newcomers can quickly adopt reproducible pipelines.
 
-I run the “NiPraxis” course, an off-curriculum, hands-on training series teaching reproducible pipelines to new researchers.
+Leading **hackathons** and **BrainHacks** to foster a collaborative environment where diverse skill sets merge.
 
-I also organize hackathons and BrainHacks to foster collaborative code sprints.
+Finally, **mentorship** is key.
 
-The aim is to seed a culture of openness and reproducibility—making sure early-career scientists learn these best practices from day one.
+Through my **AxonLab research group** and broader community support, I help early-career scientists gain confidence and skill in open science practices.
 
-In fact, I'll be rushing to Celine Provins' public defence after this interview.
+
+(Actually, right after this interview, I’ll be heading to our PhD student Celine Provins’ public defense—an exciting milestone for our open-science journey!)
 
 ---
 count:false
@@ -1558,7 +1627,7 @@ Let's move into my future research plans.
 
 ???
 
-This diagram shows the intersection of my core areas: Neuro/Neuroscience for real-world applications, ML/AI and computer vision for powerful algorithmic approaches, and finally Software engineering & standardization (S&S).
+This diagram shows the intersection of my core areas: neuroimaging and computational neuroscience, ML/AI and computer vision, and finally Software engineering & standardization (S&S).
 
 I have identified three main funding opportunities which can be loosely assigned to each of these areas.
 
@@ -1569,15 +1638,18 @@ I have identified three main funding opportunities which can be loosely assigned
 
 ???
 
-The first is an SNSF Division II grant targeting ML/AI techniques for QA/QC on raw MRI signals, known as the “k-space,” before standard image reconstruction.
+The first is an SNSF Division II proposing to streamline QA/QC within the MRI experiment session before images are reconstructed (and therefore interpretable by the human eye).
 
-This project has strong industry connections with MR vendors such as Siemens and could dramatically reduce artifacts early on and save precious dollars sunk into unusable data as well as participants' time.
+The project is not just an idea.
+
+In fact, I responded to an R01 call from the NIH in the US, and despite falling right below the funding line, the project obtained a very good score.
+
+To address the main criticism of the reviewers, I'm collecting preliminary data in collaboration with Dr. Franceschiello (HES-SO and the sense) to secure a well-rounded submission by October 2025.
+
+This project has strong industry connections with MR vendors such as Siemens and could dramatically reduce artifacts early-on and save precious dollars sunk into unusable data as well as participants' time.
 
 I see it as an opportunity to partner with ML experts at Idiap who specialize in signal processing, plus non-academic collaborators in the medical imaging industry.
 
-This project obtained a very good scored by a US BRAIN Initiative panel after submission for R01.
-
-Currently, I'm collecting preliminary data in collaboration with Dr. Franceschiello (HES-SO and the sense) to secure a well-rounded submission by October 2025.
 
 ---
 .boxed-content.centered[
@@ -1592,7 +1664,7 @@ The idea is to build individualized “digital twins” of a patient’s brain n
 
 This is directly relevant to my background in connectivity, harnessing those improved pipelines from NiPreps and the reliability insights from HCPh.
 
-Again, this proposal will derive from previous funding efforts.
+Like the SNSF project, this proposal derives from previous funding efforts.
 
 ---
 .boxed-content.centered[
@@ -1601,7 +1673,7 @@ Again, this proposal will derive from previous funding efforts.
 
 ???
 
-The third grant is more speculative and involves industry collaboration through an Innosuisse Innovation project.
+The third core grant is more speculative and involves industry collaboration through an Innosuisse Innovation project.
 
 To identify potential partners, we plan to hold a dedicated workshop implementing a "continuing education" program offered to Swiss companies.
 
@@ -1621,11 +1693,17 @@ This ties nicely to the “human phantom” concept, potentially enabling multi-
 
 ???
 
-Here you can see the projected timeline for each grant.
+Let's projected these core opportunities into a timeline.
 
-In the early phase, I’d focus on the SNSF grant—especially relevant to Idiap’s ML expertise—then progress to the ERC Consolidator, and finally move on to the industry project.
+As introduced, I'm already focused on the October 25 deadline for the SNSF project.
 
-Of course, this is flexible and will adapt to funding cycles and partnership opportunities.
+Should this first submission be unsuccessful, I would rework the proposal following the feedback and submit again on April 2026.
+
+The next deadline will be for the ERC grant, as early as December 2025 but likely January or Feburary 2026.
+
+This submission is also initiated from a head-start position.
+
+Finally, the Innosuisse Innovation project is left for the second year, to allow the necessary time to identify at least one industrial partner.
 
 ---
 
@@ -1636,6 +1714,10 @@ Of course, this is flexible and will adapt to funding cycles and partnership opp
 ]
 
 ???
+
+Beyond these three core funding opportunities, I've identified other grants to bolster this strategy.
+
+Let's clean up this timeline and leave here only the icons for the three core grants and place these additional opportunities in time.
 
 ---
 count:false
@@ -1648,15 +1730,86 @@ count:false
 
 ???
 
-I have several other ideas at various stages of development, which I’d be delighted to discuss if time permits.
+I'm planning to be a co-PI on a grant Russ Poldrack is preparing to advance fMRIPrep.
+
+I'm also drafting a Werner-Siemens-Stiftung application, which funds projects with industrial application to move AI into raising the quality levels of neuroimaging in the hospital.
+
+I'm planning to apply with a colleague at University of Copenhagen to a novo nordisk data science grant.
+
+And finally with Prof. Molly Bright through the US NSF and Swiss NSF partnership program.
+
+This timeline is highly dynamic and some other opportunities will be tracked and applied for if suitable.
+
 
 ---
 
-# Conclusion & Thanks
+# Conclusion & Next Steps
+
+.boxed-content.large.no-bullet[
+* <i class="fa-solid fa-brain"></i> .larger[Leadership in **Neurocomputing & Neuroimaging**]
+  .indent[
+  .gray-text[Expanding Idiap's AI4Life program, bridging fundamental science and real-world impact]
+  ]
+
+* <i class="fa-solid fa-robot"></i> .larger[**ML/AI Integration**]
+  .indent[
+  .gray-text[Opportunity for cross-disciplinary collaboration inside and beyond Idiap]
+  ]
+
+* <i class="fa-solid fa-network-wired"></i> .larger[**Software & Standardization (S&S)**]
+  .indent[
+  .gray-text[Synergy between academic innovation and real-world deployment of advanced ML solutions]
+  ]
+
+* <i class="fa-solid fa-torch"></i> .larger[**Clear roadmap**]
+  .indent[
+  .gray-text[Two in-progress proposals building on feedback from previous applications, and additional funding opportunities]
+  ]
+]
 
 ???
 
-I hope this presentation shows how I plan to build upon my achievements—HCPh for calibration, NiPreps for pipeline standardization, and open science for broad community impact—to establish a robust research program at Idiap.
+
+Thank you for your attention!  
+I’m eager to initiate and lead a new **neurocomputing** line at Idiap, 
+where advanced **neuroimaging** meets **ML/AI** and **software engineering** 
+under the AI4Life program.  
+My aim is to **develop cutting-edge methods**, **secure external funding**, 
+and **create productive collaborations** both inside Idiap and with industry, 
+ultimately producing **tangible benefits** for science and society.  
+I look forward to your questions!
+
+
+- ML/AI integration is an immediate need today for the neuroimaging pipeline, and within the neurocomputing area we will broaden the scope to neuro-inspired computing etc.
+
+Thank you for your attention!
+
+I’m excited about initiating and leading a new neuro-computing research area within the AI4Life program at Idiap, blending the institute's focus on AI/ML and software engineering and produce tangible benefits.
+
+I look forward to your questions.
+
+---
+layout: false
+count: false
+
+
+.center[
+<a href="https://oesteban.github.io/talks/20250306/">
+  <img src="images/qr-talk-url.svg" alt="workflow" style="width: 20%" />
+  <br />
+  https://oesteban.github.io/talks/20250306/
+</a>
+
+<br />
+<br />
+
+# Thank you
+
+Oscar Esteban &lt;<code>phd@oscaresteban.es</code>>
+
+]
+
+???
 
 </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
