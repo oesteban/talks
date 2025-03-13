@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Oscar Esteban 13.03.2025</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/talks/assets/asciinema-player/asciinema-player.css" />
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,700,400italic);
+
+      .blur {
+          -webkit-filter: blur(5px) opacity(.3);
+          -moz-filter: blur(10px) opacity(.3);
+          -o-filter: blur(5px) opacity(.3);
+          -ms-filter: blur(5px) opacity(.3);
+          filter: blur(5px) opacity(.3);
+      }
+
+      html {
+        height: 100%;
+      }
+      body {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        height: 100%;
+      }
+      h1, h2, h3 {
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+
+      .middle {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        width:100%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+
+      .remark-slide-content { height: 100%; padding: 0; font-size: 16pt;}
+      .remark-slide-content h1 { font-size: 2em; color: #738373; }
+      .remark-slide-content h2 { font-size: 1.5em; color: #738373; }
+      .remark-slide-content h3 { font-size: 1.2em; color: #738373; }
+      .footnote {
+        position: absolute;
+        bottom: 0.5em;
+        font-size: 0.7em;
+  left: 6em;
+      }
+      li p { line-height: 1.25em; }
+
+      .remark-slide-content>p { margin-left: 60px; }
+      .remark-slide-content>ul { margin-left: 60px; }
+      .remark-slide-content>ul li { margin-left: 0.8em; }
+
+      .no-bullet > ul {
+        list-style-type: none;
+        padding-left:  0;
+      }
+
+      .no-bullet > ul > li > ul {
+        padding-left:  2.8em;
+      }
+
+      .red { color: #fa0000; }
+      .blue { color: #0000fa; }
+      .green { color: #698b69; }
+
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        background: #e7e8e2;
+        border-radius: 3px;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Roboto Mono'; }
+      .large .remark-code, .large .remark-inline-code { font-size: 0.8em; }
+      .remark-code-line-highlighted     { background-color: #373832; }
+      .pull-left {
+        float: left;
+        width: 45%;
+      }
+      .pull-right {
+        float: right;
+        width: 45%;
+        height: 75%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .section-separator .middle {
+        margin-left: 210px;
+        width: 80%;
+      }
+
+      .fa-solid {
+        color: #026c00;
+      }
+      .fa-brands {
+        color: #026c00;
+      }
+      .fa-blank {
+  color: #ffffff;
+      }
+
+      .fa-solid-dim {
+        color: #026c0020;
+      }
+
+      em {
+        color: #026c00;
+      }
+
+      strong {
+        color: #026c00;
+      }
+
+      a { color: #026c00; text-decoration: underline}
+
+      .gray-text {
+        color: #888;
+      }
+      .gray-text em, .gray-text strong {
+        color: #888;
+      }
+
+      .dim strong {
+        color: #026c0020;
+      }
+
+      .dim em {
+        color: #026c0020;
+      }
+
+      .dimgray-text {
+        color: #08080820;
+      }
+
+      .perma-sidebar {
+        float: left;
+        background-color: #009933;
+        color: #f4f4f4;
+        width: 40px;
+        height: 100%;
+        padding: 0;
+        margin: 0 2em 0 0;
+        text-align: center;
+      }
+      .perma-sidebar p {
+        text-align: left;
+        font-size: 80%;
+        height: 35px;
+        width: 670px;
+        margin: 320px 0 0 -315px;
+      }
+      .perma-sidebar h2:last-of-type, .perma-sidebar h3:last-child {
+        color: #d2c295;
+      }
+
+/*      .sidebar-slug {
+          bottom: 12px;
+          left: 0;
+          position: absolute;
+          width: 210px;
+          text-align: center;
+      }
+      .sidebar-slug img {
+          width: 180px;
+      }*/
+
+      .svg-reportlet { width: 75%; }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        /*font-size: .9em;*/
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        width: 23%;
+        height: 82%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 65%;
+        float: right;
+        padding-top: 1em;
+      }
+      /* Two-column layout (40% left) */
+      .left-column2 {
+        width: 35%;
+        height: 85%;
+        float: left;
+      }
+        .left-column2 h2:last-of-type, .left-column2 h3:last-child {
+          color: #000;
+        }
+      .right-column2 {
+        width: 50%;
+        float: right;
+        padding-top: 1em;
+        margin-right: 2.5em;
+      }
+      /* Two-column layout (60% left) */
+      .left-column3 {
+        display: block;
+        width: auto;
+        height: 85%;
+        margin: 0 32% 0 5%;
+      }
+        .left-column3 h2:last-of-type, .left-column3 h3:last-child {
+          color: #000;
+        }
+
+      .left-column3 li {
+        margin-left: 25px;
+      }
+
+      .right-column3 {
+        width: 30%;
+        float: right;
+        padding-top: 1em;
+        padding-right: 1em;
+      }
+      /* Two-column layout (even split) */
+      .left-column-mid {
+        width: 45%;
+        float: left;
+      }
+      .right-column-mid {
+        width: 45%;
+        float: right;
+      }
+      /* Two-column layout (flipped) */
+      .left-column-inv {
+        color: #777;
+        width: 75%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column-inv {
+        width: 20%;
+        float: right;
+        padding-top: 1em;
+      }
+      .caption {
+          font-size: 0.7em;
+      }
+      .slide-slug {
+          bottom: 12px;
+          opacity: .5;
+          position: absolute;
+          left: 4em;
+      }
+
+      .small code {
+        font-size: 9pt;
+      }
+      .tiny code {
+        font-size: 8.5pt;
+      }
+
+      .small {
+        font-size: 0.7em;
+      }
+
+      .larger {
+        font-size: 1.1em;
+      }
+
+      .large {
+        font-size: 1.6em;
+      }
+
+      .boxed-content {
+        float: left;
+        display: block;
+        width: 89%;
+        padding-right: 4%;
+      }
+
+      .boxed-bottom {
+        clear: both;
+        margin-top: 0px;
+      }
+/*
+      .distribute {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+      }*/
+
+      .distribute {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 80%;
+        width: 100%;
+      }
+
+      .cut-right {
+        margin-right: 100px;
+      }
+
+      .align-right {
+        text-align: right;
+      }
+
+      .rotate{
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+      }
+
+      .hidden-text {
+        color: transparent; /* make the text invisible */
+        user-select: none; /* prevent selection of the text */
+      }
+
+      .pad-left {
+        padding-left: 2.0em;
+      }
+      .install-cmd {
+          top: 20px;
+          position: absolute;
+          right: 4em;
+      }
+      figure {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 8pt;
+      }
+      figcaption {
+        text-align: right;
+        font-size: 1.2em;
+      }
+
+      .program-table td:nth-child(2) {
+        font-size: 1.2em;
+        
+      }
+      .program-table td:nth-child(1) {
+        font-size: 0.9em;
+        color: #999;
+        padding-right: 20px;
+      }
+
+      .people-table td:nth-child(1) {
+        padding-right: 20px;
+      }
+      .people-table img {
+        object-fit: cover;
+        width: 200px;
+        height: 200px;
+        filter: grayscale(1);
+      }
+      .indent {
+        padding-left: 50px;
+      }
+
+      .many-people-table td:nth-child(1) {
+        padding-right: 20px;
+      }
+      .many-people-table td:nth-child(1) img {
+        object-fit: cover;
+        width: 80px;
+        height: 80px;
+      }
+
+      .top-right {
+        font-size: 0.8em;
+        position:  absolute;
+        width: 100px;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        right: 5%;
+      }
+
+      .pad-top li {
+        padding-top: 1.1em;
+      }
+
+      div.vertical-center {
+        /*left: 0;*/
+        width:  85%;
+        margin: -100px 20px 40px 100px;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+      }
+
+      div.white-bg {
+        rgba(0, 0, 0, 0.6);
+      }
+    </style>
+  </head>
+  <body>
+<script src="/talks/assets/asciinema-player/asciinema-player.min.js"></script>
+<script src="https://kit.fontawesome.com/015d4b01de.js" crossorigin="anonymous"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true},
+      jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+      extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+      TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+      equationNumbers: {
+      autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+
+<textarea id="source">
+
+name: title
+layout: true
+class: center
+
+---
+
+name: newsection
+layout: true
+
+.perma-sidebar[
+<p class="rotate">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; height: 20px; padding-top: 6px;" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+  <span style="padding-left: 10px; font-weight: 600;">Introducing Oscar Esteban | 13.03.2025</span>
+</p>
+]
+
+---
+
+# About me
+
+.right-column3.center[
+(Link to slides)
+<a href="https://oesteban.github.io/talks/20250313/">
+  <img src="images/qr-talk-url.svg" alt="workflow" style="width: 100%" />
+  <br />
+  https://oesteban.github.io/talks/20250313/
+</a>
+]
+
+
+.pad-top.left-column3[
+.people-table.larger[
+
+| | |
+|---:|---|
+| ![oscar-esteban](https://www.axonlab.org/images/teampic/OscarEsteban-300x300.jpg) | **Oscar Esteban** <br /> Research & Teaching FNS Fellow <br /> Head of [AxonLab](https://www.axonlab.org) <br /> Dept. of Radiology, CHUV |
+]
+
+I'm a **computational neuroscientist** and **open science** advocate.
+
+Ph.D. (2015) @ Universidad Politécnica de Madrid [ESKAS (2012) @ EPFL],
+PD (2020) @ Stanford University
+<!-- At Stanford University, we created *fMRIPrep* and initiated [*NiPreps*](https://www.nipreps.org), focusing on ensuring robust, standardized research across studies.
+I currently lead the *Human Connectome PHantom project*, tackling the challenge of characterizing the reliability of brain networks. -->
+
+.larger[***Mental* health—both human and machine—**is becoming the next big challenge.]
+
+Hallucinations · Confabulation · Cognitive overload · Forgetting · Delusions · Bias · Attention · Agency · Emergent Behavior
+]
+
+---
+
+<br />
+<br />
+
+<img src="images/career_timeline.svg" alt="career timeline" style="width: 90%" />
+
+
+---
+.boxed-content.centered[
+<img src="images/venn-interests.svg" width="99%" />
+]
+
+???
+
+This diagram shows the intersection of my core areas: neuroimaging and computational neuroscience, ML/AI and computer vision, and finally Software engineering & standardization (S&S).
+
+I have identified three main funding opportunities which can be loosely assigned to each of these areas.
+
+---
+.boxed-content.centered[
+<img src="images/venn-grants-1.svg" width="99%" />
+]
+
+???
+
+The first is an SNSF Division II proposing to streamline QA/QC within the MRI experiment session before images are reconstructed (and therefore interpretable by the human eye).
+
+The project is not just an idea.
+
+In fact, I responded to an R01 call from the NIH in the US, and despite falling right below the funding line, the project obtained a very good score.
+
+To address the main criticism of the reviewers, I'm collecting preliminary data in collaboration with Dr. Franceschiello (HES-SO and the sense) to secure a well-rounded submission by October 2025.
+
+This project has strong industry connections with MR vendors such as Siemens and could dramatically reduce artifacts early-on and save precious dollars sunk into unusable data as well as participants' time.
+
+I see it as an opportunity to partner with ML experts at Idiap who specialize in signal processing, plus non-academic collaborators in the medical imaging industry.
+
+
+---
+.boxed-content.centered[
+<img src="images/venn-grants-2.svg" width="99%" />
+]
+
+???
+
+The second is my ERC Consolidator proposal called NETwin (network digital twins for personalized epilepsy).
+
+The idea is to build individualized “digital twins” of a patient’s brain network using SC and FC data, then apply AI-based modeling to predict seizures and treatment outcomes.
+
+This is directly relevant to my background in connectivity, harnessing those improved pipelines from NiPreps and the reliability insights from HCPh.
+
+Like the SNSF project, this proposal derives from previous funding efforts.
+
+---
+.boxed-content.centered[
+<img src="images/venn-grants-3.svg" width="99%" />
+]
+
+???
+
+The third core grant is more speculative and involves industry collaboration through an Innosuisse Innovation project.
+
+To identify potential partners, we plan to hold a dedicated workshop implementing a "continuing education" program offered to Swiss companies.
+
+In addition to potential ex-Idiap figures, I plan to invite Chris Gorgolewski (Antrhopic, and collaborator in the early days of fMRIPrep) and Fabian Pedregosa (Google) as key speakers to ensure the attractiveness.
+
+The concept is to systematically benchmark and calibrate advanced imaging or possibly AI-driven scanning protocols.
+
+This ties nicely to the “human phantom” concept, potentially enabling multi-site calibration with industry-driven R&D to scale it up.
+
+---
+
+# Grant roadmap—core grants
+
+.boxed-content.centered[
+<img src="images/grant-timeline-baseline.svg" width="99%" />
+]
+
+???
+
+Let's projected these core opportunities into a timeline.
+
+As introduced, I'm already focused on the October 25 deadline for the SNSF project.
+
+Should this first submission be unsuccessful, I would rework the proposal following the feedback and submit again on April 2026.
+
+The next deadline will be for the ERC grant, as early as December 2025 but likely January or Feburary 2026.
+
+This submission is also initiated from a head-start position.
+
+Finally, the Innosuisse Innovation project is left for the second year, to allow the necessary time to identify at least one industrial partner.
+
+---
+count:false
+
+# Grant roadmap—other
+
+.boxed-content.centered[
+<img src="images/grant-timeline.svg" width="99%" />
+]
+
+???
+
+I'm planning to be a co-PI on a grant Russ Poldrack is preparing to advance fMRIPrep.
+
+I'm also drafting a Werner-Siemens-Stiftung application, which funds projects with industrial application to move AI into raising the quality levels of neuroimaging in the hospital.
+
+I'm planning to apply with a colleague at University of Copenhagen to a novo nordisk data science grant.
+
+And finally with Prof. Molly Bright through the US NSF and Swiss NSF partnership program.
+
+This timeline is highly dynamic and some other opportunities will be tracked and applied for if suitable.
+
+
+---
+
+# Conclusion & Next Steps
+<br />
+
+.boxed-content.larger.no-bullet[
+* <i class="fa-solid fa-brain"></i> .larger[Leadership in **Neurocomputing & Neuroimaging**]
+  .indent[
+  .gray-text[Bridging fundamental science and real-world impact]
+  ]
+
+* <i class="fa-solid fa-forward"></i> .larger[**ML/AI Integration**]
+  .indent[
+  .gray-text[Defining the next-generation neuro-engineering technology]
+  ]
+
+* <i class="fa-solid fa-bridge"></i> .larger[**Software & Standardization (S&S)**]
+  .indent[
+  .gray-text[Bridging research and real-world deployment by industry]
+  ]
+
+* <i class="fa-solid fa-location-arrow"></i> .larger[**Clear roadmap**]
+  .indent[
+  .gray-text[Two in-progress proposals building on feedback from previous applications, and additional funding opportunities]
+  ]
+]
+
+???
+
+
+Thank you for your attention!
+
+I’m excited about initiating and leading a new neuro-computing research area within the AI4Life program at Idiap, blending the institute's focus on AI/ML and software engineering and produce tangible benefits.
+
+I look forward to your questions.
+
+---
+layout: false
+count: false
+
+
+.center[
+<a href="https://oesteban.github.io/talks/20250313/">
+  <img src="images/qr-talk-url.svg" alt="workflow" style="width: 20%" />
+  <br />
+  https://oesteban.github.io/talks/20250313/
+</a>
+
+<br />
+<br />
+
+# Thank you
+
+Oscar Esteban &lt;<code>phd@oscaresteban.es</code>>
+
+]
+
+???
+
+</textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <script>
+      // Use: ![:img Alt text with spaces but not commas, 50%](image.png)
+      remark.macros.img = function (altText, width) {
+        var url = this;
+        return '<img alt="' + altText + '" src="' + url + '" style="width: ' + width + '" />';
+      };
+      // Use: ![:video](10.5129/10234)
+      remark.macros.video = function (width) {
+        var url = this;
+        return '<video src="' + url + '" width="' + width + '" preload="auto" controls />';
+      };
+      // Use: ![:doi](10.5129/10234)
+      remark.macros.doi = function () {
+        var doi = this;
+        return '<a href="https://doi.org/' + doi + '">' + doi + '</a>';
+      };
+
+      var slideshow = remark.create({
+          highlightStyle: 'monokai',
+          highlightLanguage: 'remark',
+          highlightLines: true,
+          countIncrementalSlides: false,
+          highlightSpans: true,
+          ratio: '16:9'
+      });
+    </script>
+  </body>
+</html>
