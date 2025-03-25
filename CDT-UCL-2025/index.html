@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open, Reliable & Repeatable :: CDT 2/04/2025</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../assets/asciinema-player/asciinema-player.css" />
+    <link rel="stylesheet" type="text/css" href="../css/slides.css" />
+  </head>
+  <body>
+<script src="../assets/asciinema-player/asciinema-player.min.js"></script>
+<script src="https://kit.fontawesome.com/015d4b01de.js" crossorigin="anonymous"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true},
+      jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+      extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+      TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+      equationNumbers: {
+      autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+
+<textarea id="source">
+name: title
+layout: true
+class: center
+---
+layout: false
+count: false
+
+
+.center[
+<a href="https://oesteban.github.io/talks/CDT-UCL-2025/">
+  <img src="images/qr-talk-url.svg" alt="workflow" style="width: 20%" />
+  <br />
+  https://oesteban.github.io/talks/CDT-UCL-2025/
+</a>
+
+<br />
+<br />
+
+## Open, Reliable, and Repeatable: Foundations for Breakthroughs in Connectivity Analyses
+
+Oscar Esteban &lt;<code>phd@oscaresteban.es</code>>
+
+<br />
+
+### CDT Seminar April 2<sup>nd</sup>, 2025
+]
+
+???
+
+
+---
+name: newsection
+layout: true
+
+.perma-sidebar[
+<p class="rotate">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; height: 20px; padding-top: 6px;" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+  <span style="padding-left: 10px; font-weight: 600;">Esteban | Mat-Tech Lab | Repeatable Research</span>
+</p>
+]
+  
+</textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <script>
+      // Use: ![:img Alt text with spaces but not commas, 50%](image.png)
+      remark.macros.img = function (altText, width) {
+        var url = this;
+        return '<img alt="' + altText + '" src="' + url + '" style="width: ' + width + '" />';
+      };
+      // Use: ![:video](10.5129/10234)
+      remark.macros.video = function (width) {
+        var url = this;
+        return '<video src="' + url + '" width="' + width + '" preload="auto" controls />';
+      };
+      // Use: ![:doi](10.5129/10234)
+      remark.macros.doi = function () {
+        var doi = this;
+        return '<a href="https://doi.org/' + doi + '">' + doi + '</a>';
+      };
+
+      var slideshow = remark.create({
+          highlightStyle: 'monokai',
+          highlightLanguage: 'remark',
+          highlightLines: true,
+          countIncrementalSlides: false,
+          highlightSpans: true,
+          ratio: '16:9'
+      });
+    </script>
+  </body>
+</html>
