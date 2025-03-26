@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,800,400italic);
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,800,400italic);
+@import url(https://fonts.googleapis.com/css?family=Urbanist:400,800,400italic);
 
 .blur {
     -webkit-filter: blur(5px) opacity(.3);
@@ -13,7 +15,7 @@ html {
 }
 
 body {
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: "Urbanist", "Fira Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     height: 100%;
 }
 
