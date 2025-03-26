@@ -12,8 +12,13 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#">
-  <defs
-     id="defs32081" />
+  <defs id="defs32081">
+   <style type="text/css">
+   <![CDATA[
+    @import url(https://fonts.googleapis.com/css?family=Urbanist:400,800,400italic);
+   ]]>
+   </style>
+  </defs>
   <g
      id="layer1"
      transform="translate(182.42512,95.642982)"
