@@ -503,7 +503,8 @@ figcaption {
 }
 
 .indent {
-    padding-left: 50px;
+    padding-left: 43px;
+    display: block;
 }
 
 .many-people-table td:nth-child(1) {
