@@ -2,7 +2,6 @@
 <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='576.00pt' height='648.00pt' viewBox='0 0 576.00 648.00'>
 <defs>
   <style type='text/css'><![CDATA[
-    @import url(https://fonts.googleapis.com/css?family=Arimo:400,800,400italic);
     .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
       fill: none;
       stroke: #000000;
@@ -948,29 +947,29 @@
 <circle cx='462.60' cy='283.65' r='4.09' style='stroke-width: 0.71; stroke: #EDDAAA; fill: #EDDAAA;' />
 <circle cx='466.27' cy='326.54' r='4.09' style='stroke-width: 0.71; stroke: #A695B8; fill: #A695B8;' />
 <circle cx='385.51' cy='240.76' r='4.09' style='stroke-width: 0.71; stroke: #EDDAAA; fill: #EDDAAA;' />
-<text x='95.02' y='140.61' style='font-size: 23.00px;fill: #F5C241; font-family: "Arimo";' textLength='86.10px' lengthAdjust='spacingAndGlyphs'>defaced</text>
-<text x='95.02' y='162.19' style='font-size: 23.00px; font-weight: bold;fill: #F5C241; font-family: "Arimo";' textLength='64.97px' lengthAdjust='spacingAndGlyphs'>lower</text>
-<text x='448.03' y='453.33' style='font-size: 23.00px;fill: #643296; font-family: "Arimo";' textLength='86.10px' lengthAdjust='spacingAndGlyphs'>defaced</text>
-<text x='458.88' y='474.90' style='font-size: 23.00px; font-weight: bold;fill: #643296; font-family: "Arimo";' textLength='75.83px' lengthAdjust='spacingAndGlyphs'>higher</text>
+<text x='95.02' y='140.61' style='font-size: 23.00px;fill: #F5C241; font-family: "Liberation Sans";' textLength='86.10px' lengthAdjust='spacingAndGlyphs'>defaced</text>
+<text x='95.02' y='162.19' style='font-size: 23.00px; font-weight: bold;fill: #F5C241; font-family: "Liberation Sans";' textLength='64.97px' lengthAdjust='spacingAndGlyphs'>lower</text>
+<text x='448.03' y='453.33' style='font-size: 23.00px;fill: #643296; font-family: "Liberation Sans";' textLength='86.10px' lengthAdjust='spacingAndGlyphs'>defaced</text>
+<text x='458.88' y='474.90' style='font-size: 23.00px; font-weight: bold;fill: #643296; font-family: "Liberation Sans";' textLength='75.83px' lengthAdjust='spacingAndGlyphs'>higher</text>
 <line x1='53.68' y1='302.03' x2='570.52' y2='302.03' style='stroke-width: 1.07; stroke: #7F7F7F; stroke-linecap: butt;' />
 <line x1='53.68' y1='202.80' x2='570.52' y2='202.80' style='stroke-width: 1.07; stroke: #F5C241; stroke-opacity: 0.60; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
 <line x1='53.68' y1='413.86' x2='570.52' y2='413.86' style='stroke-width: 1.07; stroke: #643296; stroke-opacity: 0.60; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
 <line x1='53.68' y1='308.33' x2='570.52' y2='308.33' style='stroke-width: 2.13; stroke-dasharray: 11.38,11.38; stroke-linecap: butt;' />
 <polygon points='249.24,321.77 374.95,321.77 374.87,321.77 375.21,321.76 375.56,321.69 375.88,321.56 376.18,321.39 376.45,321.17 376.68,320.91 376.87,320.61 377.00,320.29 377.09,319.96 377.11,319.61 377.11,319.61 377.11,297.05 377.11,297.05 377.09,296.70 377.00,296.36 376.87,296.04 376.68,295.75 376.45,295.49 376.18,295.27 375.88,295.09 375.56,294.97 375.21,294.90 374.95,294.89 249.24,294.89 249.50,294.90 249.16,294.89 248.81,294.93 248.48,295.03 248.16,295.18 247.88,295.37 247.63,295.61 247.42,295.89 247.26,296.20 247.14,296.53 247.09,296.87 247.08,297.05 247.08,319.61 247.09,319.44 247.09,319.78 247.14,320.13 247.26,320.46 247.42,320.77 247.63,321.04 247.88,321.28 248.16,321.48 248.48,321.63 248.81,321.73 249.16,321.77 ' style='stroke-width: 0.53; stroke: none; fill: #000000;' />
-<text x='250.68' y='313.22' style='font-size: 20.63px;fill: #FFFFFF; font-family: "Arimo";' textLength='47.57px' lengthAdjust='spacingAndGlyphs'>-0.05</text>
-<text x='303.62' y='313.22' style='font-size: 20.63px;fill: #FFFFFF; font-family: "Arimo";' textLength='11.80px' lengthAdjust='spacingAndGlyphs'>±</text>
-<text x='320.78' y='313.22' style='font-size: 20.63px;fill: #FFFFFF; font-family: "Arimo";' textLength='52.73px' lengthAdjust='spacingAndGlyphs'>0.028</text>
+<text x='250.68' y='313.22' style='font-size: 20.63px;fill: #FFFFFF; font-family: "Liberation Sans";' textLength='47.57px' lengthAdjust='spacingAndGlyphs'>-0.05</text>
+<text x='303.62' y='313.22' style='font-size: 20.63px;fill: #FFFFFF; font-family: "Liberation Sans";' textLength='11.80px' lengthAdjust='spacingAndGlyphs'>±</text>
+<text x='320.78' y='313.22' style='font-size: 20.63px;fill: #FFFFFF; font-family: "Liberation Sans";' textLength='52.73px' lengthAdjust='spacingAndGlyphs'>0.028</text>
 <polygon points='71.05,217.26 119.06,217.26 118.97,217.25 119.32,217.24 119.66,217.17 119.98,217.05 120.29,216.87 120.55,216.65 120.78,216.39 120.97,216.10 121.11,215.78 121.19,215.44 121.22,215.10 121.22,215.10 121.22,190.50 121.22,190.50 121.19,190.15 121.11,189.82 120.97,189.50 120.78,189.20 120.55,188.94 120.29,188.72 119.98,188.55 119.66,188.43 119.32,188.36 119.06,188.34 71.05,188.34 71.31,188.36 70.96,188.34 70.62,188.38 70.28,188.48 69.97,188.63 69.68,188.83 69.43,189.07 69.22,189.35 69.06,189.65 68.95,189.98 68.90,190.33 68.89,190.50 68.89,215.10 68.90,214.92 68.90,215.27 68.95,215.61 69.06,215.94 69.22,216.25 69.43,216.53 69.68,216.77 69.97,216.97 70.28,217.12 70.62,217.21 70.96,217.25 ' style='stroke-width: 0.53; stroke: none; fill: #F5C241;' />
-<text x='72.49' y='208.19' style='font-size: 22.76px; font-family: "Arimo";' textLength='45.13px' lengthAdjust='spacingAndGlyphs'>0.81</text>
+<text x='72.49' y='208.19' style='font-size: 22.76px; font-family: "Liberation Sans";' textLength='45.13px' lengthAdjust='spacingAndGlyphs'>0.81</text>
 <polygon points='505.14,428.32 560.47,428.32 560.38,428.31 560.73,428.30 561.07,428.23 561.40,428.11 561.70,427.93 561.97,427.71 562.20,427.45 562.38,427.16 562.52,426.84 562.60,426.50 562.63,426.16 562.63,426.16 562.63,401.56 562.63,401.56 562.60,401.21 562.52,400.88 562.38,400.56 562.20,400.26 561.97,400.00 561.70,399.78 561.40,399.61 561.07,399.49 560.73,399.42 560.47,399.40 505.14,399.40 505.40,399.42 505.05,399.40 504.71,399.45 504.37,399.54 504.06,399.69 503.77,399.89 503.52,400.13 503.31,400.41 503.15,400.71 503.04,401.04 502.99,401.39 502.98,401.56 502.98,426.16 502.99,425.98 502.99,426.33 503.04,426.67 503.15,427.00 503.31,427.31 503.52,427.59 503.77,427.83 504.06,428.03 504.37,428.18 504.71,428.27 505.05,428.31 ' style='stroke-width: 0.53; stroke: none; fill: #643296;' />
-<text x='506.58' y='419.25' style='font-size: 22.76px;fill: #FFFFFF; font-family: "Arimo";' textLength='52.45px' lengthAdjust='spacingAndGlyphs'>-0.91</text>
+<text x='506.58' y='419.25' style='font-size: 22.76px;fill: #FFFFFF; font-family: "Liberation Sans";' textLength='52.45px' lengthAdjust='spacingAndGlyphs'>-0.91</text>
 </g>
 <g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw2NDguMDA=)'>
-<text x='48.74' y='552.83' text-anchor='end' style='font-size: 16.00px;fill: #4D4D4D; font-family: "Arimo";' textLength='14.31px' lengthAdjust='spacingAndGlyphs'>-2</text>
-<text x='48.74' y='430.29' text-anchor='end' style='font-size: 16.00px;fill: #4D4D4D; font-family: "Arimo";' textLength='14.31px' lengthAdjust='spacingAndGlyphs'>-1</text>
-<text x='48.74' y='307.74' text-anchor='end' style='font-size: 16.00px;fill: #4D4D4D; font-family: "Arimo";' textLength='9.15px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text x='48.74' y='185.20' text-anchor='end' style='font-size: 16.00px;fill: #4D4D4D; font-family: "Arimo";' textLength='9.15px' lengthAdjust='spacingAndGlyphs'>1</text>
-<text x='48.74' y='62.66' text-anchor='end' style='font-size: 16.00px;fill: #4D4D4D; font-family: "Arimo";' textLength='9.15px' lengthAdjust='spacingAndGlyphs'>2</text>
+<text x='48.74' y='552.83' text-anchor='end' style='font-size: 16.00px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='14.31px' lengthAdjust='spacingAndGlyphs'>-2</text>
+<text x='48.74' y='430.29' text-anchor='end' style='font-size: 16.00px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='14.31px' lengthAdjust='spacingAndGlyphs'>-1</text>
+<text x='48.74' y='307.74' text-anchor='end' style='font-size: 16.00px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='9.15px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='48.74' y='185.20' text-anchor='end' style='font-size: 16.00px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='9.15px' lengthAdjust='spacingAndGlyphs'>1</text>
+<text x='48.74' y='62.66' text-anchor='end' style='font-size: 16.00px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='9.15px' lengthAdjust='spacingAndGlyphs'>2</text>
 <polyline points='50.94,547.12 53.68,547.12 ' style='stroke-width: 0.00; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='50.94,424.57 53.68,424.57 ' style='stroke-width: 0.00; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='50.94,302.03 53.68,302.03 ' style='stroke-width: 0.00; stroke: #333333; stroke-linecap: butt;' />
@@ -980,16 +979,16 @@
 <polyline points='238.68,601.32 238.68,598.58 ' style='stroke-width: 0.00; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='385.51,601.32 385.51,598.58 ' style='stroke-width: 0.00; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='495.64,601.32 495.64,598.58 ' style='stroke-width: 0.00; stroke: #333333; stroke-linecap: butt;' />
-<text x='128.56' y='614.94' text-anchor='middle' style='font-size: 16.00px;fill: #4D4D4D; font-family: "Arimo";' textLength='58.05px' lengthAdjust='spacingAndGlyphs'>exclude</text>
-<text x='238.68' y='614.94' text-anchor='middle' style='font-size: 16.00px;fill: #4D4D4D; font-family: "Arimo";' textLength='35.81px' lengthAdjust='spacingAndGlyphs'>poor</text>
-<text x='385.51' y='614.94' text-anchor='middle' style='font-size: 16.00px;fill: #4D4D4D; font-family: "Arimo";' textLength='80.95px' lengthAdjust='spacingAndGlyphs'>acceptable</text>
-<text x='495.64' y='614.94' text-anchor='middle' style='font-size: 16.00px;fill: #4D4D4D; font-family: "Arimo";' textLength='67.13px' lengthAdjust='spacingAndGlyphs'>excellent</text>
-<text x='233.65' y='637.24' style='font-size: 22.00px; font-weight: bold; font-family: "Arimo";' textLength='89.02px' lengthAdjust='spacingAndGlyphs'>average</text>
-<text x='328.38' y='637.24' style='font-size: 22.00px; font-family: "Arimo";' textLength='62.16px' lengthAdjust='spacingAndGlyphs'>rating</text>
-<text transform='translate(21.19,448.38) rotate(-90)' style='font-size: 22.00px; font-family: "Arimo";' textLength='72.71px' lengthAdjust='spacingAndGlyphs'>ratings</text>
-<text transform='translate(21.19,369.96) rotate(-90)' style='font-size: 22.00px; font-weight: bold; font-family: "Arimo";' textLength='112.44px' lengthAdjust='spacingAndGlyphs'>difference</text>
-<text transform='translate(21.19,251.80) rotate(-90)' style='font-size: 22.00px; font-family: "Arimo";' textLength='19.38px' lengthAdjust='spacingAndGlyphs'>(Δ</text>
-<text transform='translate(27.47,232.42) rotate(-90)' style='font-size: 17.60px; font-family: "Arimo";' textLength='70.14px' lengthAdjust='spacingAndGlyphs'>ndef-def</text>
-<text transform='translate(21.19,162.29) rotate(-90)' style='font-size: 22.00px; font-family: "Arimo";' textLength='6.60px' lengthAdjust='spacingAndGlyphs'>)</text>
+<text x='128.56' y='614.94' text-anchor='middle' style='font-size: 16.00px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='58.05px' lengthAdjust='spacingAndGlyphs'>exclude</text>
+<text x='238.68' y='614.94' text-anchor='middle' style='font-size: 16.00px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='35.81px' lengthAdjust='spacingAndGlyphs'>poor</text>
+<text x='385.51' y='614.94' text-anchor='middle' style='font-size: 16.00px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='80.95px' lengthAdjust='spacingAndGlyphs'>acceptable</text>
+<text x='495.64' y='614.94' text-anchor='middle' style='font-size: 16.00px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='67.13px' lengthAdjust='spacingAndGlyphs'>excellent</text>
+<text x='233.65' y='637.24' style='font-size: 22.00px; font-weight: bold; font-family: "Liberation Sans";' textLength='89.02px' lengthAdjust='spacingAndGlyphs'>average</text>
+<text x='328.38' y='637.24' style='font-size: 22.00px; font-family: "Liberation Sans";' textLength='62.16px' lengthAdjust='spacingAndGlyphs'>rating</text>
+<text transform='translate(21.19,448.38) rotate(-90)' style='font-size: 22.00px; font-family: "Liberation Sans";' textLength='72.71px' lengthAdjust='spacingAndGlyphs'>ratings</text>
+<text transform='translate(21.19,369.96) rotate(-90)' style='font-size: 22.00px; font-weight: bold; font-family: "Liberation Sans";' textLength='112.44px' lengthAdjust='spacingAndGlyphs'>difference</text>
+<text transform='translate(21.19,251.80) rotate(-90)' style='font-size: 22.00px; font-family: "Liberation Sans";' textLength='19.38px' lengthAdjust='spacingAndGlyphs'>(Δ</text>
+<text transform='translate(27.47,232.42) rotate(-90)' style='font-size: 17.60px; font-family: "Liberation Sans";' textLength='70.14px' lengthAdjust='spacingAndGlyphs'>ndef-def</text>
+<text transform='translate(21.19,162.29) rotate(-90)' style='font-size: 22.00px; font-family: "Liberation Sans";' textLength='6.60px' lengthAdjust='spacingAndGlyphs'>)</text>
 </g>
 </svg>

@@ -36,7 +36,6 @@
     <style
        type="text/css"
        id="style2820"><![CDATA[
-    @import url(https://fonts.googleapis.com/css?family=Arimo:400,800,400italic);
     .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
       fill: none;
       stroke: #000000;
@@ -5564,28 +5563,28 @@
   <text
      x="95.019997"
      y="140.61"
-     style="font-size:23px;font-family:Arimo;fill:#f5c241"
+     style="font-size:23px;font-family:Liberation Sans;fill:#f5c241"
      textLength="86.099998"
      lengthAdjust="spacingAndGlyphs"
      id="text4676">defaced</text>
   <text
      x="95.019997"
      y="162.19"
-     style="font-weight:bold;font-size:23px;font-family:Arimo;fill:#f5c241"
+     style="font-weight:bold;font-size:23px;font-family:Liberation Sans;fill:#f5c241"
      textLength="64.970001"
      lengthAdjust="spacingAndGlyphs"
      id="text4678">lower</text>
   <text
      x="448.03"
      y="453.32999"
-     style="font-size:23px;font-family:Arimo;fill:#643296"
+     style="font-size:23px;font-family:Liberation Sans;fill:#643296"
      textLength="86.099998"
      lengthAdjust="spacingAndGlyphs"
      id="text4680">defaced</text>
   <text
      x="458.88"
      y="474.89999"
-     style="font-weight:bold;font-size:23px;font-family:Arimo;fill:#643296"
+     style="font-weight:bold;font-size:23px;font-family:Liberation Sans;fill:#643296"
      textLength="75.830002"
      lengthAdjust="spacingAndGlyphs"
      id="text4682">higher</text>
@@ -5603,7 +5602,7 @@
        x="48.74"
        y="552.83"
        text-anchor="end"
-       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;Arimo&quot;;"
+       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;Liberation Sans&quot;;"
        textLength="14.31px"
        lengthAdjust="spacingAndGlyphs"
        id="text4710">-2</text>
@@ -5611,7 +5610,7 @@
        x="48.74"
        y="430.29"
        text-anchor="end"
-       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;Arimo&quot;;"
+       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;Liberation Sans&quot;;"
        textLength="14.31px"
        lengthAdjust="spacingAndGlyphs"
        id="text4712">-1</text>
@@ -5619,7 +5618,7 @@
        x="48.74"
        y="307.74"
        text-anchor="end"
-       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;Arimo&quot;;"
+       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;Liberation Sans&quot;;"
        textLength="9.15px"
        lengthAdjust="spacingAndGlyphs"
        id="text4714">0</text>
@@ -5627,7 +5626,7 @@
        x="48.74"
        y="185.20"
        text-anchor="end"
-       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;Arimo&quot;;"
+       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;Liberation Sans&quot;;"
        textLength="9.15px"
        lengthAdjust="spacingAndGlyphs"
        id="text4716">1</text>
@@ -5635,7 +5634,7 @@
        x="48.74"
        y="62.66"
        text-anchor="end"
-       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;Arimo&quot;;"
+       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;Liberation Sans&quot;;"
        textLength="9.15px"
        lengthAdjust="spacingAndGlyphs"
        id="text4718">2</text>
@@ -5679,7 +5678,7 @@
        x="128.56"
        y="614.94"
        text-anchor="middle"
-       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;Arimo&quot;;"
+       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;Liberation Sans&quot;;"
        textLength="58.05px"
        lengthAdjust="spacingAndGlyphs"
        id="text4738">exclude</text>
@@ -5687,7 +5686,7 @@
        x="238.68"
        y="614.94"
        text-anchor="middle"
-       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;Arimo&quot;;"
+       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;Liberation Sans&quot;;"
        textLength="35.81px"
        lengthAdjust="spacingAndGlyphs"
        id="text4740">poor</text>
@@ -5695,7 +5694,7 @@
        x="385.51"
        y="614.94"
        text-anchor="middle"
-       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;Arimo&quot;;"
+       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;Liberation Sans&quot;;"
        textLength="80.95px"
        lengthAdjust="spacingAndGlyphs"
        id="text4742">acceptable</text>
@@ -5703,51 +5702,51 @@
        x="495.64"
        y="614.94"
        text-anchor="middle"
-       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;Arimo&quot;;"
+       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;Liberation Sans&quot;;"
        textLength="67.13px"
        lengthAdjust="spacingAndGlyphs"
        id="text4744">excellent</text>
     <text
        x="233.65"
        y="637.24"
-       style="font-size: 22.00px; font-weight: bold; font-family: &quot;Arimo&quot;;"
+       style="font-size: 22.00px; font-weight: bold; font-family: &quot;Liberation Sans&quot;;"
        textLength="89.02px"
        lengthAdjust="spacingAndGlyphs"
        id="text4746">average</text>
     <text
        x="328.38"
        y="637.24"
-       style="font-size: 22.00px; font-family: &quot;Arimo&quot;;"
+       style="font-size: 22.00px; font-family: &quot;Liberation Sans&quot;;"
        textLength="62.16px"
        lengthAdjust="spacingAndGlyphs"
        id="text4748">rating</text>
     <text
        transform="translate(21.19,448.38) rotate(-90)"
-       style="font-size: 22.00px; font-family: &quot;Arimo&quot;;"
+       style="font-size: 22.00px; font-family: &quot;Liberation Sans&quot;;"
        textLength="72.71px"
        lengthAdjust="spacingAndGlyphs"
        id="text4750">ratings</text>
     <text
        transform="translate(21.19,369.96) rotate(-90)"
-       style="font-size: 22.00px; font-weight: bold; font-family: &quot;Arimo&quot;;"
+       style="font-size: 22.00px; font-weight: bold; font-family: &quot;Liberation Sans&quot;;"
        textLength="112.44px"
        lengthAdjust="spacingAndGlyphs"
        id="text4752">difference</text>
     <text
        transform="translate(21.19,251.80) rotate(-90)"
-       style="font-size: 22.00px; font-family: &quot;Arimo&quot;;"
+       style="font-size: 22.00px; font-family: &quot;Liberation Sans&quot;;"
        textLength="19.38px"
        lengthAdjust="spacingAndGlyphs"
        id="text4754">(Δ</text>
     <text
        transform="translate(27.47,232.42) rotate(-90)"
-       style="font-size: 17.60px; font-family: &quot;Arimo&quot;;"
+       style="font-size: 17.60px; font-family: &quot;Liberation Sans&quot;;"
        textLength="70.14px"
        lengthAdjust="spacingAndGlyphs"
        id="text4756">ndef-def</text>
     <text
        transform="translate(21.19,162.29) rotate(-90)"
-       style="font-size: 22.00px; font-family: &quot;Arimo&quot;;"
+       style="font-size: 22.00px; font-family: &quot;Liberation Sans&quot;;"
        textLength="6.60px"
        lengthAdjust="spacingAndGlyphs"
        id="text4758">)</text>
