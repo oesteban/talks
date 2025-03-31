@@ -55,7 +55,7 @@ count: false
 
 Oscar Esteban &lt;<code><a href="mailto:phd@oscaresteban.es">phd@oscaresteban.es</a></code>>
 
-#### CDT Seminar April 2<sup>nd</sup>, 2025
+#### i4health CDT Seminar April 2<sup>nd</sup>, 2025
 ]
 
 ???
@@ -446,7 +446,7 @@ count: false
 
 .center[
 .boxed-content[
-<object type="image/svg+xml" data="../assets/reproducible-definition-grid-axes-2.svg" style="width: 65%;"></object>
+<object type="image/svg+xml" data="../assets/reproducible-definition-grid-axes-3.svg" style="width: 65%;"></object>
 
 [Esteban, (2025)](https://doi.org/10.1007/978-1-0716-4260-3_8) [[Methods for analyzing large neuroimaging datasets](https://doi.org/10.1007/978-1-0716-4260-3)]
 ]
@@ -459,7 +459,7 @@ count: false
 
 .center[
 .boxed-content[
-<object type="image/svg+xml" data="../assets/reproducible-definition-grid-axes-3.svg" style="width: 65%;"></object>
+<object type="image/svg+xml" data="../assets/reproducible-definition-grid-axes-2.svg" style="width: 65%;"></object>
 
 [Esteban, (2025)](https://doi.org/10.1007/978-1-0716-4260-3_8) [[Methods for analyzing large neuroimaging datasets](https://doi.org/10.1007/978-1-0716-4260-3)]
 ]
@@ -501,12 +501,12 @@ The dataset needed to combine sophisticated functional and structural MR acquisi
 ## HCPh: An ultra-dense, calibration dataset
 
 .right-column3[
-Peer-reviewed pre-registration
+Avoid **between-subject** variability.
 
-Total time span: ~8 weeks
+Short span of time to minimize brain changes (~8 weeks)
 
-* Wave 1: 4 weeks
-* Wave 2: 4 weeks
+* Wave 1: **within-scanner variability**
+* Wave 2: **between-scanner variability**
 
 ]
 
@@ -993,7 +993,56 @@ Provins et al., (2025)</a>
 
 ---
 
-# Bland-Altman analysis
+# Does defacing influence QA/QC decisions?
+
+.boxed-content[
+
+.pull-right.center[
+]
+
+.pull-left[
+<br />
+
+.large[**IXI dataset** (N = 581; 3 sites)]
+* **Manual QA/QC**: <br style="padding-top: 0" /> N = 185 (Hammersmith Hospital, 3T) <br />4 raters
+* **Automated QA/QC**: <br style="padding-top: 0" /> Full dataset <br /> IQMs (image quality metrics)
+
+.large[**Processing**:] <br />
+MRIQC reports (**manual**) and IQMs (**automated**)
+* before defacing (**nondefaced**)
+* after defacing (**defaced**)
+
+([Provins et al., 2025](https://doi.org/10.1101/2024.10.11.617777))
+]
+
+]
+
+---
+
+# Does defacing influence **manual** QA/QC decisions?
+
+.boxed-content[
+
+.pull-right.center[
+<object type="image/svg+xml" data="../assets/defacing-RR-ba-traditional-minimal.svg" style="width: 100%; padding-top: 17pt"></object>
+]
+
+.pull-left[
+<br />
+
+.large[**4 raters** assessed 185 images x2]
+
+.large[**Bland-Altman** analysis]
+
+([Provins et al., 2025](https://doi.org/10.1101/2024.10.11.617777))
+]
+
+]
+
+---
+count: false
+
+# Does defacing influence **manual** QA/QC decisions?
 
 .boxed-content[
 
@@ -1004,14 +1053,17 @@ Provins et al., (2025)</a>
 .pull-left[
 <br />
 
-.large[**IXI dataset** (N = 581; 3 sites)]
-* **Manual QA/QC**: <br style="padding-top: 0" /> N = 185 (Hammersmith Hospital, 3T)
-* **Automated QA/QC**: <br style="padding-top: 0" /> Full dataset
+.large[**4 raters** assessed 185 images x2]
 
-.large[**Processing**:] <br />
-MRIQC reports (**manual**) and IQMs (**automated**)
-* without defacing (**nondefaced**)
-* after defacing (**defaced**)
+.large[**Bland-Altman** analysis]
+
+.larger[
+* Large, asymmetric **variability** <br />LoA = [-0.91, 0.81]
+
+* **Negative**—albeit small—bias<br />
+  𝔼[Δ<sub>ndef-def</sub>] = -0.05
+]
+
 
 ([Provins et al., 2025](https://doi.org/10.1101/2024.10.11.617777))
 ]
@@ -1021,7 +1073,7 @@ MRIQC reports (**manual**) and IQMs (**automated**)
 ---
 count: false
 
-# Bland-Altman analysis
+# Does defacing influence **manual** QA/QC decisions?
 
 .boxed-content[
 
@@ -1032,14 +1084,16 @@ count: false
 .pull-left[
 <br />
 
-.large[**IXI dataset** (N = 581; 3 sites)]
-* **Manual QA/QC**: <br style="padding-top: 0" /> N = 185 (Hammersmith Hospital, 3T)
-* **Automated QA/QC**: <br style="padding-top: 0" /> Full dataset
+.large[**4 raters** assessed 185 images x2]
 
-.large[**Processing**:] <br />
-MRIQC reports (**manual**) and IQMs (**automated**)
-* without defacing (**nondefaced**)
-* after defacing (**defaced**)
+.large[**Bland-Altman** analysis]
+
+.larger[
+* Large, asymmetric **variability** <br />LoA = [-0.91, 0.81]
+
+* **Negative**—albeit small—bias<br />
+  𝔼[Δ<sub>ndef-def</sub>] = -0.05
+]
 
 ([Provins et al., 2025](https://doi.org/10.1101/2024.10.11.617777))
 ]
@@ -1048,7 +1102,7 @@ MRIQC reports (**manual**) and IQMs (**automated**)
 
 ---
 
-# Bland-Altman analysis
+# Does defacing influence **manual** QA/QC decisions?
 
 .boxed-content[
 
@@ -1062,15 +1116,15 @@ MRIQC reports (**manual**) and IQMs (**automated**)
 .pull-left[
 <br />
 
-.large[Large, asymmetric **variability** <br /> LoA = [-0.91, 0.81]]
+.large[
+* **Overoptimistic** defaced 
 
-<br />
+* concentrated at **lowest nondefaced**,
 
-.large[**Negative**—albeit small—bias]
+* **more extreme** &
 
-<br />
-
-.large[Overoptimistic defaced **concentrated at in lowest** nondefaced, **more extreme** & **more numerous**]
+* **more numerous**
+]
 ]
 
 ]
@@ -1346,7 +1400,7 @@ count: false
 
 Oscar Esteban &lt;<code><a href="mailto:phd@oscaresteban.es">phd@oscaresteban.es</a></code>>
 
-**CDT Seminar April 2<sup>nd</sup>, 2025**
+**i4health CDT Seminar April 2<sup>nd</sup>, 2025**
 ]
 
 .left-column3[
