@@ -40,7 +40,7 @@ count: false
 
 .center[
 <a href="https://oesteban.github.io/talks/CDT-UCL-2025/">
-  <img src="images/qr-talk-url.svg" alt="workflow" style="width: 20%" />
+  <object type="image/svg+xml" data="images/qr-talk-url.svg" style="width: 20%"></object>
   <br />
   https://oesteban.github.io/talks/CDT-UCL-2025/
 </a>
@@ -76,14 +76,17 @@ layout: true
 
 # About me
 
+.large[
+**Computational neuroscientist** & **open science** advocate.
+]
+
 .right-column3.center[
 <a href="https://oesteban.github.io/talks/CDT-UCL-2025/">
-  <img src="images/qr-talk-url.svg" alt="workflow" style="width: 100%" />
+  <object type="image/svg+xml" data="images/qr-talk-url.svg" style="width: 80%"></object>
   <br />
   Link to slides
 </a>
 ]
-
 
 .pad-top.left-column3[
 .people-table.larger[
@@ -93,17 +96,12 @@ layout: true
 | ![oscar-esteban](https://www.axonlab.org/images/teampic/OscarEsteban-300x300.jpg) | **Oscar Esteban** <br /> Research & Teaching FNS Fellow <br /> Head of [AxonLab](https://www.axonlab.org) <br /> Dept. of Radiology, CHUV |
 ]
 
-I'm a **computational neuroscientist** and **open science** advocate.
 
-<br />
+.larger[
+* PD (2020) @ Stanford University
+* Ph.D. (2015) @ Universidad Politécnica de Madrid <br />ESKAS (2012) @ EPFL
+]
 
-Ph.D. (2015) @ Universidad Politécnica de Madrid [ESKAS (2012) @ EPFL]
-PD (2020) @ Stanford University
-
-<br />
-
-At Stanford University, we created *fMRIPrep* and initiated [*NiPreps*](https://www.nipreps.org), focusing on ensuring robust, standardized research across studies.
-I currently lead the *Human Connectome PHantom project*, tackling the challenge of characterizing the reliability of brain networks.
 ]
 
 ---
@@ -317,6 +315,8 @@ Unfortunately, we had to conclude that, despite promising data quality and relia
   * .larger[Diffusion MRI [[Maier-Hein et al., (2015)](https://doi.org/10.1038/s41467-017-01285-x)]]
   * .larger[Functional MRI [[Botvinik-Nezer et al., (2020)](https://doi.org/10.1038/s41586-020-2314-9)]]
 
+<br />
+* .large[<i class="fa-solid fa-dna"></i> **Like genomics** between HGP (2003) and NGS (2015)?]
 ]
 ]
 
@@ -394,8 +394,8 @@ count: false
   * .larger[Functional MRI [[Botvinik-Nezer et al., (2020)](https://doi.org/10.1038/s41586-020-2314-9)]]
 
 <br />
-* .large[<i class="fa-solid fa-triangle-exclamation"></i> Insufficient **test-retest reliability**]
-]
+* .large[<i class="fa-solid fa-magnifying-glass-plus"></i> Insufficient **test-retest reliability** at the finer scales of brain units]
+  * .larger[[Nakuci et al., (2023)](https://doi.org/10.1038/s41598-023-33441-3)]]
 ]
 
 ???
@@ -525,22 +525,23 @@ count:false
 ## HCPh: An ultra-dense, calibration dataset
 
 .right-column3[
-fMRI:
+**Anatomy**:
+  * T<sub>1</sub>-weighted & T<sub>2</sub>-weighted
 
-  * 2.2 × 2.2 × 2.2 [mm<sup>3</sup>]
-  * TR = 1.6s
-  * multi-echo (4 echos)
-  * three tasks:
-    * QC task (3min 7s)
-    * naturalistic movie resting (20min 9s)
-    * breath-holding task (6min 0s)
-
-dMRI:
+**Diffusion MRI** (HARDI):
 
   * 1.6 × 1.6 × 1.6 [mm<sup>3</sup>]
   * 6 × b = 0 s/mm<sup>2</sup>
-  * 274 DWIs (b={700,1000,2000,3000} s/mm<sup>2</sup>)
-  * 137 DWIs non-collinear
+  * 274 DWIs <br />137 DWIs non-collinear
+    b={700,1000,2000,3000} s/mm<sup>2</sup>
+
+**Functional MRI** (BOLD): <br />(next slide)
+
+***B<sub>0</sub>* fieldmaps**:
+
+  * GRE (2min 38s)
+  * 4 × EPI/dMRI (54s)
+  * 4 × EPI/fMRI (27s)
 ]
 
 .left-column3[
@@ -559,7 +560,7 @@ count:false
 ## HCPh: An ultra-dense, calibration dataset
 
 .right-column3[
-fMRI:
+**Functional MRI**:
 
   * 2.2 × 2.2 × 2.2 [mm<sup>3</sup>]
   * TR = 1.6s
@@ -569,45 +570,10 @@ fMRI:
     * naturalistic movie resting (20min 9s)
     * breath-holding task (6min 0s)
 
-dMRI:
-
-  * 1.6 × 1.6 × 1.6 [mm<sup>3</sup>]
-  * 6 × b = 0 s/mm<sup>2</sup>
-  * 274 DWIs (b={700,1000,2000,3000} s/mm<sup>2</sup>)
-  * 137 DWIs non-collinear
-
-]
-
-.left-column3[
-<object type="image/svg+xml" data="../assets/hcph-02.svg" style="width: 90%;"></object>
-]
-
-???
-
-We collected eye-tracking to assess arousal and analyze correlation with other facets such as head motion.
-
----
-count:false
-
-## HCPh: An ultra-dense, calibration dataset
-
-.right-column3[
-fMRI:
-
-  * 2.2 × 2.2 × 2.2 [mm<sup>3</sup>]
-  * TR = 1.6s
-  * multi-echo (4 echos)
-  * three tasks:
-    * QC task (3min 7s)
-    * naturalistic movie resting (20min 9s)
-    * breath-holding task (6min 0s)
-
-dMRI:
-
-  * 1.6 × 1.6 × 1.6 [mm<sup>3</sup>]
-  * 6 × b = 0 s/mm<sup>2</sup>
-  * 274 DWIs (b={700,1000,2000,3000} s/mm<sup>2</sup>)
-  * 137 DWIs non-collinear
+<video width="100%" autoplay loop muted>
+  <source src="../assets/mundaka-clip.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
 
 ]
 
@@ -616,7 +582,7 @@ dMRI:
 ]
 
 ???
-
+We collected eye-tracking to assess arousal and analyze correlation with other facets such as head motion.
 We also obtained a wealth of signals to investigate physiological variability, including expired oxygen and CO2 (which is far from standard practice but needed).
 
 ---
@@ -625,20 +591,17 @@ count:false
 ## HCPh: An ultra-dense, calibration dataset
 
 .right-column3[
-Time span: 4 weeks
+Collected within **4 weeks**
 
-B<sub>0</sub> fieldmaps:
+Following stringent **Standard Operating Procedures (SOPs)**
 
-  * GRE (2min 38s)
-  * 4 × EPI/dMRI (54s)
-  * 4 × EPI/fMRI (27s)
-
-Movie-watching RSfMRI:
-
-<video width="100%" autoplay loop muted>
-  <source src="../assets/mundaka-clip.webm" type="video/webm">
-  Your browser does not support the video tag.
-</video>
+.center[
+<a href="https://www.axonlab.org/hcph-sops">
+  <object type="image/svg+xml" data="images/qr-talk-url.svg" style="width: 80%"></object>
+  <br />
+  Link to **public** SOPs
+</a>
+]
 
 ]
 
@@ -918,7 +881,7 @@ count:false
 
 .boxed-content[
 .center[
-<object type="image/svg+xml" data="../assets/neuroimaging-workflow-large.svg" style="width: 90%; padding-bottom: 10pt; padding-top: 100pt;"></object>
+<object type="image/svg+xml" data="../assets/neuroimaging-workflow-large.svg" style="width: 90%; padding-bottom: 55.5pt; padding-top: 120pt;"></object>
 ]
 
 .align-right[
@@ -935,7 +898,109 @@ count:false
 
 .boxed-content[
 .center[
-<img src="../ISMRM2024/images/09-qaqc-workflow.png" alt="workflow" style="width: 100%; padding-bottom: 10pt; padding-top: 42pt;" />
+<object type="image/svg+xml" data="../assets/provins-qaqc-protocol-00.svg" style="width: 100%; padding-bottom: 5pt; padding-top: 40pt;"></object>
+]
+
+.align-right[
+([Provins et al., 2023](http://doi.org/10.3389/fnimg.2022.1073734))
+]
+]
+
+???
+
+---
+count:false
+
+# QA/QC of the neuroimaging worflow
+
+.boxed-content[
+.center[
+<object type="image/svg+xml" data="../assets/provins-qaqc-protocol-01.svg" style="width: 100%; padding-bottom: 5pt; padding-top: 40pt;"></object>
+]
+
+.align-right[
+([Provins et al., 2023](http://doi.org/10.3389/fnimg.2022.1073734))
+]
+]
+
+???
+
+---
+count:false
+
+# QA/QC of the neuroimaging worflow
+
+.boxed-content[
+.center[
+<object type="image/svg+xml" data="../assets/provins-qaqc-protocol-02.svg" style="width: 100%; padding-bottom: 5pt; padding-top: 40pt;"></object>
+]
+
+.align-right[
+([Provins et al., 2023](http://doi.org/10.3389/fnimg.2022.1073734))
+]
+]
+
+???
+
+---
+count:false
+
+# QA/QC of the neuroimaging worflow
+
+.boxed-content[
+.center[
+<object type="image/svg+xml" data="../assets/provins-qaqc-protocol-03.svg" style="width: 100%; padding-bottom: 5pt; padding-top: 40pt;"></object>
+]
+
+.align-right[
+([Provins et al., 2023](http://doi.org/10.3389/fnimg.2022.1073734))
+]
+]
+
+???
+
+---
+count:false
+
+# QA/QC of the neuroimaging worflow
+
+.boxed-content[
+.center[
+<object type="image/svg+xml" data="../assets/provins-qaqc-protocol-04.svg" style="width: 100%; padding-bottom: 5pt; padding-top: 40pt;"></object>
+]
+
+.align-right[
+([Provins et al., 2023](http://doi.org/10.3389/fnimg.2022.1073734))
+]
+]
+
+???
+
+---
+count:false
+
+# QA/QC of the neuroimaging worflow
+
+.boxed-content[
+.center[
+<object type="image/svg+xml" data="../assets/provins-qaqc-protocol-05.svg" style="width: 100%; padding-bottom: 5pt; padding-top: 40pt;"></object>
+]
+
+.align-right[
+([Provins et al., 2023](http://doi.org/10.3389/fnimg.2022.1073734))
+]
+]
+
+???
+
+---
+count:false
+
+# QA/QC of the neuroimaging worflow
+
+.boxed-content[
+.center[
+<object type="image/svg+xml" data="../assets/provins-qaqc-protocol.svg" style="width: 100%; padding-bottom: 5pt; padding-top: 40pt;"></object>
 ]
 
 .align-right[
@@ -951,7 +1016,7 @@ count:false
 
 .boxed-content[
 .center[
-<img src="../ISMRM2024/images/09-qaqc-workflow.png" alt="workflow" style="width:60%" />
+<object type="image/svg+xml" data="../assets/provins-qaqc-protocol.svg" style="width: 60%; padding-bottom: 10pt; padding-top: 10pt;"></object>
 
 <object type="image/svg+xml" data="../ISMRM2024/images/swiss-cheese.svg" style="width:60%"></object>
 
@@ -978,9 +1043,10 @@ By layering several QC checkpoints looking at the data in different ways, we mak
 .right-column3[
 .larger.center[
 .large[**Stage 2 RR**] <br />
-(under review)
+(nearly accepted)
 
-<a href="https://doi.org/10.1101/2024.10.11.617777"><img src="../assets/qr-defacing-stage2-preprint.svg" alt="workflow" style="width: 85%;" />
+<a href="https://doi.org/10.1101/2024.10.11.617777"><object type="image/svg+xml" data="../assets/qr-defacing-stage2-preprint.svg" style="width: 85%;"></object>
+
 Provins et al., (2025)</a>
 ]
 ]
@@ -1396,7 +1462,7 @@ count: false
 # Thank you!
 
 .right-column3.center[
-<a href="https://oesteban.github.io/talks/CDT-UCL-2025/"><img src="images/qr-talk-url.svg" alt="workflow" style="width: 60%" /></a>
+<a href="https://oesteban.github.io/talks/CDT-UCL-2025/"><object type="image/svg+xml" data="images/qr-talk-url.svg" style="width: 60%"></object></a>
 
 Oscar Esteban &lt;<code><a href="mailto:phd@oscaresteban.es">phd@oscaresteban.es</a></code>>
 
