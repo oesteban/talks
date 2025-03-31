@@ -2,6 +2,7 @@
 <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='576.00pt' height='648.00pt' viewBox='0 0 576.00 648.00'>
 <defs>
   <style type='text/css'><![CDATA[
+    @import url(https://fonts.googleapis.com/css?family=Arimo:400,800,400italic);
     .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
       fill: none;
       stroke: #000000;

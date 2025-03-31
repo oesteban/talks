@@ -36,6 +36,7 @@
     <style
        type="text/css"
        id="style2820"><![CDATA[
+    @import url(https://fonts.googleapis.com/css?family=Arimo:400,800,400italic);
     .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
       fill: none;
       stroke: #000000;
