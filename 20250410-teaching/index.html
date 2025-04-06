@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open, Reliable & Repeatable :: CDT 2/04/2025</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../assets/asciinema-player/asciinema-player.css" />
+    <link rel="stylesheet" type="text/css" href="../css/slides.css" />
+  </head>
+  <body>
+<script src="../assets/asciinema-player/asciinema-player.min.js"></script>
+<script src="https://kit.fontawesome.com/015d4b01de.js" crossorigin="anonymous"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true},
+      jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+      extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+      TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+      equationNumbers: {
+      autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+
+<textarea id="source">
+name: title
+layout: true
+class: center
+---
+layout: false
+count: false
+
+
+.center[
+<a href="https://oesteban.github.io/talks/20250410-teaching/">
+  <object type="image/svg+xml" data="images/qr-talk-url.svg" style="width: 20%"></object>
+  <br />
+  https://oesteban.github.io/talks/20250410-teaching/
+</a>
+
+<br />
+<br />
+
+## Course : *Big data infrastructures and programming*
+
+### Défis et Solutions pour l’Analyse de Grands Volumes de Données
+
+<br />
+
+Oscar Esteban &lt;<code><a href="mailto:phd@oscaresteban.es">phd@oscaresteban.es</a></code>>
+
+#### April 10<sup>th</sup>, 2025
+]
+
+???
+
+
+---
+name: newsection
+layout: true
+
+.perma-sidebar[
+<p class="rotate">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; height: 20px; padding-top: 6px;" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+  <span style="padding-left: 10px; font-weight: 600;">Open, Reliable & Repeatable :: CDT 2/04/2025</span>
+</p>
+]
+
+---
+
+# Objectifs pédagogiques du cours
+
+
+.boxed-content.large[
+* faire connaissance avec les **problématiques** qui vont être abordées
+
+  * stockage, calcul et distribution
+
+* **case practique** : *visualisation graphique des mots significatifs les plus fréquents dans un corpus textuel*
+
+  * plusieurs **millions** de documents
+  * brosser un panorama des techniques et des problèmes rencontrés
+]
+---
+
+# Objectif de la séance
+
+.boxed-content.large[
+* **Démontrer un pipeline Big Data** minimal pour analyser un corpus avec Spark.
+
+* Illustrer la **logique d’ingestion, de préparation et de comptage** de mots en contexte HPC/Cloud.
+
+* **Limites de la séance** : nous n’aborderons pas en détail la gestion avancée du stockage, la distribution des données à grande échelle ni la comparaison RDD/DataFrame, car le jeu de données reste modeste et la leçon est centrée sur le fonctionnement général du pipeline.
+]
+
+???
+
+Objectif de la séance (15 minutes) :
+
+    Exposer les principes clés d’un pipeline Big Data (ingestion, distribution, stockage, analyse).
+
+    Illustrer ces principes avec un exemple concret : le traitement du jeu de données 20 Newsgroups (téléchargé via scikit-learn) pour un comptage de fréquences (Word Count).
+
+    Montrer comment Spark peut gérer la répartition des tâches et l’évolutivité (local vs. cluster), même sur un système de fichiers partagé (NFS).
+
+    Démontrer l’importance de la préparation et du nettoyage des données (filtrage de mots vides, normalisation) afin d’obtenir des résultats pertinents.
+
+    Mettre en avant les choix technologiques (RDD vs. DataFrame, stockage local vs. cloud) en fonction des contraintes de performance et de budget.
+
+    Conclure sur l’intérêt de la reproductibilité et de la modularité (scripts de préparation, scripts Spark) pour un flux de travail Big Data robuste.
+
+</textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <script>
+      // Use: ![:img Alt text with spaces but not commas, 50%](image.png)
+      remark.macros.img = function (altText, width) {
+        var url = this;
+        return '<img alt="' + altText + '" src="' + url + '" style="width: ' + width + '" />';
+      };
+      // Use: ![:video](10.5129/10234)
+      remark.macros.video = function (width) {
+        var url = this;
+        return '<video src="' + url + '" width="' + width + '" preload="auto" controls />';
+      };
+      // Use: ![:doi](10.5129/10234)
+      remark.macros.doi = function () {
+        var doi = this;
+        return '<a href="https://doi.org/' + doi + '">' + doi + '</a>';
+      };
+
+      var slideshow = remark.create({
+          highlightStyle: 'monokai',
+          highlightLanguage: 'remark',
+          highlightLines: true,
+          countIncrementalSlides: false,
+          highlightSpans: true,
+          ratio: '16:9'
+      });
+    </script>
+  </body>
+</html>
