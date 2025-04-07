@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Open, Reliable & Repeatable :: CDT 2/04/2025</title>
+    <title>302.1 | Big data, cloud, infras & HPC</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../assets/asciinema-player/asciinema-player.css" />
     <link rel="stylesheet" type="text/css" href="../css/slides.css" />
@@ -48,19 +48,20 @@ count: false
 <br />
 <br />
 
-## Course : *Big data infrastructures and programming*
+## 302 Data computation
 
-### Défis et Solutions pour l’Analyse de Grands Volumes de Données
+### 302.1 – Big data, cloud, infras & HPC (14 ECTS)
 
 <br />
 
 Oscar Esteban &lt;<code><a href="mailto:phd@oscaresteban.es">phd@oscaresteban.es</a></code>>
 
-#### April 10<sup>th</sup>, 2025
+#### 10.04.2025
 ]
 
 ???
 
+Défis et Solutions pour l’Analyse de Grands Volumes de Données
 
 ---
 name: newsection
@@ -69,13 +70,13 @@ layout: true
 .perma-sidebar[
 <p class="rotate">
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; height: 20px; padding-top: 6px;" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
-  <span style="padding-left: 10px; font-weight: 600;">Open, Reliable & Repeatable :: CDT 2/04/2025</span>
+  <span style="padding-left: 10px; font-weight: 600;">302.1 | Big data, cloud, infras & HPC | Course 1</span>
 </p>
 ]
 
 ---
 
-# Objectifs pédagogiques du cours
+# Objectifs généraux du cours
 
 
 .boxed-content.large[
@@ -90,7 +91,7 @@ layout: true
 ]
 ---
 
-# Objectif de la séance
+# Objectifs spécifiques de la séance
 
 .boxed-content.large[
 * **Démontrer un pipeline Big Data** minimal pour analyser un corpus avec Spark.
@@ -115,6 +116,318 @@ Objectif de la séance (15 minutes) :
     Mettre en avant les choix technologiques (RDD vs. DataFrame, stockage local vs. cloud) en fonction des contraintes de performance et de budget.
 
     Conclure sur l’intérêt de la reproductibilité et de la modularité (scripts de préparation, scripts Spark) pour un flux de travail Big Data robuste.
+
+---
+
+# Présentation globale du workflow Big Data
+
+.boxed-content[
+<object type="image/svg+xml" data="images/big-data-workflow-00.svg" style="width: 100%; padding-top: 20pt;"></object>
+]
+
+???
+
+---
+count: false
+
+# Présentation globale du workflow Big Data
+
+.boxed-content[
+<object type="image/svg+xml" data="images/big-data-workflow-01.svg" style="width: 100%; padding-top: 20pt;"></object>
+]
+
+???
+
+---
+count: false
+
+# Présentation globale du workflow Big Data
+
+.boxed-content[
+<object type="image/svg+xml" data="images/big-data-workflow-02.svg" style="width: 100%; padding-top: 20pt;"></object>
+]
+
+???
+
+---
+count: false
+
+# Présentation globale du workflow Big Data
+
+.boxed-content[
+<object type="image/svg+xml" data="images/big-data-workflow-03.svg" style="width: 100%; padding-top: 20pt;"></object>
+]
+
+???
+
+---
+
+# Limites et cadre de la séance
+
+.boxed-content[
+<object type="image/svg+xml" data="images/big-data-workflow-04.svg" style="width: 100%; padding-top: 20pt;"></object>
+]
+
+---
+
+# Présentation de Map-Reduce et Spark
+
+.boxed-content[
+![Map-Reduce](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2016/11/MapReduce-Way-MapReduce-Tutorial-Edureka-768x339.png)
+]
+
+---
+
+# Le jeu de données « 20 Newsgroups »
+
+.boxed-content[
+
+Example: `doc_116.txt`
+
+```
+Subject: PC BOARD Layout Help
+From: <EH1QC@CUNYVM.BITNET>
+Organization: City University of New York
+Lines: 8
+
+Hi,  I have a few questions about laying out a PCB. I am using easytrax for dos
+which is a great program. But what my question is When laying out traces what
+thickness should they be? I am mainly designing low voltage low current boards
+for micro controller apps. What should pad sizes be for resistors? I will be
+turning to a commercial PCB maker to produce 1's of these boards and I was
+wondering what is the minimum distance traces should be from each other. Well
+any info would be great. Thanks.
+                                                 Anton
+```
+]
+
+---
+
+# Exemple de script *PySpark* (1)
+
+.boxed-content[
+```python
+#!/usr/bin/env python
+"""
+Spark job reading the 20 Newsgroups text files from an NFS path,
+applying a stopword filter, and printing the top 100 most frequent tokens.
+"""
+
+import os
+from pathlib import Path
+from pyspark.sql import SparkSession
+from pyspark.sql import functions as F
+
+DATA_DIR = Path(os.getenv("SCRATCH", str(Path.home()))) / "datasets"
+STOPWORDS_PATH = DATA_DIR / "stopwords.txt"
+NEWSGROUPS_PATH = DATA_DIR / "newsgroups"
+
+# Create a set of stop words we don't want to count such as "the"
+stopword_list = {
+  line.strip().lower()
+  for line in STOPWORDS_PATH.read_text().splitlines() if line.strip()
+}
+
+```
+]
+
+---
+count: false
+
+# Exemple de script *PySpark* (2)
+
+.boxed-content[
+```python
+def main():
+    # 1. Initialize Spark
+    spark = SparkSession.builder \
+        .appName("WordCountOnNFS") \
+        .getOrCreate()
+
+    # 2. Read text files as a DataFrame (one column: "value")
+    text_df = spark.read.text(f"{NEWSGROUPS_PATH}/*.txt")
+
+    # 3. Split each line into tokens, explode into rows
+    words_df = text_df.select(
+        F.explode(
+            F.split(F.col("value"), r"\\W+")
+        ).alias("token")
+    )
+
+    # 4. Convert to lowercase
+    words_df = words_df.select(F.lower(F.col("token")).alias("token"))
+
+```
+]
+
+---
+count: false
+
+# Exemple de script *PySpark* (3)
+
+.boxed-content[
+```python
+    # 5. Filter out empty strings, numeric tokens, and stopwords
+    words_df = words_df.filter(
+        (F.col("token") != "") &
+        (~F.col("token").rlike("^[0-9]+$")) &
+        (~F.col("token").isin(stopword_list))
+    )
+
+    # 6. Group by token, count occurrences
+    counts_df = words_df.groupBy("token").count()
+
+    # 7. Get the top 15 words by descending frequency
+    top_15 = counts_df.orderBy(F.desc("count")).limit(15)
+
+    # 9. Show results
+    top_15.show(truncate=False)
+
+    spark.stop()
+
+if __name__ == "__main__":
+    main()
+```
+]
+
+---
+
+# Resilient Distributed Dataset (RDD) vs. DataFrame
+
+.boxed-content[
+```python
+    # 2. Read text files into RDD 
+    text_rdd = spark.sparkContext.textFile(f"{NEWSGROUPS_PATH}/*.txt")
+
+    # 3-4. Convert to lowercase and split into tokens
+    tokens_rdd = text_rdd.flatMap(
+        lambda line: re.split(r"\W+", line.lower())
+    )
+
+    # 5. Filter out empty strings, numeric tokens, and stopwords
+    filtered_rdd = tokens_rdd.filter(
+        lambda token: (
+            token != "" and
+            not re.match(r'^[0-9]+$', token) and
+            token not in stopword_list
+        )
+    )
+
+    # Map each token to (token, 1), then reduce
+    word_counts = filtered_rdd.map(lambda w: (w, 1)) \
+                              .reduceByKey(lambda a, b: a + b)
+
+    # Retrieve the top 15 by descending frequency
+    top_15 = word_counts.takeOrdered(15, key=lambda x: -x[1])
+```
+]
+
+---
+
+# Soumission d’un job HPC avec SBATCH (1)
+
+.boxed-content[
+```bash
+#!/bin/bash
+#SBATCH --job-name=SparkWordCount
+#SBATCH --nodes=4
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=8
+#SBATCH --time=01:00:00
+
+module load spark/3.5.5
+
+# 1. Identify allocated nodes
+scontrol show hostnames $SLURM_NODELIST > node_list.txt
+
+# 2. Pick the first node as Spark master
+MASTER_NODE=$(head -n 1 node_list.txt)
+
+# 3. Start Spark master on MASTER_NODE
+if [ "$HOSTNAME" = "$MASTER_NODE" ]; then
+  $SPARK_HOME/sbin/start-master.sh
+fi
+```
+
+]
+
+---
+count: false
+
+# Soumission d’un job HPC avec SBATCH (2)
+
+.boxed-content[
+```bash
+# 4. Start Spark workers on each allocated node
+for node in $(cat node_list.txt); do
+  srun -N1 -w "$node" "$SPARK_HOME/sbin/start-worker.sh" "spark://$MASTER_NODE:7077"
+done
+
+# 5. Submit the Spark job
+$SPARK_HOME/bin/spark-submit \
+  --master spark://$MASTER_NODE:7077 \
+  --deploy-mode client \
+  $PWD/wordcount.py
+
+# 6. Stop Spark workers
+for node in $(cat node_list.txt); do
+  ssh $node "$SPARK_HOME/sbin/stop-worker.sh"
+done
+
+# 7. Stop Spark master on MASTER_NODE
+if [ "$HOSTNAME" = "$MASTER_NODE" ]; then
+  $SPARK_HOME/sbin/stop-master.sh
+fi
+```
+
+]
+
+
+---
+
+# Démo pratique
+
+.boxed-content[
+<div class="asciicast" id="636539" style="padding-top: 25px"></div>
+]
+
+---
+
+# Analyse des résultats
+
+.boxed-content[
+```
+25/04/07 07:24:09 INFO CodeGenerator: Code generated in 12.294894 ms
++----------+-----+
+|token     |count|
++----------+-----+
+|one       |14635|
+|writes    |13344|
+|article   |12275|
+|people    |9473 |
+|university|9431 |
+|know      |8631 |
+|get       |8343 |
+|think     |7602 |
+|time      |6711 |
+|use       |6673 |
+|new       |6385 |
+|good      |5946 |
+|even      |5380 |
+|see       |5191 |
+|god       |5062 |
++----------+-----+
+25/04/07 07:24:09 INFO SparkContext: SparkContext is stopping with exitCode 0.
+```
+]
+
+---
+
+# Synthèse finale
+
+---
+
+#  Devoirs et pistes d’approfondissement 
 
 </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -142,6 +455,38 @@ Objectif de la séance (15 minutes) :
           countIncrementalSlides: false,
           highlightSpans: true,
           ratio: '16:9'
+      });
+
+      // Now retrieve all IDs of asciinema casts
+      const allcasts = new Map();
+
+      slideshow.on('afterShowSlide', function (slide) {
+        // Slide is the slide being navigated
+        var slideNumber = slide.getSlideIndex();
+        var element = document.getElementsByClassName("remark-visible")[0].getElementsByClassName('asciicast')
+        if (element.length == 0 ) {
+          return;
+        }
+
+        if (allcasts.has(slideNumber)) {
+          allcasts.get(slideNumber).play();
+          return;
+        }
+
+        var castid = element[0].attributes["id"].value;
+        allcasts.set(slideNumber, AsciinemaPlayer.create(
+            'images/spark.cast',
+            document.getElementById('636539'),
+            { autoPlay: true, speed: 3, idle_time_limit: 8, rows: 20, cols: 100 }
+        ));
+
+      });
+      slideshow.on('beforeHideSlide', function (slide) {
+        // Slide is the slide being navigated
+        var slideNumber = slide.getSlideIndex();
+        if (allcasts.has(slideNumber)) {
+          allcasts.get(slideNumber).pause();
+        }
       });
     </script>
   </body>
