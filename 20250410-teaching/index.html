@@ -71,9 +71,7 @@ Oscar Esteban &lt;<code><a href="mailto:phd@oscaresteban.es">phd@oscaresteban.es
 
 ???
 
-Défis et Solutions pour l’Analyse de Grands Volumes de Données
-
-Bonjour à toutes et à tous ! Je suis Oscar Esteban et je vous souhaite la bienvenue dans ce cours « 302.1 — Big data, cloud, infras & HPC ». C’est une introduction aux grands défis du calcul distribué appliqué à des volumes massifs de données, que ce soit en mode cloud ou sur des infrastructures HPC.
+Bonjour à tous ! Je suis Oscar Esteban et je vous souhaite la bienvenue dans ce cours « 302.1 — Big data, cloud, infras & HPC ». C’est une introduction aux grands défis du calcul distribué appliqué à des volumes massifs de données, que ce soit en mode cloud ou sur des infrastructures HPC.
 
 Avec le QR code de gauche vous pouvez consulter toute la présentation de cette séance ; pour la parcourir à votre rythme, et même revenir plus tard sur certaines parties.
 
@@ -96,11 +94,13 @@ layout: true
 
 
 .boxed-content.large[
-* faire connaissance avec les **problématiques** qui vont être abordées
+* **Défis et Solutions** pour l’Analyse de *Big Data*
 
   * stockage, calcul et distribution
 
-* **case pratique** : *visualisation graphique des mots significatifs les plus fréquents dans un corpus textuel*
+* Avec un **case pratique** :
+
+  > *visualisation graphique des mots significatifs les plus fréquents dans un corpus textuel*
 
   * plusieurs **millions** de documents
   * brosser un panorama des techniques et des problèmes rencontrés
@@ -121,11 +121,14 @@ Objectifs de ce cours (au sens large) :
 # Objectifs spécifiques de la séance
 
 .boxed-content.large[
-* **Démontrer un pipeline Big Data** minimal pour analyser un corpus avec Spark.
+* **Démontrer un pipeline avec Spark** pour compter les mots les plus fréquents dans un corpus de text.
 
-* Illustrer la **logique d’ingestion, de préparation et de comptage** de mots en contexte HPC/Cloud.
+* Illustrer la **execution sur HPC**.
 
-* **Limites de la séance** : nous n’aborderons pas en détail la gestion avancée du stockage, la distribution des données à grande échelle ni la comparaison RDD/DataFrame, car le jeu de données reste modeste et la leçon est centrée sur le fonctionnement général du pipeline.
+* **Limites de la séance** :
+
+  * gestion avancée du stockage,
+  * la distribution des données et de compute
 ]
 
 ???
@@ -202,10 +205,10 @@ Ici, nous insistons sur les limites de l’exemple :
 
 ---
 
-# Présentation de Map-Reduce et Spark
+# Présentation de Map-Reduce
 
 .boxed-content[
-![Map-Reduce](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2016/11/MapReduce-Way-MapReduce-Tutorial-Edureka-768x339.png)
+<object type="image/svg+xml" data="images/map-reduce-00.svg" style="width: 100%; padding-top: 20pt;"></object>
 ]
 
 ???
@@ -221,6 +224,72 @@ Spark est une évolution plus flexible :
 - Il utilise le principe Map-Reduce tout en optimisant la gestion mémoire (RDD) et en proposant des APIs DataFrame plus simples. 
 
 - Il peut se déployer sur un cluster HPC ou en mode local, etc.
+
+---
+count: false
+
+# Présentation de Map-Reduce
+
+.boxed-content[
+<object type="image/svg+xml" data="images/map-reduce-01.svg" style="width: 100%; padding-top: 20pt;"></object>
+]
+
+???
+
+---
+count: false
+
+# Présentation de Map-Reduce
+
+.boxed-content[
+<object type="image/svg+xml" data="images/map-reduce-02.svg" style="width: 100%; padding-top: 20pt;"></object>
+]
+
+???
+
+---
+count: false
+
+# Présentation de Map-Reduce
+
+.boxed-content[
+<object type="image/svg+xml" data="images/map-reduce-03.svg" style="width: 100%; padding-top: 20pt;"></object>
+]
+
+???
+
+---
+count: false
+
+# Présentation de Map-Reduce
+
+.boxed-content[
+<object type="image/svg+xml" data="images/map-reduce-04.svg" style="width: 100%; padding-top: 20pt;"></object>
+]
+
+???
+
+---
+count: false
+
+# Présentation de Map-Reduce
+
+.boxed-content[
+<object type="image/svg+xml" data="images/map-reduce-05.svg" style="width: 100%; padding-top: 20pt;"></object>
+]
+
+???
+
+---
+count: false
+
+# Présentation de Map-Reduce
+
+.boxed-content[
+<object type="image/svg+xml" data="images/map-reduce-06.svg" style="width: 100%; padding-top: 20pt;"></object>
+]
+
+???
 
 ---
 
@@ -295,7 +364,7 @@ Ici, on montre le squelette du script :
 
 - Imports de base (os, Path, SparkSession).
 
-- Définition des chemins : DATA_DIR, STOPWORDS_PATH, NEWSGROUPS_PATH.
+- Définition des chemins : DATA\_DIR, STOPWORDS\_PATH, NEWSGROUPS\_PATH.
 
 - Chargement des stopwords (mots vides) depuis un fichier texte.
 
@@ -330,13 +399,13 @@ def main():
 ```
 ]
 
-??? 
+???
 
 Suite du script :
 
 1. Création de la SparkSession (SparkSession.builder…).
 
-2. On lit des fichiers texte depuis NEWSGROUPS_PATH : on obtient un DataFrame avec une colonne "value" par ligne.
+2. On lit des fichiers texte depuis NEWSGROUPS\_PATH : on obtient un DataFrame avec une colonne "value" par ligne.
 
 3. split/explode : on transforme chaque ligne en plusieurs tokens, et on « explose » pour avoir une ligne par token.
 
@@ -375,7 +444,7 @@ if __name__ == "__main__":
 
 ]
 
-??? 
+???
 
 Dernières étapes :
 
@@ -552,7 +621,8 @@ god	5062
 ]
 ]
 
-??? 
+???
+
 Ici, on voit un exemple de top 15 mots les plus fréquents :
 
   one, writes, article, people, etc.
