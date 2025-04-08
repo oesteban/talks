@@ -37,20 +37,30 @@ class: center
 layout: false
 count: false
 
-
 .center[
-<a href="https://oesteban.github.io/talks/20250410-teaching/">
-  <object type="image/svg+xml" data="images/qr-talk-url.svg" style="width: 20%"></object>
-  <br />
-  https://oesteban.github.io/talks/20250410-teaching/
-</a>
 
-<br />
-<br />
+<table style="border-collapse: collapse; border: 0; width: 40%; margin: 50px auto">
+<tr>
+  <td style="border: 0; padding: 0">
+    <a href="https://oesteban.github.io/talks/20250410-teaching/">
+      <object type="image/svg+xml" data="images/qr-talk-url.svg" style="width: 200px"></object>
+      <br />
+      Presentation
+    </a>
+  </td>
+  <td style="border: 0; padding: 0">
+    <a href="https://github.com/oesteban/talks/tree/main/20250410-teaching">
+      <object type="image/svg+xml" data="images/qr-repo-url.svg" style="width: 200px"></object>
+      <br />
+      Code
+    </a>
+  </td>
+</tr>
+</table>
 
-## 302 Data computation
+# 302 Data computation
 
-### 302.1 – Big data, cloud, infras & HPC (14 ECTS)
+## .green[302.1 — Big data, cloud, infras & HPC (14 ECTS)]
 
 <br />
 
@@ -62,6 +72,12 @@ Oscar Esteban &lt;<code><a href="mailto:phd@oscaresteban.es">phd@oscaresteban.es
 ???
 
 Défis et Solutions pour l’Analyse de Grands Volumes de Données
+
+Bonjour à toutes et à tous ! Je suis Oscar Esteban et je vous souhaite la bienvenue dans ce cours « 302.1 — Big data, cloud, infras & HPC ». C’est une introduction aux grands défis du calcul distribué appliqué à des volumes massifs de données, que ce soit en mode cloud ou sur des infrastructures HPC.
+
+Avec le QR code de gauche vous pouvez consulter toute la présentation de cette séance ; pour la parcourir à votre rythme, et même revenir plus tard sur certaines parties.
+
+Au cœur de ma méthodologie d’enseignement, j’encourage l’accès libre aux ressources. C’est pourquoi le QR code de droite mène au dépôt GitHub, où vous retrouverez tout le code source des slides, ainsi que des scripts et exemples supplémentaires. Vous êtes vivement encouragés à contribuer en corrigeant des fautes de frappe, en proposant des améliorations ou en ajoutant des compléments intéressants. Ces contributions seront valorisées : vous serez ajoutés à la liste des contributeurs et vous pourrez gagner quelques points bonus pour la note finale.
 
 ---
 name: newsection
@@ -84,11 +100,22 @@ layout: true
 
   * stockage, calcul et distribution
 
-* **case practique** : *visualisation graphique des mots significatifs les plus fréquents dans un corpus textuel*
+* **case pratique** : *visualisation graphique des mots significatifs les plus fréquents dans un corpus textuel*
 
   * plusieurs **millions** de documents
   * brosser un panorama des techniques et des problèmes rencontrés
 ]
+
+???
+
+Objectifs de ce cours (au sens large) :
+
+1. Découvrir les principales problématiques autour du big data : stockage, calcul et distribution.
+
+2. Aborder un cas pratique orienté « analyse textuelle » : extraire et visualiser les mots les plus fréquents dans un ensemble de documents potentiellement très vaste.
+
+3. Poser un panorama global : depuis la capture des données jusqu’à l’interprétation et la visualisation, en passant par les méthodes de traitement distribué.
+
 ---
 
 # Objectifs spécifiques de la séance
@@ -103,19 +130,13 @@ layout: true
 
 ???
 
-Objectif de la séance (15 minutes) :
+Nous avons 15 minutes pour :
 
-    Exposer les principes clés d’un pipeline Big Data (ingestion, distribution, stockage, analyse).
+- Montrer un pipeline Big Data minimal (lecture, transformation, comptage) avec Spark, sur un cluster HPC ou équivalent.
 
-    Illustrer ces principes avec un exemple concret : le traitement du jeu de données 20 Newsgroups (téléchargé via scikit-learn) pour un comptage de fréquences (Word Count).
+- Expliquer l’ingestion, la préparation des données (stopwords, regex), puis le comptage de fréquences.
 
-    Montrer comment Spark peut gérer la répartition des tâches et l’évolutivité (local vs. cluster), même sur un système de fichiers partagé (NFS).
-
-    Démontrer l’importance de la préparation et du nettoyage des données (filtrage de mots vides, normalisation) afin d’obtenir des résultats pertinents.
-
-    Mettre en avant les choix technologiques (RDD vs. DataFrame, stockage local vs. cloud) en fonction des contraintes de performance et de budget.
-
-    Conclure sur l’intérêt de la reproductibilité et de la modularité (scripts de préparation, scripts Spark) pour un flux de travail Big Data robuste.
+- Nous ne parlerons pas en détail de la distribution avancée (cas de milliers de nœuds), ni de la comparaison poussée RDD vs. DataFrame ; nous voulons simplement donner un aperçu fonctionnel et concret.
 
 ---
 
@@ -168,6 +189,17 @@ count: false
 <object type="image/svg+xml" data="images/big-data-workflow-04.svg" style="width: 100%; padding-top: 20pt;"></object>
 ]
 
+???
+
+Ici, nous insistons sur les limites de l’exemple :
+
+- On n’aborde pas la collecte complexe ni la mise à l’échelle extrême.
+
+- On se concentre sur des fichiers déjà disponibles dans un répertoire « NFS » partagé.
+
+- On montre l’architecture globale, mais on s’arrête à un exercice de comptage de mots pour illustrer la logique d’un pipeline Big Data.
+
+
 ---
 
 # Présentation de Map-Reduce et Spark
@@ -175,6 +207,20 @@ count: false
 .boxed-content[
 ![Map-Reduce](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2016/11/MapReduce-Way-MapReduce-Tutorial-Edureka-768x339.png)
 ]
+
+???
+
+Un bref rappel de la philosophie Map-Reduce :
+
+1. On découpe le jeu de données en blocs (Map), chaque bloc est traité par un worker (e.g., extraire des paires (clé, valeur)).
+
+2. On regroupe (Shuffle) puis on agrège (Reduce) pour obtenir le résultat final.
+
+Spark est une évolution plus flexible : 
+
+- Il utilise le principe Map-Reduce tout en optimisant la gestion mémoire (RDD) et en proposant des APIs DataFrame plus simples. 
+
+- Il peut se déployer sur un cluster HPC ou en mode local, etc.
 
 ---
 
@@ -184,7 +230,9 @@ count: false
 
 Example: `doc_116.txt`
 
-```
+<br />
+
+```Text
 Subject: PC BOARD Layout Help
 From: <EH1QC@CUNYVM.BITNET>
 Organization: City University of New York
@@ -200,6 +248,16 @@ any info would be great. Thanks.
                                                  Anton
 ```
 ]
+
+???
+
+Exemple concret : la collection 20 Newsgroups (environ 20 000 messages sur l'Usenet).
+
+- Chaque fichier contient l’en-tête (Subject, From, etc.) et le corps du message.
+
+- Nous allons extraire, nettoyer et compter les mots (hors stopwords, hors chiffres).
+
+- Sur un jeu plus grand (ex. 200 000 ou 2 millions de documents), on verrait réellement le bénéfice d’un traitement distribué. 
 
 ---
 
@@ -231,6 +289,18 @@ stopword_list = {
 ```
 ]
 
+???
+
+Ici, on montre le squelette du script : 
+
+- Imports de base (os, Path, SparkSession).
+
+- Définition des chemins : DATA_DIR, STOPWORDS_PATH, NEWSGROUPS_PATH.
+
+- Chargement des stopwords (mots vides) depuis un fichier texte.
+
+Ce script nous servira d’exemple pour présenter le pipeline Spark.
+
 ---
 count: false
 
@@ -260,6 +330,20 @@ def main():
 ```
 ]
 
+??? 
+
+Suite du script :
+
+1. Création de la SparkSession (SparkSession.builder…).
+
+2. On lit des fichiers texte depuis NEWSGROUPS_PATH : on obtient un DataFrame avec une colonne "value" par ligne.
+
+3. split/explode : on transforme chaque ligne en plusieurs tokens, et on « explose » pour avoir une ligne par token.
+
+4. Passage en minuscules (lowercase).
+
+On sépare la logique en étapes pour la rendre plus lisible.
+
 ---
 count: false
 
@@ -288,7 +372,23 @@ count: false
 if __name__ == "__main__":
     main()
 ```
+
 ]
+
+??? 
+
+Dernières étapes :
+
+- On contrôle que les tokens ne soient pas vides, numériques, ou un stopword.
+
+- groupBy + count pour le comptage.
+
+- on ordonne par comptage et on prend les 15 les plus fréquents.
+
+- show pour afficher, puis spark.stop().
+
+Ainsi, on a un pipeline complet, minimal, qui illustre la logique Spark en DataFrame. 
+
 
 ---
 
@@ -322,6 +422,14 @@ if __name__ == "__main__":
 ```
 ]
 
+???
+
+La nouvelle infrastructure du Spark optimise et orienté sur les bases de données.
+
+Le système antérieur s'apelle RDD (Resilient Distributed Dataset) et est plus bas-niveau.
+
+- En RDD on manipule map, filter et reduceByKey directement.
+
 ---
 
 # Soumission d’un job HPC avec SBATCH (1)
@@ -350,6 +458,22 @@ fi
 ```
 
 ]
+
+???
+
+Exemple de script SBATCH :
+
+1. Nom du job, nombre de nœuds, cpus, etc.
+
+2. Charger le module Spark.
+
+3. Identifier les nœuds via scontrol.
+
+4. Démarrer le master si on est sur le nœud principal.
+
+Note : c’est un mode « éphémère » ; on crée un cluster Spark à la volée. 
+
+Faites attention à la variable $HOSTNAME, etc.
 
 ---
 count: false
@@ -382,6 +506,17 @@ fi
 
 ]
 
+???
+
+- On lance un worker Spark par nœud (srun).
+
+- On exécute spark-submit pour lancer le job Python (wordcount.py) en mode client.
+
+- Ensuite, on arrête les workers (ssh $node "stop-worker.sh"), puis on arrête le master.
+
+L’ordre est important pour éviter que Spark ne s’arrête avant la fin du job. 
+
+Dans un HPC typique, on utilise parfois ssh plutôt que srun pour que les daemons restent en arrière-plan.
 
 ---
 
@@ -393,41 +528,76 @@ fi
 
 ---
 
-# Analyse des résultats
+# Analyse des résultats (`top15_output.txt`)
 
 .boxed-content[
-```
-25/04/07 07:24:09 INFO CodeGenerator: Code generated in 12.294894 ms
-+----------+-----+
-|token     |count|
-+----------+-----+
-|one       |14635|
-|writes    |13344|
-|article   |12275|
-|people    |9473 |
-|university|9431 |
-|know      |8631 |
-|get       |8343 |
-|think     |7602 |
-|time      |6711 |
-|use       |6673 |
-|new       |6385 |
-|good      |5946 |
-|even      |5380 |
-|see       |5191 |
-|god       |5062 |
-+----------+-----+
-25/04/07 07:24:09 INFO SparkContext: SparkContext is stopping with exitCode 0.
+.large[
+```Text
+one	14635
+writes	13344
+article	12275
+people	9473
+university	9431
+know	8631
+get	8343
+think	7602
+time	6711
+use	6673
+new	6385
+good	5946
+even	5380
+see	5191
+god	5062
 ```
 ]
+]
+
+??? 
+Ici, on voit un exemple de top 15 mots les plus fréquents :
+
+  one, writes, article, people, etc.
+
+On peut interpréter ces résultats. S’il reste des tokens parasites (ex. >, lines, etc.),
+il faudra affiner le regex ou la suppression de l’en-tête. 
+
+Cela donne une idée du pipeline final.
 
 ---
 
 # Synthèse finale
 
+???
+
+Conclusion :
+
+- Nous avons vu un mini pipeline Big Data (Spark + HPC), 
+- Bien que l’exemple soit modeste (20 000 documents), la méthode est la même pour des ensembles beaucoup plus grands.
+- L’objectif était de démontrer la logique Spark : configuration du cluster, script PySpark, et soumission HPC.
+- N’hésitez pas à tester des datasets plus volumineux ou plus variés (Enron emails, Amazon reviews, Wikipedia…).
+
 ---
 
-#  Devoirs et pistes d’approfondissement 
+#  Devoirs et pistes d’approfondissement
+
+???
+
+Pistes pour aller plus loin :
+
+1. Approfondir la partie ingestion (ex. streaming, logs, ingestion depuis le cloud).
+
+2. Expérimenter RDD vs. DataFrame sur un corpus plus lourd, comparer performances.
+
+3. Mettre en place un pipeline complet avec un stockage distribué (S3, HDFS) et 
+   observer l’impact sur le temps de traitement.
+  
+4. Ajouter un module de visualisation (par exemple, générer un nuage de mots, 
+   ou construire un mini-dashboard).
+
+5. Proposer des améliorations (pull requests) dans le dépôt GitHub pour ajouter 
+   d’autres exemples de scripts ou de doc.
+   
+Vos contributions sont les bienvenues !
+
 
 </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
