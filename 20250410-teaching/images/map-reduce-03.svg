@@ -11,6 +11,11 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
      id="defs2">
+    <style type="text/css">
+    <![CDATA[
+     @import url(https://fonts.googleapis.com/css?family=Urbanist:400,800,400italic);
+    ]]>
+    </style>
     <marker
        style="overflow:visible"
        id="Arrow1Send"
