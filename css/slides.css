@@ -419,6 +419,16 @@ a {
     margin-top: 0px;
 }
 
+.bottom-box {
+    position: absolute;
+    bottom: 0;
+    width: 89%;
+    padding-left: 55px;
+    padding-right: 4%;
+    left: 40px;
+    height: 15%;
+}
+
 /*
 .distribute {
   display: flex;
@@ -531,16 +541,6 @@ figcaption {
 
 .pad-top li {
     padding-top: 1.1em;
-}
-
-.bottom-box {
-    position: absolute;
-    bottom: 0;
-    width: 89%;
-    padding-left: 55px;
-    padding-right: 4%;
-    left: 40px;
-    height: 15%;
 }
 
 div.vertical-center {
