@@ -8,7 +8,9 @@
    version="1.1"
    id="svg5"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#">
   <defs
      id="defs2">
     <style type="text/css">
@@ -52,7 +54,7 @@
      id="layer1"
      style="display:inline">
     <g
-       style="fill:#999999;fill-opacity:1"
+       style="fill:#009933;fill-opacity:1"
        id="g857"
        transform="matrix(4.6248411,0,0,4.6248411,247.47777,370.95585)">
       <path
@@ -61,109 +63,105 @@
          d="m 39,9.75 v 6.4286 c 0,2.071 -6.7157,3.75 -15,3.75 -8.2843,0 -15,-1.679 -15,-3.75 V 9.75 C 9,7.67893 15.7157,6 24,6 32.2843,6 39,7.67893 39,9.75 Z M 9.62114,19.7144 C 11.4651,21.2634 17.2049,22.393 24,22.393 c 6.7951,0 12.5349,-1.1296 14.3789,-2.6786 C 38.783,20.0538 39,20.4134 39,20.7857 v 6.4286 c 0,2.071 -6.7157,3.75 -15,3.75 -8.2843,0 -15,-1.679 -15,-3.75 v -6.4285 c 2e-5,-0.3723 0.21703,-0.732 0.62114,-1.0714 z M 24,33.6786 C 17.205,33.6786 11.4652,32.549 9.62118,31 9.21703,31.3395 9,31.6991 9,32.0714 V 38.5 c 0,2.0711 6.7157,3.75 15,3.75 8.2843,0 15,-1.6789 15,-3.75 V 32.0714 C 39,31.6991 38.783,31.3395 38.3788,31 36.5348,32.549 30.795,33.6786 24,33.6786 Z m 8.3333,3.6547 C 32.3333,37.9777 31.811,38.5 31.1667,38.5 30.5223,38.5 30,37.9777 30,37.3333 c 0,-0.6443 0.5223,-1.1666 1.1667,-1.1666 0.6443,0 1.1666,0.5223 1.1666,1.1666 z m 3.5,0 C 36.4777,37.3333 37,36.811 37,36.1667 37,35.5223 36.4777,35 35.8333,35 c -0.6443,0 -1.1666,0.5223 -1.1666,1.1667 0,0.6443 0.5223,1.1666 1.1666,1.1666 z"
          fill="currentColor"
          id="path848"
-         style="fill:#999999;fill-opacity:1" />
+         style="fill:#009933;fill-opacity:1" />
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:35.2777px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:35.2777px;line-height:1.25;font-family:Inter;-inkscape-font-specification:'Inter Ultra-Bold';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
        x="324.85898"
        y="97.073013"
        id="text9425"><tspan
          id="tspan9423"
-         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:Inter;-inkscape-font-specification:'Inter Ultra-Bold';stroke-width:0.264583"
          x="324.85898"
          y="97.073013" /></text>
-    <g
-       id="g72980"
-       transform="translate(0,-22.214741)">
-      <text
-         xml:space="preserve"
-         style="font-weight:800;font-size:49.3889px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#026c00;fill-opacity:1;stroke-width:0.264583"
+    <text
+       xml:space="preserve"
+       style="font-weight:800;font-size:49.3889px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#009933;fill-opacity:1;stroke-width:0.264583"
+       x="84.074432"
+       y="98.314758"
+       id="text3369"><tspan
+         id="tspan3367"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:84.6667px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#009933;fill-opacity:1;stroke-width:0.264583"
          x="84.074432"
-         y="120.5295"
-         id="text3369"><tspan
-           id="tspan3367"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:84.6667px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, @wght=800';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 800;fill:#026c00;fill-opacity:1;stroke-width:0.264583"
-           x="84.074432"
-           y="120.5295">Data</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:35.2777px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
+         y="98.314758">Data</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:35.2777px;line-height:1.25;font-family:Inter;-inkscape-font-specification:'Inter, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
+       x="88.87001"
+       y="172.77872"
+       id="text27902"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
          x="88.87001"
-         y="194.99345"
-         id="text27902"><tspan
-           style="font-size:50.8px;stroke-width:0.264583"
-           x="88.87001"
-           y="194.99345"
-           id="tspan34022">- Capture &amp; ingestion</tspan><tspan
-           style="stroke-width:0.264583"
-           x="88.87001"
-           y="244.12531"
-           id="tspan34026">   (batch data, streams, ...)</tspan><tspan
-           style="font-size:50.8px;stroke-width:0.264583"
-           x="88.87001"
-           y="302.59058"
-           id="tspan27904">- Storage</tspan><tspan
-           style="stroke-width:0.264583"
-           x="88.87001"
-           y="351.72241"
-           id="tspan35768">   (data warehouse, data lake, ...)</tspan></text>
-    </g>
+         y="172.77872"
+         id="tspan34022">- Capture &amp; ingestion</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
+         x="88.87001"
+         y="222.3667"
+         id="tspan34026">   (text files, streams, ...)</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
+         x="88.87001"
+         y="280.6926"
+         id="tspan27904">- Storage</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
+         x="88.87001"
+         y="330.28058"
+         id="tspan35768">   (HDFS, S3, NFS, ...)</tspan></text>
   </g>
   <g
      id="layer2"
      style="display:inline">
     <g
-       style="fill:#999999"
+       style="fill:#009933;fill-opacity:1"
        id="g43540"
        transform="matrix(4.8369948,0,0,4.8369948,846.13005,363.80117)">
       <path
          d="m 13,9.50024 c 0,1.93296 1.567,3.49996 3.5,3.49996 1.933,0 3.5,-1.567 3.5,-3.49996 0,-1.93299 -1.567,-3.5 -3.5,-3.5 -1.933,0 -3.5,1.56701 -3.5,3.5 z"
          fill="currentColor"
          id="path43525"
-         style="fill:#999999" />
+         style="fill:#009933;fill-opacity:1" />
       <path
          fill-rule="evenodd"
          clip-rule="evenodd"
          d="M 29.4489,16.0508 C 29.3046,16.0177 29.1543,16.0002 29,16.0002 h -9 v 12 h -7 v -12 h -1 c -3.31371,0 -6,2.6863 -6,6 0,2.973 2.16229,5.441 5,5.9171 v 12.0829 c 0,1.1046 0.8954,2 2,2 1.1046,0 2,-0.8954 2,-2 v -9 h 3 v 9 c 0,1.1046 0.8954,2 2,2 1.1046,0 2,-0.8954 2,-2 v -20 h 7 c 0.4766,0 0.9143,-0.1667 1.2579,-0.445 l 1.9981,8.6546 c -2.1525,0.4969 -3.4946,2.6448 -2.9977,4.7973 l 1.0503,8.9942 2.8237,-0.6519 -1.0298,-4.9146 1.9575,-0.4102 1.0215,4.8748 6.9195,-1.5975 -2.999,-8.5443 C 38.5051,28.605 36.3573,27.2629 34.2048,27.7599 L 30.3806,11.1956 c -0.1243,-0.5381 -0.6612,-0.8737 -1.1993,-0.7494 -0.5382,0.1242 -0.8737,0.6612 -0.7495,1.1993 z M 9,22.0002 c 0,-1.1045 0.89543,-2 2,-2 v 4 c -1.10457,0 -2,-0.8954 -2,-2 z m 25.6547,7.7084 -1.9488,0.4499 c -1.0762,0.2485 -1.7473,1.3224 -1.4988,2.3987 l 5.8462,-1.3497 c -0.2485,-1.0763 -1.3224,-1.7473 -2.3986,-1.4989 z"
          fill="currentColor"
          id="path43527"
-         style="fill:#999999" />
+         style="fill:#009933;fill-opacity:1" />
       <path
          d="m 18,16.0002 v 3 h -3 v -3 z"
          fill="currentColor"
          id="path43529"
-         style="fill:#999999" />
+         style="fill:#009933;fill-opacity:1" />
     </g>
     <text
        xml:space="preserve"
-       style="font-weight:800;font-size:49.3889px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#026c00;fill-opacity:1;stroke-width:0.264583"
+       style="font-weight:800;font-size:49.3889px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#009933;fill-opacity:1;stroke-width:0.264583"
        x="702.43311"
        y="102.24217"
        id="text3369-8"><tspan
          id="tspan3367-7"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:84.6667px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, @wght=800';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 800;fill:#026c00;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:84.6667px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#009933;fill-opacity:1;stroke-width:0.264583"
          x="702.43311"
          y="102.24217">Preprocessing</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:35.2777px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
+       style="font-size:35.2777px;line-height:1.25;font-family:Inter;-inkscape-font-specification:'Inter, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
        x="703.6568"
        y="177.14378"
        id="text27902-6"><tspan
-         style="font-size:50.8px;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
          x="703.6568"
          y="177.14378"
          id="tspan34026-4">- Filtering, cleaning</tspan><tspan
-         style="font-size:50.8px;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
          x="703.6568"
          y="240.64378"
          id="tspan27904-8">- Aggregation</tspan><tspan
-         style="font-size:50.8px;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
          x="703.6568"
          y="304.14377"
          id="tspan45323">- Transformation</tspan><tspan
-         style="font-size:50.8px;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
          x="703.6568"
          y="367.64377"
          id="tspan35768-9">- Feature extraction</tspan></text>
@@ -171,41 +169,36 @@
   <g
      id="layer5"
      style="display:none">
+    <text
+       xml:space="preserve"
+       style="font-weight:800;font-size:49.3889px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#009933;fill-opacity:1;stroke-width:0.264583"
+       x="311.97269"
+       y="785.24994"
+       id="text3369-4"><tspan
+         id="tspan3367-8"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:84.6667px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#009933;fill-opacity:1;stroke-width:0.264583"
+         x="311.97269"
+         y="785.24994">Use</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.2777px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:Urbanist;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
+       x="316.76828"
+       y="859.71387"
+       id="text27902-66"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
+         x="316.76828"
+         y="859.71387"
+         id="tspan34026-6">- Reporting &amp; Visualization</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
+         x="316.76828"
+         y="923.21387"
+         id="tspan35768-7">- Inference / prediction</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
+         x="316.76828"
+         y="986.71387"
+         id="tspan148770">- Deployment of services</tspan></text>
     <g
-       id="g72980-1"
-       transform="translate(227.89826,664.72043)"
-       style="display:inline">
-      <text
-         xml:space="preserve"
-         style="font-weight:800;font-size:49.3889px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#026c00;fill-opacity:1;stroke-width:0.264583"
-         x="84.074432"
-         y="120.5295"
-         id="text3369-4"><tspan
-           id="tspan3367-8"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:84.6667px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, @wght=800';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 800;fill:#026c00;fill-opacity:1;stroke-width:0.264583"
-           x="84.074432"
-           y="120.5295">Use</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:35.2777px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
-         x="88.87001"
-         y="194.99345"
-         id="text27902-66"><tspan
-           style="font-size:50.8px;stroke-width:0.264583"
-           x="88.87001"
-           y="194.99345"
-           id="tspan34026-6">- Reporting &amp; Visualization</tspan><tspan
-           style="font-size:50.8px;stroke-width:0.264583"
-           x="88.87001"
-           y="258.49344"
-           id="tspan35768-7">- Inference / prediction</tspan><tspan
-           style="font-size:50.8px;stroke-width:0.264583"
-           x="88.87001"
-           y="321.99344"
-           id="tspan148770">- Deployment of services</tspan></text>
-    </g>
-    <g
-       style="fill:#999999;fill-opacity:1"
+       style="fill:#009933;fill-opacity:1"
        id="g130948"
        transform="matrix(4.7161168,0,0,4.7161168,655.49896,571.74055)">
       <path
@@ -214,38 +207,38 @@
          d="M 23,6 H 6 v 12 h 17 z m -8.5,10 c 0.5523,0 1,-0.4477 1,-1 0,-0.5523 -0.4477,-1 -1,-1 -0.5523,0 -1,0.4477 -1,1 0,0.5523 0.4477,1 1,1 z m -1,-7 c 0,-0.55228 0.4477,-1 1,-1 0.5523,0 1,0.44772 1,1 v 3 c 0,0.5523 -0.4477,1 -1,1 -0.5523,0 -1,-0.4477 -1,-1 z"
          fill="currentColor"
          id="path130924"
-         style="fill:#999999;fill-opacity:1" />
+         style="fill:#009933;fill-opacity:1" />
       <path
          fill-rule="evenodd"
          clip-rule="evenodd"
          d="M 42,6 H 25 V 18 H 42 Z M 40.2071,9.20711 34.5,14.9142 32,12.4142 29.7071,14.7071 28.2929,13.2929 32,9.58579 34.5,12.0858 38.7929,7.79289 Z"
          fill="currentColor"
          id="path130926"
-         style="fill:#999999;fill-opacity:1" />
+         style="fill:#009933;fill-opacity:1" />
       <path
          fill-rule="evenodd"
          clip-rule="evenodd"
          d="M 6,32 V 20 h 17 v 4.083 c -2.8377,0.476 -5,2.944 -5,5.917 0,0.7013 0.1203,1.3744 0.3414,2 z m 3,-7 v -2 h 2 v 2 z m 0,2 v 2 h 2 v -2 z m 4,-2 v -2 h 2 v 2 z m 0,2 v 2 h 2 v -2 z m 4,-2 v -2 h 2 v 2 z"
          fill="currentColor"
          id="path130928"
-         style="fill:#999999;fill-opacity:1" />
+         style="fill:#009933;fill-opacity:1" />
       <path
          fill-rule="evenodd"
          clip-rule="evenodd"
          d="m 30,30 c 0,0.7013 -0.1203,1.3744 -0.3414,2 H 42 V 20 H 25 v 4.083 c 2.8377,0.476 5,2.944 5,5.917 z m 2,-5 h 7 c 0.5523,0 1,-0.4477 1,-1 0,-0.5523 -0.4477,-1 -1,-1 h -7 c -0.5523,0 -1,0.4477 -1,1 0,0.5523 0.4477,1 1,1 z m 0,3 c 0,0.5523 0.4477,1 1,1 h 6 c 0.5523,0 1,-0.4477 1,-1 0,-0.5523 -0.4477,-1 -1,-1 h -6 c -0.5523,0 -1,0.4477 -1,1 z"
          fill="currentColor"
          id="path130930"
-         style="fill:#999999;fill-opacity:1" />
+         style="fill:#009933;fill-opacity:1" />
       <path
          d="m 28,30 c 0,2.2091 -1.7909,4 -4,4 -2.2091,0 -4,-1.7909 -4,-4 0,-2.2091 1.7909,-4 4,-4 2.2091,0 4,1.7909 4,4 z"
          fill="currentColor"
          id="path130932"
-         style="fill:#999999;fill-opacity:1" />
+         style="fill:#009933;fill-opacity:1" />
       <path
          d="m 24,35 c -1.2424,0 -3.0719,0.1859 -4.612,0.5599 -0.7639,0.1854 -1.5213,0.4322 -2.111,0.762 C 16.761,36.6106 16,37.1753 16,38.1212 V 42 H 32 V 38.1212 C 32,37.1753 31.239,36.6106 30.723,36.3219 30.1333,35.9921 29.3759,35.7453 28.612,35.5599 27.0719,35.1859 25.2424,35 24,35 Z"
          fill="currentColor"
          id="path130934"
-         style="fill:#999999;fill-opacity:1" />
+         style="fill:#009933;fill-opacity:1" />
     </g>
   </g>
   <g
@@ -262,69 +255,88 @@
   <g
      id="layer4"
      style="display:inline">
-    <g
-       id="g116794"
-       transform="translate(37.570851,144.05859)">
-      <text
-         xml:space="preserve"
-         style="font-weight:800;font-size:49.3889px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;display:inline;fill:#026c00;fill-opacity:1;stroke-width:0.264583"
-         x="1420.3889"
-         y="189.02536"
-         id="text3369-8-0"><tspan
-           id="tspan3367-7-7"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:84.6667px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, @wght=800';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 800;fill:#026c00;fill-opacity:1;stroke-width:0.264583"
-           x="1420.3889"
-           y="189.02536">Modeling</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:35.2777px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;display:inline;stroke-width:0.264583"
-         x="1421.6127"
-         y="263.92694"
-         id="text27902-6-1"><tspan
-           style="font-size:50.8px;stroke-width:0.264583"
-           x="1421.6127"
-           y="263.92694"
-           id="tspan34026-4-9">- Model development</tspan><tspan
-           style="font-size:35.2778px;stroke-width:0.264583"
-           x="1421.6127"
-           y="313.0589"
-           id="tspan73874">    selection, training, validation,</tspan><tspan
-           style="font-size:35.2778px;stroke-width:0.264583"
-           x="1421.6127"
-           y="357.15613"
-           id="tspan91089">    evaluation, ...</tspan><tspan
-           style="font-size:50.8px;stroke-width:0.264583"
-           x="1421.6127"
-           y="415.62143"
-           id="tspan111773">- Computation</tspan><tspan
-           style="font-size:35.2778px;stroke-width:0.264583"
-           x="1421.6127"
-           y="464.75339"
-           id="tspan73878">    HPC, Cloud, ...</tspan><tspan
-           style="font-size:50.8px;stroke-width:0.264583"
-           x="1421.6127"
-           y="523.21869"
-           id="tspan73882">- Resources</tspan><tspan
-           style="font-size:35.2778px;stroke-width:0.264583"
-           x="1421.6127"
-           y="572.35065"
-           id="tspan73884">    paralellization, optimization,</tspan><tspan
-           style="font-size:35.2778px;stroke-width:0.264583"
-           x="1421.6127"
-           y="616.44788"
-           id="tspan101401">    memory, CPU/GPU, ...</tspan><tspan
-           style="font-size:50.8px;stroke-width:0.264583"
-           x="1421.6127"
-           y="674.91321"
-           id="tspan35768-9-0">- Implementation</tspan><tspan
-           style="font-size:35.2778px;stroke-width:0.264583"
-           x="1421.6127"
-           y="724.04517"
-           id="tspan111777">    scikit-learn, PyTorch, Spark</tspan></text>
-    </g>
+    <text
+       xml:space="preserve"
+       style="font-weight:800;font-size:49.3889px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;display:inline;fill:#009933;fill-opacity:1;stroke-width:0.264583"
+       x="1457.9597"
+       y="333.08395"
+       id="text3369-8-0"><tspan
+         id="tspan3367-7-7"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:84.6667px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#009933;fill-opacity:1;stroke-width:0.264583"
+         x="1457.9597"
+         y="333.08395">Modeling</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:35.2777px;line-height:1.25;font-family:Inter;-inkscape-font-specification:'Inter, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;display:inline;stroke-width:0.264583"
+       x="1459.1835"
+       y="407.98553"
+       id="text27902-6-1"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
+         x="1459.1835"
+         y="407.98553"
+         id="tspan34026-4-9">- Model development</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.2778px;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
+         x="1459.1835"
+         y="457.57352"
+         id="tspan73874">    selection, training, validation,</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.2778px;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
+         x="1459.1835"
+         y="501.98743"
+         id="tspan91089">    evaluation, ...</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
+         x="1459.1835"
+         y="560.31335"
+         id="tspan111773">- Computation</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.2778px;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
+         x="1459.1835"
+         y="609.90137"
+         id="tspan73878">    HPC, Cloud, ...</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
+         x="1459.1835"
+         y="668.22729"
+         id="tspan73882">- Resources</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.2778px;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
+         x="1459.1835"
+         y="717.81525"
+         id="tspan73884">    paralellization, optimization,</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.2778px;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
+         x="1459.1835"
+         y="762.22919"
+         id="tspan101401">    memory, CPU/GPU, ...</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
+         x="1459.1835"
+         y="820.55511"
+         id="tspan35768-9-0">- Implementation</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.2778px;font-family:Urbanist;-inkscape-font-specification:Urbanist;stroke-width:0.264583"
+         x="1459.1835"
+         y="870.14307"
+         id="tspan111777">    scikit-learn, PyTorch, Spark</tspan></text>
     <path
        d="m 1337.0452,509.26468 c 2.1169,-1.87837 2.9517,-4.8301 1.8485,-7.45386 -0.6857,-1.58021 -1.4311,-3.13062 -2.2659,-4.62139 l -0.9243,-1.61003 c -0.8945,-1.49078 -1.8784,-2.95173 -2.9219,-4.35306 -1.6994,-2.26597 -4.681,-3.01135 -7.3644,-2.11689 l -8.408,2.77283 c -3.1902,-2.62376 -6.8575,-4.77047 -10.7931,-6.23143 l -1.8188,-8.64646 c -0.5665,-2.77284 -2.7132,-4.97919 -5.5158,-5.30716 -1.9679,-0.26833 -3.9655,-0.3876 -5.993,-0.3876 h -0.2087 c -2.0273,0 -4.0251,0.11927 -5.9928,0.35779 -2.8027,0.32797 -4.9494,2.56413 -5.5159,5.30715 l -1.8188,8.67628 c -3.9654,1.49078 -7.6029,3.60767 -10.7932,6.23143 l -8.4377,-2.74301 c -2.6834,-0.89447 -5.665,-0.14908 -7.3644,2.11689 -1.0435,1.40132 -2.0275,2.86228 -2.9518,4.35306 l -0.8944,1.58021 c -0.8348,1.49077 -1.5802,3.04118 -2.2659,4.65121 -1.1032,2.59394 -0.2685,5.54567 1.8485,7.45385 l 6.619,5.90346 c -0.3279,1.99764 -0.5069,4.08471 -0.5069,6.20161 0,2.1169 0.179,4.20398 0.5069,6.23143 l -6.619,5.90346 c -2.117,1.87836 -2.9517,4.8301 -1.8485,7.45385 0.6857,1.58022 1.4311,3.13062 2.2659,4.65121 l 0.8944,1.5504 c 0.8945,1.52059 1.8784,2.95173 2.9518,4.35305 1.6994,2.26597 4.681,3.01136 7.3644,2.1169 l 8.408,-2.77283 c 3.1902,2.62375 6.8575,4.77046 10.7931,6.23142 l 1.8187,8.67629 c 0.5666,2.77284 2.7133,4.97917 5.5159,5.30715 1.9976,0.23852 4.0251,0.35779 6.0823,0.35779 2.0574,0 4.0848,-0.11927 6.0824,-0.35779 2.8027,-0.32798 4.9494,-2.56413 5.5158,-5.30715 l 1.8188,-8.67629 c 3.9654,-1.49077 7.603,-3.60767 10.7932,-6.23142 l 8.408,2.77283 c 2.6833,0.89446 5.6649,0.14907 7.3644,-2.1169 1.0435,-1.40132 2.0274,-2.83246 2.9219,-4.35305 l 0.9243,-1.61004 c 0.8348,-1.49076 1.5802,-3.04117 2.2659,-4.62139 1.1032,-2.59393 0.2683,-5.54567 -1.8485,-7.45385 l -6.619,-5.90346 c 0.3279,-2.02745 0.5068,-4.11453 0.5068,-6.23142 0,-2.1169 -0.1789,-4.20398 -0.5068,-6.23143 l 6.619,-5.90346 z m -58.5873,12.13488 a 14.311408,14.311408 0 1 1 28.6228,0 14.311408,14.311408 0 1 1 -28.6228,0 z m 117.0852,96.75108 c 1.8783,2.1169 4.8301,2.95173 7.4539,1.84855 1.5801,-0.68575 3.1306,-1.43114 4.6213,-2.26597 l 1.61,-0.92428 c 1.4909,-0.89446 2.9518,-1.87836 4.3532,-2.9219 2.2659,-1.69949 3.0113,-4.68103 2.1168,-7.36441 l -2.7728,-8.40796 c 2.6237,-3.19025 4.7704,-6.85755 6.2314,-10.79319 l 8.6763,-1.81874 c 2.7729,-0.5665 4.9792,-2.71321 5.3071,-5.51585 0.2386,-1.99764 0.3578,-4.02509 0.3578,-6.08235 0,-2.05727 -0.1192,-4.08471 -0.3578,-6.08235 -0.3279,-2.80265 -2.5641,-4.94936 -5.3071,-5.51585 l -8.6763,-1.84856 c -1.4907,-3.96546 -3.6077,-7.60293 -6.2314,-10.79319 l 2.7728,-8.40796 c 0.8945,-2.68338 0.1491,-5.66492 -2.1168,-7.3644 -1.4014,-1.04355 -2.8623,-2.02745 -4.3532,-2.95173 l -1.5801,-0.89446 c -1.4909,-0.83483 -3.0412,-1.58022 -4.6512,-2.26597 -2.594,-1.10318 -5.5457,-0.26835 -7.4539,1.84855 l -5.9035,6.61902 c -2.0274,-0.32797 -4.1145,-0.50686 -6.2314,-0.50686 -2.1169,0 -4.204,0.17889 -6.2315,0.50686 l -5.9034,-6.61902 c -1.8784,-2.1169 -4.8301,-2.95173 -7.4538,-1.84855 -1.5803,0.68575 -3.1306,1.43114 -4.6512,2.26597 l -1.5504,0.89446 c -1.5206,0.89446 -2.9518,1.87838 -4.353,2.95173 -2.2661,1.69948 -3.0114,4.68102 -2.117,7.3644 l 2.7728,8.40796 c -2.6237,3.19026 -4.7704,6.85755 -6.2314,10.79319 l -8.6762,1.78892 c -2.773,0.5665 -4.9793,2.71321 -5.3072,5.51586 -0.2386,1.99763 -0.3578,4.02508 -0.3578,6.08234 0,2.05727 0.1192,4.08472 0.3578,6.08235 0.3279,2.80266 2.5641,4.94937 5.3072,5.51587 l 8.6762,1.81873 c 1.4908,3.96545 3.6077,7.60294 6.2314,10.79319 l -2.7728,8.40795 c -0.8944,2.68339 -0.1491,5.66493 2.117,7.36441 1.4012,1.04354 2.8324,2.02746 4.353,2.92192 l 1.61,0.92427 c 1.4907,0.83484 3.0412,1.58023 4.6214,2.26598 2.5939,1.10317 5.5456,0.26833 7.4538,-1.84856 l 5.9035,-6.61903 c 2.0275,0.32797 4.1145,0.50686 6.2314,0.50686 2.1169,0 4.204,-0.17889 6.2315,-0.50686 l 5.9034,6.61903 z m -12.1349,-58.58733 a 14.31141,14.31141 0 1 1 0,28.62282 14.31141,14.31141 0 1 1 0,-28.62282 z"
        id="path116820"
-       style="fill:#999999;fill-opacity:1;stroke-width:0.298154" />
+       style="fill:#009933;fill-opacity:1;stroke-width:0.298154" />
   </g>
+  <metadata
+     id="metadata1983">
+    <rdf:RDF>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
 </svg>
