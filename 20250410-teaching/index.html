@@ -101,17 +101,20 @@ layout: true
 # Objectifs généraux du cours
 
 
-.boxed-content.large[
-* **Défis et Solutions** pour l’Analyse de *Big Data*
-
+.boxed-content.large.no-bullet[
+* <i class="fa-solid fa-globe"></i> **Big Data**: défis et solutions
+  
+  .gray-text[
   * stockage, calcul et distribution
+  ]
+  
 
-* Avec un **case pratique** :
+* <i class="fa-solid fa-person-dots-from-line"></i> Avec un **cas pratique** :
 
   > *visualisation graphique des mots significatifs les plus fréquents dans un corpus textuel*
 
   * plusieurs **millions** de documents
-  * brosser un panorama des techniques et des problèmes rencontrés
+  * proposer un panorama des techniques et des problèmes rencontrés
 ]
 
 ???
@@ -134,17 +137,21 @@ By vast we mean several million documents, and this example will allow us to map
 
 # Objectifs spécifiques de la séance
 
-.boxed-content.large[
-* **Démontrer un pipeline avec Spark** pour compter les mots les plus fréquents dans un corpus de text.
+.boxed-content.large.no-bullet[
+* <i class="fa-solid fa-wrench"></i> **Démontrer un pipeline avec Spark** pour compter les mots les plus fréquents dans un corpus de text.
 
-* Illustrer la **execution sur HPC**.
+* <i class="fa-solid fa-server"></i> Illustrer la **execution sur HPC**.
 
-* **Limites de la séance** :
+<br />
 
-  * gestion avancée du stockage,
-  * la distribution des données et de compute,
-  * execution in Cloud, ou
-  * utilisation finale: visualisation, l’analyse, etc.
+* <i class="fa-solid fa-circle-stop"></i> **Limites de la séance** :
+
+  .gray-text.indent[
+* gestion avancée du stockage,
+* la distribution des données et de compute,
+* execution in Cloud, ou
+* utilisation finale: visualisation, l’analyse, etc.
+  ]
 ]
 
 ???
@@ -194,17 +201,17 @@ Let's get started!
 
 ???
 
-Qu’est-ce qu’un pipeline Big Data ?
+Un pipeline Big Data - c'est quoi?
 
 C’est un ensemble de processus permettant de collecter, stocker, traiter et analyser de grands volumes de données.
 
-Typiquement, on distingue :
+Typiquement, on commence par :
 
-- **Ingestion des données** : récupération depuis diverses sources (bases, APIs, flux, etc.).
+- **Ingestion des données** : s'agit de la récupération depuis diverses sources (comme des bases, des APIs, des flux, etc.).
 
-- **Stockage** : utilisation d’un système distribué ou d’une base adaptée pour manipuler d’importants volumes (HDFS, S3, data lake, etc.).
+- **Stockage** : utilisation d’un système distribué ou d’une base adaptée pour manipuler d’importants volumes
 
-Nous allons voir comment ces étapes s’agencent pour former un flux cohérent.
+Nous allons voir comment ces étapes s’organisent pour former un flux cohérent.
 
 <!--
 
@@ -274,7 +281,7 @@ On applique par exemple :
 
 - Des méthodes statistiques, d’apprentissage automatique ou de deep learning,
 
-- qui peut etre implementes avec des frameworks comme TensorFlow, PyTorch, Scikit-learn, etc.
+- qui peuvent etre mises en place avec des frameworks comme TensorFlow, PyTorch, Scikit-learn, etc.
 
 Cette étape se déroule souvent sur une infrastructure adaptée (cloud, cluster HPC),
 
@@ -887,7 +894,62 @@ Finally, we stop the workers and the master node to clean up.
 
 ---
 
-# Démo pratique
+# Démo pratique ("cooking show")
+
+<br />
+.boxed-content.no-bullet.larger[
+- .large[<i class="fa-solid fa-kitchen-set"></i> Tous les ingrédients et outils sont prêts :]
+
+  - architecture générale
+
+  - dataset + stopwords
+
+  - script `wordcount.py`
+
+  - script SBATCH
+
+<br />
+
+- .large[<i class="fa-solid fa-fire-burner"></i> Il ne reste plus qu’à « cuire » la recette]
+]
+
+???
+
+À ce stade, nous avons fait la mise en place avec tous les ingrédients nécessaires pour lancer notre job :
+
+- Nous avons vu l’architecture globale,
+
+- Nous disposons du dataset et d’un fichier de stopwords,
+
+- Nous avons le script `wordcount.py`,
+
+- Et nous avons aussi le script SBATCH.
+
+Maintenant, comme dans une émission de cuisine (« cooking show »), nous allons simplement exécuter le job pour voir les résultats.
+
+Si vous suivez depuis votre ordinateur, vous pouvez faire des pauses, copier/coller, car il ne s’agit pas d’une vidéo réelle.
+Vous pourrez aussi rejouer la démonstration plus lentement, car ici elle sera diffusée à vitesse légèrement accélérée.
+
+<!-- 
+At this point, we have all the ingredients ready to run our job.
+
+- We have seen the overall architecture of the solution
+
+- We have a dataset and a list of "stopwords" to filter out.
+
+- We have the script `wordcount.py`,
+
+- and we have the SBATCH script.
+
+Now, like in a cooking show, we will run the job and see the results.
+
+If you are following on your laptop, you can stop it and copy and paste because
+it's not a real video.
+
+You can also revisit it and play it slower, as this one will play at 2x speed.
+-->
+
+---
 
 .boxed-content[
 <div class="asciicast" id="636539" style="padding-top: 25px"></div>
@@ -977,8 +1039,12 @@ god	5062
 
 Voici le fichier final listant les 15 tokens les plus fréquents.
 
-On observe “one”, “writes”, “article”... Ce dernier, par exemple, reflète le fait que beaucoup de messages citent “article”.
+On observe “one”, “writes”, “article”... 
+
+<!--
+Ce dernier, par exemple, reflète le fait que beaucoup de messages citent “article”.
 De même, “university” apparaît souvent en raison des en-têtes ou des signatures.
+-->
 
 Dans un usage réel, on peaufinerait encore le filtrage (en-têtes, etc.) pour plus de pertinence.
 
@@ -996,17 +1062,17 @@ As we can see, the most frequent token is "one", followed by "writes", "article"
 
 # Synthèse finale
 
-.boxed-content.large[
-* **Aperçu global** d’un pipeline Big Data<br />
-  .gray-text[et des principaux défis (ingestion, distribution, solutions)]
+.boxed-content.large.no-bullet[
+* <i class="fa-solid fa-globe"></i> **Aperçu global** d’un pipeline Big Data<br />
+  .gray-text.indent[et des principaux défis (ingestion, distribution, solutions)]
 
-* **Introduction** du paradigme Map-Reduce<br />
+* <i class="fa-solid fa-diamond"></i> **Introduction** du paradigme Map-Reduce<br />
   .gray-text[point de départ historique pour l’analyse à grande échelle]
 
-* **Implémentation** d’un mini-pipeline Spark<br />
+* <i class="fa-solid fa-trowel-bricks"></i> **Implémentation** d’un mini-pipeline Spark<br />
   .gray-text[appliqué à un jeu de données ouvert]
 
-* **Exécution** sur un cluster HPC (via SLURM)<br />
+* <i class="fa-solid fa-server"></i> **Exécution** sur un cluster HPC (via SLURM)<br />
   .gray-text[illustrant les enjeux et bénéfices du calcul distribué]
 ]
 
@@ -1045,30 +1111,32 @@ We have executed the pipeline on a HPC cluster using SLURM, which has allowed us
 
 ## Pour aller plus loin
 .boxed-content.large[
+* Convertir le script `wordcount.py` de Python vers Scala.
+
 * Tester des datasets **plus volumineux** (p. ex., Enron emails, Amazon reviews, Wikipedia "dumps").
 
 * Expérimenter **RDD vs. DataFrame**
-
-* **Ameliorer le script** pour gérer les stopwords et les tokens plus efficacement.
 ]
 
 ???
 
 Nous concluons avec un petit “devoir” pour la prochaine séance :
 
-- Supprimer le tri et la limitation au top 15, et produire plutôt un nuage de mots (word cloud) en Python.
+- Supprimer le tri et la limitation au top 15, et produire plutôt un nuage de mots (word cloud) avec Python.
 
 - Vous pouvez employer n’importe quelle bibliothèque Python, mais je vous conseille `wordcloud`.
   
 La semaine prochaine, nous discuterons de la visualisation que vous aurez implémentée et verrons vos retours.
 
-**Pistes pour aller plus loin** :
+**Et pour aller plus loin**, je vous suggère :
 
-- Explorer des ensembles de données plus vastes ou variés, comme les emails Enron, les avis Amazon, ou les dumps de Wikipédia.
+- De transformer le code Python en Scala, qui est le langage de programmation principal d’Apache Spark.
 
-- Expérimenter les API Spark RDD et DataFrame pour comparer leurs performances.
+- D'explorer des ensembles de données plus vastes ou variés, comme les emails Enron, les avis Amazon, ou les dumps de Wikipédia.
 
-- Enfin, peaufiner le script pour gérer plus efficacement les stopwords et la tokenisation (regex, etc.).
+- D'expérimenter les API Spark RDD et DataFrame pour comparer leurs performances.
+
+- 
 
 
 <!-- 
@@ -1175,7 +1243,7 @@ Oscar Esteban &lt;<code><a href="mailto:phd@oscaresteban.es">phd@oscaresteban.es
         allcasts.set(slideNumber, AsciinemaPlayer.create(
             'images/spark.cast',
             document.getElementById('636539'),
-            { autoPlay: true, speed: 2, idle_time_limit: 8, rows: 20, cols: 100 }
+            { autoPlay: true, speed: 2, idle_time_limit: 8, rows: 24, cols: 100 }
         ));
 
       });
