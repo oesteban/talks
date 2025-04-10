@@ -14,7 +14,7 @@
      id="defs153256">
     <style type="text/css">
     <![CDATA[
-     @import url(https://fonts.googleapis.com/css?family=Urbanist:400,800,400italic,800italic);
+     @import url(https://fonts.googleapis.com/css?family=Urbanist:400,800,400italic);
     ]]>
     </style>
     <rect
@@ -738,7 +738,7 @@
   </g>
   <g
      id="layer5"
-     style="display:none">
+     style="display:inline">
     <image
        width="179.66183"
        height="40.723351"
@@ -1393,7 +1393,7 @@
   </g>
   <g
      id="g28898"
-     style="display:inline">
+     style="display:none">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.875px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;display:inline;stroke-width:0.264583"
@@ -2034,7 +2034,7 @@ vlCD1RH3ZM8G7F74psKC5ZKib4BUjUJKdmwprDVScM0XslsDdRBL094iFbmk6Nsg48sFyuf5Gfsr
   </g>
   <g
      id="layer2"
-     style="display:none">
+     style="display:inline">
     <g
        id="g6486"
        transform="translate(247.8404,-81.031488)">
@@ -2047,7 +2047,7 @@ vlCD1RH3ZM8G7F74psKC5ZKib4BUjUJKdmwprDVScM0XslsDdRBL094iFbmk6Nsg48sFyuf5Gfsr
            style="stroke-width:1.56054" />
         <polygon
            class="st1"
-           points="11.67,58 16.45,58 16.45,53.22 20.54,53.22 20.54,58 25.32,58 25.32,62.09 20.54,62.09 20.54,66.87 16.45,66.87 16.45,62.09 11.67,62.09 "
+           points="16.45,53.22 20.54,53.22 20.54,58 25.32,58 25.32,62.09 20.54,62.09 20.54,66.87 16.45,66.87 16.45,62.09 11.67,62.09 11.67,58 16.45,58 "
            id="polygon4227"
            transform="matrix(1.5605411,0,0,1.5605411,107.10159,345.43874)" />
       </g>
