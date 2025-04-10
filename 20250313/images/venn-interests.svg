@@ -9,6 +9,11 @@
    id="svg153259"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+    <style type="text/css">
+    <![CDATA[
+     @import url(https://fonts.googleapis.com/css?family=Urbanist:400,800,400italic);
+    ]]>
+    </style>
   <defs
      id="defs153256">
     <rect
@@ -113,7 +118,7 @@
        xml:space="preserve"
        transform="matrix(0.26458333,0,0,0.26458333,18.796551,-21.831498)"
        id="text147059"
-       style="font-size:160px;line-height:1.25;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect147083)"><tspan
+       style="font-size:160px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect147083)"><tspan
          x="1162.207"
          y="636.79016"
          id="tspan158618"><tspan
@@ -121,23 +126,23 @@
            id="tspan158616">Neuro</tspan></tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:5.29167px;line-height:1.25;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
+       style="font-size:5.29167px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
        x="446.86227"
        y="168.58409"
        id="text147077"><tspan
          id="tspan147069"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;stroke-width:0.264583"
          x="446.86227"
          y="168.58409">Neuroimaging</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;stroke-width:0.264583"
          x="446.86227"
          y="186.22296"
          id="tspan147071">Neuroengineering</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;stroke-width:0.264583"
          x="446.86227"
          y="203.86185"
          id="tspan147073">Computational Neuroscience</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;stroke-width:0.264583"
          x="446.86227"
          y="221.50072"
          id="tspan147075">Clinical applications</tspan></text>
@@ -148,7 +153,7 @@
          xml:space="preserve"
          transform="matrix(0.26458333,0,0,0.26458333,275.48489,-21.003191)"
          id="text147059-3"
-         style="font-size:160px;line-height:1.25;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect147083-2);display:inline"><tspan
+         style="font-size:160px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect147083-2);display:inline"><tspan
            x="1162.207"
            y="636.79016"
            id="tspan158622"><tspan
@@ -156,23 +161,23 @@
              id="tspan158620">ML/AI</tspan></tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:5.29167px;line-height:1.25;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;stroke-width:0.264583"
+         style="font-size:5.29167px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;stroke-width:0.264583"
          x="585.70892"
          y="169.4124"
          id="text147077-4"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;stroke-width:0.264583"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;stroke-width:0.264583"
            x="585.70892"
            y="169.4124"
            id="tspan147075-3">Applied ML/AI</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;stroke-width:0.264583"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;stroke-width:0.264583"
            x="585.70892"
            y="187.05127"
            id="tspan151057">Statistical models</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;stroke-width:0.264583"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;stroke-width:0.264583"
            x="585.70892"
            y="204.69016"
            id="tspan151059">Digital twins</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;stroke-width:0.264583"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;stroke-width:0.264583"
            x="585.70892"
            y="222.32903"
            id="tspan151061">Computer Vision</tspan></text>
@@ -184,7 +189,7 @@
          xml:space="preserve"
          transform="matrix(0.26458333,0,0,0.26458333,164.72173,231.23181)"
          id="text147059-9"
-         style="font-size:160px;line-height:1.25;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect147083-4);display:inline"><tspan
+         style="font-size:160px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect147083-4);display:inline"><tspan
            x="1162.207"
            y="636.79016"
            id="tspan158626"><tspan
@@ -192,23 +197,23 @@
              id="tspan158624">S&amp;S</tspan></tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:5.29167px;line-height:1.25;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;display:inline;stroke-width:0.264583"
+         style="font-size:5.29167px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;display:inline;stroke-width:0.264583"
          x="515.875"
          y="421.6474"
          id="text147077-9"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
            x="515.875"
            y="421.6474"
            id="tspan147075-5">Software</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
            x="515.875"
            y="439.28629"
            id="tspan155180">Standardization</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
            x="515.875"
            y="456.92514"
            id="tspan155182">QA/QC</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
            x="515.875"
            y="474.56403"
            id="tspan155184">CI/CD</tspan></text>
@@ -218,5 +223,5 @@
      xml:space="preserve"
      transform="scale(0.26458333)"
      id="text146074"
-     style="font-family:'Helvetica LT Std';font-size:53.33329391px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:'Helvetica LT Std, Normal';writing-mode:lr;white-space:pre;shape-inside:url(#rect146076)" />
+     style="font-family:Urbanist;font-size:53.33329391px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:'Urbanist, Normal';writing-mode:lr;white-space:pre;shape-inside:url(#rect146076)" />
 </svg>
