@@ -607,7 +607,7 @@
   </defs>
   <g
      id="layer1"
-     style="display:inline">
+     style="display:none">
     <circle
        style="opacity:0.213009;fill:#aeceff;fill-opacity:1;stroke:none;stroke-width:4.99999;stroke-linejoin:round;stroke-dashoffset:8.31308;paint-order:fill markers stroke"
        id="path153344-9"
@@ -652,8 +652,7 @@
          y="141.41182" /></text>
   </g>
   <g
-     id="layer4"
-     style="display:none">
+     id="layer4">
     <text
        xml:space="preserve"
        style="font-size:21.973px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';stroke-width:0.264583"
@@ -670,7 +669,7 @@
          id="tspan12">Forgetting · Delusions · Bias · Attention · Agency Emergent Behavior</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;display:inline;stroke-width:0.264583"
+       style="display:inline;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
        x="324.40738"
        y="129.91818"
        id="text13"><tspan
@@ -680,7 +679,7 @@
          y="129.91818">Neuro</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.8px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;display:inline;stroke-width:0.264583"
+       style="display:inline;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.8px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
        x="563.78741"
        y="129.91818"
        id="text14"><tspan
@@ -791,7 +790,7 @@
   </g>
   <g
      id="layer5"
-     style="display:inline">
+     style="display:none">
     <image
        width="179.66183"
        height="40.723351"
@@ -873,7 +872,7 @@
   </g>
   <g
      id="g28466"
-     style="display:inline">
+     style="display:none">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.875px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
@@ -991,19 +990,19 @@
            id="path28320" />
         <polygon
            class="cls-2"
-           points="229.246,34.437 248.284,34.437 248.284,26.371 229.246,26.371 229.246,15.327 251.118,15.327 251.118,6.477 216.079,6.477 216.079,55.39 251.681,55.39 251.681,46.044 229.246,46.044 "
+           points="229.246,46.044 229.246,34.437 248.284,34.437 248.284,26.371 229.246,26.371 229.246,15.327 251.118,15.327 251.118,6.477 216.079,6.477 216.079,55.39 251.681,55.39 251.681,46.044 "
            id="polygon28322" />
         <polygon
            class="cls-2"
-           points="292.767,55.885 307.113,20.76 307.113,55.39 320.063,55.39 320.063,6.477 303.239,6.477 290.621,37.728 278.316,6.477 260.601,6.477 260.601,55.39 270.226,55.39 270.226,20.76 284.293,55.885 "
+           points="284.293,55.885 292.767,55.885 307.113,20.76 307.113,55.39 320.063,55.39 320.063,6.477 303.239,6.477 290.621,37.728 278.316,6.477 260.601,6.477 260.601,55.39 270.226,55.39 270.226,20.76 "
            id="polygon28324" />
         <polygon
            class="cls-2"
-           points="345.758,34.437 364.8,34.437 364.8,26.371 345.758,26.371 345.758,15.327 367.63,15.327 367.63,6.477 332.591,6.477 332.591,55.39 368.198,55.39 368.198,46.044 345.758,46.044 "
+           points="345.758,46.044 345.758,34.437 364.8,34.437 364.8,26.371 345.758,26.371 345.758,15.327 367.63,15.327 367.63,6.477 332.591,6.477 332.591,55.39 368.198,55.39 368.198,46.044 "
            id="polygon28326" />
         <polygon
            class="cls-2"
-           points="386.812,55.39 386.812,22.208 404.059,55.39 419.444,55.39 419.444,6.477 409.819,6.477 409.819,39.22 393.024,6.477 377.187,6.477 377.187,55.39 "
+           points="377.187,55.39 386.812,55.39 386.812,22.208 404.059,55.39 419.444,55.39 419.444,6.477 409.819,6.477 409.819,39.22 393.024,6.477 377.187,6.477 "
            id="polygon28328" />
         <path
            class="cls-2"
@@ -1026,7 +1025,7 @@
            id="path28338" />
         <polygon
            class="cls-1"
-           points="5,137.088 17.055,137.088 17.055,113.902 34.254,113.902 34.254,137.088 46.314,137.088 46.314,81.024 34.254,81.024 34.254,103.363 17.055,103.363 17.055,81.024 5,81.024 "
+           points="5,81.024 5,137.088 17.055,137.088 17.055,113.902 34.254,113.902 34.254,137.088 46.314,137.088 46.314,81.024 34.254,81.024 34.254,103.363 17.055,103.363 17.055,81.024 "
            id="polygon28340" />
         <path
            class="cls-1"
@@ -1207,11 +1206,11 @@
        transform="matrix(0.48337083,0,0,0.48337083,904.6755,500.8616)">
       <polygon
          class="cls-1"
-         points="0,21.6 11.43,21.6 11.43,9.8 38.34,9.8 38.34,0 0,0 "
+         points="0,0 0,21.6 11.43,21.6 11.43,9.8 38.34,9.8 38.34,0 "
          id="polygon28444" />
       <polygon
          class="cls-1"
-         points="0,53 38.34,53 38.34,43.2 11.43,43.2 11.43,31.4 0,31.4 "
+         points="0,31.4 0,53 38.34,53 38.34,43.2 11.43,43.2 11.43,31.4 "
          id="polygon28446" />
       <rect
          class="cls-1"
@@ -1226,11 +1225,11 @@
          id="path28450" />
       <polygon
          class="cls-1"
-         points="155.47,43.2 155.47,0 144.04,0 144.04,53 182.38,53 182.38,43.2 "
+         points="182.38,43.2 155.47,43.2 155.47,0 144.04,0 144.04,53 182.38,53 "
          id="polygon28452" />
       <polygon
          class="cls-1"
-         points="97.42,21.6 108.85,21.6 108.85,9.8 135.76,9.8 135.76,0 97.42,0 "
+         points="97.42,0 97.42,21.6 108.85,21.6 108.85,9.8 135.76,9.8 135.76,0 "
          id="polygon28454" />
       <rect
          class="cls-1"

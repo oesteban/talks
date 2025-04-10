@@ -14,7 +14,7 @@
      id="defs153256">
     <style type="text/css">
     <![CDATA[
-     @import url(https://fonts.googleapis.com/css?family=Urbanist:400,800,400italic);
+     @import url(https://fonts.googleapis.com/css?family=Urbanist:400,800,900,400italic,800italic,900italic);
     ]]>
     </style>
     <rect
@@ -606,19 +606,8 @@
     </marker>
   </defs>
   <g
-     id="layer1">
-    <circle
-       style="opacity:0.304017;fill:#aeceac;stroke:none;stroke-width:4.99999;stroke-linejoin:round;stroke-dashoffset:8.31308;paint-order:fill markers stroke"
-       id="path153344"
-       cx="405.19971"
-       cy="181.09799"
-       r="150.08916" />
-    <circle
-       style="opacity:0.328262;fill:#ffceac;fill-opacity:1;stroke:none;stroke-width:4.99999;stroke-linejoin:round;stroke-dashoffset:8.31308;paint-order:fill markers stroke"
-       id="path153344-7"
-       cx="610.80029"
-       cy="181.58319"
-       r="150.08916" />
+     id="layer1"
+     style="display:inline">
     <circle
        style="opacity:0.213009;fill:#aeceff;fill-opacity:1;stroke:none;stroke-width:4.99999;stroke-linejoin:round;stroke-dashoffset:8.31308;paint-order:fill markers stroke"
        id="path153344-9"
@@ -627,7 +616,7 @@
        r="150.08916" />
     <text
        xml:space="preserve"
-       style="font-size:42.3333px;line-height:1.25;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
+       style="font-size:42.3333px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
        x="569.76044"
        y="141.41182"
        id="text169097"><tspan
@@ -637,103 +626,167 @@
          y="141.41182" /></text>
   </g>
   <g
+     id="g3"
+     style="display:inline">
+    <circle
+       style="opacity:0.304017;fill:#aeceac;stroke:none;stroke-width:4.99999;stroke-linejoin:round;stroke-dashoffset:8.31308;paint-order:fill markers stroke"
+       id="circle1"
+       cx="405.19971"
+       cy="181.09799"
+       r="150.08916" />
+    <circle
+       style="opacity:0.328262;fill:#ffceac;fill-opacity:1;stroke:none;stroke-width:4.99999;stroke-linejoin:round;stroke-dashoffset:8.31308;paint-order:fill markers stroke"
+       id="circle2"
+       cx="610.80029"
+       cy="181.58319"
+       r="150.08916" />
+    <text
+       xml:space="preserve"
+       style="font-size:42.3333px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
+       x="569.76044"
+       y="141.41182"
+       id="text3"><tspan
+         id="tspan3"
+         style="stroke-width:0.264583"
+         x="569.76044"
+         y="141.41182" /></text>
+  </g>
+  <g
+     id="layer4"
+     style="display:none">
+    <text
+       xml:space="preserve"
+       style="font-size:21.973px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';stroke-width:0.264583"
+       x="507.45065"
+       y="407.4472"
+       id="text4"><tspan
+         style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="507.45065"
+         y="407.4472"
+         id="tspan5">Hallucinations · Confabulation · Cognitive overload</tspan><tspan
+         style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="507.45065"
+         y="434.91345"
+         id="tspan12">Forgetting · Delusions · Bias · Attention · Agency Emergent Behavior</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;display:inline;stroke-width:0.264583"
+       x="324.40738"
+       y="129.91818"
+       id="text13"><tspan
+         id="tspan13"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="324.40738"
+         y="129.91818">Neuro</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.8px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;display:inline;stroke-width:0.264583"
+       x="563.78741"
+       y="129.91818"
+       id="text14"><tspan
+         id="tspan14"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="563.78741"
+         y="129.91818">ML/AI</tspan></text>
+  </g>
+  <g
      id="layer3"
      style="display:none">
     <text
        xml:space="preserve"
-       style="font-size:19.7556px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
        x="454.46667"
        y="155.59581"
        id="text51756"><tspan
          id="tspan51754"
-         style="font-size:19.7556px;text-align:end;text-anchor:end;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;stroke-width:0.264583"
          x="454.46667"
          y="155.59581">Neuroimaging</tspan><tspan
-         style="font-size:19.7556px;text-align:end;text-anchor:end;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;stroke-width:0.264583"
          x="454.46667"
          y="180.29031"
          id="tspan51758">Neuroengineering</tspan><tspan
-         style="font-size:19.7556px;text-align:end;text-anchor:end;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;stroke-width:0.264583"
          x="454.46667"
          y="204.9848"
          id="tspan51760">Computational neuroscience</tspan><tspan
-         style="font-size:19.7556px;text-align:end;text-anchor:end;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;stroke-width:0.264583"
          x="454.46667"
          y="229.67931"
          id="tspan51762">Clinical applications</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:19.7556px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
        x="566.04517"
        y="156.58359"
        id="text60372"><tspan
          id="tspan60370"
-         style="font-size:19.7556px;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="566.04517"
          y="156.58359">Applied ML/AI</tspan><tspan
-         style="font-size:19.7556px;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="566.04517"
          y="181.27809"
          id="tspan60374">Statistical models</tspan><tspan
-         style="font-size:19.7556px;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="566.04517"
          y="205.9726"
          id="tspan60376">Digital twins</tspan><tspan
-         style="font-size:19.7556px;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="566.04517"
          y="230.66708"
          id="tspan60378">Computer Vision</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:19.7556px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
        x="507.90121"
        y="423.04819"
        id="text63586"><tspan
          id="tspan63584"
-         style="font-size:19.7556px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
          x="507.90121"
          y="423.04819">Software</tspan><tspan
-         style="font-size:19.7556px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
          x="507.90121"
          y="447.74268"
          id="tspan63588">Standardization</tspan><tspan
-         style="font-size:19.7556px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
          x="507.90121"
          y="472.43719"
          id="tspan63590">QA/QC</tspan><tspan
-         style="font-size:19.7556px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
          x="507.90121"
          y="497.13168"
          id="tspan63592">CI/CD</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:50.8px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
-       x="320.21939"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
+       x="324.40738"
        y="129.91818"
        id="text70770"><tspan
          id="tspan70768"
-         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';stroke-width:0.264583"
-         x="320.21939"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="324.40738"
          y="129.91818">Neuro</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:50.8px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.8px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
        x="563.78741"
        y="129.91818"
        id="text70770-6"><tspan
          id="tspan70768-0"
-         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="563.78741"
          y="129.91818">ML/AI</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:50.8px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
-       x="457.84772"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.8px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
+       x="459.01608"
        y="395.61343"
        id="text70770-1"><tspan
          id="tspan70768-2"
-         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';stroke-width:0.264583"
-         x="457.84772"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:50.8px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="459.01608"
          y="395.61343">S&amp;S</tspan></text>
   </g>
   <g
@@ -749,22 +802,22 @@
        y="50.309834" />
     <text
        xml:space="preserve"
-       style="font-size:42.3333px;line-height:1.25;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#c85e40;fill-opacity:1;stroke-width:0.264583"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.3472px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#c85e40;fill-opacity:1;stroke-width:0.264583"
        x="601.06189"
        y="103.08522"
        id="text173149"><tspan
          id="tspan173147"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.5833px;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#c85e40;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.3472px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#c85e40;fill-opacity:1;stroke-width:0.264583"
          x="601.06189"
          y="103.08522">Division II</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:42.3333px;line-height:1.25;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
        x="571.22791"
        y="140.99391"
        id="text198068"><tspan
          id="tspan198066"
-         style="font-style:italic;font-variant:normal;font-weight:800;font-stretch:normal;font-size:24.6944px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         style="font-style:italic;font-variant:normal;font-weight:800;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Ultra-Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="571.22791"
          y="140.99391">kQC—MRIQC before reconstruction</tspan></text>
     <text
@@ -938,19 +991,19 @@
            id="path28320" />
         <polygon
            class="cls-2"
-           points="229.246,46.044 229.246,34.437 248.284,34.437 248.284,26.371 229.246,26.371 229.246,15.327 251.118,15.327 251.118,6.477 216.079,6.477 216.079,55.39 251.681,55.39 251.681,46.044 "
+           points="248.284,34.437 248.284,26.371 229.246,26.371 229.246,15.327 251.118,15.327 251.118,6.477 216.079,6.477 216.079,55.39 251.681,55.39 251.681,46.044 229.246,46.044 229.246,34.437 "
            id="polygon28322" />
         <polygon
            class="cls-2"
-           points="284.293,55.885 292.767,55.885 307.113,20.76 307.113,55.39 320.063,55.39 320.063,6.477 303.239,6.477 290.621,37.728 278.316,6.477 260.601,6.477 260.601,55.39 270.226,55.39 270.226,20.76 "
+           points="307.113,20.76 307.113,55.39 320.063,55.39 320.063,6.477 303.239,6.477 290.621,37.728 278.316,6.477 260.601,6.477 260.601,55.39 270.226,55.39 270.226,20.76 284.293,55.885 292.767,55.885 "
            id="polygon28324" />
         <polygon
            class="cls-2"
-           points="345.758,46.044 345.758,34.437 364.8,34.437 364.8,26.371 345.758,26.371 345.758,15.327 367.63,15.327 367.63,6.477 332.591,6.477 332.591,55.39 368.198,55.39 368.198,46.044 "
+           points="364.8,34.437 364.8,26.371 345.758,26.371 345.758,15.327 367.63,15.327 367.63,6.477 332.591,6.477 332.591,55.39 368.198,55.39 368.198,46.044 345.758,46.044 345.758,34.437 "
            id="polygon28326" />
         <polygon
            class="cls-2"
-           points="377.187,55.39 386.812,55.39 386.812,22.208 404.059,55.39 419.444,55.39 419.444,6.477 409.819,6.477 409.819,39.22 393.024,6.477 377.187,6.477 "
+           points="386.812,22.208 404.059,55.39 419.444,55.39 419.444,6.477 409.819,6.477 409.819,39.22 393.024,6.477 377.187,6.477 377.187,55.39 386.812,55.39 "
            id="polygon28328" />
         <path
            class="cls-2"
@@ -973,7 +1026,7 @@
            id="path28338" />
         <polygon
            class="cls-1"
-           points="5,81.024 5,137.088 17.055,137.088 17.055,113.902 34.254,113.902 34.254,137.088 46.314,137.088 46.314,81.024 34.254,81.024 34.254,103.363 17.055,103.363 17.055,81.024 "
+           points="17.055,137.088 17.055,113.902 34.254,113.902 34.254,137.088 46.314,137.088 46.314,81.024 34.254,81.024 34.254,103.363 17.055,103.363 17.055,81.024 5,81.024 5,137.088 "
            id="polygon28340" />
         <path
            class="cls-1"
@@ -1154,11 +1207,11 @@
        transform="matrix(0.48337083,0,0,0.48337083,904.6755,500.8616)">
       <polygon
          class="cls-1"
-         points="0,0 0,21.6 11.43,21.6 11.43,9.8 38.34,9.8 38.34,0 "
+         points="11.43,21.6 11.43,9.8 38.34,9.8 38.34,0 0,0 0,21.6 "
          id="polygon28444" />
       <polygon
          class="cls-1"
-         points="0,31.4 0,53 38.34,53 38.34,43.2 11.43,43.2 11.43,31.4 "
+         points="38.34,53 38.34,43.2 11.43,43.2 11.43,31.4 0,31.4 0,53 "
          id="polygon28446" />
       <rect
          class="cls-1"
@@ -1173,11 +1226,11 @@
          id="path28450" />
       <polygon
          class="cls-1"
-         points="182.38,43.2 155.47,43.2 155.47,0 144.04,0 144.04,53 182.38,53 "
+         points="155.47,0 144.04,0 144.04,53 182.38,53 182.38,43.2 155.47,43.2 "
          id="polygon28452" />
       <polygon
          class="cls-1"
-         points="97.42,0 97.42,21.6 108.85,21.6 108.85,9.8 135.76,9.8 135.76,0 "
+         points="108.85,21.6 108.85,9.8 135.76,9.8 135.76,0 97.42,0 97.42,21.6 "
          id="polygon28454" />
       <rect
          class="cls-1"
@@ -1220,12 +1273,12 @@
        style="display:inline" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14.1111px;line-height:1.25;font-family:Whitney;-inkscape-font-specification:'Whitney, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="117.83292"
        y="281.9371"
        id="text2605"><tspan
          id="tspan2603"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:Urbanist;-inkscape-font-specification:Urbanist;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="117.83292"
          y="281.9371">k-space</tspan></text>
     <image
@@ -1241,17 +1294,17 @@
        style="display:inline" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14.1111px;line-height:1.25;font-family:Whitney;-inkscape-font-specification:'Whitney, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="140.02625"
        y="411.00299"
        id="text2605-0"><tspan
          id="tspan2603-2"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:28.2222px;font-family:Whitney;-inkscape-font-specification:'Whitney, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="140.02625"
          y="411.00299">reconstructed</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:28.2222px;font-family:Whitney;-inkscape-font-specification:'Whitney, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="140.02625"
-         y="446.28073"
+         y="435.69748"
          id="tspan3768">image</tspan></text>
     <rect
        style="display:inline;fill:#ffffff;stroke:#000000;stroke-width:1.0201;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
@@ -1262,74 +1315,64 @@
        y="336.27765" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14.1111px;line-height:1.25;font-family:Whitney;-inkscape-font-specification:'Whitney, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="30.723598"
-       y="360.14426"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="57.172916"
+       y="357.11673"
        id="text2605-0-6"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:Urbanist;-inkscape-font-specification:Urbanist;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
-         x="30.723598"
-         y="360.14426"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="57.172916"
+         y="357.11673"
          id="tspan3768-7">reconstruction</tspan></text>
-    <g
-       id="g14400"
-       transform="translate(-13.912191,-27.964868)"
-       style="display:inline">
-      <rect
-         style="display:inline;fill:#ffffff;stroke:#000000;stroke-width:0.901402;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
-         id="rect11285-1"
-         width="144.63602"
-         height="28.88656"
-         x="145.43051"
-         y="519.60455" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14.1111px;line-height:1.25;font-family:Whitney;-inkscape-font-specification:'Whitney, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-         x="152.95041"
-         y="541.92181"
-         id="text2605-0-6-3"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:Urbanist;-inkscape-font-specification:Urbanist;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
-           x="152.95041"
-           y="541.92181"
-           id="tspan3768-7-3">1st QA/QC</tspan></text>
-    </g>
-    <g
-       id="g16074"
-       transform="translate(-4.7159538,-11.485058)"
-       style="display:inline">
-      <rect
-         style="opacity:1;fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
-         id="rect15601"
-         width="64.927803"
-         height="37.349323"
-         x="233.15169"
-         y="311.21887" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14.1111px;line-height:1.25;font-family:Whitney;-inkscape-font-specification:'Whitney, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-         x="239.1714"
-         y="337.97919"
-         id="text2605-0-6-38"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:Urbanist;-inkscape-font-specification:Urbanist;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
-           x="239.1714"
-           y="337.97919"
-           id="tspan3768-7-5">kQC</tspan></text>
-      <path
-         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
-         d="M 233.06723,334.22359 H 84.044299"
-         id="path15980" />
-    </g>
+    <rect
+       style="display:inline;fill:#ffffff;stroke:#000000;stroke-width:0.901402;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect11285-1"
+       width="144.63602"
+       height="28.88656"
+       x="131.51833"
+       y="491.63968" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="159.21831"
+       y="512.58746"
+       id="text2605-0-6-3"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="159.21831"
+         y="512.58746"
+         id="tspan3768-7-3">1st QA/QC</tspan></text>
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect15601"
+       width="64.927803"
+       height="37.349323"
+       x="228.43573"
+       y="299.73383" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="241.31195"
+       y="325.68842"
+       id="text2605-0-6-38"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="241.31195"
+         y="325.68842"
+         id="tspan3768-7-5">kQC</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="M 228.35128,322.73853 H 79.328345"
+       id="path15980" />
   </g>
   <g
      id="layer6"
      style="display:inline">
     <text
        xml:space="preserve"
-       style="font-size:42.3333px;line-height:1.25;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;display:inline;stroke-width:0.264583"
+       style="font-size:42.3333px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;display:inline;stroke-width:0.264583"
        x="27.612715"
        y="140.99391"
        id="text198068-1"><tspan
          id="tspan198066-7"
-         style="font-style:italic;font-variant:normal;font-weight:800;font-stretch:normal;font-size:24.6944px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         style="font-style:italic;font-variant:normal;font-weight:800;font-stretch:normal;font-size:24.6944px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Ultra-Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="27.612715"
          y="140.99391">NETwin—Network digital twins</tspan></text>
     <text
@@ -1382,12 +1425,12 @@
        y="53.516666" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.875px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:14.1111px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
        x="377.77438"
        y="90.217072"
        id="text235715"><tspan
          id="tspan235713"
-         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:15.875px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:14.1111px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="377.77438"
          y="90.217072">Consolidator</tspan></text>
   </g>
@@ -1822,202 +1865,7 @@
        width="163.31821"
        height="44.749187"
        preserveAspectRatio="none"
-       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAESCAMAAABZ6w+AAAAB4FBMVEUAAAC1rqa1rqa1rqa1rqa1
-rqa1rqa1rqa1rqa1rqa1rqa1rqa1rqa1rqa1rqa1rqa1rqa1rqYAdrQAdrQAdrQAdrQAdrQAdrQA
-drQAdrQAdrQAdrQAdrQAdrQAdrQAdrQAdrQAdrQAdrQAmdoAmdoAmdoAmdoAmdoAmdrcAGncAGnc
-AGncAGncAGncAGnytwDytwDytwDytwDytwDytwAAl18Al18Al18Al18Al18Al18AmdoAmdoAmdrc
-AGncAGncAGnytwDytwDytwAAl18Al18Al18Al18AmdoAmdrcAGkAmdrcAGkAmdoAmdrcAGnytwAA
-l18AmdrcAGnytwAAl1/ytwAiroQAnGeMyq3Z7OL///9jvJkAn96CzfHqfqD30dziTIPz+fbm8+zy
-+f4BseblXoz76e799PffHXJ4w6SU0/Lum7XX7fud0bgAoXEApeDk8/1Ov+yu18Noxu4ouOkAq+P2
-x1TzuxXM5tgTqHrI5vn1xNP40XX86L/++vP99ub75LD3zGX636K34Pfsjar1w0H87cym2fXgOXn6
-25T1vy3nbpbyt8n51oW938798trwqb/53eZDtY/ytwAAl1/cAGnytwAAl18AmdoAl1/ytwAAmdrc
-AGncAGnytwCJYk7kAAAAoHRSTlMAIHCw4P/AkEAAMIAQYPBQ0KAQQIBQAJD/wCDQ4GCgsDBw8BBw
-wJAgACCQwGAQAGCwwKBAABBwwJAgAEDw///gMBDQ/1Dw/2AwgPDgQFCgsOCA0IAgsID/////////
-////////////////////////////////////////////////////////////////////////cKCg
-8OBgMJCwcFAwcj8e1AAAKI1JREFUeAHsnW9jnCgQhwMyCAqozV6a9i539/0/5fXyr4RhHKk2a5t5
-Xm7orm8ef8MM2ptrIwhKdwYesb3z2xh6C4+YTisvcNx4QbgqzkKOGYPnCNpAjo1eOLHogqAslCTt
-15kMlMzOC2cVXRBiggo2+BUWqDF6QUQXzskIddLgKcIMdbrgBRFdOCELUKSB9Rwxi+kiunBCYiZp
-P36jS99NJ6zNPLfjN/rsg8ULIrpwNtx3Q9Wr++ZV4/UaIL0259WY4Bntz4WILgjhxU8z+Ay9Zm2s
-bshD92K/8qdCRBcES2yth0QW7yoRLfZRincR/ZQIE9lCG8iBWUf+pYcnlD8PIrogBJTbqHpP1L1h
-8RgrkS6inxeZoLuV1vrk32LgERM8RqGbw5UQ0QUB7bb7tblbX/0U3Fo/3nnhLKILwoLDOSdVJmxh
-9d7gp5OdhBXRBUHBE9HX6eCRWrGfgq9zzk26iC5IoFtmB+9zEhPZFn8lYnBu8BzOOSWiH4Ygge6Y
-w7EOf2QCKzrzeKtxG56ns05E34kg9MBI6bDoBhf7jaIv8EzkLo1YFOh6YD/OufA7ii7IDN15JtEH
-HOj+h0XX8EJSzDGe6tU9v9VmcdwrrqzVqtXyBf7HaL9GiJ21y+QJVFwsPGG70Z1DdEFm6JZdgQN9
-bBMd7/GZRYZaNBh4ofd81aCbKxx07h/hEjwyK48JcYaCLgZW9E+3z1wulz/u9pJ92eXT3QdH4APd
-L6XoE9Ny57vuDjIUGegZAR3Af2ZhPW8zfdn0yo0hrTx4PyaokMbwKvrne5YG07/cc3y+Ez44qAqn
-gnXO4poN9AGvoEUfaeWqtbtKkDPyv5FCW57z/9DSv+8MIIoK4eae57I9uu9ZvtwJHxy2reZVmZyO
-t0dndrKiG18lQM5QSJah+PtEbH0sn6kXFH35GmjSIKILZw10Xbpi+d3xDI8EJvFXB3sRcmgXYeFC
-l75WhIUC1bar8AuskcJPEP2riC60BjrdElOlpIqt3GdPYnhTZ8jo0EE9bFoBZFi/jQFKev49mo72
-HKHbRecR0QWGDW01V0q7kHaWS/TGrXCiq2NcewfCnl2i056mJtEjMHQiunAF+Laat4Vpig90cgmv
-MX8r0ICYDxM9AWJqEF0lYLBPov8pogvviOMDXRVLUKDTGnTbNsPESkMU0DNg1EGiR8AsDaJb4Oif
-RP9yqOh/iejCvkDHXgdcr/Jn7SpExlRH9NwHWp/9ond0/2yL6A5Y4mbRH46co/99J3xghvYqnD9I
-RyxBpPVd9kLU5j1UMMeIHmg3N4neAYfxm0W/PVL0y53wgcFVOB/oaXOgx4aTKQZ/CeFaghrDIaJr
-qNGxohP3CRuV936ISyqXiujCO9LQMxsa0loT7haoVVMjUT1PuYH0RpoXnRno9WhfwYseyUogPl2q
-ccQR2J2i/yOiC/sCHXmdNs/d4zatCFMt8ccl8zyTPh0h+pDLPaN9BSv6sjLzC05r51+4uRwq+kVE
-pxFQWvNtNf75VH4JEdps3KPqOOYqTweInqX4nKs8bxTdcm0DEV24Ag1ttZa0NlQM8ttwQqS5fnMI
-efOrO0B0k8fxm3jfJjrk9CL6KRAa2mpTe6Cn0HgMraOH6Lpa7neF9rtFn97WEAZJ2yT6KKKfHQl0
-5HVDWvOjeWIkHsgheqhW9LEo5HeLvrytu3uqDOdF50v3h0NFfxDRSYT2thr/fCq9hG/HaSrrl7pf
-4e3g2u4VPRR194BUbhIdljXRbw8V/VZEpxDa2mp8WjNL+HbcTO3eXbWi78ovUDtFj2X3zyBpm0QH
-q0R04eqYnxnoyLq2V0tEyDD1ij6WX6B3im7Ln+zRTIARfYaCbhLRfxUk0FOhQsNBurZ2XF8fouv6
-8oDs3Ce6Qlcy4ekdN0dHpC4GEV24Hu1ttfbnU3kcZKT6ED1UK/oOH1oddok+4m/CP8efjKswj4OI
-LlyHH2mrtZ+M5zFQiU2Ne1pIpEjkMC86fyWGKCA40UMCAtOrt6J/PVT0f0V0Hnk+9fhAHzxPxemO
-sv+ZriLejPzkROdri74yWI+M6MWnGBtz0X2j6Awi+k4k0KEM9K7tf2tkCJUqfSBacaomriY20q2i
-L7U9QCpmApzowcAKJorowlUCvX/PF07wgoHGH4319Nc1+5cdoqdMyOrFqQ2i+wFWsUpEf0cEda0X
-TmAmPEpPUPfLVD+e0dOsrOjMEL2vXpw+4uWQKYrovwvywonJt2BKrSPetqO0nOvKxR8WvWOflTOb
-RPcuwSpRRP8FkECf+UD/j70z35PU9rV4DMYsNlstXUN17e//kPf2/CZJu+EgIcDDfNLnv2QKqKW/
-lizLxzqnhZBJPeb8QSMdDK8e/7EUdOUTjfknQc9dTJP+B4L+2P/S+W1d7fb/avfN6toBPZXvT4Uv
-oRlL9Nf/Bh5zCqQESgh65A82OKMHoHvKTDKm4ifo738I6Of94dZd/Jt198Nxcd4f18Pdf9BPXbr7
-4fl7iFfZPyryFZT9I5UvL0FZTW44QasfwSOwqbv2M3cc6SWgNwBbB6wxAOj+AetAzU/Quz8A9PPz
-jo2kL7frUrDvjidq3Ht1h2Mw2ovSmt5grU1r60WIdJlNjU58mVhwdyBpWU0Q0MXluDbXoBQXI579
-ubsI9ALx7D21xqD35MoYJ+9/BOiPE+0W/36az/r5ib8K8dgiVxGZKhmRsbWbA3nZNgmUbssFYXfV
-igHd50RQjssAns7nH12vRKCncI2uBP8CQPdUpxqF9OCgHyfG2KdPOdb7dRZXR+xrCWHfrUd5qhOG
-mjTLJVJRw7h5pJYN6M2UlzR0Ix39Ep7vM7CXinxS0PWpCPTKj9sod3cYdPjTmqQvFR70/aQge3tN
-QU+O+hUPJ+FPo3ClTtiq2npy5honTMVZvoTCG04QUvDbBLNobTx5/yQBvfZe6csfdyDoWC7q/f1E
-mwb9fJsK3mUvImuPMZd+GrmcrZJpqtJ8gshRBDRRyrUBwwlwbU8pHAywMgHoLXekJUBHKqvEU7th
-0HeHl4C80/R0enf/IdbyM/WySqYrlWNOSs+O6nLDiYTTGS8fe/pSXnrOUzsddJdwpWSg54X/O5vF
-Qe/om60bZS+PqZPz1w+5lsZcmUQik/OU6USgWAUP6DG97m6ol3DnyGAqzv6qqumglwlXkRD0PPvy
-Hv/Kb5sE/SSHD83U5Q/C2kA450d01yYyVZL8XVBWkxlOiJRShxvWCVv1ZNCbhKuGBp31jP8H/RAW
-9Cdrdk6sZgseAUQPcwHPgE4ToSwznIvVulyq8IYT4nJc5bz7cxVPBV0lfCkp6CYY6PJ19Mfrxyzd
-BJxvAPQ2kapkrnHJ1Qgip6CsFiKg46DaIldYQo4EXf5TpAFBfwsM+vXHXF0FnEt03wDnzN+9Teap
-KoIHdCM3nJCV4wr0z4TKiaDrhC8tBd17SLNF0OWcY9Jl8/OgW/FsIhcZ11yTJIFJ55fVYsH+VOoP
-HguH7AbGQ0LNNNAz0SA+qxhnNgI64FyuF6f2fvyxIdCzZIYCcC4kfUOGE2SKU+JZNCFFgi5Prtpx
-0F0Umzbyf5q+xVS6FdAB53JddvT6+Wv2U46Lnj+IpY1JrbWpMQ1O76ScN60tsw/Vth19oRZU5NYy
-nJAHdOzB5MQFjQiDDt48X9Uo6PWvm+m0GPvF682BLq3DCQpy9/kP2QcouDc2+3q+faynLaPHYw20
-Pr2ubqsEyQQJ6BExehHN8+JyXEvPopH0AOhN5gkcCsNQPQJ64Rk8/2MC3VumdVsDfSdskxFAuP8x
-X4+lOFcIRDuMSBE1fADhIKIjB1ql5ct4vvhltXhCI52r8Evk5bgMRPuYcXnhgz6oph4Ydgu6khZD
-0PulBNNam5qh9J8D+qjTymP/SdfDhQZdPk7Ik3f5o7r/aTjRWLvinrocSqUVj78aDiIQJCso70v3
-pyahDCeIPlSNZtEl4/IUg+7zhv1s8NjsIOgu4SmjQZdLAvqTtR+167p3+ZP4Af11+2xf8zgeurVA
-d8MkZnTjOg26qrARMFTRgBxg64YT8nJchBpk0WAb9yfSjCwc+tngmnkJQc/4HdJ/5cftgH5+kWH6
-9Pgb1NOL4nQ3awn9ddgNONB4+2bflwK9lFa5S03+xRscXaCw4aANZDhRrRzQ+5g4kJUbVupfs0DX
-X6f/BacXv5kLuvoJ+n47oHcUe096exvzUTsyb0Dz72u3fGNcLE+TbQVeOV76KYUdNpWaHtA1K6Dz
-G+mIPEZmNNOOH/HAy90ZyBUe+Lxv3yHQC/6awJZAp3KL+w60xAtC+nFGOrC/LQ06HXKxlC2IoIp+
-e1Gtvl12f2o13XCiJl4iK8dlKAlSrLK94RXrMz8It7zCSgaLcZq9EL8l0C+TF8x2N+nultOsmv2j
-W7RfJqO73aSyQlrx6rvavuGEIKTHaLbT8BybDa+frvBBr8dHQA/rcmieUXI53xLoV8HC+G40pl8w
-W0Q170Jvl18Q9HKRNWt+QG/4LSV9pSEMJ5SgeV6gokqG7tYSuQ88gjGim1+w/auv1gcdXdjSnG8O
-9AvBuaB+d5Q64ZxoOg+v9/2Kbe52xYBeyK9mESYvq7VrGk7g1QXjYJVO8eqcERpXez+q5o2ZWQ9r
-PZiRWdpJYGOgX2Wr4k9Re9xjUwdHtauBXs2qnLtKUMcTlNWiCY10BX6JSEVtM4XLE3b02t7oV9Kb
-XzLmkBl/TSrq4YpoYWhvoE2B3gnmzFQi8JKuop+Cgm7WAr2Ur4XjcNFs3XBivpzxQyflwVgVHHeP
-1IGLxkskqf9r9i8sQNdym+X5tkCnY2wn3AVzFIJ+CQu6aCosLZyXc6f4am3DiULQPL+wyrhKqrjO
-Cam0SZLGOq872Q6qVPAioNJ8vIdPtKq2SRIzdGHxdf9DFZf+yzYD+klaBN9Jcve9fEN7INCbfL7U
-7Oa2VrA2N9XHtXL9cxYFAf1bWfb3GFP7Q+WmQL+IA2wnuHAv39AeCPQky2crmt3blok3sfHLaumE
-Rjol/HK+tRXQH/Ip80FgvE5/6FfAmC6bCtOK56/Pa4HPhbSsRnfG0zH/W9sGnc7chU1uV/ke1W7/
-u0BfKj0lxg9x7p6tajhRS5vnv7V90IkGFvk+tBN9DVZ3DAN6RnssS5QtsKW8FtxDWFaLBJ3x3/rD
-QN/NcFV+CC7dcb3nTiHm6m6d05DsEjvKBZN0SVktgOHEBvQN+nHOqrYkGXjxDSwCsK4TICNHHXRe
-L+F/Xsn3p+KYT3XG0zH/W9sH/UBcIwf9vICVzeUA7hLgiBZTihP4igjG8km62orhxLe2D7qgLQ6Y
-WAmuxSML0PtzTdYL+QnodMyc14cTCfJ/SVmN3HxKx/xvbR/0C2ke9Uvyg9joiT3F+nUnqrT5bVET
-smzc5ySvxUUh7hKtZjjxHdDloO/CQY7n2xtr0EG6Ty3Dq7ZizbazhFRji8C1OFyNs/L9qSDmZ7yA
-Lt+f+g16Hhb0Tr7aJdKNbrNZb7oefZ4mx04Q0oELuxh0FWCmLyireV1y8uOXsVRpbe/L8xvU8Rjo
-amsj9M3VsU6SpqVmMzVI6/C7AMqsjQr4b/HPL1Kb2NZqMuiHq+f1DLTbf+i2NdA73CIv1O0h3H7a
-OLJNjJaJioBFd3Abs7ThRLGu4YRrgX22t9NT18iWz9u07qloOK66Lu11RsB3UUWM/XKmGBpxEl86
-LWjQpabGBxF4h/CgzzlhsXsIaukE6VGChX/A8KDjYC0oqwk6462E839pxO8Gjk3tyP7xsmK59hrG
-X0DBsem38GGlxsuz/wnQX6scvXbbifrd0qXONdZWiQhtFmq7WcZwomR0xgOTKelHiMaN77PR8kmL
-4CSGNsv5CzCMQopCv2TRJEDGbR/0ZbTOYaqvo6gLRnHBpNVmgk53sybo8rJaO/FsZXmZQY+PsGb8
-Z1HjW35iemdQxZm7tZxgUPhfKFTjNgT6PTzos596J4J6PUin4MwEKJNtEXRcViMNJ7J1DCeK8WWH
-8ZHYjVxseWsaCr4E3Etz2hQtNxk0GwK9Cw86ZSFL6/08/Ti1it+FxlGs1ge95q7SyctqVtAZL20F
-sOOfLyIM1j1p3jieTQU94fyklv1nk/03QD/LT0ifZU7RCAxYyyqZpipaHfSMCbq8rCbpjBe3CMbj
-o6sZBTAjhsDKhQed9na3XND3Gwdd/u4fK5IuOo5UmWSijNsI6PKyGj+gm/n78jVhreHGKieKSsDK
-sKD7tcRv0FfL3i+7xUAHyyS0qmJLoM8wnChXM5wwIyQXia96pF9Ikz2DcXjQQWj4Bh0f6iRQJwcd
-ydlqIunlFkCXl9XK9Qwn6PQ7j8an2Qr9G0iZVWjQs4RU/Q36h66z0vcnf3WNH5PKJpmkegOgy8tq
-et2ATlTjmvFyaY0rdYM/UhQadDqg6/y3gH4JDzqhM7HMJjx1NU5mdKYVbSXI3sOBXtBELh/QdS4V
-zq4d8dEs/CeVDKkJDLrqdVJlSmV1qr0wEBh0XMM/BQIdaN/N2TQDVCbEHI5Q3Wo+6S4w6LMDuply
-2rnMQQoEX03k3ymc3leIzAYMBgFAj1BCUfxivarzDYF+CAY60LVbfvmukmbu/o/FUhx4HZ32dNuU
-4UQKq3ExEZMr+OXpT3jF3jgREvTY57y3Ga50+X8E9HemW8T+vvRhcuUSnBVRI52mN8E748qtGk7U
-ELVqvJ6mPLQQvSryEoaQoGtyJ8N2QBe0nb+6z7ofPO09vbF1PlxES2xvSDGdYXOkOKxrwbYzOejV
-XMOJTNAZnwuEecXzkpI1QrSf+VLeq0KC7q+jBQR9LwCdvOq534c5IelxE5Tg4VtzDV0z48mVcUKo
-XGubakonBvKyGnnaOZ7Eiw+ciYkPF7Pwq7yEuUFrcN+gezpv57TyI2Bd8u5c6yVWFOcE6w0d0umc
-2y1lPIFpipbfn4pjvsDLVlMnToEP36AinvJqYlVI0AvQA7BV0N/otfeAOoLpuuDd1fqf39/mc6XS
-KsEqpJ5xAmP3dLOGE0DR8GCnqHpHhT507A0A3o3KgKA7kNZtFvSONo8Iqd2Vzzrx7gobG2PSOpeL
-1zWXstbFykUOcLPhDSeIgC7bqRoRh94pwL/3D9GX4TAOm7p7sm7joN/odxBYO/6K2+4tnFyaADXr
-+LoXdF4gL6u1eHGQnsSLLS4t4fWhh2txDmQI6iunLizoniqrAoEuq109aY/o8Drf+Cv14ZShoO4W
-XEgXdHRjIqGPq1vXcAKtl8dDbXGVPwsi3CC0P8D642EZCHQwVDVRsQnQ94LLLm+/R+duC6DjYr6n
-bJWye8pcXVPbM5ygDFy8gG19hvrfYAvSnAigHwZ0mwxJt/VGQcfVOHzMeRA9+RtbggnsQC4F1ThZ
-LS4ObjghCegYNjdQi3d9Uv2EvwSjn4L/K1CvO1BcTgb9GAD0e5CQLtCVv74WTCXedkw2r6YLHNQS
-LRrQGzqgx/lsebD1OY49Ut1AlaOAbpO9IG+3sXutatVn0M/0H3IA0J8BYBKTvrn3pjHoFKRaPEUH
-K3nyshrdGa8IOoTtAHYoAa/70bv+TA0YQdOBabsOCLpKxtQq+pBF2R/yUQj6WVTDC6Jue6Bb3pqX
-oSil1fKm6G6DhhO41hAPZdtefO/DF4PKXjH0gCIc6JRlXOrWAf0gnfG/y1ybAui4PdAzHugR7Tgt
-ydzbzRtOEPtadK/80Pj4ViAL6H8pehDnNCDolAlsU2wL9Kd8GxrUWBVxx04RdnQNI7QUD3RF712X
-ZO71koYTFR3Qm3wBuV41Tn0hs+x9xGoY0HIAaf/VVUjQ84hjSxIe9KcAJwnpu+flx33EQIr/seih
-K7S4Zxk3xOtIaSJzF5TVwF4V2fZ24UfJvvJRfBkK0t44Cb7VYniWU4cEPc80TXp40NHdbouSvju8
-htrQvffZnZcBfbeN1D1CAVke0ktm5g6JxJP4TG44IVPrQdJL1X2A9dds3wznSRpMDtogoPsHvmJp
-tyXQz4IDz3BP2wfmFOjM+x3pXvfQipgr5K6Sr7DBzV3F1g0n6EEr/kJNO9DX6rOXDpf1UtRm68KC
-TmxubDcAOgjpQPfzpC71A/U+u/P8qvs9POiGuwPVSq1o8dVmScOJJEBAB4G49jLtoX43479iaPQr
-UM5QBgadMB5TLNBvYUA/88wYx9HcefvJMej33v2QjkEa45yb4deIgVAoleOoIEYJQVkttOEEDLg+
-lq6HsOlfgMv3A/9iAoHuq4gMCOks0LswoPshHev9idjcHzr8LBimb6PFtMcrxAp/mlSZrPmDSMjb
-RLy1xWniUomPK7+RrqQn8fJ9LZlHdTyQlDtvkGyGv9EUc6iCge7L1UNO4dUGQJeceXi5HfYe7fv9
-4fY+Jdh23u2eZxjPX7Rn3AL61NoARSyn1ChnFi6mu4YZ0LPNGk7gr80O7Uvxm+NAcc37QqPMU+Pd
-MwDoQHXb/9nCg94JdpAAvXc/JVn46nppwlBgfnSBtrT8j4NaXArHU1mLcjkZ5zFJZHgHKcGEJ/a+
-FzWQ3bfeK0rw7WM1AUDHUl9Rt3/lx/Cg0/gJJADd1+v+3O8+U/58D2Y78XdenEk5x797A09hFXBe
-KciPIKAbOqCn+XLyhsVmiElvxc0MJuImYaoICDr9ZxL/lR82BPr5FQr0FzaSPnzo3slPahHoX/6I
-qO5i+qwWVFLzpbMcC7lbRHDqyyurgRo8fbbyAvLJ9WbaQ3QUg51uKuEqDQg6PcEzHNDfBTtABKAL
-DN7ldbLFHnFeuqVVR2MVKg9A3s9uE6AWDQ6uBVfEov2pdXjDCfKLaL3YO9Qn63nSePjwpMOAjlUh
-0LHCgb7wmS1vq4N+WKPTrbHF8AlNFe594kUywmCMMJvVbtuGE4Qy8C3Q85wItxBh1b8ZdLNp0N9u
-QUDfLfSAy26lltbK2DL7xFVWtjrBqon5NlRc+iypMiZ2RyxmOKEDB/Tc0XXJiHDpKhK+2v846C/y
-DgFA368+N5CD7vP+oYY1H8QqxjuhYxtlH4psrPmHwcjLajqk4QRdl6zpgob3cbmq/tOpO3233fti
-nF/WBv25fO+6RE2e80kXq8xFhhOFwHAipYcPiVLaPZdoEqokX9jvAb3GVfewoAfI3ruVi3635R1j
-JGpcLiddzvnWDCeEK5MxPRZYcANCcRjQa2ttRvU1Whbo+7Cgv51WB/0QmHNC6UKcYxV6Wc7nG044
-uYOUVIpeMcxGk/s4mSS3Kuj+DxuXzl846XXGnRYF/X2R/OD62jzomHOBzPKc44qcRFU5tlbbTAno
-TQDDCSRNH0ZRYWBBNQ8rWhV0P1XzWc+afq97tyjo4gqZr8ciE/XTmjnD820ToMeOP0MVSxfSHeNK
-YDhBV+Wliun6Rotf4tfk22xQjXdhH/TG+IrLAdDNF7UZ86SWJrV1ZvsLNG0A0AV3k8dcweY1mS6L
-+kdViVRRzlemFx5MakFZrQ1tOEFsB0rpeXw7WLUvGI9QPdBhSkaUadJh0FXCU7YF0OXHIcldG+9z
-c4Xd2j7tWPIj151NBKpqmJYLympVUMMJuh24oBfby6GrNacOkHJATxoG6IkdBD1LWDI5D/RnKNB9
-7eeh/hp52+d5c/99CA84LPmR66pNpspiJqvpZbXaD5LygC5TRTtdGjiLT1mtC403GrBoLBmgV24I
-dObIrZigH8KDPhv1+3U06J6f7+Exx1KRno45Bmw51FtFxseWVVbzYcnCGE7QFLd0eq8HS3kFa3pQ
-sECPOcjW8oge5VsBHetxkxTgsQmNnHXsR7OMgOUXkLZiEJTVsoeAP+mafIX+SlrFP1t5WVm6d1jB
-hXafftb0IGLRaDig2yHQHbsXd2HQzyuUq6/31/KUy1jvcJqwhArb8IJ5W+ezxBlUdJvxqHGcLNzP
-nU1AwwlMIXiMTnyVYPaNpHHFbHHQ85S7/tpfR+96uvP/uncv2d0IHU9MIF/3K6YceMbeLkz7Kj7l
-crnamioZk7FZvoCKKMawV3FUcJ3Sq0llNRCuZQ5SAmnaaCdCYwHzBLu0R6NmpO4Fnbr7M4+I2R7R
-ur+PTX7uf2qZv+LHcf9TixOw2x/u40R2t6dwj8n5eOheY4x3h+P5LZxUZlPT9BE3tizyBeU+nmO+
-bKKxNlNTJryGDugYdLnhhFA1gBjvfbFDE3zNzBqyMUcA/1Wa3t4+5H/lDJ0I/AL9T9Jj/zycuq67
-eL5xp8N1f54/klwPh67r3j/f+XY44EErAPD/yuVr6uNJwsqWoctqNOjYBnpptWjfLdgYYAbbY0te
-W07D6kqMObX52nOm9LwwqgTKFLkP+re+JQRd0w5SGHR5QBcrJfv98qIZduEpedaarvEHEhx2vUfU
-1WgLsv+axhGntHgWhN+gf2t+CZsV0H3Q4wABHSprK3JJ4Rc6cfblUvPzypKaEqXV10EiS82w0uwT
-sC14UfTPnYp4cGlV9X1JdOqNY//H3hnsNgwCUVCxiVnA4PD/P9v2sqeFElltt9LMkT3kNHoykMdN
-0QHR83Kgq8nhbwJdyd9/Cp0i2V5+LP5C+iFE8mBwldKPL6LusyA63EamJ02bud/V1eTfC3RAdLjf
-wRbsYTM/x6uxqmwa6G5AdIDXZAt6tw+wHsayzhqBjuj+gKrWDsN5m1dFWqNGoCO6J+Bso010GdZW
-1uFJdNcrHp5AdIAyOFfObVycFNR02/OQwKXoQKQ/j9O8LR5nl1CL/aacJPAlOsBl/Dtejnnf/K7j
-SzWvzdAfnIgOEJ/KXkSkxmC/sWz20YZYRaTsxhVucCQ6QF9+qk3JbaG7GvyLDphue26b7t9zRAeI
-trP5/dckegKvogNYffHxTFNKs2qlwbHoADWsdscqj97sUltwKzqARG1b2OuasmfV1rpXJ83/iegA
-Wd4vpJJP8gf7dLKuJAAGALRtz5EDaeGEmRSkEVg2j+//KO3g4u5+3w9uznmH8xTRAdEB0QHRHwlE
-B0QHRAdEB0QHRAfRAdEB0QHRAdEB0QHRAdEB0UF0QHRAdEB0eDaZxpnNk1vPF8s4L16mt1brTZjt
-Lru1f3WI8/qY5/mTHEb35m0RapL0LcpQ705pz/l9FWp9zno+1E2k+nKP6PCxiPYp+nnf9RT9vG/T
-f95Eu4jOHXwuws2Tzpcy3DJ9YFuFW2Wdfd1Eq4+jR4evRbxvSed7Ge+Uts5VvB9Z59LE+zl6dJgV
-8X4lnWsZ73fa2lUD+JO1/jbxDqNHh2kxgKRTDhv9XzWAXdY6iB4A0UUH0UUH0UUH0UUH0UUfFaKL
-DqKLDqKLDqKLDqKLHg/RRRcd0f+zd29NqftqHMdf2eZmz/zfAm1/HCsWUA4qSwrIWYQlKqLrDW8L
-9JkG0oWT1Jnmv5/vXaq3n0nTJsVI6Nkg618LnWPoDN2yHexzcgydMwt6vvCdNKEXSzhXqZx26LYL
-ChdZo6BzPKNX8I0udaB7VXyjWj3V0C0HYlcmQecY+vVPQ2/gexXTCl10TuUMgM4xdKqZEHRN52ik
-GXoLYSQebYOgcwz9poKw28uj7q5vNaF7oAye0dvY1wlwW7a7HxgAnWPo1CWoX5K/VgDcq0KvV0EZ
-vEa/Eu/WswhyTYDOMXSqgLBKV/JcvgkUVKE38M2qmk/dfd8/g7qnAb2PoD6NOwgamACdY+jUA8Ka
-kr921aHXa4HhhheEoKEXJg6JuQr00XiCoOls/t/YHsca0LHLpnEWQVmjoHMMPV9BmIz0Qhn6E1B7
-yuyjJ27SoTr05RQUJnHWfawYOvd/DV1cpktu3u/wWxF6FbWyXPZzUtBHOGq6fpE4nyQAvU/jlnG3
-7hxDF5fpt3nJvftCDboHvIpTOA09GupBX0PSeC75r0ftNTpN4ZbLD+PMi6GLy/RryZTeVYP+hmFG
-hO6Fo1caakEfQd5kNqKHb73NFADmGtBb2OVY++G7ia/XOIYuLtMvEzvUUqvV46A3EoH+MsG+1RYn
-bWfrr2bbA32d12tZIGK7Y9qGGY6hU/cIq+STgv7xnKHqCMqI0Oua0Gc75KOXHfrRbIL41irQqT7t
-cCfntnFbYDmGLmx6X2hDl+SJ0Ic01ID+AmDrRy7MV4hp2tOCnsWhXOjc4UMtnHnQxU3v9z8FvUrD
-UhLQZ8Ds2H7MtL7UPL3WwqE+drkWQ+fMhN4Vbt6Thv4KACUaVpOAPok4p3qjKY6bjLTPozuI5g74
-PDpnJHThHdsieegNETqCPjWhH92QU/4MQtul/ocnLEd0ztA5M6ELN++XPwO9IUIvaUIfC4DFaX22
-JeYj/WOqonSHnDN0zkDoXYQVEoc+FKB7+tDPt/Q36/X8hcZ60NsEHVnCn2XonDnQqcLPQS9JNsaV
-DPo45B8XFD2J6yPH0DnzoNO2mZvEodeEDTJPpkG3QUW2yAF9hs6ZA51q0jbYpKGLG2QahkHvABLp
-AwAMnTMNOi3Sm/nEodN+GROhk3O3RdKDy1mGzhkJvUnfmUka+lMENkEfmgGdnDvtf3KIbHu3GTpn
-IvQCdt39wBbYtwhsgt5ICHrPX3+18f9m+sVXhU7O3609bpLeYeicgdC72PX7J36SqSbCLiUI3R/j
-0GRMh1NPmq4UoRPtDrEPxw4/jOPMg55v0gI9cehFBBX/Ar2uCv3x6CC6fF6fQRV6Vnj+FpVug6Fz
-5kG/pgV68tCrR8fP344fxn0M1aD3tjhuuulJnGOsCD08xdKWboa1GTpnFvR7WqAnD72IXRmqcbzX
-HSirQBedx31Lyt8C2ChBpwm9Jd/2/oehGxVDv6nEL9DzWtDpZxxqAnThvfoz4KlAHyOu8WZ52Ai7
-2SJoqQa9I2x7pW/GhVkM3agY+l8W6PnmLz3oQ+wqnUAvRqZ8lVv3OXatHtfrxxVO2q5WNOOvFF+v
-XWCfcHFA0gcM3YwY+vkFegEPGtBJNRrCa/Wgajilf6KqAn0KYEpP2uePE8TmK0KXiybp7oChmxJD
-pwX6fcwG+IIO9KLkZxQ97HujZ3NDBejzk6X3aAt5Y9UNMzGL8ZxwwIWhGxBDpwX6ddw2Gh3oZYSV
-M9QzDpXKX4MhgCcF6GNMTlbeyxkkbXu60DviZetC3PbO0FMfQ6cFunQ+L2j8mqr4e6ri+7aw2ieC
-nhWgAyNhLHzHPdqKnCtDx0DyFQqSztANiKFfY9fvwkmLpt7vo9Nq/PgIywfEhhkV6DNxTM2FT0RO
-Nhp73d8B2uhODRxEchi6CTH0O5zrRh16CWEfmUjPEPNUoEsAU/56vELQivbPKEHPIczNHS61OxDr
-MPT0x9C7FZzrP0lAfz29Tg3Te3rtApT7btv2O12wcySdoac9hp5v4ly3+tBpu4x0Sq/W0wv9D2Lq
-iEfZGHqqY+gLnO1BA3oD4lt0qgiqVk7zefQWpDlW9IBLjqGnOob+C+dbaECvfyLmG+5vNJ+T81RC
-J82U7NBqm6GnOYZewfkKCtCpegC61pD85bWG3Z/qaf/CzJWLo9yr4/dsVww9xTH0m8XD+e6UoFN1
-z8vI8zyvbMI34yzbFZh32pE/7SLnDD2NMXS9BOgamfBdd7t/AQAX/dbXblj+pZb/sU/HRAAAIBCA
-8tnPwEbQxeUPOoDokdF3oiO66CC66CC66CC66CC66IguuuiILrroiC666IguOoguOoguOsRFFx1E
-b9EPoB6eT/v0lhMhDIYBdDHeaoB6K5o0tAELhZCMGoLsDBwYL1v1jRbn9RtIzH/2cBrm1KeN/mBO
-oBWznqKTf2Gn8C6ZM2i8lM+yDwP3JpzS4j1SdLK+RqElV8xJNVzAPZ2BuxGevUUrYopO1lclCmxk
-vlCD1RH3ZM8G7F74psKC5ZKib4BUjUJKdmwprDVScM0XslsDdRBL094iFbmk6Nsg48sFyuf5Gfsr
-+noNUIZvfuTncAfTteJI2T+hvJexlPIXaPTRUAKFgesAAAAASUVORK5CYII=
-"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAESCAMAAABZ6w+AAAAB4FBMVEUAAAC1rqa1rqa1rqa1rqa1 rqa1rqa1rqa1rqa1rqa1rqa1rqa1rqa1rqa1rqa1rqa1rqa1rqYAdrQAdrQAdrQAdrQAdrQAdrQA drQAdrQAdrQAdrQAdrQAdrQAdrQAdrQAdrQAdrQAdrQAmdoAmdoAmdoAmdoAmdoAmdrcAGncAGnc AGncAGncAGncAGnytwDytwDytwDytwDytwDytwAAl18Al18Al18Al18Al18Al18AmdoAmdoAmdrc AGncAGncAGnytwDytwDytwAAl18Al18Al18Al18AmdoAmdrcAGkAmdrcAGkAmdoAmdrcAGnytwAA l18AmdrcAGnytwAAl1/ytwAiroQAnGeMyq3Z7OL///9jvJkAn96CzfHqfqD30dziTIPz+fbm8+zy +f4BseblXoz76e799PffHXJ4w6SU0/Lum7XX7fud0bgAoXEApeDk8/1Ov+yu18Noxu4ouOkAq+P2 x1TzuxXM5tgTqHrI5vn1xNP40XX86L/++vP99ub75LD3zGX636K34Pfsjar1w0H87cym2fXgOXn6 25T1vy3nbpbyt8n51oW938798trwqb/53eZDtY/ytwAAl1/cAGnytwAAl18AmdoAl1/ytwAAmdrc AGncAGnytwCJYk7kAAAAoHRSTlMAIHCw4P/AkEAAMIAQYPBQ0KAQQIBQAJD/wCDQ4GCgsDBw8BBw wJAgACCQwGAQAGCwwKBAABBwwJAgAEDw///gMBDQ/1Dw/2AwgPDgQFCgsOCA0IAgsID///////// ////////////////////////////////////////////////////////////////////////cKCg 8OBgMJCwcFAwcj8e1AAAKI1JREFUeAHsnW9jnCgQhwMyCAqozV6a9i539/0/5fXyr4RhHKk2a5t5 Xm7orm8ef8MM2ptrIwhKdwYesb3z2xh6C4+YTisvcNx4QbgqzkKOGYPnCNpAjo1eOLHogqAslCTt 15kMlMzOC2cVXRBiggo2+BUWqDF6QUQXzskIddLgKcIMdbrgBRFdOCELUKSB9Rwxi+kiunBCYiZp P36jS99NJ6zNPLfjN/rsg8ULIrpwNtx3Q9Wr++ZV4/UaIL0259WY4Bntz4WILgjhxU8z+Ay9Zm2s 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 "
        id="image40575"
        x="176.29312"
        y="303.57132"
@@ -2047,7 +1895,7 @@ vlCD1RH3ZM8G7F74psKC5ZKib4BUjUJKdmwprDVScM0XslsDdRBL094iFbmk6Nsg48sFyuf5Gfsr
            style="stroke-width:1.56054" />
         <polygon
            class="st1"
-           points="16.45,53.22 20.54,53.22 20.54,58 25.32,58 25.32,62.09 20.54,62.09 20.54,66.87 16.45,66.87 16.45,62.09 11.67,62.09 11.67,58 16.45,58 "
+           points="20.54,66.87 16.45,66.87 16.45,62.09 11.67,62.09 11.67,58 16.45,58 16.45,53.22 20.54,53.22 20.54,58 25.32,58 25.32,62.09 20.54,62.09 "
            id="polygon4227"
            transform="matrix(1.5605411,0,0,1.5605411,107.10159,345.43874)" />
       </g>
@@ -2258,12 +2106,12 @@ vlCD1RH3ZM8G7F74psKC5ZKib4BUjUJKdmwprDVScM0XslsDdRBL094iFbmk6Nsg48sFyuf5Gfsr
     </g>
     <text
        xml:space="preserve"
-       style="font-size:42.3333px;line-height:1.25;font-family:'Helvetica LT Std';-inkscape-font-specification:'Helvetica LT Std, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;display:inline;stroke-width:0.264583"
+       style="font-style:italic;font-variant:normal;font-weight:800;font-stretch:normal;font-size:19.7556px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Ultra-Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;display:inline;stroke-width:0.264583"
        x="369.22375"
        y="411.95413"
        id="text198068-1-1"><tspan
          id="tspan198066-7-3"
-         style="font-style:italic;font-variant:normal;font-weight:800;font-stretch:normal;font-size:24.6944px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         style="font-style:italic;font-variant:normal;font-weight:800;font-stretch:normal;font-size:19.7556px;font-family:Urbanist;-inkscape-font-specification:'Urbanist, Ultra-Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="369.22375"
          y="411.95413">De Novo fMRIPrep—clinical fMRI, finally</tspan></text>
     <text
