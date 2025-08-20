@@ -44,17 +44,17 @@ h3 {
 
 .remark-slide-content h1 {
     font-size: 2em;
-    color: #738373;
+    color: #1a1a1a;
 }
 
 .remark-slide-content h2 {
     font-size: 1.5em;
-    color: #738373;
+    color: #1a1a1a;
 }
 
 .remark-slide-content h3 {
     font-size: 1.2em;
-    color: #738373;
+    color: #1a1a1a;
 }
 
 .footnote {
@@ -98,12 +98,12 @@ li p {
 }
 
 .green {
-    color: #009933;
+    color: #dc0069;
 }
 
 a,
 a>code {
-    color: rgb(249, 38, 114);
+    color: #dc0069;
     text-decoration: none;
 }
 
@@ -156,11 +156,11 @@ code {
 }
 
 .fa-solid {
-    color: #009933;
+    color: #dc0069;
 }
 
 .fa-brands {
-    color: #009933;
+    color: #dc0069;
 }
 
 .fa-blank {
@@ -168,19 +168,19 @@ code {
 }
 
 .fa-solid-dim {
-    color: #00993320;
+    color: #da629c;
 }
 
 em {
-    color: #009933;
+    color: #dc0069;
 }
 
 strong {
-    color: #009933;
+    color: #dc0069;
 }
 
 a {
-    color: #026c00;
+    color: #dc0069;
     text-decoration: underline
 }
 
@@ -194,20 +194,20 @@ a {
 }
 
 .dim strong {
-    color: #00993320;
+    color: #dc006920;
 }
 
 .dim em {
-    color: #00993320;
+    color: #dc006920;
 }
 
 .dimgray-text {
-    color: #08080820;
+    color: #88888820;
 }
 
 .perma-sidebar {
     float: left;
-    background-color: #009933;
+    background-color: #dc0069;
     color: #f4f4f4;
     width: 40px;
     height: 100%;
