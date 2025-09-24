@@ -1519,72 +1519,74 @@ The **NiPreps Community**
       (function () {
         'use strict';
 
-        function parseStepToken(token) {
-          if (!token) {
-            return null;
-          }
-          var cleaned = token.trim();
-          if (!cleaned) {
-            return null;
-          }
-          var namedMatch = cleaned.match(/^(?:steps?|step)-?(\d+(?:\.\d+)?)$/i);
-          if (namedMatch) {
-            var namedValue = parseFloat(namedMatch[1]);
-            return isNaN(namedValue) ? null : namedValue;
-          }
-          if (/^\d+(?:\.\d+)?$/.test(cleaned)) {
-            var numericValue = parseFloat(cleaned);
-            return isNaN(numericValue) ? null : numericValue;
-          }
-          return null;
-        }
-
-        function extractStepIndex(element) {
-          if (!element) {
-            return null;
+        function parseHideRanges(value) {
+          if (!value) {
+            return [];
           }
 
-          var dataStep = element.getAttribute('data-step');
-          if (dataStep !== null) {
-            var dataValue = parseFloat(dataStep);
-            return isNaN(dataValue) ? null : dataValue;
-          }
+          var ranges = [];
+          var parts = String(value)
+            .split(/[\s,]+/)
+            .map(function (part) {
+              return part.trim();
+            })
+            .filter(function (part) {
+              return part.length > 0;
+            });
 
-          var id = element.getAttribute('id');
-          if (id) {
-            var idMatch = id.match(/steps?-?(\d+(?:\.\d+)?)/i);
-            if (idMatch) {
-              var idValue = parseFloat(idMatch[1]);
-              if (!isNaN(idValue)) {
-                return idValue;
-              }
+          for (var i = 0; i < parts.length; i++) {
+            var segment = parts[i];
+            var match = segment.match(/^(\d+(?:\.\d+)?)(?:\s*-\s*(\d+(?:\.\d+)?|end))?$/i);
+            if (!match) {
+              continue;
             }
-          }
 
-          if (element.classList && element.classList.length) {
-            var tokens = Array.prototype.slice.call(element.classList);
-            var hasStepsClass = tokens.indexOf('steps') !== -1;
-            for (var i = 0; i < tokens.length; i++) {
-              var token = tokens[i];
-              if (token === 'steps') {
+            var startRange = parseFloat(match[1]);
+            if (isNaN(startRange)) {
+              continue;
+            }
+
+            var endPart = match[2];
+            var endRange;
+            if (!endPart) {
+              endRange = startRange;
+            } else if (/^end$/i.test(endPart)) {
+              endRange = Infinity;
+            } else {
+              endRange = parseFloat(endPart);
+              if (isNaN(endRange)) {
                 continue;
               }
-              var tokenValue = parseStepToken(token);
-              if (tokenValue !== null) {
-                return tokenValue;
-              }
             }
-            if (!hasStepsClass) {
-              for (var j = 0; j < tokens.length; j++) {
-                var altValue = parseStepToken(tokens[j]);
-                if (altValue !== null) {
-                  return altValue;
-                }
-              }
+
+            if (endRange < startRange) {
+              var temp = startRange;
+              startRange = endRange;
+              endRange = temp;
+            }
+
+            ranges.push({
+              start: startRange,
+              end: endRange
+            });
+          }
+
+          return ranges;
+        }
+
+        function isHiddenAtStep(ranges, step) {
+          if (!ranges || !ranges.length || step === null) {
+            return false;
+          }
+
+          for (var i = 0; i < ranges.length; i++) {
+            var range = ranges[i];
+            if (step >= range.start && step <= range.end) {
+              return true;
             }
           }
 
-          return null;
+          return false;
         }
 
         function StepSvg(root) {
@@ -1595,21 +1597,37 @@ The **NiPreps Community**
         }
 
         StepSvg.prototype._collectStepElements = function () {
-          var allElements = this.root.querySelectorAll('*');
+          this._maybeAddStepElement(this.root);
+
+          var allElements = this.root.querySelectorAll('[data-step]');
           for (var i = 0; i < allElements.length; i++) {
-            var element = allElements[i];
-            var stepIndex = extractStepIndex(element);
-            if (stepIndex === null) {
-              continue;
-            }
-            this.stepElements.push({
-              element: element,
-              step: stepIndex,
-              originalDisplay: element.style.display || '',
-              originalAttributeDisplay: element.getAttribute('display')
-            });
+            this._maybeAddStepElement(allElements[i]);
           }
+
           this._rebuildStepValues();
+
+          if (this.stepElements.length) {
+            this.showThrough(null);
+          }
+        };
+
+        StepSvg.prototype._maybeAddStepElement = function (element) {
+          if (!element || !element.hasAttribute('data-step')) {
+            return;
+          }
+
+          var dataValue = parseFloat(element.getAttribute('data-step'));
+          if (isNaN(dataValue)) {
+            return;
+          }
+
+          this.stepElements.push({
+            element: element,
+            step: dataValue,
+            hideRanges: parseHideRanges(element.getAttribute('data-hide')),
+            originalDisplay: element.style.display || '',
+            originalAttributeDisplay: element.getAttribute('display')
+          });
         };
 
         StepSvg.prototype._rebuildStepValues = function () {
@@ -1637,7 +1655,11 @@ The **NiPreps Community**
         StepSvg.prototype.showThrough = function (threshold) {
           for (var i = 0; i < this.stepElements.length; i++) {
             var item = this.stepElements[i];
-            var shouldShow = threshold !== null && item.step <= threshold;
+            var shouldShow =
+              threshold !== null &&
+              item.step <= threshold &&
+              !isHiddenAtStep(item.hideRanges, threshold);
+
             if (shouldShow) {
               if (item.originalAttributeDisplay !== null) {
                 item.element.setAttribute('display', item.originalAttributeDisplay);
@@ -1892,12 +1914,38 @@ The **NiPreps Community**
           return null;
         }
 
+        function slideHasStepwiseClass(slideElement) {
+          if (!slideElement) {
+            return false;
+          }
+
+          var candidates = [slideElement];
+          var remarkSlide = slideElement.querySelector('.remark-slide');
+          if (remarkSlide) {
+            candidates.push(remarkSlide);
+          }
+          var content = slideElement.querySelector('.remark-slide-content');
+          if (content) {
+            candidates.push(content);
+          }
+
+          for (var i = 0; i < candidates.length; i++) {
+            var candidate = candidates[i];
+            if (candidate && candidate.classList && candidate.classList.contains('stepwise-svg')) {
+              return true;
+            }
+          }
+
+          return false;
+        }
+
         function getStepSlide(index) {
           if (stepSlideCache.has(index)) {
             return stepSlideCache.get(index);
           }
           var slideElement = getSlideElementByIndex(index);
-          if (!slideElement) {
+          if (!slideElement || !slideHasStepwiseClass(slideElement)) {
+            stepSlideCache.set(index, null);
             return null;
           }
           var stepSlide = new StepSlide(slideElement);
