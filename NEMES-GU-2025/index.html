@@ -1525,49 +1525,48 @@ The **NiPreps Community**
           }
 
           var ranges = [];
-          var parts = String(value)
+          var segments = String(value)
             .split(/[\s,]+/)
-            .map(function (part) {
-              return part.trim();
+            .map(function (segment) {
+              return segment.trim();
             })
-            .filter(function (part) {
-              return part.length > 0;
+            .filter(function (segment) {
+              return segment.length > 0;
             });
 
-          for (var i = 0; i < parts.length; i++) {
-            var segment = parts[i];
-            var match = segment.match(/^(\d+(?:\.\d+)?)(?:\s*-\s*(\d+(?:\.\d+)?|end))?$/i);
+          for (var i = 0; i < segments.length; i++) {
+            var match = segments[i].match(/^(\d+(?:\.\d+)?)(?:\s*-\s*(\d+(?:\.\d+)?|end))?$/i);
             if (!match) {
               continue;
             }
 
-            var startRange = parseFloat(match[1]);
-            if (isNaN(startRange)) {
+            var start = parseFloat(match[1]);
+            if (!isFinite(start)) {
               continue;
             }
 
-            var endPart = match[2];
-            var endRange;
-            if (!endPart) {
-              endRange = startRange;
-            } else if (/^end$/i.test(endPart)) {
-              endRange = Infinity;
+            var endToken = match[2];
+            var end;
+            if (!endToken) {
+              end = start;
+            } else if (/^end$/i.test(endToken)) {
+              end = Infinity;
             } else {
-              endRange = parseFloat(endPart);
-              if (isNaN(endRange)) {
+              end = parseFloat(endToken);
+              if (!isFinite(end)) {
                 continue;
               }
             }
 
-            if (endRange < startRange) {
-              var temp = startRange;
-              startRange = endRange;
-              endRange = temp;
+            if (end < start) {
+              var temp = start;
+              start = end;
+              end = temp;
             }
 
             ranges.push({
-              start: startRange,
-              end: endRange
+              start: start,
+              end: end
             });
           }
 
@@ -1575,7 +1574,11 @@ The **NiPreps Community**
         }
 
         function isHiddenAtStep(ranges, step) {
-          if (!ranges || !ranges.length || step === null) {
+          if (!ranges || !ranges.length) {
+            return false;
+          }
+
+          if (typeof step !== 'number' || !isFinite(step)) {
             return false;
           }
 
@@ -1589,234 +1592,321 @@ The **NiPreps Community**
           return false;
         }
 
-        function StepSvg(root) {
-          this.root = root;
-          this.stepElements = [];
-          this.stepValues = [];
-          this._collectStepElements();
+        function StepNode(element, step, hideRanges) {
+          this.element = element;
+          this.step = step;
+          this.hideRanges = hideRanges || [];
+          this.isSvgElement = element && element.namespaceURI === 'http://www.w3.org/2000/svg';
+          this.originalDisplayStyle = element ? element.style.display : '';
+          this.originalSvgDisplay = this.isSvgElement ? element.getAttribute('display') : null;
         }
 
-        StepSvg.prototype._collectStepElements = function () {
-          this._maybeAddStepElement(this.root);
-
-          var allElements = this.root.querySelectorAll('[data-step]');
-          for (var i = 0; i < allElements.length; i++) {
-            this._maybeAddStepElement(allElements[i]);
-          }
-
-          this._rebuildStepValues();
-
-          if (this.stepElements.length) {
-            this.showThrough(null);
+        StepNode.prototype.setVisible = function (visible) {
+          if (visible) {
+            this.show();
+          } else {
+            this.hide();
           }
         };
 
-        StepSvg.prototype._maybeAddStepElement = function (element) {
-          if (!element || !element.hasAttribute('data-step')) {
-            return;
-          }
-
-          var dataValue = parseFloat(element.getAttribute('data-step'));
-          if (isNaN(dataValue)) {
-            return;
-          }
-
-          this.stepElements.push({
-            element: element,
-            step: dataValue,
-            hideRanges: parseHideRanges(element.getAttribute('data-hide')),
-            originalDisplay: element.style.display || '',
-            originalAttributeDisplay: element.getAttribute('display')
-          });
-        };
-
-        StepSvg.prototype._rebuildStepValues = function () {
-          var unique = [];
-          for (var i = 0; i < this.stepElements.length; i++) {
-            var value = this.stepElements[i].step;
-            if (unique.indexOf(value) === -1) {
-              unique.push(value);
+        StepNode.prototype.show = function () {
+          if (this.isSvgElement) {
+            if (this.originalSvgDisplay === null) {
+              this.element.removeAttribute('display');
+            } else {
+              this.element.setAttribute('display', this.originalSvgDisplay);
             }
           }
-          unique.sort(function (a, b) {
+          this.element.style.display = this.originalDisplayStyle || '';
+        };
+
+        StepNode.prototype.hide = function () {
+          if (this.isSvgElement) {
+            this.element.setAttribute('display', 'none');
+          }
+          this.element.style.display = 'none';
+        };
+
+        function StepController(root) {
+          this.root = root;
+          this.stepNodes = [];
+          this.stepValues = [];
+          this._seenSteps = Object.create(null);
+          this._collect();
+        }
+
+        StepController.prototype._collect = function () {
+          if (!this.root) {
+            return;
+          }
+
+          if (this.root.nodeType === 1 && this.root.hasAttribute && this.root.hasAttribute('data-step')) {
+            this._addElement(this.root);
+          }
+
+          var elements = this.root.querySelectorAll ? this.root.querySelectorAll('[data-step]') : [];
+          for (var i = 0; i < elements.length; i++) {
+            this._addElement(elements[i]);
+          }
+
+          this.stepValues.sort(function (a, b) {
             return a - b;
           });
-          this.stepValues = unique;
+
+          this.hideAll();
         };
 
-        StepSvg.prototype.hasSteps = function () {
-          return this.stepElements.length > 0;
+        StepController.prototype._addElement = function (element) {
+          if (!element || !element.getAttribute) {
+            return;
+          }
+
+          var rawStep = element.getAttribute('data-step');
+          if (rawStep === null) {
+            return;
+          }
+
+          var stepValue = parseFloat(rawStep);
+          if (!isFinite(stepValue)) {
+            return;
+          }
+
+          var hideRanges = parseHideRanges(element.getAttribute('data-hide'));
+          var node = new StepNode(element, stepValue, hideRanges);
+          this.stepNodes.push(node);
+
+          var key = String(stepValue);
+          if (!Object.prototype.hasOwnProperty.call(this._seenSteps, key)) {
+            this._seenSteps[key] = true;
+            this.stepValues.push(stepValue);
+          }
         };
 
-        StepSvg.prototype.getStepValues = function () {
+        StepController.prototype.hasSteps = function () {
+          return this.stepNodes.length > 0;
+        };
+
+        StepController.prototype.getSteps = function () {
           return this.stepValues.slice();
         };
 
-        StepSvg.prototype.showThrough = function (threshold) {
-          for (var i = 0; i < this.stepElements.length; i++) {
-            var item = this.stepElements[i];
-            var shouldShow =
-              threshold !== null &&
-              item.step <= threshold &&
-              !isHiddenAtStep(item.hideRanges, threshold);
-
-            if (shouldShow) {
-              if (item.originalAttributeDisplay !== null) {
-                item.element.setAttribute('display', item.originalAttributeDisplay);
-              } else {
-                item.element.removeAttribute('display');
-              }
-              if (item.originalDisplay) {
-                item.element.style.display = item.originalDisplay;
-              } else {
-                item.element.style.removeProperty('display');
-              }
-            } else {
-              item.element.setAttribute('display', 'none');
-              item.element.style.display = 'none';
+        StepController.prototype.applyStep = function (stepValue) {
+          var hasStep = typeof stepValue === 'number' && isFinite(stepValue);
+          for (var i = 0; i < this.stepNodes.length; i++) {
+            var node = this.stepNodes[i];
+            var visible = hasStep && stepValue >= node.step;
+            if (visible && node.hideRanges.length && isHiddenAtStep(node.hideRanges, stepValue)) {
+              visible = false;
             }
+            node.setVisible(visible);
           }
         };
 
-        function StepSlide(slideElement) {
-          this.slideElement = slideElement;
+        StepController.prototype.hideAll = function () {
+          for (var i = 0; i < this.stepNodes.length; i++) {
+            this.stepNodes[i].hide();
+          }
+        };
+
+        function StepSlide(container) {
+          this.container = container;
           this.controllers = [];
           this.stepOrder = [];
           this.currentStepValue = null;
           this.pendingAction = null;
-
+          this.objectControllers = new Map();
+          this.pendingObjects = new Set();
           this._initialize();
         }
 
         StepSlide.prototype._initialize = function () {
-          this._attachInlineSvgs();
-          this._attachObjectSvgs();
-        };
-
-        StepSlide.prototype._attachInlineSvgs = function () {
-          var inlineSvgs = this.slideElement.querySelectorAll('svg');
-          for (var i = 0; i < inlineSvgs.length; i++) {
-            this._tryAddController(new StepSvg(inlineSvgs[i]));
+          var contentRoot = this._findContentRoot();
+          if (contentRoot) {
+            var controller = new StepController(contentRoot);
+            if (controller.hasSteps()) {
+              this.controllers.push(controller);
+            }
           }
+
+          this._scanObjectElements();
+          this._controllersChanged();
         };
 
-        StepSlide.prototype._attachObjectSvgs = function () {
-          var objects = this.slideElement.querySelectorAll('object[type="image/svg+xml"]');
+        StepSlide.prototype._findContentRoot = function () {
+          var content = this.container.querySelector('.remark-slide-content');
+          if (content) {
+            return content;
+          }
+
+          var slide = this.container.querySelector('.remark-slide');
+          if (slide) {
+            return slide;
+          }
+
+          return this.container;
+        };
+
+        StepSlide.prototype._scanObjectElements = function () {
+          var objects = this.container.querySelectorAll('object[type="image/svg+xml"]');
           for (var i = 0; i < objects.length; i++) {
-            this._handleObjectElement(objects[i]);
+            this._attachObjectController(objects[i]);
           }
         };
 
-        StepSlide.prototype._handleObjectElement = function (objectElement) {
-          if (objectElement.__stepEnhancerInitialized) {
+        StepSlide.prototype._attachObjectController = function (objectEl) {
+          if (!objectEl || this.objectControllers.has(objectEl)) {
             return;
           }
-          objectElement.__stepEnhancerInitialized = true;
+
+          this.objectControllers.set(objectEl, null);
+          this.pendingObjects.add(objectEl);
 
           var self = this;
-          var processObject = function () {
-            if (objectElement.__stepEnhancerProcessed) {
-              return;
-            }
-            var doc;
-            try {
-              doc = objectElement.contentDocument;
-            } catch (error) {
-              return;
-            }
-            if (!doc || !doc.documentElement) {
-              return;
-            }
-            var svgRoot = doc.documentElement;
-            if (!svgRoot || svgRoot.tagName.toLowerCase() !== 'svg') {
-              objectElement.__stepEnhancerProcessed = true;
-              return;
-            }
-            var controller = new StepSvg(svgRoot);
-            if (!controller.hasSteps()) {
-              objectElement.__stepEnhancerProcessed = true;
-              return;
-            }
-            self._tryAddController(controller);
-            objectElement.__stepEnhancerProcessed = true;
-          };
 
-          if (objectElement.contentDocument && objectElement.contentDocument.documentElement) {
-            processObject();
-          } else {
-            objectElement.addEventListener('load', processObject);
+          function createControllerFromObject() {
+            var doc = objectEl.contentDocument;
+            if (!doc) {
+              return { processed: false, added: false };
+            }
+
+            var previous = self.objectControllers.get(objectEl);
+            if (previous) {
+              var index = self.controllers.indexOf(previous);
+              if (index !== -1) {
+                self.controllers.splice(index, 1);
+              }
+            }
+
+            var svgRoot = doc.documentElement && doc.documentElement.tagName &&
+              doc.documentElement.tagName.toLowerCase() === 'svg'
+              ? doc.documentElement
+              : doc.querySelector('svg');
+
+            var controller = null;
+            if (svgRoot) {
+              controller = new StepController(svgRoot);
+              if (!controller.hasSteps()) {
+                controller = null;
+              }
+            }
+
+            self.objectControllers.set(objectEl, controller);
+            if (controller) {
+              self.controllers.push(controller);
+            }
+
+            self._controllersChanged();
+            return { processed: true, added: !!controller };
           }
+
+          function finalizeProcessing(processed) {
+            if (!processed) {
+              return;
+            }
+            if (self.pendingObjects.has(objectEl)) {
+              self.pendingObjects.delete(objectEl);
+            }
+          }
+
+          objectEl.addEventListener('load', function () {
+            var result = createControllerFromObject();
+            finalizeProcessing(result.processed);
+          });
+
+          var initialResult = createControllerFromObject();
+          finalizeProcessing(initialResult.processed);
         };
 
-        StepSlide.prototype._tryAddController = function (controller) {
-          if (!controller || !controller.hasSteps()) {
-            return;
-          }
-          this.controllers.push(controller);
-          this._updateAfterControllerChange();
-        };
-
-        StepSlide.prototype._updateAfterControllerChange = function () {
+        StepSlide.prototype._controllersChanged = function () {
           this._rebuildStepOrder();
 
-          if (!this.stepOrder.length) {
-            return;
+          if (this.pendingAction && !this.hasSteps() && !this.isWaiting()) {
+            this.pendingAction = null;
           }
 
-          if (this.pendingAction === 'first') {
+          if (this.pendingAction) {
+            var action = this.pendingAction;
             this.pendingAction = null;
-            this.showFirst();
-            return;
-          }
-
-          if (this.pendingAction === 'all') {
-            this.pendingAction = null;
-            this.showAll();
-            return;
+            if (action === 'first') {
+              this.showFirst();
+              return;
+            }
+            if (action === 'all') {
+              this.showAll();
+              return;
+            }
           }
 
           if (this.currentStepValue !== null) {
-            var currentIndex = this.stepOrder.indexOf(this.currentStepValue);
-            if (currentIndex === -1) {
-              var fallback = null;
-              for (var i = 0; i < this.stepOrder.length; i++) {
-                var candidate = this.stepOrder[i];
-                if (candidate <= this.currentStepValue) {
-                  fallback = candidate;
-                } else {
-                  break;
-                }
-              }
-              if (fallback === null) {
-                fallback = this.stepOrder[0];
-              }
-              this.currentStepValue = fallback;
+            if (!this.hasSteps()) {
+              this.currentStepValue = null;
+              this._hideAllControllers();
+            } else {
+              var normalized = this._normalizeStepValue(this.currentStepValue);
+              this.currentStepValue = normalized;
+              this._applyCurrentStep();
             }
+          } else if (!this.hasSteps()) {
+            this._hideAllControllers();
           }
-
-          this._applyCurrentStep();
         };
 
         StepSlide.prototype._rebuildStepOrder = function () {
+          var seen = Object.create(null);
           var values = [];
+
           for (var i = 0; i < this.controllers.length; i++) {
-            var controllerValues = this.controllers[i].getStepValues();
-            for (var j = 0; j < controllerValues.length; j++) {
-              var value = controllerValues[j];
-              if (values.indexOf(value) === -1) {
+            var controller = this.controllers[i];
+            if (!controller || !controller.hasSteps()) {
+              continue;
+            }
+
+            var steps = controller.getSteps();
+            for (var j = 0; j < steps.length; j++) {
+              var value = steps[j];
+              var key = String(value);
+              if (!Object.prototype.hasOwnProperty.call(seen, key)) {
+                seen[key] = true;
                 values.push(value);
               }
             }
           }
+
           values.sort(function (a, b) {
             return a - b;
           });
           this.stepOrder = values;
         };
 
+        StepSlide.prototype._normalizeStepValue = function (value) {
+          if (!this.hasSteps()) {
+            return null;
+          }
+
+          for (var i = 0; i < this.stepOrder.length; i++) {
+            if (this.stepOrder[i] === value) {
+              return value;
+            }
+          }
+
+          for (var j = 0; j < this.stepOrder.length; j++) {
+            if (this.stepOrder[j] > value) {
+              return this.stepOrder[j];
+            }
+          }
+
+          return this.stepOrder[this.stepOrder.length - 1];
+        };
+
         StepSlide.prototype._applyCurrentStep = function () {
           for (var i = 0; i < this.controllers.length; i++) {
-            this.controllers[i].showThrough(this.currentStepValue);
+            this.controllers[i].applyStep(this.currentStepValue);
+          }
+        };
+
+        StepSlide.prototype._hideAllControllers = function () {
+          for (var i = 0; i < this.controllers.length; i++) {
+            this.controllers[i].hideAll();
           }
         };
 
@@ -1824,12 +1914,18 @@ The **NiPreps Community**
           return this.stepOrder.length > 0;
         };
 
+        StepSlide.prototype.isWaiting = function () {
+          return this.pendingObjects.size > 0;
+        };
+
         StepSlide.prototype.showFirst = function () {
           if (!this.hasSteps()) {
-            this.pendingAction = 'first';
+            this.pendingAction = this.isWaiting() ? 'first' : null;
             this.currentStepValue = null;
+            this._hideAllControllers();
             return;
           }
+
           this.pendingAction = null;
           this.currentStepValue = this.stepOrder[0];
           this._applyCurrentStep();
@@ -1837,10 +1933,12 @@ The **NiPreps Community**
 
         StepSlide.prototype.showAll = function () {
           if (!this.hasSteps()) {
-            this.pendingAction = 'all';
+            this.pendingAction = this.isWaiting() ? 'all' : null;
             this.currentStepValue = null;
+            this._hideAllControllers();
             return;
           }
+
           this.pendingAction = null;
           this.currentStepValue = this.stepOrder[this.stepOrder.length - 1];
           this._applyCurrentStep();
@@ -1848,7 +1946,7 @@ The **NiPreps Community**
 
         StepSlide.prototype.stepForward = function () {
           if (!this.hasSteps()) {
-            return false;
+            return this.isWaiting();
           }
 
           if (this.currentStepValue === null) {
@@ -1900,18 +1998,8 @@ The **NiPreps Community**
           return false;
         };
 
-        var stepSlideCache = new Map();
-        var activeStepSlide = null;
-        var currentSlideIndex = 0;
-        var previousSlideIndex = 0;
-        var totalSlides = document.querySelectorAll('.remark-slide-container').length;
-
-        function getSlideElementByIndex(index) {
-          var containers = document.querySelectorAll('.remark-slide-container');
-          if (index >= 0 && index < containers.length) {
-            return containers[index];
-          }
-          return null;
+        function visibleSlideRoot() {
+          return document.querySelector('.remark-slide-container.remark-visible');
         }
 
         function slideHasStepwiseClass(slideElement) {
@@ -1924,6 +2012,7 @@ The **NiPreps Community**
           if (remarkSlide) {
             candidates.push(remarkSlide);
           }
+
           var content = slideElement.querySelector('.remark-slide-content');
           if (content) {
             candidates.push(content);
@@ -1939,16 +2028,25 @@ The **NiPreps Community**
           return false;
         }
 
-        function getStepSlide(index) {
-          if (stepSlideCache.has(index)) {
-            return stepSlideCache.get(index);
-          }
-          var slideElement = getSlideElementByIndex(index);
-          if (!slideElement || !slideHasStepwiseClass(slideElement)) {
-            stepSlideCache.set(index, null);
+        var stepSlideCache = new Map();
+        var activeStepSlide = null;
+        var lastSlideIndex = null;
+
+        function getStepSlide(index, container) {
+          if (!container) {
             return null;
           }
-          var stepSlide = new StepSlide(slideElement);
+
+          if (stepSlideCache.has(index)) {
+            var cached = stepSlideCache.get(index);
+            if (cached && cached.container !== container) {
+              cached = new StepSlide(container);
+              stepSlideCache.set(index, cached);
+            }
+            return cached;
+          }
+
+          var stepSlide = new StepSlide(container);
           stepSlideCache.set(index, stepSlide);
           return stepSlide;
         }
@@ -1958,25 +2056,33 @@ The **NiPreps Community**
         });
 
         slideshow.on('afterShowSlide', function (slide) {
-          previousSlideIndex = currentSlideIndex;
-          currentSlideIndex = slide.getSlideIndex();
-          var direction = currentSlideIndex >= previousSlideIndex ? 'forward' : 'backward';
-          var stepSlide = getStepSlide(currentSlideIndex);
-          activeStepSlide = stepSlide;
+          var slideIndex = slide.getSlideIndex();
+          var direction = 'forward';
+          if (lastSlideIndex !== null && slideIndex < lastSlideIndex) {
+            direction = 'backward';
+          }
 
-          if (!stepSlide) {
+          var root = visibleSlideRoot();
+          if (!root || !slideHasStepwiseClass(root)) {
+            activeStepSlide = null;
+            lastSlideIndex = slideIndex;
             return;
           }
 
-          if (direction === 'forward') {
-            stepSlide.showFirst();
-          } else {
+          var stepSlide = getStepSlide(slideIndex, root);
+          activeStepSlide = stepSlide;
+
+          if (direction === 'backward') {
             stepSlide.showAll();
+          } else {
+            stepSlide.showFirst();
           }
+
+          lastSlideIndex = slideIndex;
         });
 
         document.addEventListener('keydown', function (event) {
-          if (!activeStepSlide || !activeStepSlide.hasSteps()) {
+          if (!activeStepSlide) {
             return;
           }
 
@@ -1997,23 +2103,17 @@ The **NiPreps Community**
             if (activeStepSlide.stepForward()) {
               event.preventDefault();
               event.stopPropagation();
-              return;
-            }
-            if (currentSlideIndex < totalSlides - 1) {
-              activeStepSlide = null;
             }
           } else if (isBackwardKey) {
             if (activeStepSlide.stepBackward()) {
               event.preventDefault();
               event.stopPropagation();
-              return;
-            }
-            if (currentSlideIndex > 0) {
-              activeStepSlide = null;
             }
           }
         }, true);
       })();
+
+
     </script>
   </body>
 </html>
