@@ -5483,28 +5483,28 @@
   <text
      x="102.2"
      y="141.2"
-     style="font-size:23px;font-family:'DejaVu Sans';fill:#f5c241"
+     style="font-size:23px;font-family: 'DejaVu Sans';fill:#f5c241"
      textLength="92.309998"
      lengthAdjust="spacingAndGlyphs"
      id="text1820">defaced</text>
   <text
      x="102.2"
      y="163.2"
-     style="font-weight:bold;font-size:23px;font-family:'DejaVu Sans';fill:#f5c241"
+     style="font-weight:bold;font-size:23px;font-family: 'DejaVu Sans';fill:#f5c241"
      textLength="71.860001"
      lengthAdjust="spacingAndGlyphs"
      id="text1822">lower</text>
   <text
      x="502.54001"
      y="453.35001"
-     style="font-size:23px;font-family:'DejaVu Sans';fill:#643296"
+     style="font-size:23px;font-family: 'DejaVu Sans';fill:#643296"
      textLength="92.309998"
      lengthAdjust="spacingAndGlyphs"
      id="text1824">defaced</text>
   <text
      x="512.53998"
      y="475.35001"
-     style="font-weight:bold;font-size:23px;font-family:'DejaVu Sans';fill:#643296"
+     style="font-weight:bold;font-size:23px;font-family: 'DejaVu Sans';fill:#643296"
      textLength="84.019997"
      lengthAdjust="spacingAndGlyphs"
      id="text1826">higher</text>
@@ -5522,7 +5522,7 @@
        x="50.29"
        y="553.39"
        text-anchor="end"
-       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;DejaVu Sans&quot;;"
+       style="font-size: 16.00px;fill: #4D4D4D; font-family: 'DejaVu Sans';"
        textLength="15.96px"
        lengthAdjust="spacingAndGlyphs"
        id="text1854">-2</text>
@@ -5530,7 +5530,7 @@
        x="50.29"
        y="430.75"
        text-anchor="end"
-       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;DejaVu Sans&quot;;"
+       style="font-size: 16.00px;fill: #4D4D4D; font-family: 'DejaVu Sans';"
        textLength="15.96px"
        lengthAdjust="spacingAndGlyphs"
        id="text1856">-1</text>
@@ -5538,7 +5538,7 @@
        x="50.29"
        y="308.10"
        text-anchor="end"
-       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;DejaVu Sans&quot;;"
+       style="font-size: 16.00px;fill: #4D4D4D; font-family: 'DejaVu Sans';"
        textLength="10.18px"
        lengthAdjust="spacingAndGlyphs"
        id="text1858">0</text>
@@ -5546,7 +5546,7 @@
        x="50.29"
        y="185.46"
        text-anchor="end"
-       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;DejaVu Sans&quot;;"
+       style="font-size: 16.00px;fill: #4D4D4D; font-family: 'DejaVu Sans';"
        textLength="10.18px"
        lengthAdjust="spacingAndGlyphs"
        id="text1860">1</text>
@@ -5554,7 +5554,7 @@
        x="50.29"
        y="62.82"
        text-anchor="end"
-       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;DejaVu Sans&quot;;"
+       style="font-size: 16.00px;fill: #4D4D4D; font-family: 'DejaVu Sans';"
        textLength="10.18px"
        lengthAdjust="spacingAndGlyphs"
        id="text1862">2</text>
@@ -5598,7 +5598,7 @@
        x="140.31"
        y="615.66"
        text-anchor="middle"
-       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;DejaVu Sans&quot;;"
+       style="font-size: 16.00px;fill: #4D4D4D; font-family: 'DejaVu Sans';"
        textLength="62.12px"
        lengthAdjust="spacingAndGlyphs"
        id="text1882">exclude</text>
@@ -5606,7 +5606,7 @@
        x="265.45"
        y="615.66"
        text-anchor="middle"
-       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;DejaVu Sans&quot;;"
+       style="font-size: 16.00px;fill: #4D4D4D; font-family: 'DejaVu Sans';"
        textLength="36.30px"
        lengthAdjust="spacingAndGlyphs"
        id="text1884">poor</text>
@@ -5614,7 +5614,7 @@
        x="432.29"
        y="615.66"
        text-anchor="middle"
-       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;DejaVu Sans&quot;;"
+       style="font-size: 16.00px;fill: #4D4D4D; font-family: 'DejaVu Sans';"
        textLength="87.91px"
        lengthAdjust="spacingAndGlyphs"
        id="text1886">acceptable</text>
@@ -5622,57 +5622,57 @@
        x="557.43"
        y="615.66"
        text-anchor="middle"
-       style="font-size: 16.00px;fill: #4D4D4D; font-family: &quot;DejaVu Sans&quot;;"
+       style="font-size: 16.00px;fill: #4D4D4D; font-family: 'DejaVu Sans';"
        textLength="72.53px"
        lengthAdjust="spacingAndGlyphs"
        id="text1888">excellent</text>
     <text
        x="262.54"
        y="637.77"
-       style="font-size: 22.00px; font-weight: bold; font-family: &quot;DejaVu Sans&quot;;"
+       style="font-size: 22.00px; font-weight: bold; font-family: 'DejaVu Sans';"
        textLength="100.49px"
        lengthAdjust="spacingAndGlyphs"
        id="text1890">average</text>
     <text
        x="370.02"
        y="637.77"
-       style="font-size: 22.00px; font-family: &quot;DejaVu Sans&quot;;"
+       style="font-size: 22.00px; font-family: 'DejaVu Sans';"
        textLength="65.18px"
        lengthAdjust="spacingAndGlyphs"
        id="text1892">rating</text>
     <text
        transform="translate(21.52,463.55) rotate(-90)"
-       style="font-size: 22.00px; font-family: &quot;DejaVu Sans&quot;;"
+       style="font-size: 22.00px; font-family: 'DejaVu Sans';"
        textLength="76.64px"
        lengthAdjust="spacingAndGlyphs"
        id="text1894">ratings</text>
     <text
        transform="translate(21.52,379.91) rotate(-90)"
-       style="font-size: 22.00px; font-weight: bold; font-family: &quot;DejaVu Sans&quot;;"
+       style="font-size: 22.00px; font-weight: bold; font-family: 'DejaVu Sans';"
        textLength="126.79px"
        lengthAdjust="spacingAndGlyphs"
        id="text1896">difference</text>
     <text
        transform="translate(21.52,246.13) rotate(-90)"
-       style="font-size: 22.00px; font-family: &quot;DejaVu Sans&quot;;"
+       style="font-size: 22.00px; font-family: 'DejaVu Sans';"
        textLength="8.58px"
        lengthAdjust="spacingAndGlyphs"
        id="text1898">(</text>
     <text
        transform="translate(21.52,237.55) rotate(-90)"
-       style="font-size: 22.00px; font-family: &quot;DejaVu Sans&quot;;"
+       style="font-size: 22.00px; font-family: 'DejaVu Sans';"
        textLength="15.06px"
        lengthAdjust="spacingAndGlyphs"
        id="text1900">Δ</text>
     <text
        transform="translate(27.94,222.49) rotate(-90)"
-       style="font-size: 17.60px; font-family: &quot;DejaVu Sans&quot;;"
+       style="font-size: 17.60px; font-family: 'DejaVu Sans';"
        textLength="72.91px"
        lengthAdjust="spacingAndGlyphs"
        id="text1902">ndef-def</text>
     <text
        transform="translate(21.52,149.58) rotate(-90)"
-       style="font-size: 22.00px; font-family: &quot;DejaVu Sans&quot;;"
+       style="font-size: 22.00px; font-family: 'DejaVu Sans';"
        textLength="8.58px"
        lengthAdjust="spacingAndGlyphs"
        id="text1904">)</text>
