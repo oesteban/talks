@@ -1515,6 +1515,457 @@ The **NiPreps Community**
           highlightSpans: true,
           ratio: '16:9'
       });
+
+      (function () {
+        'use strict';
+
+        function parseStepToken(token) {
+          if (!token) {
+            return null;
+          }
+          var cleaned = token.trim();
+          if (!cleaned) {
+            return null;
+          }
+          var namedMatch = cleaned.match(/^(?:steps?|step)-?(\d+(?:\.\d+)?)$/i);
+          if (namedMatch) {
+            var namedValue = parseFloat(namedMatch[1]);
+            return isNaN(namedValue) ? null : namedValue;
+          }
+          if (/^\d+(?:\.\d+)?$/.test(cleaned)) {
+            var numericValue = parseFloat(cleaned);
+            return isNaN(numericValue) ? null : numericValue;
+          }
+          return null;
+        }
+
+        function extractStepIndex(element) {
+          if (!element) {
+            return null;
+          }
+
+          var dataStep = element.getAttribute('data-step');
+          if (dataStep !== null) {
+            var dataValue = parseFloat(dataStep);
+            return isNaN(dataValue) ? null : dataValue;
+          }
+
+          var id = element.getAttribute('id');
+          if (id) {
+            var idMatch = id.match(/steps?-?(\d+(?:\.\d+)?)/i);
+            if (idMatch) {
+              var idValue = parseFloat(idMatch[1]);
+              if (!isNaN(idValue)) {
+                return idValue;
+              }
+            }
+          }
+
+          if (element.classList && element.classList.length) {
+            var tokens = Array.prototype.slice.call(element.classList);
+            var hasStepsClass = tokens.indexOf('steps') !== -1;
+            for (var i = 0; i < tokens.length; i++) {
+              var token = tokens[i];
+              if (token === 'steps') {
+                continue;
+              }
+              var tokenValue = parseStepToken(token);
+              if (tokenValue !== null) {
+                return tokenValue;
+              }
+            }
+            if (!hasStepsClass) {
+              for (var j = 0; j < tokens.length; j++) {
+                var altValue = parseStepToken(tokens[j]);
+                if (altValue !== null) {
+                  return altValue;
+                }
+              }
+            }
+          }
+
+          return null;
+        }
+
+        function StepSvg(root) {
+          this.root = root;
+          this.stepElements = [];
+          this.stepValues = [];
+          this._collectStepElements();
+        }
+
+        StepSvg.prototype._collectStepElements = function () {
+          var allElements = this.root.querySelectorAll('*');
+          for (var i = 0; i < allElements.length; i++) {
+            var element = allElements[i];
+            var stepIndex = extractStepIndex(element);
+            if (stepIndex === null) {
+              continue;
+            }
+            this.stepElements.push({
+              element: element,
+              step: stepIndex,
+              originalDisplay: element.style.display || '',
+              originalAttributeDisplay: element.getAttribute('display')
+            });
+          }
+          this._rebuildStepValues();
+        };
+
+        StepSvg.prototype._rebuildStepValues = function () {
+          var unique = [];
+          for (var i = 0; i < this.stepElements.length; i++) {
+            var value = this.stepElements[i].step;
+            if (unique.indexOf(value) === -1) {
+              unique.push(value);
+            }
+          }
+          unique.sort(function (a, b) {
+            return a - b;
+          });
+          this.stepValues = unique;
+        };
+
+        StepSvg.prototype.hasSteps = function () {
+          return this.stepElements.length > 0;
+        };
+
+        StepSvg.prototype.getStepValues = function () {
+          return this.stepValues.slice();
+        };
+
+        StepSvg.prototype.showThrough = function (threshold) {
+          for (var i = 0; i < this.stepElements.length; i++) {
+            var item = this.stepElements[i];
+            var shouldShow = threshold !== null && item.step <= threshold;
+            if (shouldShow) {
+              if (item.originalAttributeDisplay !== null) {
+                item.element.setAttribute('display', item.originalAttributeDisplay);
+              } else {
+                item.element.removeAttribute('display');
+              }
+              if (item.originalDisplay) {
+                item.element.style.display = item.originalDisplay;
+              } else {
+                item.element.style.removeProperty('display');
+              }
+            } else {
+              item.element.setAttribute('display', 'none');
+              item.element.style.display = 'none';
+            }
+          }
+        };
+
+        function StepSlide(slideElement) {
+          this.slideElement = slideElement;
+          this.controllers = [];
+          this.stepOrder = [];
+          this.currentStepValue = null;
+          this.pendingAction = null;
+
+          this._initialize();
+        }
+
+        StepSlide.prototype._initialize = function () {
+          this._attachInlineSvgs();
+          this._attachObjectSvgs();
+        };
+
+        StepSlide.prototype._attachInlineSvgs = function () {
+          var inlineSvgs = this.slideElement.querySelectorAll('svg');
+          for (var i = 0; i < inlineSvgs.length; i++) {
+            this._tryAddController(new StepSvg(inlineSvgs[i]));
+          }
+        };
+
+        StepSlide.prototype._attachObjectSvgs = function () {
+          var objects = this.slideElement.querySelectorAll('object[type="image/svg+xml"]');
+          for (var i = 0; i < objects.length; i++) {
+            this._handleObjectElement(objects[i]);
+          }
+        };
+
+        StepSlide.prototype._handleObjectElement = function (objectElement) {
+          if (objectElement.__stepEnhancerInitialized) {
+            return;
+          }
+          objectElement.__stepEnhancerInitialized = true;
+
+          var self = this;
+          var processObject = function () {
+            if (objectElement.__stepEnhancerProcessed) {
+              return;
+            }
+            var doc;
+            try {
+              doc = objectElement.contentDocument;
+            } catch (error) {
+              return;
+            }
+            if (!doc || !doc.documentElement) {
+              return;
+            }
+            var svgRoot = doc.documentElement;
+            if (!svgRoot || svgRoot.tagName.toLowerCase() !== 'svg') {
+              objectElement.__stepEnhancerProcessed = true;
+              return;
+            }
+            var controller = new StepSvg(svgRoot);
+            if (!controller.hasSteps()) {
+              objectElement.__stepEnhancerProcessed = true;
+              return;
+            }
+            self._tryAddController(controller);
+            objectElement.__stepEnhancerProcessed = true;
+          };
+
+          if (objectElement.contentDocument && objectElement.contentDocument.documentElement) {
+            processObject();
+          } else {
+            objectElement.addEventListener('load', processObject);
+          }
+        };
+
+        StepSlide.prototype._tryAddController = function (controller) {
+          if (!controller || !controller.hasSteps()) {
+            return;
+          }
+          this.controllers.push(controller);
+          this._updateAfterControllerChange();
+        };
+
+        StepSlide.prototype._updateAfterControllerChange = function () {
+          this._rebuildStepOrder();
+
+          if (!this.stepOrder.length) {
+            return;
+          }
+
+          if (this.pendingAction === 'first') {
+            this.pendingAction = null;
+            this.showFirst();
+            return;
+          }
+
+          if (this.pendingAction === 'all') {
+            this.pendingAction = null;
+            this.showAll();
+            return;
+          }
+
+          if (this.currentStepValue !== null) {
+            var currentIndex = this.stepOrder.indexOf(this.currentStepValue);
+            if (currentIndex === -1) {
+              var fallback = null;
+              for (var i = 0; i < this.stepOrder.length; i++) {
+                var candidate = this.stepOrder[i];
+                if (candidate <= this.currentStepValue) {
+                  fallback = candidate;
+                } else {
+                  break;
+                }
+              }
+              if (fallback === null) {
+                fallback = this.stepOrder[0];
+              }
+              this.currentStepValue = fallback;
+            }
+          }
+
+          this._applyCurrentStep();
+        };
+
+        StepSlide.prototype._rebuildStepOrder = function () {
+          var values = [];
+          for (var i = 0; i < this.controllers.length; i++) {
+            var controllerValues = this.controllers[i].getStepValues();
+            for (var j = 0; j < controllerValues.length; j++) {
+              var value = controllerValues[j];
+              if (values.indexOf(value) === -1) {
+                values.push(value);
+              }
+            }
+          }
+          values.sort(function (a, b) {
+            return a - b;
+          });
+          this.stepOrder = values;
+        };
+
+        StepSlide.prototype._applyCurrentStep = function () {
+          for (var i = 0; i < this.controllers.length; i++) {
+            this.controllers[i].showThrough(this.currentStepValue);
+          }
+        };
+
+        StepSlide.prototype.hasSteps = function () {
+          return this.stepOrder.length > 0;
+        };
+
+        StepSlide.prototype.showFirst = function () {
+          if (!this.hasSteps()) {
+            this.pendingAction = 'first';
+            this.currentStepValue = null;
+            return;
+          }
+          this.pendingAction = null;
+          this.currentStepValue = this.stepOrder[0];
+          this._applyCurrentStep();
+        };
+
+        StepSlide.prototype.showAll = function () {
+          if (!this.hasSteps()) {
+            this.pendingAction = 'all';
+            this.currentStepValue = null;
+            return;
+          }
+          this.pendingAction = null;
+          this.currentStepValue = this.stepOrder[this.stepOrder.length - 1];
+          this._applyCurrentStep();
+        };
+
+        StepSlide.prototype.stepForward = function () {
+          if (!this.hasSteps()) {
+            return false;
+          }
+
+          if (this.currentStepValue === null) {
+            this.currentStepValue = this.stepOrder[0];
+            this._applyCurrentStep();
+            return true;
+          }
+
+          var index = this.stepOrder.indexOf(this.currentStepValue);
+          if (index === -1) {
+            this.currentStepValue = this.stepOrder[0];
+            this._applyCurrentStep();
+            return true;
+          }
+
+          if (index < this.stepOrder.length - 1) {
+            this.currentStepValue = this.stepOrder[index + 1];
+            this._applyCurrentStep();
+            return true;
+          }
+
+          return false;
+        };
+
+        StepSlide.prototype.stepBackward = function () {
+          if (!this.hasSteps()) {
+            return false;
+          }
+
+          if (this.currentStepValue === null) {
+            this.currentStepValue = this.stepOrder[this.stepOrder.length - 1];
+            this._applyCurrentStep();
+            return true;
+          }
+
+          var index = this.stepOrder.indexOf(this.currentStepValue);
+          if (index === -1) {
+            this.currentStepValue = this.stepOrder[this.stepOrder.length - 1];
+            this._applyCurrentStep();
+            return true;
+          }
+
+          if (index > 0) {
+            this.currentStepValue = this.stepOrder[index - 1];
+            this._applyCurrentStep();
+            return true;
+          }
+
+          return false;
+        };
+
+        var stepSlideCache = new Map();
+        var activeStepSlide = null;
+        var currentSlideIndex = 0;
+        var previousSlideIndex = 0;
+        var totalSlides = document.querySelectorAll('.remark-slide-container').length;
+
+        function getSlideElementByIndex(index) {
+          var containers = document.querySelectorAll('.remark-slide-container');
+          if (index >= 0 && index < containers.length) {
+            return containers[index];
+          }
+          return null;
+        }
+
+        function getStepSlide(index) {
+          if (stepSlideCache.has(index)) {
+            return stepSlideCache.get(index);
+          }
+          var slideElement = getSlideElementByIndex(index);
+          if (!slideElement) {
+            return null;
+          }
+          var stepSlide = new StepSlide(slideElement);
+          stepSlideCache.set(index, stepSlide);
+          return stepSlide;
+        }
+
+        slideshow.on('beforeHideSlide', function () {
+          activeStepSlide = null;
+        });
+
+        slideshow.on('afterShowSlide', function (slide) {
+          previousSlideIndex = currentSlideIndex;
+          currentSlideIndex = slide.getSlideIndex();
+          var direction = currentSlideIndex >= previousSlideIndex ? 'forward' : 'backward';
+          var stepSlide = getStepSlide(currentSlideIndex);
+          activeStepSlide = stepSlide;
+
+          if (!stepSlide) {
+            return;
+          }
+
+          if (direction === 'forward') {
+            stepSlide.showFirst();
+          } else {
+            stepSlide.showAll();
+          }
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (!activeStepSlide || !activeStepSlide.hasSteps()) {
+            return;
+          }
+
+          if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey) {
+            return;
+          }
+
+          var target = event.target;
+          if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.tagName === 'SELECT' || target.isContentEditable)) {
+            return;
+          }
+
+          var key = event.key;
+          var isForwardKey = key === 'ArrowRight' || key === 'PageDown' || key === ' ' || key === 'Spacebar';
+          var isBackwardKey = key === 'ArrowLeft' || key === 'PageUp';
+
+          if (isForwardKey) {
+            if (activeStepSlide.stepForward()) {
+              event.preventDefault();
+              event.stopPropagation();
+              return;
+            }
+            if (currentSlideIndex < totalSlides - 1) {
+              activeStepSlide = null;
+            }
+          } else if (isBackwardKey) {
+            if (activeStepSlide.stepBackward()) {
+              event.preventDefault();
+              event.stopPropagation();
+              return;
+            }
+            if (currentSlideIndex > 0) {
+              activeStepSlide = null;
+            }
+          }
+        }, true);
+      })();
     </script>
   </body>
 </html>
