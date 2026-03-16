@@ -4748,13 +4748,13 @@
 </g></g></g><g
      id="layer2"
      style="display:inline"><path
-       style="fill:#000000;stroke:#009933;stroke-width:1.765;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWideHeavy)"
+       class="accent-stroke" style="fill:#000000;stroke:#009933;stroke-width:1.765;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWideHeavy)"
        d="M 13.603947,12.805919 V 117.75346"
        id="path1" /><text
        xml:space="preserve"
        transform="matrix(0,-0.26458333,0.26458333,0,-170.22019,169.59791)"
        id="text1"
-       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:39.9999px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect1);shape-padding:0;fill:#026c00;fill-opacity:1"><tspan
+       class="accent-dark-fill" style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:39.9999px;line-height:1.25;font-family:Urbanist;-inkscape-font-specification:'Urbanist Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect1);shape-padding:0;fill:#026c00;fill-opacity:1"><tspan
          x="235.44336"
          y="678.78572"
          id="tspan32059">Repeat</tspan></text></g><g
@@ -4776,13 +4776,13 @@
            id="tspan32065">cancel out</tspan></tspan></text></g><g
      id="layer3"
      style="display:inline"><path
-       style="fill:#000000;stroke:#009933;stroke-width:1.765;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWideHeavy-4)"
+       class="accent-stroke" style="fill:#000000;stroke:#009933;stroke-width:1.765;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWideHeavy-4)"
        d="M 12.736422,12.761321 H 162.17777"
        id="path1-0" /><text
        xml:space="preserve"
        transform="matrix(0.26458333,0,0,0.26458333,29.562264,-170.6369)"
        id="text1-7"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:39.9999px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';white-space:pre;shape-inside:url(#rect1-0);shape-padding:0;display:inline;fill:#026c00;fill-opacity:1"><tspan
+       class="accent-dark-fill" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:39.9999px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';white-space:pre;shape-inside:url(#rect1-0);shape-padding:0;display:inline;fill:#026c00;fill-opacity:1"><tspan
          x="235.44336"
          y="678.78572"
          id="tspan32071"><tspan
@@ -4825,13 +4825,13 @@
          id="tspan32087"><tspan
            style="font-family:Urbanist;-inkscape-font-specification:'Urbanist, Normal'"
            id="tspan32085">Repeatibility (QC)</tspan></tspan></text><path
-       style="display:inline;fill:#000000;stroke:#009933;stroke-width:1.765;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWideHeavy-4-9)"
+       class="accent-stroke" style="display:inline;fill:#000000;stroke:#009933;stroke-width:1.765;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWideHeavy-4-9)"
        d="M 13.204969,12.584256 162.31467,117.16957"
        id="path1-0-7" /><text
        xml:space="preserve"
        transform="matrix(0.21705613,0.15129764,-0.15129764,0.21705613,178.95298,-94.720034)"
        id="text1-7-0"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:39.9999px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';white-space:pre;shape-inside:url(#rect1-0-7);shape-padding:0;display:inline;fill:#026c00;fill-opacity:1"><tspan
+       class="accent-dark-fill" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:39.9999px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';white-space:pre;shape-inside:url(#rect1-0-7);shape-padding:0;display:inline;fill:#026c00;fill-opacity:1"><tspan
          x="235.44336"
          y="678.78572"
          id="tspan32091"><tspan
