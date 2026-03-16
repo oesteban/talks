@@ -3,11 +3,12 @@
   <head>
     <title>302.1 | Big data, cloud, infras & HPC</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="../assets/asciinema-player/asciinema-player.css" />
-    <link rel="stylesheet" type="text/css" href="../css/slides.css" />
+    <link rel="stylesheet" type="text/css" href="../remark-engine/vendor/asciinema-player/asciinema-player.css" />
+    <link rel="stylesheet" type="text/css" href="../remark-engine/core/base.css" />
+    <link rel="stylesheet" type="text/css" href="../remark-engine/themes/chuv.css" />
   </head>
   <body>
-<script src="../assets/asciinema-player/asciinema-player.min.js"></script>
+<script src="../remark-engine/vendor/asciinema-player/asciinema-player.min.js"></script>
 <script src="https://kit.fontawesome.com/015d4b01de.js" crossorigin="anonymous"></script>
 <script type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
@@ -1217,63 +1218,7 @@ Oscar Esteban &lt;<code><a href="mailto:phd@oscaresteban.es">phd@oscaresteban.es
 
 </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
-    <script>
-      // Use: ![:img Alt text with spaces but not commas, 50%](image.png)
-      remark.macros.img = function (altText, width) {
-        var url = this;
-        return '<img alt="' + altText + '" src="' + url + '" style="width: ' + width + '" />';
-      };
-      // Use: ![:video](10.5129/10234)
-      remark.macros.video = function (width) {
-        var url = this;
-        return '<video src="' + url + '" width="' + width + '" preload="auto" controls />';
-      };
-      // Use: ![:doi](10.5129/10234)
-      remark.macros.doi = function () {
-        var doi = this;
-        return '<a href="https://doi.org/' + doi + '">' + doi + '</a>';
-      };
-
-      var slideshow = remark.create({
-          highlightStyle: 'monokai',
-          highlightLanguage: 'remark',
-          highlightLines: true,
-          countIncrementalSlides: false,
-          highlightSpans: true,
-          ratio: '16:9'
-      });
-
-      // Now retrieve all IDs of asciinema casts
-      const allcasts = new Map();
-
-      slideshow.on('afterShowSlide', function (slide) {
-        // Slide is the slide being navigated
-        var slideNumber = slide.getSlideIndex();
-        var element = document.getElementsByClassName("remark-visible")[0].getElementsByClassName('asciicast')
-        if (element.length == 0 ) {
-          return;
-        }
-
-        if (allcasts.has(slideNumber)) {
-          allcasts.get(slideNumber).play();
-          return;
-        }
-
-        var castid = element[0].attributes["id"].value;
-        allcasts.set(slideNumber, AsciinemaPlayer.create(
-            'images/spark.cast',
-            document.getElementById('636539'),
-            { autoPlay: true, speed: 2, idle_time_limit: 8, rows: 24, cols: 100 }
-        ));
-
-      });
-      slideshow.on('beforeHideSlide', function (slide) {
-        // Slide is the slide being navigated
-        var slideNumber = slide.getSlideIndex();
-        if (allcasts.has(slideNumber)) {
-          allcasts.get(slideNumber).pause();
-        }
-      });
-    </script>
+    <script src="../remark-engine/core/engine.js"></script>
+    <script src="../remark-engine/ext/asciicasts.js"></script>
   </body>
 </html>

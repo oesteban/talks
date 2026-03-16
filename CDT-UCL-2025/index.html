@@ -3,11 +3,12 @@
   <head>
     <title>Open, Reliable & Repeatable :: CDT 2/04/2025</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="../assets/asciinema-player/asciinema-player.css" />
-    <link rel="stylesheet" type="text/css" href="../css/slides.css" />
+    <link rel="stylesheet" type="text/css" href="../remark-engine/vendor/asciinema-player/asciinema-player.css" />
+    <link rel="stylesheet" type="text/css" href="../remark-engine/core/base.css" />
+    <link rel="stylesheet" type="text/css" href="../remark-engine/themes/chuv.css" />
   </head>
   <body>
-<script src="../assets/asciinema-player/asciinema-player.min.js"></script>
+<script src="../remark-engine/vendor/asciinema-player/asciinema-player.min.js"></script>
 <script src="https://kit.fontawesome.com/015d4b01de.js" crossorigin="anonymous"></script>
 <script type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
@@ -50,7 +51,7 @@ count: false
 
 ## Open, Reliable, and Repeatable
 
-### Foundations for Breakthroughs in Connectivity Analyses
+### Foundations for Breakthroughs in Network Analyses
 <br />
 
 Oscar Esteban &lt;<code><a href="mailto:phd@oscaresteban.es">phd@oscaresteban.es</a></code>>
@@ -77,7 +78,7 @@ layout: true
 # About me
 
 .large[
-**Computational neuroscientist** & **open science** advocate.
+**Data scientist** who plays with brain data & **open science** advocate.
 ]
 
 .right-column3.center[
@@ -110,7 +111,7 @@ layout: true
 
 .boxed-content.large.no-bullet[
 * <i class="fa-solid fa-circle-right"></i> .larger[**Context**]
-  <br /> .indent[.gray-text[Structural and functional connectivity of the brain]]
+  <br /> .indent[.gray-text[Structural and functional networks]]
 
 * <i class="fa-solid fa-circle-right"></i> .larger[**The Human Connectome PHantom (HCPh)**]
   <br /> .indent[.gray-text[A New Standard for Dense, Multi-Modal Neuroimaging]]
@@ -131,7 +132,7 @@ count:false
 
 .boxed-content.large.no-bullet[
 * <i class="fa-solid fa-circle-right"></i> .larger[**Context**]
-  <br /> .indent[.gray-text[Structural and functional connectivity of the brain]]
+  <br /> .indent[.gray-text[Structural and functional networks]]
 
 * <i class="fa-solid fa-circle-right fa-solid-dim"></i> .larger.dim[**The Human Connectome PHantom (HCPh)**]
   <br /> .indent[.dimgray-text[A New Standard for Dense, Multi-Modal Neuroimaging]]
@@ -147,7 +148,7 @@ count:false
 
 ---
 
-# The research workflow of connectivity analyses
+# The research workflow of network analyses
 
 .boxed-content[
 <object type="image/svg+xml" data="../assets/neuroimaging-workflow-large.svg" style="width: 100%; padding-top: 20pt;"></object>
@@ -160,7 +161,7 @@ count:false
 
 ???
 
-In broad strokes, this is the MRI-based connectivity analysis pipeline.
+In broad strokes, this is the MRI-based network analysis pipeline.
 
 Interestingly, it looks like any machine learning pipeline: we acquire data, perform quality control, preprocess it, define features, and then apply statistical modeling to extract insights.
 
@@ -169,7 +170,7 @@ For a deeper dive into the details of the neuroimaging worflow, I've participate
 ---
 count:false
 
-# The research workflow of connectivity analyses
+# The research workflow of network analyses
 
 .boxed-content[
 <object type="image/svg+xml" data="../assets/neuroimaging-workflow-1.svg" style="width: 100%; padding-top: 20pt;"></object>
@@ -206,7 +207,7 @@ This is why my group and I have been deeply involved in BIDS, produced version-c
 ---
 count:false
 
-# The research workflow of connectivity analyses
+# The research workflow of network analyses
 
 .boxed-content[
 <object type="image/svg+xml" data="../assets/neuroimaging-workflow-2.svg" style="width: 100%; padding-top: 20pt;"></object>
@@ -258,7 +259,7 @@ Rather than delving into each of these steps, I'll just say that there's a curre
 
 ---
 
-# The research workflow of connectivity analyses
+# The research workflow of network analyses
 
 .boxed-content[
 <object type="image/svg+xml" data="../assets/neuroimaging-workflow-3.svg" style="width: 100%; padding-top: 20pt;"></object>
@@ -472,7 +473,7 @@ count:false
 
 .boxed-content.large.no-bullet[
 * <i class="fa-solid fa-circle-right fa-solid-dim"></i> .larger.dim[**Context**]
-  <br /> .indent[.dimgray-text[Structural and functional connectivity of the brain]]
+  <br /> .indent[.dimgray-text[Structural and functional networks]]
 
 * <i class="fa-solid fa-circle-right"></i> .larger[**The Human Connectome PHantom (HCPh)**]
   <br /> .indent[.gray-text[A New Standard for Dense, Multi-Modal Neuroimaging]]
@@ -661,7 +662,7 @@ count:false
 ## HCPh: An ultra-dense, calibration dataset
 
 .right-column3[
-<a href="https://www.axonlab.org/hcph-sops/processing/functional-connectivity/">Connectivity extraction (SOPs)</a> (mostly *NiLearn*)
+<a href="https://www.axonlab.org/hcph-sops/processing/functional-connectivity/">Network extraction (SOPs)</a> (mostly *NiLearn*)
 ]
 
 .left-column3[
@@ -832,7 +833,7 @@ This will yield a baseline measure of how stable connectivity metrics can be if 
   .indent[
   .gray-text[Removal of physiological variability, artifacts, etc.]
 
-  .gray-text[Between-scanner agreement of measurements (other than connectivity)]
+  .gray-text[Between-scanner agreement of measurements (other than networks)]
   ]
 
 * .large[<i class="fa-solid fa-building-columns"></i> A **foundational dataset**]
@@ -861,7 +862,7 @@ count:false
 
 .boxed-content.large.no-bullet[
 * <i class="fa-solid fa-circle-right fa-solid-dim"></i> .larger.dim[**Context**]
-  <br /> .indent[.dimgray-text[Structural and functional connectivity of the brain]]
+  <br /> .indent[.dimgray-text[Structural and functional networks]]
 
 * <i class="fa-solid fa-circle-right fa-solid-dim"></i> .larger.dim[**The Human Connectome PHantom (HCPh)**]
   <br /> .indent[.dimgray-text[A New Standard for Dense, Multi-Modal Neuroimaging]]
@@ -1211,7 +1212,7 @@ count:false
 <br />
 .boxed-content.large.no-bullet[
 * <i class="fa-solid fa-circle-right fa-solid-dim"></i> .larger.dim[**Context**]
-  <br /> .indent[.dimgray-text[Structural and functional connectivity of the brain]]
+  <br /> .indent[.dimgray-text[Structural and functional networks]]
 
 * <i class="fa-solid fa-circle-right fa-solid-dim"></i> .larger.dim[**The Human Connectome PHantom (HCPh)**]
   <br /> .indent[.dimgray-text[A New Standard for Dense, Multi-Modal Neuroimaging]]
@@ -1490,31 +1491,6 @@ The **NiPreps Community**
 ???
 </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
-    <script>
-      // Use: ![:img Alt text with spaces but not commas, 50%](image.png)
-      remark.macros.img = function (altText, width) {
-        var url = this;
-        return '<img alt="' + altText + '" src="' + url + '" style="width: ' + width + '" />';
-      };
-      // Use: ![:video](10.5129/10234)
-      remark.macros.video = function (width) {
-        var url = this;
-        return '<video src="' + url + '" width="' + width + '" preload="auto" controls />';
-      };
-      // Use: ![:doi](10.5129/10234)
-      remark.macros.doi = function () {
-        var doi = this;
-        return '<a href="https://doi.org/' + doi + '">' + doi + '</a>';
-      };
-
-      var slideshow = remark.create({
-          highlightStyle: 'monokai',
-          highlightLanguage: 'remark',
-          highlightLines: true,
-          countIncrementalSlides: false,
-          highlightSpans: true,
-          ratio: '16:9'
-      });
-    </script>
+    <script src="../remark-engine/core/engine.js"></script>
   </body>
 </html>

@@ -1,0 +1,3 @@
+[submodule "remark-engine"]
+	path = remark-engine
+	url = https://github.com/oesteban/remark-engine.git

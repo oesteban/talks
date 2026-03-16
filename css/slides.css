@@ -1,3 +1,7 @@
+/*
+ * DEPRECATED — kept for archival talks with inline CSS.
+ * New talks should use remark-engine/core/base.css + remark-engine/themes/chuv.css instead.
+ */
 @import url(https://fonts.googleapis.com/css?family=Urbanist:400,800,400italic);
 @import url(https://fonts.googleapis.com/css?family=Inter:400,800,400italic);
 @import url(https://fonts.googleapis.com/css?family=Arimo:400,800,400italic);
