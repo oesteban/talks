@@ -53,7 +53,10 @@
       margin-bottom: .5rem;
     }
     .talk-list a {
-      display: block;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto auto;
+      column-gap: .75rem;
       padding: .75rem 1rem;
       background: #fff;
       border-radius: 6px;
@@ -70,16 +73,19 @@
       font-weight: 600;
       font-size: .85rem;
       color: #888;
-      min-width: 6rem;
-      display: inline-block;
+      grid-column: 2;
+      grid-row: 1 / -1;
+      align-self: center;
+      white-space: nowrap;
     }
     .talk-title {
       font-weight: 600;
+      grid-column: 1;
     }
     .talk-venue {
       font-weight: 300;
       color: #666;
-      font-size: .9rem;
+      font-size: .82rem;
     }
     footer {
       text-align: center;
@@ -100,13 +106,13 @@
     <ul class="talk-list">
       <li><a href="20260420-RRI/">
         <span class="talk-date">20 Apr 2026</span>
-        <span class="talk-title">Open, Reliable &amp; Repeatable</span>
-        <span class="talk-venue">— Rotman Rounds</span>
+        <span class="talk-title">Standardizing neuroimaging preprocessing for the age of large-scale brain research</span>
+        <span class="talk-venue">Rotman Rounds</span>
       </a></li>
       <li><a href="20260210-ISC/">
         <span class="talk-date">10 Feb 2026</span>
-        <span class="talk-title">Open, Reliable &amp; Repeatable</span>
-        <span class="talk-venue">— ISC HES-SO</span>
+        <span class="talk-title">Foundations for breakthroughs in network analyses</span>
+        <span class="talk-venue">ISC HES-SO</span>
       </a></li>
     </ul>
 
@@ -114,28 +120,28 @@
     <ul class="talk-list">
       <li><a href="202509-NEMES-GU/">
         <span class="talk-date">25 Sep 2025</span>
-        <span class="talk-title">Open, Reliable &amp; Repeatable</span>
-        <span class="talk-venue">— NEMES, University of Gothenburg</span>
+        <span class="talk-title">Foundations for breakthroughs in network analyses</span>
+        <span class="talk-venue">NEMES, University of Gothenburg</span>
       </a></li>
       <li><a href="20250820-medgift/">
         <span class="talk-date">20 Aug 2025</span>
-        <span class="talk-title">MedGIFT Seminar</span>
-        <span class="talk-venue">— HES-SO Valais-Wallis</span>
+        <span class="talk-title">Brain MRI connectivity in the clinic... a standing promise?</span>
+        <span class="talk-venue">HES-SO Valais-Wallis MedGIFT Meeting</span>
       </a></li>
       <li><a href="20250410-teaching/">
         <span class="talk-date">10 Apr 2025</span>
-        <span class="talk-title">Big Data, Cloud, Infrastructures &amp; HPC</span>
-        <span class="talk-venue">— ISC HES-SO (302.1)</span>
+        <span class="talk-title">Big Data, Cloud, Infrastructures &amp; HPC (302.1)</span>
+        <span class="talk-venue">HES-SO Wallais/Valis, ISC</span>
       </a></li>
       <li><a href="202504-CDT-UCL/">
         <span class="talk-date">2 Apr 2025</span>
-        <span class="talk-title">Open, Reliable &amp; Repeatable</span>
-        <span class="talk-venue">— CDT, University College London</span>
+        <span class="talk-title">Foundations for breakthroughs in network analyses</span>
+        <span class="talk-venue">CDT, University College London</span>
       </a></li>
       <li><a href="20250401-labmeeting/">
         <span class="talk-date">1 Apr 2025</span>
-        <span class="talk-title">Open, Reliable &amp; Repeatable</span>
-        <span class="talk-venue">— Lab Meeting</span>
+        <span class="talk-title">Foundations for breakthroughs in connectivity analyses</span>
+        <span class="talk-venue">Lab Meeting, Connectomics Lab, CHUV</span>
       </a></li>
     </ul>
 
@@ -143,38 +149,38 @@
     <ul class="talk-list">
       <li><a href="202412-OSU/">
         <span class="talk-date">Dec 2024</span>
-        <span class="talk-title">Neuroimaging Methods Club</span>
-        <span class="talk-venue">— Dept. Psychiatry &amp; Behavioral Health, Ohio State University</span>
+        <span class="talk-title">Analytical variability in computational neuroscience—the next challenge?</span>
+        <span class="talk-venue">Neuroimaging Methods Club, Ohio State University</span>
       </a></li>
       <li><a href="202411-Mat-TechLab/">
         <span class="talk-date">12 Nov 2024</span>
-        <span class="talk-title">Open, Reliable &amp; Repeatable</span>
-        <span class="talk-venue">— Mat-Tech Lab Meeting</span>
+        <span class="talk-title">Repeatable research: don't repeat history fishing for dead salmons</span>
+        <span class="talk-venue">HES-SO Valais-Wallis Mat-Tech Lab Meeting</span>
       </a></li>
       <li><a href="202409-CIBM-BnS/">
         <span class="talk-date">24 Sep 2024</span>
-        <span class="talk-title">Open, Reliable &amp; Repeatable</span>
-        <span class="talk-venue">— CIBM Breakfast &amp; Science</span>
+        <span class="talk-title">Repeatable research: don't repeat history fishing for dead salmons</span>
+        <span class="talk-venue">CIBM Breakfast &amp; Science</span>
       </a></li>
       <li><a href="202407-DataEngWorkshop/">
         <span class="talk-date">Jul 2024</span>
-        <span class="talk-title">Data Engineering Workshop</span>
-        <span class="talk-venue">— CHUV</span>
+        <span class="talk-title">QC or not QC</span>
+        <span class="talk-venue">The future of FAIR data management and engineering for open and reproducible neuroimaging, University of Oldenburg</span>
       </a></li>
       <li><a href="202405-ISMRM/">
         <span class="talk-date">May 2024</span>
-        <span class="talk-title">ISMRM 2024 — Abstract 0539</span>
-        <span class="talk-venue">— Singapore</span>
+        <span class="talk-title">Harnessing QA/QC protocols for diffusion MRI neuroimaging workflows with MRIQC</span>
+        <span class="talk-venue">ISMRM 2024 #0539 (talk), Singapore</span>
       </a></li>
       <li><a href="202403-DIPY/">
         <span class="talk-date">Mar 2024</span>
         <span class="talk-title">Imaging Data and Transforms</span>
-        <span class="talk-venue">— DIPY Workshop</span>
+        <span class="talk-venue">DIPY Workshop</span>
       </a></li>
       <li><a href="202402-teaching/">
         <span class="talk-date">Feb 2024</span>
         <span class="talk-title">HPC et IA distribuée</span>
-        <span class="talk-venue">— ISC HES-SO (30X.Y)</span>
+        <span class="talk-venue">HES-SO Wallais/Valis, ISC</span>
       </a></li>
     </ul>
 
@@ -183,7 +189,7 @@
       <li><a href="202311-BHD/">
         <span class="talk-date">Nov 2023</span>
         <span class="talk-title">Pre-registering Methods-Oriented Neuroimaging Research</span>
-        <span class="talk-venue">— BrainHack Donostia</span>
+        <span class="talk-venue">BrainHack Donostia</span>
       </a></li>
     </ul>
 
