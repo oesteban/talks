@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pre-registering methods-oriented neuroimaging research</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/assets/asciinema-player/asciinema-player.css" />
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,700,400italic);
+
+      .blur {
+          -webkit-filter: blur(5px) opacity(.3);
+          -moz-filter: blur(10px) opacity(.3);
+          -o-filter: blur(5px) opacity(.3);
+          -ms-filter: blur(5px) opacity(.3);
+          filter: blur(5px) opacity(.3);
+      }
+
+      html {
+        height: 100%;
+      }
+      body {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        height: 100%;
+      }
+      h1, h2, h3 {
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+
+      .middle {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        width:100%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+
+      .remark-slide-content { height: 100%; padding: 0; }
+      .remark-slide-content h1 { font-size: 3em; }
+      .remark-slide-content h2 { font-size: 2em; }
+      .remark-slide-content h3 { font-size: 1.6em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+        font-size: 0.7em;
+      }
+      li p { line-height: 1.25em; }
+      /*.remark-slide-content>ul { margin-left: 250px; }*/
+      /*.remark-slide-content li { margin-left: 1em; }*/
+
+      .red { color: #fa0000; }
+      .blue { color: #0000fa; }
+      .green { color: #698b69; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        background: #e7e8e2;
+        border-radius: 3px;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Roboto Mono'; }
+      .large .remark-code, .large .remark-inline-code { font-size: 0.8em; }
+      .remark-code-line-highlighted     { background-color: #373832; }
+      .pull-left {
+        float: left;
+        width: 39%;
+      }
+      .pull-right {
+        float: right;
+        width: 39%;
+        height: 75%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .section-separator .middle {
+        margin-left: 210px;
+        width: 80%;
+      }
+
+      .perma-sidebar {
+        float: left;
+        background-color: #009933;
+        color: #f4f4f4;
+        width: 40px;
+        height: 100%;
+        padding: 0;
+        margin: 0 2em 0 0;
+        text-align: center;
+      }
+      .perma-sidebar p {
+        text-align: left;
+        font-size: 80%;
+        height: 35px;
+        width: 670px;
+        margin: 320px 0 0 -315px;
+      }
+      .perma-sidebar h2:last-of-type, .perma-sidebar h3:last-child {
+        color: #d2c295;
+      }
+
+/*      .sidebar-slug {
+          bottom: 12px;
+          left: 0;
+          position: absolute;
+          width: 210px;
+          text-align: center;
+      }
+      .sidebar-slug img {
+          width: 180px;
+      }*/
+
+      .svg-reportlet { width: 75%; }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        width: 23%;
+        height: 82%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 55%;
+        float: right;
+        padding-top: 1em;
+      }
+      /* Two-column layout (40% left) */
+      .left-column2 {
+        width: 35%;
+        height: 85%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column2 {
+        width: 43%;
+        float: right;
+        padding-top: 1em;
+      }
+      /* Two-column layout (60% left) */
+      .left-column3 {
+        width: 43%;
+        height: 85%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column3 {
+        width: 35%;
+        float: right;
+        padding-top: 1em;
+      }
+      /* Two-column layout (even split) */
+      .left-column-mid {
+        width: 45%;
+        float: left;
+      }
+      .right-column-mid {
+        width: 45%;
+        float: right;
+      }
+      /* Two-column layout (flipped) */
+      .left-column-inv {
+        color: #777;
+        width: 75%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column-inv {
+        width: 20%;
+        float: right;
+        padding-top: 1em;
+      }
+      .caption {
+          font-size: 0.7em;
+      }
+      .slide-slug {
+          bottom: 12px;
+          opacity: .5;
+          position: absolute;
+          left: 4em;
+      }
+
+      .small code {
+        font-size: 9pt;
+      }
+      .tiny code {
+        font-size: 8.5pt;
+      }
+
+      .larger {
+        font-size: 20pt;
+      }
+
+      .large {
+        font-size: 24pt;
+      }
+
+      .huge {
+        font-size: 40pt;
+      }
+
+      .gigantic {
+        font-size: 60pt;
+      }
+
+      .boxed-content {
+        float: left;
+        display: block;
+        width: 89%;
+        height: 70%;
+      }
+/*
+      .distribute {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+      }*/
+
+      .distribute {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 80%;
+        width: 100%;
+      }
+
+      .cut-right {
+        margin-right: 100px;
+      }
+
+      .rotate{
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+      }
+
+      .dim {
+        color: #ccc;
+      }
+
+      .nodim {
+        color: #000;
+      }
+
+      .bold {
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+<script src="/assets/asciinema-player/asciinema-player.min.js"></script>
+<textarea id="source">
+
+name: title
+layout: true
+class: center
+---
+layout: false
+count: false
+
+.middle.center[
+# Pre-registering methods-oriented neuroimaging research
+
+## Why, when, and how?
+
+<br />
+<br />
+
+### Oscar Esteban
+#### [AxonLab](https://www.axonlab.org/team/) | Lausanne University Hospital (CHUV)
+
+###### [oesteban.github.io/talks/202311-BHD](https://oesteban.github.io/talks/202311-BHD/)
+]
+
+---
+layout: false
+count: false
+
+.middle.center[
+# Pre-registering methods-oriented neuroimaging research
+
+## Why, when, and how?
+
+<br />
+<br />
+
+### Oscar Esteban
+#### [AxonLab](https://www.axonlab.org/team/) | Lausanne University Hospital (CHUV)
+
+###### [oesteban.github.io/talks/202311-BHD](https://oesteban.github.io/talks/202311-BHD/)
+]
+
+---
+name: newsection
+layout: true
+
+.perma-sidebar[
+<p class="rotate">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; height: 20px; padding-top: 6px;" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+  <span style="padding-left: 10px; font-weight: 600;">Pre-registering methods-oriented neuroimaging research</span>
+</p>
+]
+
+---
+
+# Correction
+
+--
+
+<br />
+<br />
+<br />
+
+## Where the title refers to *pre-registration*
+
+<br />
+
+--
+
+it should instead point at
+
+<br />
+
+## Registered Reports (RRs)
+
+---
+
+<p align="center">
+<img src="images/quiz-template-millionaire.png" width="90%" /><br /><br />
+</p>
+
+---
+
+<p align="center">
+<img src="images/quiz-template-scientist.png" width="90%" /><br /><br />
+</p>
+
+---
+
+<p align="center">
+<img src="images/quiz-successful-scientific-career.png" width="90%" /><br /><br />
+</p>
+
+---
+
+<p align="center">
+<img src="images/quiz-successful-scientific-career-answer.png" width="90%" /><br /><br />
+</p>
+
+---
+
+<p align="center">
+<img src="images/quiz-publications.png" width="90%" /><br /><br />
+</p>
+
+---
+
+<p align="center">
+<img src="images/quiz-publications-answer.png" width="90%" /><br /><br />
+</p>
+
+---
+
+# The paradox (Prof. C. Chambers)
+
+--
+
+<br />
+<br />
+<br />
+
+## Results determine careers
+
+<br />
+
+--
+
+and
+
+<br />
+
+## Resarchers SHOULD NOT determine results.
+
+---
+
+
+# Outline
+
+.boxed-content[
+.distribute.large[
+* Why we need to address this paradox
+
+* What is a registered report?
+
+* Responding to when and how with two use cases
+
+  * The PCI RR community
+  * Journal pathway
+
+* Limitations and PCI's RRs 2.0
+
+* Wrap-up  
+]
+]
+
+---
+
+<p align="center">
+<a href="https://www.cos.io/initiatives/registered-reports">
+<img src="https://cdn.cos.io/media/images/Hypothetico-deductive_scientific_method-1.original.png" width="85%" /><br /><br />
+Center for Open Science (COS) - RRs' Details & Workflow</a>
+</p>
+
+---
+
+# What are Registered Reports?
+
+<p align="center">
+<img src="images/RRs-traditional-before-review.png" width="90%" /><br /><br />
+</p>
+
+---
+
+# What are Registered Reports?
+
+<p align="center">
+<img src="images/RRs-traditional-after-review.png" width="90%" /><br /><br />
+</p>
+
+---
+
+# What are Registered Reports?
+
+<p align="center">
+<img src="images/RRs-workflow.png" width="90%" /><br /><br />
+</p>
+
+---
+
+# What are Registered Reports?
+
+<br />
+<p align="center">
+<a href="https://www.cos.io/initiatives/registered-reports">
+<img src="images/cos-workflow.png" width="85%" /><br /><br />
+Center for Open Science (COS) - RRs' Details & Workflow</a>
+</p>
+
+---
+
+# Learning by doing
+
+.pull-left[
+<p align="right">
+<a href="https://rr.peercommunityin.org/articles/rec?id=346">
+<img src="images/rr-1-defacing.png" width="100%" />
+https://rr.peercommunityin.org/articles/rec?id=346
+</a>
+</p>
+<br />
+
+]
+
+--
+
+.pull-right[
+<p align="left">
+<br />
+<br />
+<br />
+<br />
+<a href="https://doi.org/10.6084/m9.figshare.19579873.v1">
+<img src="images/rr-2-hcph.png" width="90%" />
+10.6084/m9.figshare.19579873.v1
+</a>
+</p>
+]
+
+---
+
+# Defacing RR &mdash; motivation
+
+.pull-left[
+<p align="right">
+<br />
+<img src="images/defacing-result.png" width="100%" />
+<br />
+<br />
+.tiny[Provins, C., … Esteban, O. (2022). 28<sup>th</sup> OHBM. Glasgow, Scotland, UK. [10.31219/osf.io/t9ehk](https://doi.org/10.31219/osf.io/t9ehk)]
+</p>
+
+]
+
+--
+
+.pull-right[
+<p align="left">
+<img src="images/defacing-humans-ba.png" width="95%" />
+</p>
+]
+
+<!--
+
+- We had done a pilot study presented in OHBM 2022 suggesting machines and humans see quality in defaced T1w images differently as compared to the original image.
+- Why registration: because there was potential for the project to become a rabbit-hole:
+    - Difficult to interpret
+    - Or worse, a moving target
+    - High risk, low return project
+
+-->
+
+---
+
+# Defacing RR &mdash; lessons learned
+
+<img align='top' src="images/mriqc-rating.png" width="30%" />
+--
+<img align='top' src="images/g-power.png" width="30%" />
+--
+<img align='top' src="images/qkay.png" width="30%" />
+
+<!--
+
+- Introduce the experiments
+- Pre-registration showed its benefits early on:
+    - Moved from categorical ratings to interval scale
+    - Realized that a nested design would not give us the statistical power
+    - need for q-kay
+-->
+
+---
+
+# Defacing RR &mdash; timeline
+
+<p align="center">
+<img src="images/defacing-RR-timeline.png" width="90%" />
+</p>
+--
+<p align="center">
+<img align='top' src="images/pci-recommended-journals.png" width="25%" />
+<span width="20%"> </span>
+<img align='top' src="images/pci-defacing-bias-level.png" width="35%" />
+</p>
+
+<!--
+
+- We worked on a pre-registration document for 6 months, and attempted a submission to NeuroImage.
+- Submission to PCI RR
+
+- Report timing of reviews
+- Recommender (editor) first requested us to improve several items:
+    - Most importantly, to remove speculative statements on our abstract and the removal of the discussion.
+- Review had really high quality:
+    - Showcase examples of useful changes.
+
+-->
+
+---
+
+# Defacing RR &mdash; the PCI RR
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+.gigantic.center[
+[rr.peercommunityin.org](https://rr.peercommunityin.org/)
+]
+
+
+<!--
+
+STAGE 1 - what does that mean
+- List collaborating journals recommended to us (automatic acceptance)
+- Mention friendly journals (acceptance not guaranteed)
+- Mention other journals (acceptance not guaranteed and withdrawal)
+
+-->
+
+---
+
+# Learning by doing
+
+.pull-right[
+<p align="left">
+<br />
+<br />
+<br />
+<br />
+<a href="https://doi.org/10.6084/m9.figshare.19579873.v1">
+<img src="images/rr-2-hcph.png" width="90%" />
+10.6084/m9.figshare.19579873.v1
+</a>
+</p>
+]
+
+--
+
+.pull-left[
+<br />
+<br />
+<br />
+<br />
+.huge[HCPh = Human Connectome PHantom]
+]
+
+---
+
+# HCPh &mdash; motivation
+
+<p align="center">
+<img src="images/nmeth-rr-figshare.png" width="80%" />
+</p>
+
+---
+
+# HCPh &mdash; motivation
+
+<p align="center">
+<img src="https://www.axonlab.org/hcph-sops/assets/images/cohort1.png" width="50%" />
+</p>
+
+---
+
+# HCPh &mdash; SOPs
+
+.center[
+.huge[[www.axonlab.org/hcph-sops](https://www.axonlab.org/hcph-sops/)]
+<iframe src="https://www.axonlab.org/hcph-sops/" width="90%" height="600px" />
+]
+
+---
+
+# HCPh &mdash; timeline
+
+<p align="center">
+<img src="images/HCPh-timeline.png" width="90%" />
+</p>
+
+<!-- workflow? -->
+
+<!--
+
+- Explain how this is a different type of RR, for larger projects
+- Mention Programmatic RRs at PCI RR and defer discussion to later.
+
+-->
+
+---
+
+# Why RRs? (Ph.D. Students, postdocs)
+
+.boxed-content[
+.distribute.larger[
+.nodim[
+* .large.bold[Brings about the most onerous aspects of research]
+
+    * If there is no (clear) project, you better learn soon.
+    * Helps build a better understanding of the workflow.
+]
+.dim[
+* .large.bold[Secure publication]
+
+    * Helps detect major issues early on (e.g., data are not workable).
+    * Pushes the experience of peer-review early.
+]
+.dim[
+* .large.bold[Transparency is built-in]
+
+    * Better communication within stakeholders (mentors, collaborators)
+    * Better communication toward publication (editors, reviewers)
+]
+]]
+
+---
+
+# Why RRs? (Ph.D. Students, postdocs)
+
+.boxed-content[
+.distribute.larger[
+.dim[
+* .large.bold[Brings about the most onerous aspects of research]
+
+    * If there is no (clear) project, you better learn soon.
+    * Helps build a better understanding of the workflow.
+]
+.nodim[
+* .large.bold[Secure publication]
+
+    * Helps detect major issues early on (e.g., data are not workable).
+    * Pushes the experience of peer-review early.
+]
+.dim[
+* .large.bold[Transparency is built-in]
+
+    * Better communication within stakeholders (mentors, collaborators)
+    * Better communication toward publication (editors, reviewers)
+]
+]]
+
+---
+
+# Why RRs? (Ph.D. Students, postdocs)
+
+.boxed-content[
+.distribute.larger[
+.dim[
+* .large.bold[Brings about the most onerous aspects of research]
+
+    * If there is no (clear) project, you better learn soon.
+    * Helps build a better understanding of the workflow.
+]
+.dim[
+* .large.bold[Secure publication]
+
+    * Helps detect major issues early on (e.g., data are not workable).
+    * Pushes the experience of peer-review early.
+]
+.nodim[
+* .large.bold[Transparency is built-in]
+
+    * Better communication within stakeholders (mentors, collaborators)
+    * Better communication toward publication (editors, reviewers)
+]
+]]
+
+---
+
+# Why RRs? (ECRs, consolidated PIs)
+
+.boxed-content[
+.distribute.larger[
+.nodim[
+* .large.bold[Secures the realization of the project]
+
+    * Effectively avert procrastination
+    * Identify bottlenecks before project derails
+]
+.dim[
+* .large.bold[RRs are effective to track the project]
+
+    * RRs generate a roadmap as opposed to creating the path as you go
+    * Progress is easier to demonstrate to third parties
+]
+.dim[
+* .large.bold[Transparency is built-in]
+
+    * Openness has longstanding benefits (cf. preprints)
+]
+]]
+
+---
+
+# Why RRs? (ECRs, consolidated PIs)
+
+.boxed-content[
+.distribute.larger[
+.dim[
+* .large.bold[Secures the realization of the project]
+
+    * Effectively avert procrastination
+    * Identify bottlenecks before project derails
+]
+.nodim[
+* .large.bold[RRs are effective to track the project]
+
+    * RRs generate a roadmap as opposed to creating the path as you go
+    * Progress is easier to demonstrate to third parties
+]
+.dim[
+* .large.bold[Transparency is built-in]
+
+    * Openness has longstanding benefits (cf. preprints)
+]
+]]
+
+---
+
+# Why RRs? (ECRs, consolidated PIs)
+
+.boxed-content[
+.distribute.larger[
+.dim[
+* .large.bold[Secures the realization of the project]
+
+    * Effectively avert procrastination
+    * Identify bottlenecks before project derails
+]
+.dim[
+* .large.bold[RRs are effective to track the project]
+
+    * RRs generate a roadmap as opposed to creating the path as you go
+    * Progress is easier to demonstrate to third parties
+]
+.nodim[
+* .large.bold[Transparency is built-in]
+
+    * Openness has longstanding benefits (cf. preprints)
+]
+]]
+
+---
+
+# Unwarranted criticism
+
+.boxed-content[
+.distribute.larger[
+.nodim[
+* .large.bold[(Pre)registration only works with clear hypotheses]
+
+    * *if all research is pre-registered, we will not generate creative, new solutions*
+    * Not applicable to qualitative research and development of new methodologies
+]
+.dim[
+* .large.bold[Pre-registration increases the risk of being scooped]
+
+    * If you just pre-register, equivalent risk to pre-prints
+    * RR Stage 1 studies can be embargoed
+    * RR guarantees publication
+]
+.dim[
+* .large.bold[Data must not exist]
+
+    * It's a matter of controlling for biases
+]
+]]
+
+---
+
+# Unwarranted criticism
+
+.boxed-content[
+.distribute.larger[
+.dim[
+* .large.bold[(Pre)registration only works with clear hypotheses]
+
+    * *if all research is pre-registered, we will not generate creative, new solutions*
+    * Not applicable to qualitative research and development of new methodologies
+]
+.nodim[
+* .large.bold[Pre-registration increases the risk of being scooped]
+
+    * If you just pre-register, equivalent risk to pre-prints
+    * RR Stage 1 studies can be embargoed
+    * RR guarantees publication
+]
+.dim[
+* .large.bold[Data must not exist]
+
+    * It's a matter of controlling for biases
+]
+]]
+
+---
+
+# Unwarranted criticism
+
+.boxed-content[
+.distribute.larger[
+.dim[
+* .large.bold[(Pre)registration only works with clear hypotheses]
+
+    * *if all research is pre-registered, we will not generate creative, new solutions*
+    * Not applicable to qualitative research and development of new methodologies
+]
+.dim[
+* .large.bold[Pre-registration increases the risk of being scooped]
+
+    * If you just pre-register, equivalent risk to pre-prints
+    * RR Stage 1 studies can be embargoed
+    * RR guarantees publication
+]
+.nodim[
+* .large.bold[Data must not exist]
+
+    * It's a matter of controlling for biases
+]
+]]
+
+---
+
+# Limitations
+
+.boxed-content[
+.distribute.larger[
+.nodim[
+* .larger.bold[Timing]
+    * *Scheduled* RRs (PCI RR)
+]
+.dim[
+* .larger.bold[Unsuitable for longstanding projects]
+    * *Programmatic* RRs (PCI RR)
+]
+.dim[
+* .larger.bold[Ethical oversight and funding required]
+    * RRs will continue evolving over time
+]
+]
+.dim[
+* .larger.bold[Journals have low IF]
+
+    * With the exception of Nature titles
+]
+]
+]
+
+---
+
+# Limitations
+
+.boxed-content[
+.distribute.larger[
+.dim[
+* .larger.bold[Timing]
+    * *Scheduled* RRs (PCI RR)
+]
+.nodim[
+* .larger.bold[Unsuitable for longstanding projects]
+    * *Programmatic* RRs (PCI RR)
+]
+.dim[
+* .larger.bold[Ethical oversight and funding required]
+    * RRs will continue evolving over time
+]
+]
+.dim[
+* .larger.bold[Journals have low IF]
+
+    * With the exception of Nature titles
+]
+]
+]
+
+---
+
+# Limitations
+
+.boxed-content[
+.distribute.larger[
+.dim[
+* .larger.bold[Timing]
+    * *Scheduled* RRs (PCI RR)
+]
+.dim[
+* .larger.bold[Unsuitable for longstanding projects]
+    * *Programmatic* RRs (PCI RR)
+]
+.nodim[
+* .larger.bold[Ethical oversight and funding required]
+    * RRs will continue evolving over time
+]
+]
+.dim[
+* .larger.bold[Journals have low IF]
+
+    * With the exception of Nature titles
+]
+]
+]
+
+---
+
+# Limitations
+
+.boxed-content[
+.distribute.larger[
+.dim[
+* .larger.bold[Timing]
+    * *Scheduled* RRs (PCI RR)
+]
+.dim[
+* .larger.bold[Unsuitable for longstanding projects]
+    * *Programmatic* RRs (PCI RR)
+]
+.dim[
+* .larger.bold[Ethical oversight and funding required]
+    * RRs will continue evolving over time
+]
+]
+.nodim[
+* .larger.bold[Journals have low IF]
+
+    * With the exception of Nature titles
+]
+]
+]
+
+---
+
+# Results
+
+<p align="center">
+<a href="https://doi.org/10.1038/s41562-021-01193-7">
+<img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-021-01193-7/MediaObjects/41562_2021_1193_Fig2_HTML.png?as=webp" width="65%" /><br /><br />
+Chambers, C.D., Tzavella, L. The past, present and future of Registered Reports. Nat Hum Behav 6, 29–42 (2022). doi:10.1038/s41562-021-01193-7</a>
+</p>
+
+---
+
+# Results
+
+.left-column-mid[
+<p align="right">
+<img src="images/soderberg-quality.png" width="90%" />
+</p>
+]
+
+.right-column-mid[
+.larger[Increasing quality:]
+
+353 researchers peer reviewed a pair of papers from 29 published RRs from psychology and neuroscience and 57 non-RR comparison papers.
+<br />
+Soderberg et al., Nat Hum Behav 2021 [10.1038/s41562-021-01142-4](https://doi.org/10.1038/s41562-021-01142-4)
+]
+
+---
+
+# Results
+
+.left-column-mid[
+<p align="right">
+<img src="images/soderberg-quality.png" width="90%" />
+</p>
+]
+
+.right-column-mid[
+.larger[Increasing quality:]
+
+353 researchers peer reviewed a pair of papers from 29 published RRs from psychology and neuroscience and 57 non-RR comparison papers.
+<br />
+Soderberg et al., Nat Hum Behav 2021 [10.1038/s41562-021-01142-4](https://doi.org/10.1038/s41562-021-01142-4)
+
+<br />
+<br />
+<br />
+<br />
+.larger[Also reducing publication bias:]
+
+  * Generally, open science (Allen et al. 2019 [10.1371/journal.pbio.3000246](https://doi.org/10.1371/journal.pbio.3000246))
+
+  * Specifically in psychology (Scheel et al. 2021 [10.1177/25152459211007467](https://doi.org/10.1177/25152459211007467))
+]
+
+---
+
+# Conclusion
+
+.large[
+&nbsp;&nbsp;&nbsp;✓ &nbsp;&nbsp; Results should not be relevant toward publication
+]
+
+--
+
+.large[
+&nbsp;&nbsp;&nbsp;✓ &nbsp;&nbsp; Redesigning the publication workflow
+]
+
+--
+
+.large[
+&nbsp;&nbsp;&nbsp;✓ &nbsp;&nbsp; Demonstrated that it is possible
+]
+
+--
+
+.large[
+&nbsp;&nbsp;&nbsp;✓ &nbsp;&nbsp; Justification at the individual level
+]
+
+--
+
+.large[
+&nbsp;&nbsp;&nbsp;✓ &nbsp;&nbsp; Justification at the global level
+]
+
+--
+
+.large[
+&nbsp;&nbsp;&nbsp;✓ &nbsp;&nbsp; Provided tools
+]
+
+
+---
+
+.boxed-content[
+.middle.center[
+# Thanks!
+
+### Questions?
+
+]
+]
+</textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create({
+          highlightStyle: 'monokai',
+          highlightLanguage: 'remark',
+          highlightLines: true,
+          countIncrementalSlides: false,
+          highlightSpans: true,
+          ratio: '16:9'
+      });
+
+      // Now retrieve all IDs of asciinema casts
+      const allcasts = new Map();
+
+      slideshow.on('afterShowSlide', function (slide) {
+        // Slide is the slide being navigated
+        var slideNumber = slide.getSlideIndex();
+        var element = document.getElementsByClassName("remark-visible")[0].getElementsByClassName('asciicast')
+        if (element.length == 0 ) {
+          return;
+        }
+
+        if (allcasts.has(slideNumber)) {
+          allcasts.get(slideNumber).play();
+          return;
+        }
+
+        var castid = element[0].attributes["id"].value;
+        allcasts.set(slideNumber, AsciinemaPlayer.create(
+            'https://asciinema.org/a/' + castid + '.cast',
+            document.getElementById(castid),
+            { autoPlay: true, speed: 2, idle_time_limit: 8, rows: 17 }
+        ));
+      });
+
+      slideshow.on('beforeHideSlide', function (slide) {
+        // Slide is the slide being navigated
+        var slideNumber = slide.getSlideIndex();
+        if (allcasts.has(slideNumber)) {
+          allcasts.get(slideNumber).pause();
+        }
+      });
+
+    </script>
+  </body>
+</html>
