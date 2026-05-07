@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Functional MRI Data Analysis Pipelines :: ISMRM 2026, Cape Town</title>
+    <meta charset="utf-8">
+    <meta name="grammarly" content="false">
+    <meta name="google" content="notranslate">
+    <link rel="stylesheet" type="text/css" href="../remark-engine/vendor/asciinema-player/asciinema-player.css" />
+    <link rel="stylesheet" type="text/css" href="../remark-engine/core/base.css" />
+    <link rel="stylesheet" type="text/css" href="../remark-engine/themes/hes-so.css" />
+    <link rel="stylesheet" type="text/css" href="../remark-engine/ext/nav-controls.css" />
+  </head>
+  <body>
+
+<script src="../remark-engine/vendor/asciinema-player/asciinema-player.min.js"></script>
+<script src="https://kit.fontawesome.com/015d4b01de.js" crossorigin="anonymous"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true},
+      jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+      extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+      TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+      equationNumbers: {
+      autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+
+<textarea id="source">
+name: title
+layout: true
+class: center
+---
+layout: false
+count: false
+
+
+.center[
+<a href="https://oesteban.github.io/talks/20260510-ISMRM/">
+  <object type="image/svg+xml" data="images/qr-talk-url.svg" style="width: 20%"></object>
+  <br />
+  https://oesteban.github.io/talks/20260510-ISMRM/
+</a>
+
+<br />
+<br />
+
+# Functional MRI Data Analysis Pipelines
+
+## Five rules from preprocessing to reproducibility
+
+<br />
+
+Oscar Esteban &lt;<code><a href="mailto:phd@oscaresteban.es">phd@oscaresteban.es</a></code>>
+
+#### ISMRM 2026 · *Analysis Pipelines: Demos* · Cape Town · May 10<sup>th</sup>, 2026
+
+]
+
+???
+
+Welcome. This is the *Functional MRI* slot of the *Analysis Pipelines: Demos* session.
+
+---
+name: newsection
+layout: true
+
+.perma-sidebar[
+<p class="rotate">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; height: 20px; padding-top: 6px;" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+  <span style="padding-left: 10px; font-weight: 600;">fMRI Data Analysis Pipelines · ISMRM 2026</span>
+</p>
+]
+
+---
+count: false
+
+# CoI disclosure & Open Access
+
+<br />
+<br />
+
+
+.right-column3.center[
+<a href="https://oesteban.github.io/talks/20260510-ISMRM/">
+  <object type="image/svg+xml" data="images/qr-talk-url.svg" style="width: 80%"></object>
+  <br />
+  Link to slides
+</a>
+]
+
+.pad-top.left-column3[
+.large[
+**No financial interests or relationships** may pose a conflict of interest.
+
+<br />
+
+All materials related to this talk are openly available under a **CC-By license**.
+]
+]
+
+---
+
+# About me
+
+.large[
+**Data scientist** who plays with brain data &amp; **open science** advocate.
+]
+
+.right-column3.center[
+<a href="https://oesteban.github.io/talks/20260510-ISMRM/">
+  <object type="image/svg+xml" data="images/qr-talk-url.svg" style="width: 80%"></object>
+  <br />
+  Link to slides
+</a>
+]
+
+.pad-top.left-column3[
+.people-table.larger[
+
+| | |
+|---:|---|
+| ![oscar-esteban](https://www.axonlab.org/images/teampic/Oscar_HQD-1-square.jpg) | **Oscar Esteban** <br /> Associate Professor &amp; Head of [AxonLab](https://www.axonlab.org) <br /> School of Engineering <br /> HES-SO Valais/Wallis |
+]
+
+
+.larger[
+* Research &amp; Teaching FNS Fellow (2025) @ CHUV
+* PD (2020) @ Stanford University
+* Ph.D. (2015) @ Universidad Politécnica de Madrid
+* Lead developer of *fMRIPrep* &amp; *MRIQC* — [NiPreps](https://www.nipreps.org)
+]
+
+]
+
+???
+
+Quick context: I lead *fMRIPrep* and *MRIQC* and coordinate the NiPreps community.
+
+---
+
+# Warm-up · Slido <i class="fa-solid fa-mobile-screen"></i>
+
+.boxed-content.center[
+<br />
+
+### What is the *first* thing you do with a fresh fMRI dataset?
+
+<br />
+
+<a href="https://app.sli.do/event/REPLACE-ME-WARMUP">app.sli.do — code on screen</a>
+<br />
+
+<iframe src="https://wall.sli.do/event/REPLACE-ME-WARMUP/" style="width: 100%; height: 480px; border: 0; padding-top: 8pt"></iframe>
+]
+
+???
+
+---
+
+# The research workflow of brain networks
+
+.boxed-content[
+<object type="image/svg+xml" data="../assets/neuroimaging-workflow-large.svg" style="width: 100%; padding-top: 20pt;"></object>
+
+.center[
+[Esteban et al. (2020)](http://doi.org/10.1038/s41596-020-0327-3);
+[Niso et al. (2022)](https://doi.org/10.1016/j.neuroimage.2022.119623)
+]
+]
+
+???
+
+In broad strokes, this is the MRI-based network analysis pipeline.
+
+Interestingly, it looks like any machine learning pipeline: we acquire data, perform quality control, preprocess it, define features, and then apply statistical modeling to extract insights.
+
+For a deeper dive into the details of the neuroimaging worflow, I've participated in several efforts such as the two references given below.
+
+---
+count:false
+
+# The research workflow of brain networks
+
+.boxed-content[
+<object type="image/svg+xml" data="../assets/neuroimaging-workflow-1.svg" style="width: 100%; padding-top: 20pt;"></object>
+
+.center[
+[Esteban et al. (2017)](https://doi.org/10.1371/journal.pone.0184661);
+[Provins et al. (2023)](https://doi.org/10.3389/fnimg.2022.1073734); <br />
+[Provins et al. (2025)](https://doi.org/10.1371/journal.pbio.3003149)
+[Hagen et al. (2025, *accepted*)](https://doi.org/10.1101/2024.10.21.619532)
+]
+<br />
+
+.no-bullet[
+* .larger[<i class="fa-solid fa-clipboard-list"></i> Run the **MRI experiment** following Standard Operating Procedures (SOPs)]
+
+* <i class="fa-solid fa-folder-tree"></i> .larger[**Standardized data structure** (BIDS—Brain Imaging Data Structure)]
+
+* .larger[<i class="fa-solid fa-square-check"></i> **QA/QC** (Quality assurance / control)]
+
+]
+
+]
+
+???
+
+The pipeline starts with data acquisition, management and quality assurance and control (QA/QC).
+
+My early work on QA/QC applied machine learning to automatically assess MRI images of the brain, and raised awareness over issues like “site effects”—where data from different scanners or labs can systematically vary, much like “batch effects” in genomics.
+
+One key principle in AI is that models are only as good as their data and neuroimaging is no exception.
+
+This is why my group and I have been deeply involved in BIDS, produced version-controlled, machine-readable standard operating procedures, developed comprehensive QA/QC protocols and created ready-to-use applications to detect suboptimal data early.
+
+---
+count:false
+
+# The research workflow of brain networks
+
+.boxed-content[
+<object type="image/svg+xml" data="../assets/neuroimaging-workflow-2.svg" style="width: 100%; padding-top: 20pt;"></object>
+
+.center[
+[Esteban et al. (2019)](https://doi.org/10.1038/s41592-018-0235-4);
+[Ciric et al. (2022)](https://doi.org/10.1038/s41592-022-01681-2);
+[Adebimpe et al. (2022)](https://doi.org/10.1038/s41592-022-01458-7)
+]
+<br />
+
+.no-bullet[
+* .larger[<i class="fa-solid fa-smog"></i> Detection of **nuisance sources**]
+
+* .larger[<i class="fa-solid fa-magnifying-glass-location"></i> Spatiotemporal **location** of signals]
+
+* .larger[<i class="fa-solid fa-location-crosshairs"></i> Definition of **brain units** of analysis (regions)]
+
+]
+]
+
+???
+
+Next in the pipeline is preprocessing, which transforms raw data into something models can reliably interpret.
+
+For example, it identifies signals of no interest for their cleaning or accounting within modeling.
+
+In neuroimaging, preprocessing also deals with accurately locating signals and objects in space and time, and often the definition of relevant brain regions that focus the analysis.
+
+A decade ago, we might have called it “feature engineering.”
+
+Regardless of the term, it’s crucial: “preprocessing” is now a keyword in job posts at major players like Anthropic, DeepMind, and OpenAI.
+
+---
+
+# fMRIPrep: despite minimal, a complex workflow
+
+.boxed-content.center[
+<object type="image/svg+xml" data="../assets/fmriprep-natmeth-fig01.svg" style="width: 75%;"></object>
+]
+
+???
+
+Here I'm showing a very much simplified overview of fMRIPrep's design.
+
+Despite it being just "minimal" preprocessing and just one step of the pipeline, its complexity is evident.
+
+Rather than delving into each of these steps, I'll just say that there's a current need to update and improve computer vision algorithms and approaches (segmentation, image registration, dimensionality reduction, etc.) with AI/ML all across the dataflow.
+
+---
+count:false
+class: stepwise-svg
+
+# fMRIPrep: despite minimal, a complex workflow
+
+.boxed-content.center[
+<object type="image/svg+xml" data="../assets/fmriprep-natmeth-fig01.svg" style="width: 75%;"></object>
+]
+
+???
+
+---
+
+# fMRIPrep: generalizing further
+
+.boxed-content.center[
+<object type="image/svg+xml" data="https://www.nipreps.org/identity/fmriprep/fmriprep-21.0.0-inkscape.svg" style="width: 95%; padding-top: 15pt"></object>
+
+]
+
+???
+
+---
+
+# TemplateFlow: FAIR access to templates
+
+.boxed-content.center[
+<img src="https://www.templateflow.org/assets/templateflow_fig-birdsview.png" style="width: 70%; padding-top: 10pt" />
+
+]
+
+???
+
+---
+
+# The research workflow of brain networks
+
+.boxed-content[
+<object type="image/svg+xml" data="../assets/neuroimaging-workflow-3.svg" style="width: 100%; padding-top: 20pt;"></object>
+
+.center[
+[Thompson et al., (2021, *under review*)](https://doi.org/10.1101/2021.01.16.426941);
+[Rodrigue et al., (2021)](https://doi.org/10.1016/j.bpsc.2020.12.002);
+[Li et al., (2024)](https://doi.org/10.1038/s41562-024-01942-4)
+]
+]
+
+.pull-right[
+<img src="../assets/matrix-fc.png" alt="matrix-fc" style="width: 20%" />
+<br />
+**Functional Connectivity (FC)**
+<br />
+.gray-text[Synchronized BOLD co-variation between brain regions]
+]
+
+.pull-left.align-right[
+<img src="../assets/matrix-sc.png" alt="matrix-fc" style="width: 20%" />
+<br />
+**Structural Connectivity (SC)**
+<br />
+.gray-text[Tracked water diffusion pathways between brain regions]
+
+]
+
+???
+
+Once data are ready for analysis, we formalize connectivity as undirected acyclic graphs, represented with symmetric matrices.
+
+In the case of structural connectivity, we use diffusion MRI to track pathways of white-matter bundles connecting brain regions.
+
+For functional connectivity we measure synchronized functional MRI signal fluctuations sensitive to the dynamic oxygen content in blood.
+
+I’ve been involved in several works applying structural and functional connectivity.
+
+For instance, in Rodrigue 2021, we explored ML approaches to identify clinical biomarkers.
+
+Unfortunately, we had to conclude that, despite promising data quality and reliability remain insufficient for robust biomarker discovery.
+
+---
+
+# Despite active research, scarce clinical application
+
+.boxed-content[
+.center[
+<object type="image/svg+xml" data="../assets/neuroimaging-workflow-large.svg" style="width: 100%; padding-bottom: 10pt; padding-top: 20pt;"></object>
+]
+
+.no-bullet[
+* .large[<i class="fa-solid fa-triangle-exclamation"></i> Alarming **analytical variability**:]
+  * .larger[Diffusion MRI [[Maier-Hein et al., (2015)](https://doi.org/10.1038/s41467-017-01285-x)]]
+  * .larger[Functional MRI [[Botvinik-Nezer et al., (2020)](https://doi.org/10.1038/s41586-020-2314-9)]]
+
+<br />
+* .large[<i class="fa-solid fa-dna"></i> **Like genomics** between HGP (2003) and NGS (2015)?]
+]
+]
+
+???
+
+Therefore, although simple on the surface, the workflow is highly-complex and each step introduces potential variability.
+
+Complicating matters further, every lab around the world might use a slightly different pipeline.
+
+Different tools, different parameters—lead to inconsistent results.
+
+This fragmentation hinders progress and precludes between-study comparisons.
+
+The consequence is an acute scarcity of real-world applications of connectivity analyses.
+
+Let's compare to genomics.
+
+Neuroimaging is today in an early stage of standardization akin to genomics at the conclusion of the Human Genome Project in 2003.
+
+One key aspect for the remarkable advance of genomics is precisely the comprehensive standardization process of the pipeline that culminated some 10 years ago.
+
+For that reason, I advocate for replicating this success experience in neuroscience.
+
+---
+
+# Analytical variability in fMRI
+
+<figure style="width: 65%">
+![:img narps, 100%](../assets/narps-paper.png)
+<figcaption>From <a href="https://doi.org/10.1038/s41586-020-2314-9">Botvinik-Netzer et al. 2020</a>;
+doi:![:doi](10.1038/s41586-020-2314-9)</figcaption>
+</figure>
+
+---
+count: false
+
+# Despite active research, no real-world application
+
+.boxed-content[
+.center[
+<object type="image/svg+xml" data="../assets/neuroimaging-workflow-large.svg" style="width: 100%; padding-bottom: 10pt; padding-top: 20pt;"></object>
+]
+
+.no-bullet[
+* .large[<i class="fa-solid fa-triangle-exclamation"></i> Alarming **analytical variability**:]
+  * .larger[Diffusion MRI [[Maier-Hein et al., (2015)](https://doi.org/10.1038/s41467-017-01285-x)]]
+  * .larger[Functional MRI [[Botvinik-Nezer et al., (2020)](https://doi.org/10.1038/s41586-020-2314-9)]]
+
+<br />
+* .large[<i class="fa-solid fa-magnifying-glass-plus"></i> Insufficient **test-retest reliability** at the finer scales of brain units]
+  * .larger[[Nakuci et al., (2023)](https://doi.org/10.1038/s41598-023-33441-3)]]
+]
+
+???
+
+On top of all that methodological variability, there’s also inherent unreliability in measuring connectivity from session to session.
+
+If you scan the same participant twice, back-to-back, you can still get different connectivity measurements, indicating limited test-retest reliability.
+
+Despite all these concerns, more than 20 thousand papers were published focusing on functional connectivity and 10 thousand on structural connectivity in 2024, as per Pubmed.
+
+---
+
+.center[
+<object type="image/svg+xml" data="../assets/reproducible-definition-grid.svg" style="width: 68%"></object>
+.small[
+*The Turing Way project* illustration by Scriberia. Used under a CC-BY 4.0 licence. doi:<a href="https://doi.org/10.5281/zenodo.3332807">10.5281/zenodo.3332807</a>.]
+]
+
+---
+
+# More reliable measurements
+
+.center[
+.boxed-content[
+<object type="image/svg+xml" data="../assets/reproducible-definition-grid-axes-0.svg" style="width: 65%;"></object>
+
+[Esteban, (2025)](https://doi.org/10.1007/978-1-0716-4260-3_8) [[Methods for analyzing large neuroimaging datasets](https://doi.org/10.1007/978-1-0716-4260-3)]
+]
+]
+
+---
+count: false
+
+# More reliable measurements
+
+.center[
+.boxed-content[
+<object type="image/svg+xml" data="../assets/reproducible-definition-grid-axes-1.svg" style="width: 65%;"></object>
+
+[Esteban, (2025)](https://doi.org/10.1007/978-1-0716-4260-3_8) [[Methods for analyzing large neuroimaging datasets](https://doi.org/10.1007/978-1-0716-4260-3)]
+]
+]
+
+---
+count: false
+
+# More reliable measurements
+
+.center[
+.boxed-content[
+<object type="image/svg+xml" data="../assets/reproducible-definition-grid-axes-3.svg" style="width: 65%;"></object>
+
+[Esteban, (2025)](https://doi.org/10.1007/978-1-0716-4260-3_8) [[Methods for analyzing large neuroimaging datasets](https://doi.org/10.1007/978-1-0716-4260-3)]
+]
+]
+
+---
+count: false
+
+# More reliable measurements
+
+.center[
+.boxed-content[
+<object type="image/svg+xml" data="../assets/reproducible-definition-grid-axes-2.svg" style="width: 65%;"></object>
+
+[Esteban, (2025)](https://doi.org/10.1007/978-1-0716-4260-3_8) [[Methods for analyzing large neuroimaging datasets](https://doi.org/10.1007/978-1-0716-4260-3)]
+]
+]
+
+???
+
+
+---
+
+# Mid-talk · Slido <i class="fa-solid fa-mobile-screen"></i>
+
+.boxed-content.center[
+<br />
+
+### How worried are you about analytical variability in your fMRI work?
+
+.large[*1 = "totally fine" · 5 = "I lose sleep"*]
+
+<br />
+
+<a href="https://app.sli.do/event/REPLACE-ME-WORRY">app.sli.do — code on screen</a>
+<br />
+
+<iframe src="https://wall.sli.do/event/REPLACE-ME-WORRY/" style="width: 100%; height: 460px; border: 0; padding-top: 8pt"></iframe>
+]
+
+???
+
+Quick 1–5 reaction. Whatever the distribution, the rules ahead are aimed at lowering the worst-case score.
+
+---
+class: section-mark center
+
+# Five rules
+
+## …for designing fMRI pipelines (with bias)
+
+---
+
+# Rule 1 — **Keep it simple.**
+
+.pull-left[
+<br />
+.larger[
+**Do the minimum so as not to foreclose downstream analyses.**
+]
+
+<br />
+
+.large.no-bullet[
+* <i class="fa-solid fa-circle-right"></i> *fMRIPrep* refuses to **smooth**.
+* <i class="fa-solid fa-circle-right"></i> *fMRIPrep* refuses to regress out **nuisance signals**.
+* <i class="fa-solid fa-circle-right"></i> It outputs the **confounds** instead — you choose.
+]
+
+<br />
+
+.gray-text[
+*"Preprocessing offers an opportunity to reduce analytical flexibility and enable cross-study comparisons; statistical modeling must keep flexibility so as not to stifle new ideas."*
+]
+]
+
+.pull-right.center[
+<br />
+<br />
+
+.huge[<i class="fa-solid fa-fish"></i>]
+
+.large[**Analysis-grade ≈ sushi-grade**]
+
+.gray-text[Minimally processed,
+<br />*safe to consume directly.*]
+]
+
+???
+
+Rule 1 — the design stance.
+
+The pipeline's job is not to be "complete". It's to be **minimal in modeling commitments** while being **maximal in interoperability**.
+
+The sushi analogy: the fish is gutted, scaled, deboned — but not cooked, marinated, or seasoned. Whatever the analyst wants to do *next*, the fish is ready.
+
+---
+
+# Rule 2 — **Adopt a standard.**
+
+.pull-left[
+<br />
+.larger[
+**BIDS in. BIDS-Derivatives out.**
+]
+
+<br />
+
+.large[
+A standard turns *"my pipeline"* into *"any pipeline"*.
+]
+
+<br />
+
+.no-bullet.larger[
+* <i class="fa-solid fa-folder-tree"></i> Inputs: machine-readable, validated.
+* <i class="fa-solid fa-handshake"></i> Outputs: **contract**, not artifacts.
+* <i class="fa-solid fa-shuffle"></i> Swap fMRIPrep ↔ another tool, the analysis below doesn't care.
+]
+]
+
+.pull-right[
+<br />
+
+```
+sub-01/
+├── anat/
+│   └── sub-01_T1w.nii.gz
+├── func/
+│   ├── sub-01_task-rest_bold.nii.gz
+│   └── sub-01_task-rest_bold.json
+└── fmap/
+    └── sub-01_dir-AP_epi.nii.gz
+```
+
+<br />
+
+```
+derivatives/fmriprep/
+└── sub-01/
+    └── func/
+        ├── …_space-MNI152…_desc-preproc_bold.nii.gz
+        ├── …_desc-confounds_timeseries.tsv
+        └── …_desc-brain_mask.nii.gz
+```
+]
+
+???
+
+Rule 2 — without a standard, every reproducibility claim is a courtesy.
+
+BIDS gave the field a typed input/output contract. BIDS-Derivatives extended that to outputs.
+
+The win isn't aesthetic — it's that **swap-in / swap-out** becomes thinkable. You can run two pipelines on the same input and compare derivatives because they live in the same namespace.
+
+---
+
+# Rule 3 — **Decompose: *fit* &amp; *transform*.**
+
+.pull-left[
+<br />
+.larger[
+**Estimate parameters once. Apply many times.**
+]
+
+<br />
+
+.large.no-bullet[
+* <i class="fa-solid fa-screwdriver-wrench"></i> *fit* — slow, deterministic, cached.
+* <i class="fa-solid fa-bolt"></i> *transform* — cheap, composable, **single resampling**.
+]
+
+<br />
+
+.gray-text[
+A scikit-learn pattern, retrofitted onto neuroimaging — and the most consequential architectural change in *fMRIPrep* since v1.
+]
+]
+
+.pull-right.center[
+<object type="image/svg+xml" data="images/fmriprep-fit-transform.svg" style="width: 100%; padding-top: 8pt"></object>
+]
+
+???
+
+Rule 3 — *fit* once, *transform* many.
+
+Why it matters:
+- **One** resampling step (registrations composed analytically), not five — interpolation blur is a real, accumulating cost.
+- The expensive bit (registrations, brain extraction, surfaces) is computed *once* and **reused** across runs, sessions, even projects.
+- If you re-analyse in another space tomorrow, you don't rerun the whole pipeline — you re-*transform*.
+
+This is the lesson I'd take forward to *every* MR pipeline, fMRI or otherwise.
+
+---
+
+# Rule 4 — **QC everywhere.**
+
+.pull-left[
+<br />
+.larger[
+**Visual reports + automated metrics, layered.**
+]
+
+<br />
+
+.large.no-bullet[
+* <i class="fa-solid fa-eye"></i> Per-subject **HTML reports** (visual).
+* <i class="fa-solid fa-chart-line"></i> Per-cohort **IQMs** (automated).
+* <i class="fa-solid fa-layer-group"></i> Multiple checkpoints — **Swiss-cheese model**.
+]
+
+<br />
+
+.gray-text.small[
+[Provins et al., (2023), *Front. Neuroimaging*](https://doi.org/10.3389/fnimg.2022.1073734)
+]
+]
+
+.pull-right.center[
+<object type="image/svg+xml" data="../assets/provins-qaqc-protocol.svg" style="width: 100%; padding-top: 4pt"></object>
+]
+
+???
+
+Rule 4 — the warm-up Slido is most likely to point here.
+
+*MRIQC* and *fMRIPrep* both ship visual reports. Why? Because no automated metric catches everything (look up the *Swiss-cheese model* of accident causation).
+
+By layering checkpoints — automated IQMs, per-subject reports, group-level summaries — you make sure no single hole lets bad data through.
+
+---
+
+# Rule 5 — **Make it reproducible.**
+
+.pull-left[
+<br />
+.larger[
+**Containers + pinned versions + provenance + community.**
+]
+
+<br />
+
+.large.no-bullet[
+* <i class="fa-brands fa-docker"></i> **Docker / Apptainer** — same binary, every cluster.
+* <i class="fa-solid fa-tag"></i> **Semantic versioning + LTS** — `24.0.1` means something.
+* <i class="fa-solid fa-database"></i> **DataLad / TemplateFlow** — provenance for data &amp; templates.
+* <i class="fa-solid fa-people-group"></i> **Open governance** — code review, CoC, contributor docs.
+]
+
+<br />
+
+.gray-text[*"Reproducibility scales only if the **community** builds it together."*]
+]
+
+.pull-right.center[
+<br />
+<object type="image/svg+xml" data="../assets/nipreps-chart.png" style="width: 100%; padding-top: 12pt"></object>
+.small[NiPreps ecosystem &mdash; [nipreps.org](https://www.nipreps.org)]
+]
+
+???
+
+Rule 5 — the bookkeeping rule. Every previous rule depends on it.
+
+This one hands off to Sophie's *Code Reviews* talk later in the session: containers and versions are necessary but not sufficient — **community processes** (review, governance, code of conduct) are what keep a reproducible pipeline reproducible across years and contributors.
+
+---
+
+# Closer · Slido <i class="fa-solid fa-mobile-screen"></i>
+
+.boxed-content.center[
+<br />
+
+### Which rule will you take home?
+
+.large[*Pick one — we'll see the wisdom of the room.*]
+
+<br />
+
+<a href="https://app.sli.do/event/REPLACE-ME-CLOSER">app.sli.do — code on screen</a>
+<br />
+
+<iframe src="https://wall.sli.do/event/REPLACE-ME-CLOSER/" style="width: 100%; height: 460px; border: 0; padding-top: 8pt"></iframe>
+]
+
+???
+
+Single-choice across the five rules. Whatever wins, it tells me which rule the room finds least obvious — that's the one worth coming back to in Q&A.
+
+---
+
+# Recap — five rules + one meta-rule
+
+<br />
+
+.boxed-content.large.no-bullet[
+
+* <i class="fa-solid fa-circle-1"></i> .larger[**Keep it simple.**]
+  <br /> .indent[.gray-text[Do the minimum; don't foreclose downstream analyses.]]
+
+* <i class="fa-solid fa-circle-2"></i> .larger[**Adopt a standard.**]
+  <br /> .indent[.gray-text[BIDS in, BIDS-Derivatives out — input/output contract.]]
+
+* <i class="fa-solid fa-circle-3"></i> .larger[**Decompose: fit &amp; transform.**]
+  <br /> .indent[.gray-text[Estimate parameters once; apply many times; one resampling.]]
+
+* <i class="fa-solid fa-circle-4"></i> .larger[**QC everywhere.**]
+  <br /> .indent[.gray-text[Visual + automated, layered (Swiss-cheese).]]
+
+* <i class="fa-solid fa-circle-5"></i> .larger[**Make it reproducible.**]
+  <br /> .indent[.gray-text[Containers, versions, provenance, governance, community.]]
+
+<br />
+
+* <i class="fa-solid fa-circle-up"></i> .larger[***Meta:* preprocessing reproducibility upper-bounds analysis reproducibility.**]
+]
+
+???
+
+The meta-rule is the one to remember even if you forget the five.
+
+---
+
+# Resources <i class="fa-solid fa-link"></i>
+
+.pull-left.center[
+<a href="https://www.nipreps.org">
+  <object type="image/svg+xml" data="../assets/qr-nipreps-url.svg" style="width: 55%"></object>
+  <br />
+  **NiPreps** &mdash; nipreps.org
+</a>
+]
+
+.pull-right.center[
+<a href="https://oesteban.github.io/talks/20260510-ISMRM/">
+  <object type="image/svg+xml" data="images/qr-talk-url.svg" style="width: 55%"></object>
+  <br />
+  **These slides**
+</a>
+]
+
+<br />
+
+.boxed-content.no-bullet[
+* <i class="fa-solid fa-book"></i> *fMRIPrep* documentation &mdash; [fmriprep.org](https://fmriprep.org)
+* <i class="fa-solid fa-graduation-cap"></i> *NiPreps Book* &mdash; [www.nipreps.org/book](https://www.nipreps.org/book/)
+* <i class="fa-solid fa-folder-tree"></i> *BIDS* &amp; *BIDS-Derivatives* &mdash; [bids.neuroimaging.io](https://bids.neuroimaging.io)
+* <i class="fa-solid fa-cubes"></i> *TemplateFlow* &mdash; [templateflow.org](https://www.templateflow.org)
+* <i class="fa-solid fa-envelope"></i> me — [phd@oscaresteban.es](mailto:phd@oscaresteban.es)
+]
+
+???
+
+Pointers for after the session. The *NiPreps Book* is the closest thing to an actual hands-on demo.
+
+---
+layout: false
+count: false
+
+
+.center[
+<a href="https://oesteban.github.io/talks/20260510-ISMRM/">
+  <object type="image/svg+xml" data="images/qr-talk-url.svg" style="width: 18%"></object>
+  <br />
+  https://oesteban.github.io/talks/20260510-ISMRM/
+</a>
+
+<br />
+<br />
+
+# Thank you!
+
+## Questions?
+
+<br />
+
+.gray-text[
+Thanks to Francesco Santini &amp; the *Analysis Pipelines: Demos* organizers,
+<br />
+to the **NiPreps community**, and to *you* for the Slido answers.
+]
+
+<br />
+
+Oscar Esteban &lt;<code><a href="mailto:phd@oscaresteban.es">phd@oscaresteban.es</a></code>>
+
+]
+
+???
+
+Open the floor — 5 minutes for questions.
+
+</textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <script src="../remark-engine/core/engine.js"></script>
+    <script src="../remark-engine/ext/svg-theme.js"></script>
+    <script src="../remark-engine/ext/stepwise-svg.js"></script>
+    <script src="../remark-engine/ext/nav-controls.js"></script>
+  </body>
+</html>
