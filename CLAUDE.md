@@ -77,7 +77,13 @@ Themes override `:root` variables defined in `core/base.css`:
 
 ## Serving Locally
 
-Open any `index.html` directly in a browser, or use a local HTTP server (e.g. `python3 -m http.server`) from the repo root for proper relative path resolution. No build step required.
+Open any `index.html` directly in a browser, or use a local HTTP server from the repo root for proper relative path resolution. No build step required.
+
+If the env var `PYTHON_CMD` is set (typically via `.claude/settings.local.json` → `env.PYTHON_CMD`, e.g. `micromamba run -n presentations python3`), use it instead of `python3` so the server runs in the declared environment:
+
+```bash
+${PYTHON_CMD:-python3} -m http.server
+```
 
 ## Frozen Archival Talks
 
