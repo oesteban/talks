@@ -406,9 +406,50 @@ For that reason, I advocate for replicating this success experience in neuroscie
 
 <figure style="width: 65%">
 ![:img narps, 100%](../assets/narps-paper.png)
-<figcaption>From <a href="https://doi.org/10.1038/s41586-020-2314-9">Botvinik-Netzer et al. 2020</a>;
+<figcaption>From <a href="https://doi.org/10.1038/s41586-020-2314-9">Botvinik-Nezer et al. 2020</a>;
 doi:![:doi](10.1038/s41586-020-2314-9)</figcaption>
 </figure>
+
+???
+
+NARPS — 70 teams, one fMRI dataset, nine a-priori hypotheses. For 5 of 9 hypotheses, &gt;20% of teams disagreed with the consensus.
+
+The pipeline IS the experiment.
+
+---
+
+# Pipeline-induced variance — *Li et al. 2024*
+
+.pull-left[
+<br />
+
+.larger[
+*"Moving beyond processing- and analysis-related variation in human neuroscience"*
+]
+
+.gray-text[Li, …, Milham. *Nat Hum Behav* 2024 — doi:![:doi](10.1038/s41562-024-01942-4); preprint [bioRxiv 2021.12.01.470790](https://doi.org/10.1101/2021.12.01.470790).]
+
+<br />
+
+.large.no-bullet[
+* <i class="fa-solid fa-triangle-exclamation"></i> Pipeline choices are a **first-order** contributor to downstream variance — not a rounding error.
+
+* <i class="fa-solid fa-circle-up"></i> Preprocessing reproducibility **upper-bounds** analysis reproducibility.
+]
+
+]
+
+.pull-right.center[
+<img src="images/li-2024-pipeline-variance.png" alt="Li et al. 2024 — variance partitioning across pipeline choices" style="width: 100%; padding-top: 8pt" />
+]
+
+???
+
+Where NARPS quantified the *spread* across teams, Li, Milham et al. quantify the *attribution*: how much of that spread comes from the pipeline alone.
+
+The answer is "a lot". Pipeline is not noise — it's signal of the wrong kind.
+
+If preprocessing reproducibility upper-bounds analysis reproducibility, then preprocessing is where you spend the engineering effort.
 
 ---
 count: false
@@ -502,26 +543,30 @@ count: false
 
 ---
 
-# Mid-talk · Slido <i class="fa-solid fa-mobile-screen"></i>
+# …and now? — re-vote · Slido <i class="fa-solid fa-mobile-screen"></i>
 
 .boxed-content.center[
 <br />
 
-### How worried are you about analytical variability in your fMRI work?
+### Same question — *ten minutes later*.
 
-.large[*1 = "totally fine" · 5 = "I lose sleep"*]
+.large[*"How confident are you that your last fMRI result would replicate under a **different** preprocessing pipeline?"*]
 
 <br />
 
-<a href="https://app.sli.do/event/REPLACE-ME-WORRY">app.sli.do — code on screen</a>
-<br />
-
-<iframe src="https://wall.sli.do/event/REPLACE-ME-WORRY/" style="width: 100%; height: 460px; border: 0; padding-top: 8pt"></iframe>
+<iframe src="https://wall.sli.do/event/REPLACE-ME-EVENT/?section=REPLACE-ME-POST" style="width: 100%; height: 420px; border: 0; padding-top: 8pt"></iframe>
 ]
 
 ???
 
-Quick 1–5 reaction. Whatever the distribution, the rules ahead are aimed at lowering the worst-case score.
+The **post-poll**. Same Slido event as the warm-up; second poll/section.
+
+Speaker beats:
+1. *"Same question, ten minutes later."*
+2. *"Whether your number went down or stayed put — the next ten minutes are five rules aimed at that number."*
+3. (Optional) *"For those whose number went **up** — that's the contrarian read; happy to take it in Q&A."*
+
+If Slido's *Compare* mode is wired up, embed the side-by-side pre+post view here instead.
 
 ---
 class: section-mark center
