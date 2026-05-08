@@ -116,7 +116,7 @@ All materials related to this talk are openly available under a **CC-By license*
 ]
 
 .right-column3.center[
-<a href="https://oesteban.github.io/talks/20260210-ISC/">
+<a href="https://oesteban.github.io/talks/20260510-ISMRM/">
   <object type="image/svg+xml" data="images/qr-talk-url.svg" style="width: 80%"></object>
   <br />
   Link to slides
@@ -146,30 +146,74 @@ Quick context: I lead *fMRIPrep* and *MRIQC* and coordinate the NiPreps communit
 
 ---
 
-# Warm-up · Slido <i class="fa-solid fa-mobile-screen"></i>
+.center[
+<object type="image/svg+xml" data="../assets/reproducible-definition-grid.svg" style="width: 68%"></object>
+.small[
+*The Turing Way project* illustration by Scriberia. Used under a CC-BY 4.0 licence. doi:<a href="https://doi.org/10.5281/zenodo.3332807">10.5281/zenodo.3332807</a>.]
+]
 
-.boxed-content.center[
-<br />
+---
 
-### How confident are you that your last fMRI result would replicate under a **different** preprocessing pipeline?
+# More reliable measurements
 
-.large[*1 = not at all confident · 5 = fully confident*]
+.center[
+.boxed-content[
+<object type="image/svg+xml" data="../assets/reproducible-definition-grid-axes-0.svg" style="width: 65%;"></object>
 
-<br />
+[Esteban (2025)](https://doi.org/10.1007/978-1-0716-4260-3_8) [[Methods for analyzing large neuroimaging datasets](https://doi.org/10.1007/978-1-0716-4260-3)]
+]
+]
 
-<a href="https://app.sli.do/event/REPLACE-ME-EVENT">app.sli.do — code on screen</a>
+---
+count: false
 
-.gray-text.large[Scan · vote · we'll re-run this poll at the end of the intro and compare.]
-<br />
+# More reliable measurements
 
-<iframe src="https://wall.sli.do/event/REPLACE-ME-EVENT/?section=REPLACE-ME-PRE" style="width: 100%; height: 360px; border: 0; padding-top: 8pt"></iframe>
+.center[
+.boxed-content[
+<object type="image/svg+xml" data="../assets/reproducible-definition-grid-axes-1.svg" style="width: 65%;"></object>
+
+[Esteban (2025)](https://doi.org/10.1007/978-1-0716-4260-3_8) [[Methods for analyzing large neuroimaging datasets](https://doi.org/10.1007/978-1-0716-4260-3)]
+]
+]
+
+---
+count: false
+
+# More reliable measurements
+
+.center[
+.boxed-content[
+<object type="image/svg+xml" data="../assets/reproducible-definition-grid-axes-3.svg" style="width: 65%;"></object>
+
+[Esteban (2025)](https://doi.org/10.1007/978-1-0716-4260-3_8) [[Methods for analyzing large neuroimaging datasets](https://doi.org/10.1007/978-1-0716-4260-3)]
+]
+]
+
+---
+count: false
+
+# More reliable measurements
+
+.center[
+.boxed-content[
+<object type="image/svg+xml" data="../assets/reproducible-definition-grid-axes-2.svg" style="width: 65%;"></object>
+
+[Esteban (2025)](https://doi.org/10.1007/978-1-0716-4260-3_8) [[Methods for analyzing large neuroimaging datasets](https://doi.org/10.1007/978-1-0716-4260-3)]
+]
 ]
 
 ???
 
-This is the **pre-poll**. One Slido event holds two polls (pre + post) of the same shape; the post-poll re-runs right before the *Five rules* section.
+---
 
-Don't dwell on the distribution here — just confirm everyone has voted, then move into the workflow.
+.boxed-content[
+<iframe src='https://wall.sli.do/event/6KrmLNGzdeF6nTsGBqYpQZ?section=a1c632f4-a260-4640-8b46-89299b53a830&integration=shared-present-mode' style="width: 100%; height: 600px; border: 0"></iframe>
+.center[<a href="https://app.sli.do/event/6KrmLNGzdeF6nTsGBqYpQZ">Click here to participate</a>]
+]
+
+???
+
 
 ---
 
@@ -203,7 +247,7 @@ count:false
 .center[
 [Esteban et al. (2017)](https://doi.org/10.1371/journal.pone.0184661);
 [Provins et al. (2023)](https://doi.org/10.3389/fnimg.2022.1073734); <br />
-[Provins et al. (2025)](https://doi.org/10.1371/journal.pbio.3003149)
+[Provins et al. (2025)](https://doi.org/10.1371/journal.pbio.3003149);
 [Hagen et al. (2025, *accepted*)](https://doi.org/10.1101/2024.10.21.619532)
 ]
 <br />
@@ -325,8 +369,7 @@ class: stepwise-svg
 
 .center[
 [Thompson et al., (2021, *under review*)](https://doi.org/10.1101/2021.01.16.426941);
-[Rodrigue et al., (2021)](https://doi.org/10.1016/j.bpsc.2020.12.002);
-[Li et al., (2024)](https://doi.org/10.1038/s41562-024-01942-4)
+[Rodrigue et al., (2021)](https://doi.org/10.1016/j.bpsc.2020.12.002).
 ]
 ]
 
@@ -376,7 +419,7 @@ Unfortunately, we had to conclude that, despite promising data quality and relia
   * .larger[Functional MRI [[Botvinik-Nezer et al., (2020)](https://doi.org/10.1038/s41586-020-2314-9)]]
 
 <br />
-* .large[<i class="fa-solid fa-dna"></i> **Like genomics** between HGP (2003) and NGS (2015)?]
+* .large[<i class="fa-solid fa-dna"></i> **Like genomics** <br />Somewhere along NGS's standarization (2005-2015)]
 ]
 ]
 
@@ -402,12 +445,12 @@ For that reason, I advocate for replicating this success experience in neuroscie
 
 ---
 
-# Analytical variability in fMRI
+# Analytical variability in fMRI (NARPS)
 
 <figure style="width: 65%">
 ![:img narps, 100%](../assets/narps-paper.png)
 <figcaption>From <a href="https://doi.org/10.1038/s41586-020-2314-9">Botvinik-Nezer et al. 2020</a>;
-doi:![:doi](10.1038/s41586-020-2314-9)</figcaption>
+doi:![:doi](10.1038/s41586-020-2314-9) | NARPS = Neuroimaging Analysis Replication and Prediction Study</figcaption>
 </figure>
 
 ???
@@ -418,30 +461,14 @@ The pipeline IS the experiment.
 
 ---
 
-# Pipeline-induced variance — *Li et al. 2024*
+# Pipeline-induced variance (Li et al., 2024)
 
-.pull-left[
-<br />
+<figure style="width: 80%">
+![:img pipeline-variability, 100%](images/li-moving-2024.png)
+<figcaption>From <a href="https://doi.org/10.1038/s41562-024-01942-4">Li et al. 2024</a>;
+doi:![:doi](10.1038/s41562-024-01942-4)</figcaption>
+</figure>
 
-.larger[
-*"Moving beyond processing- and analysis-related variation in human neuroscience"*
-]
-
-.gray-text[Li, …, Milham. *Nat Hum Behav* 2024 — doi:![:doi](10.1038/s41562-024-01942-4); preprint [bioRxiv 2021.12.01.470790](https://doi.org/10.1101/2021.12.01.470790).]
-
-<br />
-
-.large.no-bullet[
-* <i class="fa-solid fa-triangle-exclamation"></i> Pipeline choices are a **first-order** contributor to downstream variance — not a rounding error.
-
-* <i class="fa-solid fa-circle-up"></i> Preprocessing reproducibility **upper-bounds** analysis reproducibility.
-]
-
-]
-
-.pull-right.center[
-<img src="images/li-2024-pipeline-variance.png" alt="Li et al. 2024 — variance partitioning across pipeline choices" style="width: 100%; padding-top: 8pt" />
-]
 
 ???
 
@@ -479,137 +506,48 @@ If you scan the same participant twice, back-to-back, you can still get differen
 
 Despite all these concerns, more than 20 thousand papers were published focusing on functional connectivity and 10 thousand on structural connectivity in 2024, as per Pubmed.
 
----
-
-.center[
-<object type="image/svg+xml" data="../assets/reproducible-definition-grid.svg" style="width: 68%"></object>
-.small[
-*The Turing Way project* illustration by Scriberia. Used under a CC-BY 4.0 licence. doi:<a href="https://doi.org/10.5281/zenodo.3332807">10.5281/zenodo.3332807</a>.]
-]
 
 ---
 
-# More reliable measurements
-
-.center[
-.boxed-content[
-<object type="image/svg+xml" data="../assets/reproducible-definition-grid-axes-0.svg" style="width: 65%;"></object>
-
-[Esteban, (2025)](https://doi.org/10.1007/978-1-0716-4260-3_8) [[Methods for analyzing large neuroimaging datasets](https://doi.org/10.1007/978-1-0716-4260-3)]
-]
-]
-
----
-count: false
-
-# More reliable measurements
-
-.center[
-.boxed-content[
-<object type="image/svg+xml" data="../assets/reproducible-definition-grid-axes-1.svg" style="width: 65%;"></object>
-
-[Esteban, (2025)](https://doi.org/10.1007/978-1-0716-4260-3_8) [[Methods for analyzing large neuroimaging datasets](https://doi.org/10.1007/978-1-0716-4260-3)]
-]
-]
-
----
-count: false
-
-# More reliable measurements
-
-.center[
-.boxed-content[
-<object type="image/svg+xml" data="../assets/reproducible-definition-grid-axes-3.svg" style="width: 65%;"></object>
-
-[Esteban, (2025)](https://doi.org/10.1007/978-1-0716-4260-3_8) [[Methods for analyzing large neuroimaging datasets](https://doi.org/10.1007/978-1-0716-4260-3)]
-]
-]
-
----
-count: false
-
-# More reliable measurements
-
-.center[
-.boxed-content[
-<object type="image/svg+xml" data="../assets/reproducible-definition-grid-axes-2.svg" style="width: 65%;"></object>
-
-[Esteban, (2025)](https://doi.org/10.1007/978-1-0716-4260-3_8) [[Methods for analyzing large neuroimaging datasets](https://doi.org/10.1007/978-1-0716-4260-3)]
-]
-]
+<iframe src='https://wall.sli.do/event/7MRDo81MMWSs5ZXoXqggfq?section=6359bd0d-7632-4f05-a4ee-f478561379cd&integration=shared-present-mode' style="width: 92%; height: 670px; border: 0"></iframe>
 
 ???
 
 
 ---
 
-# …and now? — re-vote · Slido <i class="fa-solid fa-mobile-screen"></i>
+.section-mark.center[
+## Five simple rules for fMRI data analysis pipelines
+
+]
+
+---
+
+.section-mark[
+.center[
+## **\#1** Prefer a paring knife to a Swiss army knife.
+]
+
+.left.larger.gray-text[
+<br />
+<br />
+<br />
+
+* Do not reinvent the wheel
+* Do not bake in assumptions about downstream analyses
+* Flee from *nose-to-tail* pipelines
+* Use modularity to your advantage ...<br />
+  but watch out for re-introducing variability! [Lindquist et al., (2019)](https://doi.org/10.1002/hbm.24528)
+]
+]
+
+
+---
+class: stepwise-svg
 
 .boxed-content.center[
-<br />
+<object type="image/svg+xml" data="../assets/nipreps-chart.svg" style="width: 80%; padding-top: 5pt"></object>
 
-### Same question — *ten minutes later*.
-
-.large[*"How confident are you that your last fMRI result would replicate under a **different** preprocessing pipeline?"*]
-
-<br />
-
-<iframe src="https://wall.sli.do/event/REPLACE-ME-EVENT/?section=REPLACE-ME-POST" style="width: 100%; height: 420px; border: 0; padding-top: 8pt"></iframe>
-]
-
-???
-
-The **post-poll**. Same Slido event as the warm-up; second poll/section.
-
-Speaker beats:
-1. *"Same question, ten minutes later."*
-2. *"Whether your number went down or stayed put — the next ten minutes are five rules aimed at that number."*
-3. (Optional) *"For those whose number went **up** — that's the contrarian read; happy to take it in Q&A."*
-
-If Slido's *Compare* mode is wired up, embed the side-by-side pre+post view here instead.
-
----
-class: section-mark center
-
-# Five rules
-
-## …for designing fMRI pipelines (with bias)
-
----
-
-# Rule 1 — **Keep it simple.**
-
-.pull-left[
-<br />
-.larger[
-**Do the minimum so as not to foreclose downstream analyses.**
-]
-
-<br />
-
-.large.no-bullet[
-* <i class="fa-solid fa-circle-right"></i> *fMRIPrep* refuses to **smooth**.
-* <i class="fa-solid fa-circle-right"></i> *fMRIPrep* refuses to regress out **nuisance signals**.
-* <i class="fa-solid fa-circle-right"></i> It outputs the **confounds** instead — you choose.
-]
-
-<br />
-
-.gray-text[
-*"Preprocessing offers an opportunity to reduce analytical flexibility and enable cross-study comparisons; statistical modeling must keep flexibility so as not to stifle new ideas."*
-]
-]
-
-.pull-right.center[
-<br />
-<br />
-
-.huge[<i class="fa-solid fa-fish"></i>]
-
-.large[**Analysis-grade ≈ sushi-grade**]
-
-.gray-text[Minimally processed,
-<br />*safe to consume directly.*]
 ]
 
 ???
@@ -622,90 +560,12 @@ The sushi analogy: the fish is gutted, scaled, deboned — but not cooked, marin
 
 ---
 
-# Rule 2 — **Adopt a standard.**
+# **\#2** Copy demonstrated patterns.
 
-.pull-left[
-<br />
-.larger[
-**BIDS in. BIDS-Derivatives out.**
+.boxed-content.center[
+<object type="image/svg+xml" data="images/fmriprep-fit-transform.svg" style="width: 100%; padding-top: 38pt"></object>
 ]
 
-<br />
-
-.large[
-A standard turns *"my pipeline"* into *"any pipeline"*.
-]
-
-<br />
-
-.no-bullet.larger[
-* <i class="fa-solid fa-folder-tree"></i> Inputs: machine-readable, validated.
-* <i class="fa-solid fa-handshake"></i> Outputs: **contract**, not artifacts.
-* <i class="fa-solid fa-shuffle"></i> Swap fMRIPrep ↔ another tool, the analysis below doesn't care.
-]
-]
-
-.pull-right[
-<br />
-
-```
-sub-01/
-├── anat/
-│   └── sub-01_T1w.nii.gz
-├── func/
-│   ├── sub-01_task-rest_bold.nii.gz
-│   └── sub-01_task-rest_bold.json
-└── fmap/
-    └── sub-01_dir-AP_epi.nii.gz
-```
-
-<br />
-
-```
-derivatives/fmriprep/
-└── sub-01/
-    └── func/
-        ├── …_space-MNI152…_desc-preproc_bold.nii.gz
-        ├── …_desc-confounds_timeseries.tsv
-        └── …_desc-brain_mask.nii.gz
-```
-]
-
-???
-
-Rule 2 — without a standard, every reproducibility claim is a courtesy.
-
-BIDS gave the field a typed input/output contract. BIDS-Derivatives extended that to outputs.
-
-The win isn't aesthetic — it's that **swap-in / swap-out** becomes thinkable. You can run two pipelines on the same input and compare derivatives because they live in the same namespace.
-
----
-
-# Rule 3 — **Decompose: *fit* &amp; *transform*.**
-
-.pull-left[
-<br />
-.larger[
-**Estimate parameters once. Apply many times.**
-]
-
-<br />
-
-.large.no-bullet[
-* <i class="fa-solid fa-screwdriver-wrench"></i> *fit* — slow, deterministic, cached.
-* <i class="fa-solid fa-bolt"></i> *transform* — cheap, composable, **single resampling**.
-]
-
-<br />
-
-.gray-text[
-A scikit-learn pattern, retrofitted onto neuroimaging — and the most consequential architectural change in *fMRIPrep* since v1.
-]
-]
-
-.pull-right.center[
-<object type="image/svg+xml" data="images/fmriprep-fit-transform.svg" style="width: 100%; padding-top: 8pt"></object>
-]
 
 ???
 
@@ -718,101 +578,143 @@ Why it matters:
 
 This is the lesson I'd take forward to *every* MR pipeline, fMRI or otherwise.
 
----
-
-# Rule 4 — **QC everywhere.**
-
-.pull-left[
-<br />
-.larger[
-**Visual reports + automated metrics, layered.**
-]
-
-<br />
-
-.large.no-bullet[
-* <i class="fa-solid fa-eye"></i> Per-subject **HTML reports** (visual).
-* <i class="fa-solid fa-chart-line"></i> Per-cohort **IQMs** (automated).
-* <i class="fa-solid fa-layer-group"></i> Multiple checkpoints — **Swiss-cheese model**.
-]
-
-<br />
-
-.gray-text.small[
-[Provins et al., (2023), *Front. Neuroimaging*](https://doi.org/10.3389/fnimg.2022.1073734)
-]
-]
-
-.pull-right.center[
-<object type="image/svg+xml" data="../assets/provins-qaqc-protocol.svg" style="width: 100%; padding-top: 4pt"></object>
-]
-
-???
-
-Rule 4 — the warm-up Slido is most likely to point here.
-
-*MRIQC* and *fMRIPrep* both ship visual reports. Why? Because no automated metric catches everything (look up the *Swiss-cheese model* of accident causation).
-
-By layering checkpoints — automated IQMs, per-subject reports, group-level summaries — you make sure no single hole lets bad data through.
 
 ---
 
-# Rule 5 — **Make it reproducible.**
-
-.pull-left[
-<br />
-.larger[
-**Containers + pinned versions + provenance + community.**
+.section-mark[
+.center[
+## **\#3** Engage with the community
 ]
 
+.left.larger.gray-text[
+<br />
+<br />
 <br />
 
-.large.no-bullet[
-* <i class="fa-brands fa-docker"></i> **Docker / Apptainer** — same binary, every cluster.
-* <i class="fa-solid fa-tag"></i> **Semantic versioning + LTS** — `24.0.1` means something.
-* <i class="fa-solid fa-database"></i> **DataLad / TemplateFlow** — provenance for data &amp; templates.
-* <i class="fa-solid fa-people-group"></i> **Open governance** — code review, CoC, contributor docs.
+* Adopt standards (BIDS in, BIDS-Derivatives out)
+* Build your own tools only if no other initiative has done it already
+* Don't be your only user: share, document, support, and engage
+* Build trust by being open, transparent, responsive to feedback, and honest about limitations
 ]
-
-<br />
-
-.gray-text[*"Reproducibility scales only if the **community** builds it together."*]
 ]
-
-.pull-right.center[
-<br />
-<object type="image/svg+xml" data="../assets/nipreps-chart.png" style="width: 100%; padding-top: 12pt"></object>
-.small[NiPreps ecosystem &mdash; [nipreps.org](https://www.nipreps.org)]
-]
-
-???
-
-Rule 5 — the bookkeeping rule. Every previous rule depends on it.
-
-This one hands off to Sophie's *Code Reviews* talk later in the session: containers and versions are necessary but not sufficient — **community processes** (review, governance, code of conduct) are what keep a reproducible pipeline reproducible across years and contributors.
 
 ---
 
-# Closer · Slido <i class="fa-solid fa-mobile-screen"></i>
+# **\#3** Engage with the community (fMRIPrep)
 
 .boxed-content.center[
+<img src="https://github.com/nipreps/fmriprep_stats/releases/latest/download/weekly.png" style="width: 98%; padding-top: 20pt" />
+]
+
+
+???
+
+---
+
+.section-mark[
+.center[
+## **\#4** Best engineering practices
+]
+
+.left.larger.gray-text[
+<br />
+<br />
 <br />
 
-### Which rule will you take home?
+* Version control everything (code, data, parameters, templates) - Check out DataLad today!
+* Use containers (Docker, Apptainer)
+* Use semantic versioning and LTS releases
+* Open your code and your processes (code review, governance, CoC, contributor docs)
+* Increase the bus factor of your project
+]
+]
 
-.large[*Pick one — we'll see the wisdom of the room.*]
+---
 
+# **\#4** Best engineering practices (fMRIPrep)
+
+.boxed-content.center[
+<img src="https://github.com/nipreps/fmriprep_stats/releases/latest/download/versionstream.png" style="width: 98%; padding-top: 80pt" />
+]
+
+
+???
+
+---
+
+.section-mark[
+.center[
+## **\#5** QA/QC is as tedious as it is critical
+]
+
+.left.larger.gray-text[
+<br />
+<br />
 <br />
 
-<a href="https://app.sli.do/event/REPLACE-ME-CLOSER">app.sli.do — code on screen</a>
-<br />
+* Understand the difference between QA (quality assurance) and QC (quality control)
+* QA/QC is not a one-time step, but a layered process
+* Build comprehensive SOPs for data acquisition and preprocessing, and make them machine-readable
+]
+]
 
-<iframe src="https://wall.sli.do/event/REPLACE-ME-CLOSER/" style="width: 100%; height: 460px; border: 0; padding-top: 8pt"></iframe>
+---
+
+# **\#5** QA/QC is as tedious as it is critical
+
+.boxed-content[
+.center[
+<object type="image/svg+xml" data="../assets/neuroimaging-workflow-large.svg" style="width: 90%; padding-bottom: 55.5pt; padding-top: 120pt;"></object>
+]
+
+.align-right[
+([Provins et al., 2023](http://doi.org/10.3389/fnimg.2022.1073734))
+]
 ]
 
 ???
 
-Single-choice across the five rules. Whatever wins, it tells me which rule the room finds least obvious — that's the one worth coming back to in Q&A.
+---
+class: stepwise-svg
+
+# **\#5** QA/QC is as tedious as it is critical
+
+.boxed-content[
+.center[
+<object type="image/svg+xml" data="../assets/provins-qaqc-protocol.svg" style="width: 100%; padding-bottom: 5pt; padding-top: 40pt;"></object>
+]
+
+.align-right[
+([Provins et al., 2023](http://doi.org/10.3389/fnimg.2022.1073734))
+]
+]
+
+---
+
+# **\#5** QA/QC is as tedious as it is critical
+
+.boxed-content[
+.center[
+<object type="image/svg+xml" data="../assets/provins-qaqc-protocol.svg" style="width: 60%; padding-bottom: 10pt; padding-top: 10pt;"></object>
+
+<object type="image/svg+xml" data="../assets/swiss-cheese.svg" style="width:60%"></object>
+
+.small[
+[BenAveling @ wikipedia](https://en.wikipedia.org/wiki/Swiss_cheese_model#/media/File:Swiss_cheese_model_textless.svg)
+]
+]
+
+]
+
+???
+
+For those with knowledge about security protocols, this approach will surely evoke the Swiss cheese model.
+
+The model assumes that all QC checkpoints will have holes through which data progresses toward analysis.
+
+By layering several QC checkpoints looking at the data in different ways, we make sure that images with potential to bias the results do not make all the way through the workflow.
+
+
 
 ---
 
